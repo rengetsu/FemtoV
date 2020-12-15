@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>C:\Users\pavel\OneDrive\Documents\NetBeansProjects\FemtoV\dist\FemtoV.jar</jar>
-  <outfile>C:\Users\pavel\OneDrive\Documents\FemtoV_0.1.exe</outfile>
+  <outfile>C:\Users\pavel\OneDrive\Documents\Builds\FemtoV_0.2\FemtoV_0.2.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -18,7 +18,7 @@
     <path></path>
     <bundledJre64Bit>false</bundledJre64Bit>
     <bundledJreAsFallback>false</bundledJreAsFallback>
-    <minVersion>1.4.0</minVersion>
+    <minVersion>1.4</minVersion>
     <maxVersion></maxVersion>
     <jdkPreference>preferJre</jdkPreference>
     <runtimeBits>64/32</runtimeBits>
