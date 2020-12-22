@@ -10,6 +10,9 @@ import java.awt.Component;
 import java.awt.Insets;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -32,10 +35,19 @@ public class Interface extends javax.swing.JFrame {
     public static final Color BLUE_FOR_BUTTONS = new Color(100,158,242);
     public static final Color GRAY_FOR_BUTTONS = new Color(240,240,240);
     
-    // Чекер для проверки статуса кнопки включения/выключения
+    // Чекеры для проверки статуса включения/выключения каналов (меню слева)
+    boolean on_off_ch1 = false;
+    boolean on_off_ch2 = false;
+    
+    // Чекеры для проверки статуса включения/выключения каналов (меню справа)
+    boolean on_off_ch1_r = false;
+    boolean on_off_ch2_r = false;
+    
+    // Чекеры для проверки статуса кнопки включения/выключения
     boolean on_off_btn_ch1 = false;
     boolean on_off_btn_ch2 = false;
     
+    // Чекеры для проверки нажатия кнопок нижнего меню
     boolean ch1 = true, ch2 = true, ch3 = true, ch4 = true, ch5 = true, ch6 = true, ch7 = true, ch8 = true, ch9 = true, ch10 = true;
 
     /**
@@ -326,8 +338,6 @@ public class Interface extends javax.swing.JFrame {
         jb62.setContentAreaFilled(false);
         jb62.setOpaque(true);
         jb62.setBorder(new LineBorder(Color.BLACK));
-        
-        
     }
 
     /**
@@ -344,8 +354,6 @@ public class Interface extends javax.swing.JFrame {
         jButton60 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton3 = new javax.swing.JToggleButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -394,6 +402,8 @@ public class Interface extends javax.swing.JFrame {
         jToggleButton16 = new javax.swing.JToggleButton();
         jToggleButton17 = new javax.swing.JToggleButton();
         jToggleButton18 = new javax.swing.JToggleButton();
+        jToggleButton19 = new javax.swing.JToggleButton();
+        jToggleButton20 = new javax.swing.JToggleButton();
         jPanel5 = new javax.swing.JPanel();
         jButton7 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -410,8 +420,6 @@ public class Interface extends javax.swing.JFrame {
         jButton39 = new javax.swing.JButton();
         jButton46 = new javax.swing.JButton();
         jButton49 = new javax.swing.JButton();
-        jToggleButton13 = new javax.swing.JToggleButton();
-        jToggleButton14 = new javax.swing.JToggleButton();
         jButton45 = new javax.swing.JButton();
         jButton40 = new javax.swing.JButton();
         jToggleButton9 = new javax.swing.JToggleButton();
@@ -441,6 +449,8 @@ public class Interface extends javax.swing.JFrame {
         jButton44 = new javax.swing.JButton();
         jButton47 = new javax.swing.JButton();
         jToggleButton6 = new javax.swing.JToggleButton();
+        jToggleButton21 = new javax.swing.JToggleButton();
+        jToggleButton22 = new javax.swing.JToggleButton();
         jPanel8 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jButton14 = new javax.swing.JButton();
@@ -514,26 +524,6 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setPreferredSize(new java.awt.Dimension(200, 650));
 
-        jToggleButton2.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_channel_two.png"))); // NOI18N
-        jToggleButton2.setSelected(true);
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
-            }
-        });
-
-        jToggleButton3.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_channel_one.png"))); // NOI18N
-        jToggleButton3.setSelected(true);
-        jToggleButton3.setMaximumSize(new java.awt.Dimension(16, 16));
-        jToggleButton3.setMinimumSize(new java.awt.Dimension(16, 16));
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
-            }
-        });
-
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel5.setText("Complement");
 
@@ -553,42 +543,32 @@ public class Interface extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Limits");
 
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_down.png"))); // NOI18N
+        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_down.png"))); // NOI18N
         jButton17.setAlignmentY(0.0F);
         jButton17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton17.setDisabledIcon(null);
-        jButton17.setDisabledSelectedIcon(null);
         jButton17.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton17.setVerifyInputWhenFocusTarget(false);
 
-        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_up.png"))); // NOI18N
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_up.png"))); // NOI18N
         jButton18.setAlignmentY(0.0F);
         jButton18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton18.setDisabledIcon(null);
-        jButton18.setDisabledSelectedIcon(null);
         jButton18.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton18.setVerifyInputWhenFocusTarget(false);
 
-        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_zero.png"))); // NOI18N
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_mid_zero.png"))); // NOI18N
         jButton19.setAlignmentY(0.0F);
         jButton19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton19.setDisabledIcon(null);
-        jButton19.setDisabledSelectedIcon(null);
         jButton19.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_big_down.png"))); // NOI18N
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_down.png"))); // NOI18N
         jButton20.setAlignmentY(0.0F);
         jButton20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton20.setDisabledIcon(null);
-        jButton20.setDisabledSelectedIcon(null);
         jButton20.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton20.setVerifyInputWhenFocusTarget(false);
 
-        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_button_big_up.png"))); // NOI18N
+        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_up.png"))); // NOI18N
         jButton21.setAlignmentY(0.0F);
         jButton21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton21.setDisabledIcon(null);
-        jButton21.setDisabledSelectedIcon(null);
         jButton21.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton21.setVerifyInputWhenFocusTarget(false);
         jButton21.addActionListener(new java.awt.event.ActionListener() {
@@ -634,31 +614,31 @@ public class Interface extends javax.swing.JFrame {
         jTextArea2.setText("-3 V");
         jScrollPane4.setViewportView(jTextArea2);
 
-        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_down.png"))); // NOI18N
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_down.png"))); // NOI18N
         jButton22.setAlignmentY(0.0F);
         jButton22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton22.setIconTextGap(0);
         jButton22.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_up.png"))); // NOI18N
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_up.png"))); // NOI18N
         jButton23.setAlignmentY(0.0F);
         jButton23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton23.setIconTextGap(0);
         jButton23.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_zero.png"))); // NOI18N
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_mid_zero.png"))); // NOI18N
         jButton24.setAlignmentY(0.0F);
         jButton24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton24.setIconTextGap(0);
         jButton24.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_big_down.png"))); // NOI18N
+        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_down.png"))); // NOI18N
         jButton25.setAlignmentY(0.0F);
         jButton25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton25.setIconTextGap(0);
         jButton25.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_button_big_up.png"))); // NOI18N
+        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_up.png"))); // NOI18N
         jButton26.setAlignmentY(0.0F);
         jButton26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton26.setIconTextGap(0);
@@ -684,19 +664,19 @@ public class Interface extends javax.swing.JFrame {
         jTextArea3.setText("3 V");
         jScrollPane5.setViewportView(jTextArea3);
 
-        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_down.png"))); // NOI18N
+        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_down.png"))); // NOI18N
         jButton27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_up.png"))); // NOI18N
+        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_up.png"))); // NOI18N
         jButton28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_zero.png"))); // NOI18N
+        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_mid_zero.png"))); // NOI18N
         jButton29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_big_down.png"))); // NOI18N
+        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_down.png"))); // NOI18N
         jButton30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_button_big_up.png"))); // NOI18N
+        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_up.png"))); // NOI18N
         jButton31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -722,19 +702,39 @@ public class Interface extends javax.swing.JFrame {
         jTextArea4.setMinimumSize(new java.awt.Dimension(100, 17));
         jScrollPane6.setViewportView(jTextArea4);
 
-        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_down.png"))); // NOI18N
+        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_down.png"))); // NOI18N
         jButton32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_zero.png"))); // NOI18N
+        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_mid_zero.png"))); // NOI18N
         jButton33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton33.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jButton33FocusGained(evt);
+            }
+        });
+        jButton33.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton33MouseClicked(evt);
+            }
+        });
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
+        jButton33.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton33KeyPressed(evt);
+            }
+        });
 
-        jButton34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_up.png"))); // NOI18N
+        jButton34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_up.png"))); // NOI18N
         jButton34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_big_down.png"))); // NOI18N
+        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_down.png"))); // NOI18N
         jButton35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_button_big_up.png"))); // NOI18N
+        jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_up.png"))); // NOI18N
         jButton36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -815,6 +815,24 @@ public class Interface extends javax.swing.JFrame {
         jToggleButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton18ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton19.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/ch1_off.png"))); // NOI18N
+        jToggleButton19.setBorder(null);
+        jToggleButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton19ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton20.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/ch2_off.png"))); // NOI18N
+        jToggleButton20.setBorder(null);
+        jToggleButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton20ActionPerformed(evt);
             }
         });
 
@@ -908,19 +926,19 @@ public class Interface extends javax.swing.JFrame {
                         .addComponent(jLabel4)
                         .addGap(49, 49, 49))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jToggleButton2)
+                        .addComponent(jToggleButton19)
+                        .addGap(4, 4, 4)
+                        .addComponent(jToggleButton20)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0)
+                .addGap(4, 4, 4)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jToggleButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -999,7 +1017,7 @@ public class Interface extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(254, 254, 254)
                         .addComponent(jLabel4)))
-                .addGap(0, 35, Short.MAX_VALUE))
+                .addGap(0, 33, Short.MAX_VALUE))
         );
 
         jPanel5.setBackground(new java.awt.Color(111, 111, 111));
@@ -1115,11 +1133,11 @@ public class Interface extends javax.swing.JFrame {
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel7.setPreferredSize(new java.awt.Dimension(200, 650));
 
-        jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_zero.png"))); // NOI18N
+        jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_mid_d.png"))); // NOI18N
         jButton39.setAlignmentY(0.0F);
         jButton39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_button_big_up.png"))); // NOI18N
+        jButton46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_right.png"))); // NOI18N
         jButton46.setAlignmentY(0.0F);
         jButton46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton46.addActionListener(new java.awt.event.ActionListener() {
@@ -1128,35 +1146,15 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_zero.png"))); // NOI18N
+        jButton49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_mid_d.png"))); // NOI18N
         jButton49.setAlignmentY(0.0F);
         jButton49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jToggleButton13.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_channel_one.png"))); // NOI18N
-        jToggleButton13.setSelected(true);
-        jToggleButton13.setMaximumSize(new java.awt.Dimension(16, 16));
-        jToggleButton13.setMinimumSize(new java.awt.Dimension(16, 16));
-        jToggleButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton13ActionPerformed(evt);
-            }
-        });
-
-        jToggleButton14.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_channel_two.png"))); // NOI18N
-        jToggleButton14.setSelected(true);
-        jToggleButton14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton14ActionPerformed(evt);
-            }
-        });
-
-        jButton45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_big_down.png"))); // NOI18N
+        jButton45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_left.png"))); // NOI18N
         jButton45.setAlignmentY(0.0F);
         jButton45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_big_down.png"))); // NOI18N
+        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_left.png"))); // NOI18N
         jButton40.setAlignmentY(0.0F);
         jButton40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -1187,7 +1185,7 @@ public class Interface extends javax.swing.JFrame {
         jTextArea7.setText("10 µs");
         jScrollPane10.setViewportView(jTextArea7);
 
-        jButton43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_up.png"))); // NOI18N
+        jButton43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_right.png"))); // NOI18N
         jButton43.setAlignmentY(0.0F);
         jButton43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -1204,18 +1202,18 @@ public class Interface extends javax.swing.JFrame {
         jTextArea6.setText("10 µs");
         jScrollPane9.setViewportView(jTextArea6);
 
-        jButton48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_up.png"))); // NOI18N
+        jButton48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_right.png"))); // NOI18N
         jButton48.setAlignmentY(0.0F);
         jButton48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel19.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel19.setText("Period");
 
-        jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_down.png"))); // NOI18N
+        jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_left.png"))); // NOI18N
         jButton37.setAlignmentY(0.0F);
         jButton37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_button_big_up.png"))); // NOI18N
+        jButton51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_right.png"))); // NOI18N
         jButton51.setAlignmentY(0.0F);
         jButton51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton51.addActionListener(new java.awt.event.ActionListener() {
@@ -1227,13 +1225,13 @@ public class Interface extends javax.swing.JFrame {
         jToggleButton10.setFont(new java.awt.Font("Tahoma", 1, 8)); // NOI18N
         jToggleButton10.setText("Phase");
 
-        jButton50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_big_down.png"))); // NOI18N
+        jButton50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_left.png"))); // NOI18N
         jButton50.setAlignmentY(0.0F);
         jButton50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_line.png"))); // NOI18N
 
-        jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_up.png"))); // NOI18N
+        jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_right.png"))); // NOI18N
         jButton38.setAlignmentY(0.0F);
         jButton38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -1256,11 +1254,11 @@ public class Interface extends javax.swing.JFrame {
         jTextArea5.setText("10 ns");
         jScrollPane8.setViewportView(jTextArea5);
 
-        jButton42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_down.png"))); // NOI18N
+        jButton42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_left.png"))); // NOI18N
         jButton42.setAlignmentY(0.0F);
         jButton42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_button_big_up.png"))); // NOI18N
+        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_right.png"))); // NOI18N
         jButton41.setAlignmentY(0.0F);
         jButton41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton41.addActionListener(new java.awt.event.ActionListener() {
@@ -1269,17 +1267,17 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jLabel20.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel20.setText("Period");
 
-        jLabel18.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel18.setText("Width");
 
-        jButton44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_zero.png"))); // NOI18N
+        jButton44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_mid_d.png"))); // NOI18N
         jButton44.setAlignmentY(0.0F);
         jButton44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_buttons_small_down.png"))); // NOI18N
+        jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_left.png"))); // NOI18N
         jButton47.setAlignmentY(0.0F);
         jButton47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -1288,6 +1286,24 @@ public class Interface extends javax.swing.JFrame {
         jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton6ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton21.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/ch1_off.png"))); // NOI18N
+        jToggleButton21.setBorder(null);
+        jToggleButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton21ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton22.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/ch2_off.png"))); // NOI18N
+        jToggleButton22.setBorder(null);
+        jToggleButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton22ActionPerformed(evt);
             }
         });
 
@@ -1362,15 +1378,12 @@ public class Interface extends javax.swing.JFrame {
                                         .addGap(0, 0, 0)
                                         .addComponent(jToggleButton6))
                                     .addGroup(jPanel7Layout.createSequentialGroup()
-                                        .addGap(2, 2, 2)
-                                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(jLabel22))
-                                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                                .addComponent(jToggleButton13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jToggleButton14)))))
+                                        .addGap(12, 12, 12)
+                                        .addComponent(jLabel22))
+                                    .addGroup(jPanel7Layout.createSequentialGroup()
+                                        .addComponent(jToggleButton21)
+                                        .addGap(4, 4, 4)
+                                        .addComponent(jToggleButton22)))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
@@ -1395,10 +1408,10 @@ public class Interface extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jToggleButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jToggleButton13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jToggleButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel22)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1710,14 +1723,6 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton51ActionPerformed
 
-    private void jToggleButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton14ActionPerformed
-
-    private void jToggleButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton13ActionPerformed
-
     private void jToggleButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton8ActionPerformed
@@ -1737,14 +1742,6 @@ public class Interface extends javax.swing.JFrame {
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton21ActionPerformed
-
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
-
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
         // TODO add your handling code here:
@@ -2193,7 +2190,6 @@ public class Interface extends javax.swing.JFrame {
 
     private void jToggleButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton18ActionPerformed
         // Меняем иконку
-        // Меняем иконку
         if( on_off_btn_ch1 == false )
         {
             on_off_btn_ch1 = true;
@@ -2219,6 +2215,78 @@ public class Interface extends javax.swing.JFrame {
             jToggleButton4.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\off_button.png"));
         }
     }//GEN-LAST:event_jToggleButton4ActionPerformed
+
+    private void jToggleButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton19ActionPerformed
+        // Меняем иконку
+        if( on_off_ch1 == false )
+        {
+            on_off_ch1 = true;
+            jToggleButton19.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_on.png"));
+        }
+        else if( on_off_ch1 == true )
+        {
+            on_off_ch1 = false;
+            jToggleButton19.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton19ActionPerformed
+
+    private void jToggleButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton20ActionPerformed
+        // Меняем иконку
+        if( on_off_ch2 == false )
+        {
+            on_off_ch2 = true;
+            jToggleButton20.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_on.png"));
+        }
+        else if( on_off_ch2 == true )
+        {
+            on_off_ch2 = false;
+            jToggleButton20.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton20ActionPerformed
+
+    private void jToggleButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton21ActionPerformed
+        // Меняем иконку
+        if( on_off_ch1_r == false )
+        {
+            on_off_ch1_r = true;
+            jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_on.png"));
+        }
+        else if( on_off_ch1_r == true )
+        {
+            on_off_ch1_r = false;
+            jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton21ActionPerformed
+
+    private void jToggleButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton22ActionPerformed
+        // Меняем иконку
+        if( on_off_ch2_r == false )
+        {
+            on_off_ch2_r = true;
+            jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_on.png"));
+        }
+        else if( on_off_ch2_r == true )
+        {
+            on_off_ch2_r = false;
+            jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton22ActionPerformed
+
+    private void jButton33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton33MouseClicked
+
+    }//GEN-LAST:event_jButton33MouseClicked
+
+    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+ 
+    }//GEN-LAST:event_jButton33ActionPerformed
+
+    private void jButton33KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton33KeyPressed
+        
+    }//GEN-LAST:event_jButton33KeyPressed
+
+    private void jButton33FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButton33FocusGained
+        
+    }//GEN-LAST:event_jButton33FocusGained
 
     /**
      * @param args the command line arguments
@@ -2366,14 +2434,14 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton10;
     private javax.swing.JToggleButton jToggleButton11;
     private javax.swing.JToggleButton jToggleButton12;
-    private javax.swing.JToggleButton jToggleButton13;
-    private javax.swing.JToggleButton jToggleButton14;
     private javax.swing.JToggleButton jToggleButton15;
     private javax.swing.JToggleButton jToggleButton16;
     private javax.swing.JToggleButton jToggleButton17;
     private javax.swing.JToggleButton jToggleButton18;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton19;
+    private javax.swing.JToggleButton jToggleButton20;
+    private javax.swing.JToggleButton jToggleButton21;
+    private javax.swing.JToggleButton jToggleButton22;
     private javax.swing.JToggleButton jToggleButton4;
     private javax.swing.JToggleButton jToggleButton6;
     private javax.swing.JToggleButton jToggleButton7;
