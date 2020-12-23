@@ -35,6 +35,8 @@ public class Interface extends javax.swing.JFrame {
     public static final Color BLUE_FOR_BUTTONS = new Color(100,158,242);
     public static final Color GRAY_FOR_BUTTONS = new Color(240,240,240);
     
+    // ЧЕКЕРЫ
+    
     // Чекеры для проверки статуса включения/выключения каналов (меню слева)
     boolean on_off_ch1 = false;
     boolean on_off_ch2 = false;
@@ -49,6 +51,23 @@ public class Interface extends javax.swing.JFrame {
     
     // Чекеры для проверки нажатия кнопок нижнего меню
     boolean ch1 = true, ch2 = true, ch3 = true, ch4 = true, ch5 = true, ch6 = true, ch7 = true, ch8 = true, ch9 = true, ch10 = true;
+    
+    // Чекеры для проверки включения частоты и периода
+    boolean peri_ch = true;
+    boolean freq_ch = false;
+    
+    // Чекеры для проверки включения частоты и периода
+    boolean nrml_ch = true;
+    boolean comp_ch = false;
+    
+    // Чекеры для проверки включения high-low, offset и standard
+    boolean hilo_ch = true;
+    boolean ofst_ch = false;
+    boolean stnd_ch = false;
+    
+    // Чекеры для проверки задержки и фазы
+    boolean delay_ch = true;
+    boolean phase_ch = false;
 
     /**
      * Creates new form Interface
@@ -73,38 +92,67 @@ public class Interface extends javax.swing.JFrame {
         
         //  КНОПКИ ВЫБОРА
         
-        JToggleButton jtb1 = jToggleButton1;
-        JToggleButton jtb12 = jToggleButton12;
-        JToggleButton jtb15 = jToggleButton15;
-        JToggleButton jtb16 = jToggleButton16;
-        JToggleButton jtb17 = jToggleButton17;
+        
+        JToggleButton jtb5 = jToggleButton5;
+        JToggleButton jtb6 = jToggleButton6;
+        JToggleButton jtb9 = jToggleButton9;
+        JToggleButton jtb11 = jToggleButton11;
+        JToggleButton jtb23 = jToggleButton23;
+        JToggleButton jtb24 = jToggleButton24;
+        JToggleButton jtb25 = jToggleButton25;
+        JToggleButton jtb26 = jToggleButton26;
+        JToggleButton jtb27 = jToggleButton27;
         
         // Прокрикиваем кнопки выбора
-        jtb17.doClick();
-        jtb16.doClick();
-        jtb12.doClick();
-        jtb15.doClick();
-        jtb1.doClick();
+        //jtb17.doClick();
+        //jtb16.doClick();
+        //jtb12.doClick();
+        //jtb15.doClick();
+        //jtb1.doClick();
          
         //jtb1.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        jtb1.setOpaque(true);                           // Делает кнопку непрозрачной
-        jtb1.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
+        jtb11.setOpaque(true);                           // Делает кнопку непрозрачной
+        jtb11.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
         
-        //jtb12.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        jtb12.setOpaque(true);                           // Делает кнопку непрозрачной
-        jtb12.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jtb15.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        jtb15.setOpaque(true);                           // Делает кнопку непрозрачной
-        jtb15.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
+        //jtb5.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
+        jtb5.setOpaque(true);                           // Делает кнопку непрозрачной
+        jtb5.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
         
         //jtb16.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        jtb16.setOpaque(true);                           // Делает кнопку непрозрачной
-        jtb16.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
+        jtb6.setOpaque(true);                           // Делает кнопку непрозрачной
+        jtb6.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
         
-        //jtb17.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        jtb17.setOpaque(true);                           // Делает кнопку непрозрачной
-        jtb17.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
+        //jtb19.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
+        jtb9.setOpaque(true);                           // Делает кнопку непрозрачной
+        jtb9.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
+        
+        //jtb23.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
+        jtb23.setOpaque(true);                           // Делает кнопку непрозрачной
+        jtb23.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
+        
+        //jtb24.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
+        jtb24.setOpaque(true);                           // Делает кнопку непрозрачной
+        jtb24.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
+        
+        //jtb25.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
+        jtb25.setOpaque(true);                           // Делает кнопку непрозрачной
+        jtb25.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
+        
+        //jtb26.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
+        jtb26.setOpaque(true);                           // Делает кнопку непрозрачной
+        jtb26.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
+        
+        //jtb27.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
+        jtb27.setOpaque(true);                           // Делает кнопку непрозрачной
+        jtb27.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
+        
+        // Кнопки верхнего меню
+        
+        JButton jb7 = jButton7;
+        
+        //jb7.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
+        jb7.setOpaque(true);                           // Делает кнопку непрозрачной
+        //jb7.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
         
         JButton jb17 = jButton17;
         JButton jb18 = jButton18;
@@ -396,14 +444,14 @@ public class Interface extends javax.swing.JFrame {
         jButton34 = new javax.swing.JButton();
         jButton35 = new javax.swing.JButton();
         jButton36 = new javax.swing.JButton();
-        jToggleButton12 = new javax.swing.JToggleButton();
-        jToggleButton15 = new javax.swing.JToggleButton();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton16 = new javax.swing.JToggleButton();
-        jToggleButton17 = new javax.swing.JToggleButton();
         jToggleButton18 = new javax.swing.JToggleButton();
         jToggleButton19 = new javax.swing.JToggleButton();
         jToggleButton20 = new javax.swing.JToggleButton();
+        jToggleButton24 = new javax.swing.JToggleButton();
+        jToggleButton6 = new javax.swing.JToggleButton();
+        jToggleButton25 = new javax.swing.JToggleButton();
+        jToggleButton11 = new javax.swing.JToggleButton();
+        jToggleButton26 = new javax.swing.JToggleButton();
         jPanel5 = new javax.swing.JPanel();
         jButton7 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -422,7 +470,6 @@ public class Interface extends javax.swing.JFrame {
         jButton49 = new javax.swing.JButton();
         jButton45 = new javax.swing.JButton();
         jButton40 = new javax.swing.JButton();
-        jToggleButton9 = new javax.swing.JToggleButton();
         jToggleButton8 = new javax.swing.JToggleButton();
         jToggleButton7 = new javax.swing.JToggleButton();
         jScrollPane10 = new javax.swing.JScrollPane();
@@ -435,11 +482,9 @@ public class Interface extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jButton37 = new javax.swing.JButton();
         jButton51 = new javax.swing.JButton();
-        jToggleButton10 = new javax.swing.JToggleButton();
         jButton50 = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         jButton38 = new javax.swing.JButton();
-        jToggleButton11 = new javax.swing.JToggleButton();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTextArea5 = new javax.swing.JTextArea();
         jButton42 = new javax.swing.JButton();
@@ -448,9 +493,12 @@ public class Interface extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jButton44 = new javax.swing.JButton();
         jButton47 = new javax.swing.JButton();
-        jToggleButton6 = new javax.swing.JToggleButton();
         jToggleButton21 = new javax.swing.JToggleButton();
         jToggleButton22 = new javax.swing.JToggleButton();
+        jToggleButton5 = new javax.swing.JToggleButton();
+        jToggleButton23 = new javax.swing.JToggleButton();
+        jToggleButton9 = new javax.swing.JToggleButton();
+        jToggleButton27 = new javax.swing.JToggleButton();
         jPanel8 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jButton14 = new javax.swing.JButton();
@@ -487,9 +535,13 @@ public class Interface extends javax.swing.JFrame {
 
         jButton60.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
         jButton60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_cancel.png"))); // NOI18N
+        jButton60.setAlignmentY(0.0F);
+        jButton60.setIconTextGap(0);
 
         jButton11.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_help.png"))); // NOI18N
+        jButton11.setAlignmentY(0.0F);
+        jButton11.setIconTextGap(0);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -514,7 +566,7 @@ public class Interface extends javax.swing.JFrame {
                     .addGap(6, 6, 6)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, Short.MAX_VALUE)
                             .addComponent(jButton60, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -742,73 +794,6 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton12.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
-        jToggleButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_std_log2.png"))); // NOI18N
-        jToggleButton12.setText("Standard Log");
-        jToggleButton12.setAlignmentY(0.0F);
-        jToggleButton12.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jToggleButton12.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jToggleButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton12ActionPerformed(evt);
-            }
-        });
-
-        jToggleButton15.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
-        jToggleButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_high_low.png"))); // NOI18N
-        jToggleButton15.setText("Offset");
-        jToggleButton15.setAlignmentY(0.0F);
-        jToggleButton15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton15.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jToggleButton15.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jToggleButton15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton15ActionPerformed(evt);
-            }
-        });
-
-        jToggleButton1.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
-        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_high_low.png"))); // NOI18N
-        jToggleButton1.setSelected(true);
-        jToggleButton1.setText("High-Low");
-        jToggleButton1.setAlignmentY(0.0F);
-        jToggleButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jToggleButton1.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-
-        jToggleButton16.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
-        jToggleButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_positive.png"))); // NOI18N
-        jToggleButton16.setSelected(true);
-        jToggleButton16.setText("Normal");
-        jToggleButton16.setAlignmentY(0.0F);
-        jToggleButton16.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton16.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jToggleButton16.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jToggleButton16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton16ActionPerformed(evt);
-            }
-        });
-
-        jToggleButton17.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
-        jToggleButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buttons/icon_negative.png"))); // NOI18N
-        jToggleButton17.setText("Complement");
-        jToggleButton17.setAlignmentY(0.0F);
-        jToggleButton17.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton17.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jToggleButton17.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jToggleButton17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton17ActionPerformed(evt);
-            }
-        });
-
         jToggleButton18.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
         jToggleButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/off_button.png"))); // NOI18N
         jToggleButton18.setBorder(null);
@@ -833,6 +818,64 @@ public class Interface extends javax.swing.JFrame {
         jToggleButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton20ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton24.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/complement_off.png"))); // NOI18N
+        jToggleButton24.setAlignmentY(0.0F);
+        jToggleButton24.setBorder(null);
+        jToggleButton24.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jToggleButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton24ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton6.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/normal_on.png"))); // NOI18N
+        jToggleButton6.setAlignmentY(0.0F);
+        jToggleButton6.setBorder(null);
+        jToggleButton6.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton6ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton25.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/offset_off.png"))); // NOI18N
+        jToggleButton25.setAlignmentY(0.0F);
+        jToggleButton25.setBorder(null);
+        jToggleButton25.setIconTextGap(0);
+        jToggleButton25.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jToggleButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton25ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton11.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/high-low_on.png"))); // NOI18N
+        jToggleButton11.setAlignmentY(0.0F);
+        jToggleButton11.setBorder(null);
+        jToggleButton11.setIconTextGap(0);
+        jToggleButton11.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jToggleButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton11ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton26.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/std_off.png"))); // NOI18N
+        jToggleButton26.setAlignmentY(0.0F);
+        jToggleButton26.setBorder(null);
+        jToggleButton26.setIconTextGap(0);
+        jToggleButton26.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jToggleButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton26ActionPerformed(evt);
             }
         });
 
@@ -905,12 +948,6 @@ public class Interface extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(10, 10, 10)
                                         .addComponent(jLabel12))
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jToggleButton17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jToggleButton16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jToggleButton15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jToggleButton12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jToggleButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addComponent(jLabel3)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -929,7 +966,15 @@ public class Interface extends javax.swing.JFrame {
                         .addComponent(jToggleButton19)
                         .addGap(4, 4, 4)
                         .addComponent(jToggleButton20)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jToggleButton6)
+                            .addComponent(jToggleButton24)
+                            .addComponent(jToggleButton11)
+                            .addComponent(jToggleButton25)
+                            .addComponent(jToggleButton26))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -944,25 +989,25 @@ public class Interface extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(3, 3, 3)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(3, 3, 3)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton16)
+                .addGap(3, 3, 3)
+                .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jToggleButton17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToggleButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
                 .addComponent(jLabel7)
+                .addGap(0, 0, 0)
+                .addComponent(jToggleButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jToggleButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jToggleButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton1)
-                .addGap(0, 0, 0)
-                .addComponent(jToggleButton15)
-                .addGap(0, 0, 0)
-                .addComponent(jToggleButton12)
-                .addGap(5, 5, 5)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1017,27 +1062,45 @@ public class Interface extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(254, 254, 254)
                         .addComponent(jLabel4)))
-                .addGap(0, 33, Short.MAX_VALUE))
+                .addGap(0, 55, Short.MAX_VALUE))
         );
 
         jPanel5.setBackground(new java.awt.Color(111, 111, 111));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jButton7.setBackground(new java.awt.Color(111, 111, 111));
         jButton7.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton7.setText("Mannual Trig/Gate");
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/ManualTrigGate.png"))); // NOI18N
+        jButton7.setAlignmentY(0.0F);
+        jButton7.setBorder(null);
+        jButton7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton7.setIconTextGap(0);
+        jButton7.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
         jButton6.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_next.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/left.png"))); // NOI18N
         jButton6.setToolTipText("");
-        jButton6.setEnabled(false);
+        jButton6.setAlignmentY(0.0F);
+        jButton6.setBorder(null);
+        jButton6.setIconTextGap(0);
+        jButton6.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
         jButton8.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_back.png"))); // NOI18N
-        jButton8.setEnabled(false);
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/right.png"))); // NOI18N
+        jButton8.setAlignmentY(0.0F);
+        jButton8.setBorder(null);
+        jButton8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton8.setIconTextGap(0);
+        jButton8.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
         jButton57.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_help.png"))); // NOI18N
-        jButton57.setText("Help");
+        jButton57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/help.png"))); // NOI18N
+        jButton57.setAlignmentY(0.0F);
+        jButton57.setBorder(null);
+        jButton57.setIconTextGap(0);
+        jButton57.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton57.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton57ActionPerformed(evt);
@@ -1049,15 +1112,15 @@ public class Interface extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton57)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(65, 65, 65))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1065,9 +1128,9 @@ public class Interface extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton57, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jButton57, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1101,9 +1164,14 @@ public class Interface extends javax.swing.JFrame {
 
         jButton61.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
         jButton61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_help.png"))); // NOI18N
+        jButton61.setAlignmentY(0.0F);
+        jButton61.setIconTextGap(0);
 
         jButton12.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
         jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_cancel.png"))); // NOI18N
+        jButton12.setAlignmentY(0.0F);
+        jButton12.setIconTextGap(0);
+        jButton12.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -1124,7 +1192,7 @@ public class Interface extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 22, Short.MAX_VALUE)
+                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
                     .addComponent(jButton61, javax.swing.GroupLayout.PREFERRED_SIZE, 22, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1158,12 +1226,10 @@ public class Interface extends javax.swing.JFrame {
         jButton40.setAlignmentY(0.0F);
         jButton40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jToggleButton9.setFont(new java.awt.Font("Tahoma", 1, 8)); // NOI18N
-        jToggleButton9.setText("Delay");
-        jToggleButton9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-
         jToggleButton8.setFont(new java.awt.Font("Tahoma", 1, 8)); // NOI18N
         jToggleButton8.setText("DCycle");
+        jToggleButton8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jToggleButton8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jToggleButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton8ActionPerformed(evt);
@@ -1222,9 +1288,6 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton10.setFont(new java.awt.Font("Tahoma", 1, 8)); // NOI18N
-        jToggleButton10.setText("Phase");
-
         jButton50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_big_left.png"))); // NOI18N
         jButton50.setAlignmentY(0.0F);
         jButton50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1234,14 +1297,6 @@ public class Interface extends javax.swing.JFrame {
         jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silver/silver_icon_button_small_right.png"))); // NOI18N
         jButton38.setAlignmentY(0.0F);
         jButton38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jToggleButton11.setFont(new java.awt.Font("Tahoma", 1, 8)); // NOI18N
-        jToggleButton11.setText("Freq");
-        jToggleButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton11ActionPerformed(evt);
-            }
-        });
 
         jScrollPane8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -1281,14 +1336,6 @@ public class Interface extends javax.swing.JFrame {
         jButton47.setAlignmentY(0.0F);
         jButton47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jToggleButton6.setFont(new java.awt.Font("Tahoma", 1, 8)); // NOI18N
-        jToggleButton6.setText("Period");
-        jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton6ActionPerformed(evt);
-            }
-        });
-
         jToggleButton21.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
         jToggleButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/ch1_off.png"))); // NOI18N
         jToggleButton21.setBorder(null);
@@ -1307,6 +1354,50 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
+        jToggleButton5.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/period_on.png"))); // NOI18N
+        jToggleButton5.setAlignmentY(0.0F);
+        jToggleButton5.setBorder(null);
+        jToggleButton5.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton5ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton23.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/frequency_off.png"))); // NOI18N
+        jToggleButton23.setAlignmentY(0.0F);
+        jToggleButton23.setBorder(null);
+        jToggleButton23.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jToggleButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton23ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton9.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/delay_on.png"))); // NOI18N
+        jToggleButton9.setAlignmentY(0.0F);
+        jToggleButton9.setBorder(null);
+        jToggleButton9.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jToggleButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton9ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton27.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        jToggleButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/phase_off.png"))); // NOI18N
+        jToggleButton27.setAlignmentY(0.0F);
+        jToggleButton27.setBorder(null);
+        jToggleButton27.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jToggleButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton27ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -1320,81 +1411,70 @@ public class Interface extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel21)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel21))
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton39, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton41, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
+                            .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton43, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton46, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
+                            .addComponent(jButton47, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton48, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton49, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton50, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jToggleButton7)
-                                .addGap(0, 0, 0)
-                                .addComponent(jToggleButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                        .addGroup(jPanel7Layout.createSequentialGroup()
-                                            .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton39, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton41, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel7Layout.createSequentialGroup()
-                                        .addComponent(jToggleButton9)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(jToggleButton10))
-                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                                            .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton43, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton46, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jScrollPane10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                                            .addComponent(jButton47, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton48, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton49, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton50, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(0, 0, 0)
-                                            .addComponent(jButton51, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel7Layout.createSequentialGroup()
-                                        .addComponent(jToggleButton11)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(jToggleButton6))
-                                    .addGroup(jPanel7Layout.createSequentialGroup()
-                                        .addGap(12, 12, 12)
-                                        .addComponent(jLabel22))
-                                    .addGroup(jPanel7Layout.createSequentialGroup()
-                                        .addComponent(jToggleButton21)
-                                        .addGap(4, 4, 4)
-                                        .addComponent(jToggleButton22)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())))
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel22))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jToggleButton21)
+                        .addGap(4, 4, 4)
+                        .addComponent(jToggleButton22))
+                    .addComponent(jToggleButton5)
+                    .addComponent(jToggleButton23)
+                    .addComponent(jToggleButton9)
+                    .addComponent(jToggleButton27)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jToggleButton7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jToggleButton8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jToggleButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel20)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1414,10 +1494,10 @@ public class Interface extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel22)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToggleButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jToggleButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel19)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1428,11 +1508,11 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton46, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jToggleButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(jToggleButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel18)
                 .addGap(0, 0, 0)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1527,7 +1607,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton54.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/down/icon_down_timing.png"))); // NOI18N
+        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/down/icon_high_low.png"))); // NOI18N
         jButton54.setText("Timing");
         jButton54.setBorder(null);
         jButton54.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1711,14 +1791,6 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton46ActionPerformed
 
-    private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton6ActionPerformed
-
-    private void jToggleButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton11ActionPerformed
-
     private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton51ActionPerformed
@@ -1747,171 +1819,20 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton57ActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // Делает кнопку синей при нажатии
-        jToggleButton1.setUI(new MetalToggleButtonUI()
-        {
-            @Override
-            protected Color getSelectColor()
-            {
-                return BLUE_FOR_BUTTONS;
-            }
-            
-        });
-        
-        // Если выбрана эта кнопка другие не могуть быть выбраны
-        if( jToggleButton1.isSelected() == true )
-        {
-            jToggleButton12.setSelected(false);
-            jToggleButton15.setSelected(false);
-            //  Возвращаем черный цвет тексту кнопок
-            jToggleButton12.setForeground(Color.BLACK);
-            jToggleButton15.setForeground(Color.BLACK);
-        }
-        // Если пользователь нажал эту же кнопку повторно
-        if( jToggleButton1.isSelected() == false )
-        {
-            jToggleButton1.doClick();
-        }
-        
-        // Также в случае выбора добавляет белый цвет тексту
-        if( jToggleButton1.isSelected() == true )
-        {
-            jToggleButton1.setForeground(Color.WHITE);
-        }
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
-
-    private void jToggleButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton15ActionPerformed
-        // Делает кнопку синей при нажатии
-        jToggleButton15.setUI(new MetalToggleButtonUI()
-        {
-            @Override
-            protected Color getSelectColor()
-            {
-                return BLUE_FOR_BUTTONS;
-            }
-        });
-        
-        // Если выбрана эта кнопка другие не могуть быть выбраны
-        if( jToggleButton15.isSelected() == true )
-        {
-            jToggleButton1.setSelected(false);
-            jToggleButton12.setSelected(false);
-            //  Возвращаем черный цвет тексту кнопок
-            jToggleButton1.setForeground(Color.BLACK);
-            jToggleButton12.setForeground(Color.BLACK);
-        }
-        // Если пользователь нажал эту же кнопку повторно
-        if( jToggleButton15.isSelected() == false )
-        {
-            jToggleButton15.doClick();
-        }
-        
-        // Также в случае выбора добавляет белый цвет тексту
-        if( jToggleButton15.isSelected() == true )
-        {
-            jToggleButton15.setForeground(Color.WHITE);
-        }
-    }//GEN-LAST:event_jToggleButton15ActionPerformed
-
-    private void jToggleButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton12ActionPerformed
-        // Делает кнопку синей при нажатии
-        jToggleButton12.setUI(new MetalToggleButtonUI()
-        {
-            @Override
-            protected Color getSelectColor()
-            {
-                return BLUE_FOR_BUTTONS;
-            }
-        });
-        
-        // Если выбрана эта кнопка другие не могуть быть выбраны
-        if( jToggleButton12.isSelected() == true )
-        {
-            jToggleButton1.setSelected(false);
-            jToggleButton15.setSelected(false);
-            //  Возвращаем черный цвет тексту кнопок
-            jToggleButton1.setForeground(Color.BLACK);
-            jToggleButton15.setForeground(Color.BLACK);
-        }
-        // Если пользователь нажал эту же кнопку повторно
-        if( jToggleButton12.isSelected() == false )
-        {
-            jToggleButton12.doClick();
-        }
-        
-        // Также в случае выбора добавляет белый цвет тексту
-        if( jToggleButton12.isSelected() == true )
-        {
-            jToggleButton12.setForeground(Color.WHITE);
-        }
-    }//GEN-LAST:event_jToggleButton12ActionPerformed
-
-    private void jToggleButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton16ActionPerformed
-        // Делает кнопку синей при нажатии
-        jToggleButton16.setUI(new MetalToggleButtonUI()
-        {
-            @Override
-            protected Color getSelectColor()
-            {
-                return BLUE_FOR_BUTTONS;
-            }
-        });
-        
-        // Если выбрана эта кнопка другие не могуть быть выбраны
-        if( jToggleButton16.isSelected() == true )
-        {
-            jToggleButton17.setSelected(false);
-            //  Возвращаем черный цвет тексту кнопок
-            jToggleButton17.setForeground(Color.BLACK);
-        }
-        // Если пользователь нажал эту же кнопку повторно
-        if( jToggleButton16.isSelected() == false )
-        {
-            jToggleButton16.doClick();
-        }
-        // Также в случае выбора добавляет белый цвет тексту
-        if( jToggleButton16.isSelected() == true )
-        {
-            jToggleButton16.setForeground(Color.WHITE);
-        }
-    }//GEN-LAST:event_jToggleButton16ActionPerformed
-
-    private void jToggleButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton17ActionPerformed
-        // Делает кнопку синей при нажатии
-        jToggleButton17.setUI(new MetalToggleButtonUI()
-        {
-            @Override
-            protected Color getSelectColor()
-            {
-                return BLUE_FOR_BUTTONS;
-            }
-        });
-        
-        // Если выбрана эта кнопка другие не могуть быть выбраны
-        if( jToggleButton17.isSelected() == true )
-        {
-            jToggleButton16.setSelected(false);
-            //  Возвращаем черный цвет тексту кнопок
-            jToggleButton16.setForeground(Color.BLACK);
-        }
-        // Если пользователь нажал эту же кнопку повторно
-        if( jToggleButton17.isSelected() == false )
-        {
-            jToggleButton17.doClick();
-        }
-        
-        // Также в случае выбора добавляет белый цвет тексту
-        if( jToggleButton17.isSelected() == true )
-        {
-            jToggleButton17.setForeground(Color.WHITE);
-        }
-    }//GEN-LAST:event_jToggleButton17ActionPerformed
-
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch8 == false ){ch8 = true; jButton14.setBackground(GRAY_FOR_BUTTONS);}
-        else if( ch8 == true ){ ch8 = false; jButton14.setBackground(BLUE_FOR_BUTTONS);}
+        if( ch8 == false )
+        {
+            ch8 = true;
+            jButton14.setBackground(GRAY_FOR_BUTTONS);
+            jButton14.setForeground(Color.BLACK);
+        }
+        else if( ch8 == true )
+        {
+            ch8 = false;
+            jButton14.setBackground(BLUE_FOR_BUTTONS);
+            jButton14.setForeground(Color.WHITE);
+        }
 
         // Остальные кнопки сделать серыми
         jButton13.setBackground(GRAY_FOR_BUTTONS);
@@ -1923,6 +1844,17 @@ public class Interface extends javax.swing.JFrame {
         jButton58.setBackground(GRAY_FOR_BUTTONS);
         jButton59.setBackground(GRAY_FOR_BUTTONS);
         jButton62.setBackground(GRAY_FOR_BUTTONS);
+        
+        // Текст остальных кнопок сделать черным
+        jButton13.setForeground(Color.BLACK);
+        jButton16.setForeground(Color.BLACK);
+        jButton52.setForeground(Color.BLACK);
+        jButton53.setForeground(Color.BLACK);
+        jButton54.setForeground(Color.BLACK);
+        jButton55.setForeground(Color.BLACK);
+        jButton58.setForeground(Color.BLACK);
+        jButton59.setForeground(Color.BLACK);
+        jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -1938,8 +1870,18 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch4 == false ){ch4 = true; jButton58.setBackground(GRAY_FOR_BUTTONS);}
-        else if( ch4 == true ){ ch4 = false; jButton58.setBackground(BLUE_FOR_BUTTONS);}
+        if( ch4 == false )
+        {
+            ch4 = true;
+            jButton58.setBackground(GRAY_FOR_BUTTONS);
+            jButton58.setForeground(Color.BLACK);
+        }
+        else if( ch4 == true )
+        {
+            ch4 = false;
+            jButton58.setBackground(BLUE_FOR_BUTTONS);
+            jButton58.setForeground(Color.WHITE);
+        }
 
         // Остальные кнопки сделать серыми
         jButton13.setBackground(GRAY_FOR_BUTTONS);
@@ -1951,6 +1893,17 @@ public class Interface extends javax.swing.JFrame {
         jButton55.setBackground(GRAY_FOR_BUTTONS);
         jButton59.setBackground(GRAY_FOR_BUTTONS);
         jButton62.setBackground(GRAY_FOR_BUTTONS);
+        
+        // Текст остальных кнопок сделать черным
+        jButton13.setForeground(Color.BLACK);
+        jButton14.setForeground(Color.BLACK);
+        jButton16.setForeground(Color.BLACK);
+        jButton52.setForeground(Color.BLACK);
+        jButton53.setForeground(Color.BLACK);
+        jButton54.setForeground(Color.BLACK);
+        jButton55.setForeground(Color.BLACK);
+        jButton59.setForeground(Color.BLACK);
+        jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -1966,8 +1919,18 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch1 == false ){ch1 = true; jButton13.setBackground(GRAY_FOR_BUTTONS);}
-        else if( ch1 == true ){ ch1 = false; jButton13.setBackground(BLUE_FOR_BUTTONS);}
+        if( ch1 == false )
+        {
+            ch1 = true;
+            jButton13.setBackground(GRAY_FOR_BUTTONS);
+            jButton13.setForeground(Color.BLACK);
+        }
+        else if( ch1 == true )
+        {
+            ch1 = false;
+            jButton13.setBackground(BLUE_FOR_BUTTONS);
+            jButton13.setForeground(Color.WHITE);
+        }
 
         // Остальные кнопки сделать серыми
         jButton14.setBackground(GRAY_FOR_BUTTONS);
@@ -1979,6 +1942,17 @@ public class Interface extends javax.swing.JFrame {
         jButton58.setBackground(GRAY_FOR_BUTTONS);
         jButton59.setBackground(GRAY_FOR_BUTTONS);
         jButton62.setBackground(GRAY_FOR_BUTTONS);
+        
+        // Текст остальных кнопок сделать черным
+        jButton14.setForeground(Color.BLACK);
+        jButton16.setForeground(Color.BLACK);
+        jButton52.setForeground(Color.BLACK);
+        jButton53.setForeground(Color.BLACK);
+        jButton54.setForeground(Color.BLACK);
+        jButton55.setForeground(Color.BLACK);
+        jButton58.setForeground(Color.BLACK);
+        jButton59.setForeground(Color.BLACK);
+        jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch2 = true;
@@ -1994,8 +1968,18 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch3 == false ){ch3 = true; jButton52.setBackground(GRAY_FOR_BUTTONS);}
-        else if( ch3 == true ){ ch3 = false; jButton52.setBackground(BLUE_FOR_BUTTONS);}
+        if( ch3 == false )
+        {
+            ch3 = true;
+            jButton52.setBackground(GRAY_FOR_BUTTONS);
+            jButton52.setForeground(Color.BLACK);
+        }
+        else if( ch3 == true )
+        {
+            ch3 = false;
+            jButton52.setBackground(BLUE_FOR_BUTTONS);
+            jButton52.setForeground(Color.WHITE);
+        }
 
         // Остальные кнопки сделать серыми
         jButton13.setBackground(GRAY_FOR_BUTTONS);
@@ -2007,6 +1991,17 @@ public class Interface extends javax.swing.JFrame {
         jButton58.setBackground(GRAY_FOR_BUTTONS);
         jButton59.setBackground(GRAY_FOR_BUTTONS);
         jButton62.setBackground(GRAY_FOR_BUTTONS);
+        
+        // Текст остальных кнопок сделать черным
+        jButton13.setForeground(Color.BLACK);
+        jButton14.setForeground(Color.BLACK);
+        jButton16.setForeground(Color.BLACK);
+        jButton53.setForeground(Color.BLACK);
+        jButton54.setForeground(Color.BLACK);
+        jButton55.setForeground(Color.BLACK);
+        jButton58.setForeground(Color.BLACK);
+        jButton59.setForeground(Color.BLACK);
+        jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2022,8 +2017,18 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton59ActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch5 == false ){ch5 = true; jButton59.setBackground(GRAY_FOR_BUTTONS);}
-        else if( ch5 == true ){ ch5 = false; jButton59.setBackground(BLUE_FOR_BUTTONS);}
+        if( ch5 == false )
+        {
+            ch5 = true;
+            jButton59.setBackground(GRAY_FOR_BUTTONS);
+            jButton59.setForeground(Color.BLACK);
+        }
+        else if( ch5 == true )
+        {
+            ch5 = false;
+            jButton59.setBackground(BLUE_FOR_BUTTONS);
+            jButton59.setForeground(Color.WHITE);
+        }
 
         // Остальные кнопки сделать серыми
         jButton13.setBackground(GRAY_FOR_BUTTONS);
@@ -2035,6 +2040,17 @@ public class Interface extends javax.swing.JFrame {
         jButton55.setBackground(GRAY_FOR_BUTTONS);
         jButton58.setBackground(GRAY_FOR_BUTTONS);
         jButton62.setBackground(GRAY_FOR_BUTTONS);
+        
+        // Текст остальных кнопок сделать черным
+        jButton13.setForeground(Color.BLACK);
+        jButton14.setForeground(Color.BLACK);
+        jButton16.setForeground(Color.BLACK);
+        jButton52.setForeground(Color.BLACK);
+        jButton53.setForeground(Color.BLACK);
+        jButton54.setForeground(Color.BLACK);
+        jButton55.setForeground(Color.BLACK);
+        jButton58.setForeground(Color.BLACK);
+        jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2050,8 +2066,18 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch2 == false ){ch2 = true; jButton16.setBackground(GRAY_FOR_BUTTONS);}
-        else if( ch2 == true ){ ch2 = false; jButton16.setBackground(BLUE_FOR_BUTTONS);}
+        if( ch2 == false )
+        {
+            ch2 = true;
+            jButton16.setBackground(GRAY_FOR_BUTTONS);
+            jButton16.setForeground(Color.BLACK);
+        }
+        else if( ch2 == true )
+        {
+            ch2 = false;
+            jButton16.setBackground(BLUE_FOR_BUTTONS);
+            jButton16.setForeground(Color.WHITE);
+        }
 
         // Остальные кнопки сделать серыми
         jButton13.setBackground(GRAY_FOR_BUTTONS);
@@ -2063,6 +2089,17 @@ public class Interface extends javax.swing.JFrame {
         jButton58.setBackground(GRAY_FOR_BUTTONS);
         jButton59.setBackground(GRAY_FOR_BUTTONS);
         jButton62.setBackground(GRAY_FOR_BUTTONS);
+        
+        // Текст остальных кнопок сделать черным
+        jButton13.setForeground(Color.BLACK);
+        jButton14.setForeground(Color.BLACK);
+        jButton52.setForeground(Color.BLACK);
+        jButton53.setForeground(Color.BLACK);
+        jButton54.setForeground(Color.BLACK);
+        jButton55.setForeground(Color.BLACK);
+        jButton58.setForeground(Color.BLACK);
+        jButton59.setForeground(Color.BLACK);
+        jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2078,8 +2115,18 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch9 == false ){ch9 = true; jButton54.setBackground(GRAY_FOR_BUTTONS);}
-        else if( ch9 == true ){ ch9 = false; jButton54.setBackground(BLUE_FOR_BUTTONS);}
+        if( ch9 == false )
+        {
+            ch9 = true;
+            jButton54.setBackground(GRAY_FOR_BUTTONS);
+            jButton54.setForeground(Color.BLACK);
+        }
+        else if( ch9 == true )
+        {
+            ch9 = false;
+            jButton54.setBackground(BLUE_FOR_BUTTONS);
+            jButton54.setForeground(Color.WHITE);
+        }
 
         // Остальные кнопки сделать серыми
         jButton13.setBackground(GRAY_FOR_BUTTONS);
@@ -2091,6 +2138,17 @@ public class Interface extends javax.swing.JFrame {
         jButton58.setBackground(GRAY_FOR_BUTTONS);
         jButton59.setBackground(GRAY_FOR_BUTTONS);
         jButton62.setBackground(GRAY_FOR_BUTTONS);
+        
+        // Текст остальных кнопок сделать черным
+        jButton13.setForeground(Color.BLACK);
+        jButton14.setForeground(Color.BLACK);
+        jButton16.setForeground(Color.BLACK);
+        jButton52.setForeground(Color.BLACK);
+        jButton53.setForeground(Color.BLACK);
+        jButton55.setForeground(Color.BLACK);
+        jButton58.setForeground(Color.BLACK);
+        jButton59.setForeground(Color.BLACK);
+        jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2106,8 +2164,18 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch10 == false ){ch10 = true; jButton55.setBackground(GRAY_FOR_BUTTONS);}
-        else if( ch10 == true ){ ch10 = false; jButton55.setBackground(BLUE_FOR_BUTTONS);}
+        if( ch10 == false )
+        {
+            ch10 = true;
+            jButton55.setBackground(GRAY_FOR_BUTTONS);
+            jButton55.setForeground(Color.BLACK);
+        }
+        else if( ch10 == true )
+        {
+            ch10 = false;
+            jButton55.setBackground(BLUE_FOR_BUTTONS);
+            jButton55.setForeground(Color.WHITE);
+        }
 
         // Остальные кнопки сделать серыми
         jButton13.setBackground(GRAY_FOR_BUTTONS);
@@ -2119,6 +2187,17 @@ public class Interface extends javax.swing.JFrame {
         jButton58.setBackground(GRAY_FOR_BUTTONS);
         jButton59.setBackground(GRAY_FOR_BUTTONS);
         jButton62.setBackground(GRAY_FOR_BUTTONS);
+        
+        // Текст остальных кнопок сделать черным
+        jButton13.setForeground(Color.BLACK);
+        jButton14.setForeground(Color.BLACK);
+        jButton16.setForeground(Color.BLACK);
+        jButton52.setForeground(Color.BLACK);
+        jButton53.setForeground(Color.BLACK);
+        jButton54.setForeground(Color.BLACK);
+        jButton58.setForeground(Color.BLACK);
+        jButton59.setForeground(Color.BLACK);
+        jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2134,8 +2213,18 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch6 == false ){ch6 = true; jButton62.setBackground(GRAY_FOR_BUTTONS);}
-        else if( ch6 == true ){ ch6 = false; jButton62.setBackground(BLUE_FOR_BUTTONS);}
+        if( ch6 == false )
+        {
+            ch6 = true;
+            jButton62.setBackground(GRAY_FOR_BUTTONS);
+            jButton62.setForeground(Color.BLACK);
+        }
+        else if( ch6 == true )
+        {
+            ch6 = false;
+            jButton62.setBackground(BLUE_FOR_BUTTONS);
+            jButton62.setForeground(Color.WHITE);
+        }
 
         // Остальные кнопки сделать серыми
         jButton13.setBackground(GRAY_FOR_BUTTONS);
@@ -2147,6 +2236,17 @@ public class Interface extends javax.swing.JFrame {
         jButton55.setBackground(GRAY_FOR_BUTTONS);
         jButton58.setBackground(GRAY_FOR_BUTTONS);
         jButton59.setBackground(GRAY_FOR_BUTTONS);
+        
+        // Текст остальных кнопок сделать черным
+        jButton13.setForeground(Color.BLACK);
+        jButton14.setForeground(Color.BLACK);
+        jButton16.setForeground(Color.BLACK);
+        jButton52.setForeground(Color.BLACK);
+        jButton53.setForeground(Color.BLACK);
+        jButton54.setForeground(Color.BLACK);
+        jButton55.setForeground(Color.BLACK);
+        jButton58.setForeground(Color.BLACK);
+        jButton59.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2162,8 +2262,18 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch7 == false ){ch7 = true; jButton53.setBackground(GRAY_FOR_BUTTONS);}
-        else if( ch7 == true ){ ch7 = false; jButton53.setBackground(BLUE_FOR_BUTTONS);}
+        if( ch7 == false )
+        {
+            ch7 = true;
+            jButton53.setBackground(GRAY_FOR_BUTTONS);
+            jButton53.setForeground(Color.BLACK);
+        }
+        else if( ch7 == true )
+        {
+            ch7 = false;
+            jButton53.setBackground(BLUE_FOR_BUTTONS);
+            jButton53.setForeground(Color.WHITE);
+        }
 
         // Остальные кнопки сделать серыми
         jButton13.setBackground(GRAY_FOR_BUTTONS);
@@ -2175,6 +2285,17 @@ public class Interface extends javax.swing.JFrame {
         jButton58.setBackground(GRAY_FOR_BUTTONS);
         jButton59.setBackground(GRAY_FOR_BUTTONS);
         jButton62.setBackground(GRAY_FOR_BUTTONS);
+        
+        // Текст остальных кнопок сделать черным
+        jButton13.setForeground(Color.BLACK);
+        jButton14.setForeground(Color.BLACK);
+        jButton16.setForeground(Color.BLACK);
+        jButton52.setForeground(Color.BLACK);
+        jButton54.setForeground(Color.BLACK);
+        jButton55.setForeground(Color.BLACK);
+        jButton58.setForeground(Color.BLACK);
+        jButton59.setForeground(Color.BLACK);
+        jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2287,6 +2408,138 @@ public class Interface extends javax.swing.JFrame {
     private void jButton33FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButton33FocusGained
         
     }//GEN-LAST:event_jButton33FocusGained
+
+    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
+        // Меняем иконку
+        if( peri_ch == true )
+        {
+        }
+        else if( peri_ch == false )
+        {
+            peri_ch = true;
+            freq_ch = false;
+            jToggleButton5.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\period_on.png"));
+            jToggleButton23.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\frequency_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton5ActionPerformed
+
+    private void jToggleButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton23ActionPerformed
+        // Меняем иконку
+        if( freq_ch == true )
+        {
+        }
+        else if( freq_ch == false )
+        {
+            freq_ch = true;
+            peri_ch = false;
+            jToggleButton23.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\frequency_on.png"));
+            jToggleButton5.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\period_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton23ActionPerformed
+
+    private void jToggleButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton24ActionPerformed
+        // Меняем иконку
+        if( comp_ch == true )
+        {
+        }
+        else if( comp_ch == false )
+        {
+            comp_ch = true;
+            nrml_ch = false;
+            jToggleButton24.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\complement_on.png"));
+            jToggleButton6.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\normal_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton24ActionPerformed
+
+    private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
+        // Меняем иконку
+        if( nrml_ch == true )
+        {
+        }
+        else if( nrml_ch == false )
+        {
+            nrml_ch = true;
+            comp_ch = false;
+            jToggleButton6.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\normal_on.png"));
+            jToggleButton24.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\complement_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton6ActionPerformed
+
+    private void jToggleButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton25ActionPerformed
+        // Меняем иконку
+        if( ofst_ch == true )
+        {
+        }
+        else if( ofst_ch == false )
+        {
+            ofst_ch = true;
+            hilo_ch = false;
+            stnd_ch = false;
+            jToggleButton25.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\offset_on.png"));
+            jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\high-low_off.png"));
+            jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\std_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton25ActionPerformed
+
+    private void jToggleButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton11ActionPerformed
+        // Меняем иконку
+        if( hilo_ch == true )
+        {
+        }
+        else if( hilo_ch == false )
+        {
+            hilo_ch = true;
+            ofst_ch = false;
+            stnd_ch = false;
+            jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\high-low_on.png"));
+            jToggleButton25.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\offset_off.png"));
+            jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\std_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton11ActionPerformed
+
+    private void jToggleButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton26ActionPerformed
+        // Меняем иконку
+        if( stnd_ch == true )
+        {
+        }
+        else if( stnd_ch == false )
+        {
+            stnd_ch = true;
+            hilo_ch = false;
+            ofst_ch = false;
+            jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\std_on.png"));
+            jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\high-low_off.png"));
+            jToggleButton25.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\offset_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton26ActionPerformed
+
+    private void jToggleButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton9ActionPerformed
+        // Меняем иконку
+        if( delay_ch == true )
+        {
+        }
+        else if( delay_ch == false )
+        {
+            delay_ch = true;
+            phase_ch = false;
+            jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\delay_on.png"));
+            jToggleButton27.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\phase_off.png"));
+        }
+    }//GEN-LAST:event_jToggleButton9ActionPerformed
+
+    private void jToggleButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton27ActionPerformed
+        // Меняем иконку
+        if( phase_ch == true )
+        {
+        }
+        else if( phase_ch == false )
+        {
+            phase_ch = true;
+            delay_ch = false;
+            jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\delay_off.png"));
+            jToggleButton27.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\phase_on.png"));
+        }
+    }//GEN-LAST:event_jToggleButton27ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2430,19 +2683,19 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea5;
     private javax.swing.JTextArea jTextArea6;
     private javax.swing.JTextArea jTextArea7;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton10;
     private javax.swing.JToggleButton jToggleButton11;
-    private javax.swing.JToggleButton jToggleButton12;
-    private javax.swing.JToggleButton jToggleButton15;
-    private javax.swing.JToggleButton jToggleButton16;
-    private javax.swing.JToggleButton jToggleButton17;
     private javax.swing.JToggleButton jToggleButton18;
     private javax.swing.JToggleButton jToggleButton19;
     private javax.swing.JToggleButton jToggleButton20;
     private javax.swing.JToggleButton jToggleButton21;
     private javax.swing.JToggleButton jToggleButton22;
+    private javax.swing.JToggleButton jToggleButton23;
+    private javax.swing.JToggleButton jToggleButton24;
+    private javax.swing.JToggleButton jToggleButton25;
+    private javax.swing.JToggleButton jToggleButton26;
+    private javax.swing.JToggleButton jToggleButton27;
     private javax.swing.JToggleButton jToggleButton4;
+    private javax.swing.JToggleButton jToggleButton5;
     private javax.swing.JToggleButton jToggleButton6;
     private javax.swing.JToggleButton jToggleButton7;
     private javax.swing.JToggleButton jToggleButton8;
