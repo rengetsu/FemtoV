@@ -26,5 +26,5 @@ This is a program designed to work with the device "FemtoScope" (9511 and 9512 m
  ```
 ### Preview Screenshot
 
-![GitHub Logo](https://i.ibb.co/xH74Gdh/Femto-V-Preview-Screenshot.png)
+![GitHub Logo](https://i.ibb.co/WxRvTBj/FemtoV.png)
 
