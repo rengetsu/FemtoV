@@ -90,16 +90,16 @@ public class Interface extends javax.swing.JFrame {
         //  ДАЛЕЕ ИДЕТ РЕДАКТИРУЕМЫЙ КОД ГРАФИЧЕСКОГО ИНТЕРФЕЙСА
         //  НАКЛАДЫВАЕМ ЦВЕТ НА КНОПКИ НИЖНЕГО МЕНЮ
         
-        jButton13.setBackground(GRAY_FOR_BUTTONS);
+        //jButton13.setBackground(GRAY_FOR_BUTTONS);
         //jButton14.setBackground(GRAY_FOR_BUTTONS);
         //jButton16.setBackground(GRAY_FOR_BUTTONS);
-        jButton52.setBackground(GRAY_FOR_BUTTONS);
-        jButton53.setBackground(GRAY_FOR_BUTTONS);
+        //jButton52.setBackground(GRAY_FOR_BUTTONS);
+        //jButton53.setBackground(GRAY_FOR_BUTTONS);
         //jButton54.setBackground(GRAY_FOR_BUTTONS);
         //jButton55.setBackground(GRAY_FOR_BUTTONS);
-        jButton58.setBackground(GRAY_FOR_BUTTONS);
-        jButton59.setBackground(GRAY_FOR_BUTTONS);
-        jButton62.setBackground(GRAY_FOR_BUTTONS);
+        //jButton58.setBackground(GRAY_FOR_BUTTONS);
+        //jButton59.setBackground(GRAY_FOR_BUTTONS);
+        //jButton62.setBackground(GRAY_FOR_BUTTONS);
         
         //  КНОПКИ ВЫБОРА
         
@@ -161,7 +161,7 @@ public class Interface extends javax.swing.JFrame {
         
         //  КНОПКИ ВЕРХНЕГО МЕНЮ
         
-        JButton jb7 = jButton7;
+        //JButton jb7 = jButton7;
         //JButton jb17 = jButton17;
         //JButton jb18 = jButton18;
         //JButton jb19 = jButton19;
@@ -349,20 +349,20 @@ public class Interface extends javax.swing.JFrame {
         
         // КНОПКИ НИЖНЕГО МЕНЮ
         
-        JButton jb13 = jButton13;
+        //JButton jb13 = jButton13;
         //JButton jb14 = jButton14;
         //JButton jb16 = jButton16;
-        JButton jb52 = jButton52;
-        JButton jb53 = jButton53;
-        JButton jb54 = jButton54;
+        //JButton jb52 = jButton52;
+        //JButton jb53 = jButton53;
+        //JButton jb54 = jButton54;
         //JButton jb55 = jButton55;
-        JButton jb58 = jButton58;
-        JButton jb59 = jButton59;
-        JButton jb62 = jButton62;
+        //JButton jb58 = jButton58;
+        //JButton jb59 = jButton59;
+        //JButton jb62 = jButton62;
         
-        jb13.setContentAreaFilled(false);
-        jb13.setOpaque(true);
-        jb13.setBorder(new LineBorder(Color.BLACK));
+        //jb13.setContentAreaFilled(false);
+        //jb13.setOpaque(true);
+        //jb13.setBorder(new LineBorder(Color.BLACK));
         
         //jb14.setContentAreaFilled(false);
         //jb14.setOpaque(true);
@@ -372,13 +372,13 @@ public class Interface extends javax.swing.JFrame {
         //jb16.setOpaque(true);
         //jb16.setBorder(new LineBorder(Color.BLACK));
         
-        jb52.setContentAreaFilled(false);
-        jb52.setOpaque(true);
-        jb52.setBorder(new LineBorder(Color.BLACK));
+        //jb52.setContentAreaFilled(false);
+        //jb52.setOpaque(true);
+        //jb52.setBorder(new LineBorder(Color.BLACK));
         
-        jb53.setContentAreaFilled(false);
-        jb53.setOpaque(true);
-        jb53.setBorder(new LineBorder(Color.BLACK));
+        //jb53.setContentAreaFilled(false);
+        //jb53.setOpaque(true);
+        //jb53.setBorder(new LineBorder(Color.BLACK));
         
         //jb54.setContentAreaFilled(false);
         //jb54.setOpaque(true);
@@ -388,17 +388,17 @@ public class Interface extends javax.swing.JFrame {
         //jb55.setOpaque(true);
         //jb55.setBorder(new LineBorder(Color.BLACK));
         
-        jb58.setContentAreaFilled(false);
-        jb58.setOpaque(true);
-        jb58.setBorder(new LineBorder(Color.BLACK));
+        //jb58.setContentAreaFilled(false);
+        //jb58.setOpaque(true);
+        //jb58.setBorder(new LineBorder(Color.BLACK));
         
-        jb59.setContentAreaFilled(false);
-        jb59.setOpaque(true);
-        jb59.setBorder(new LineBorder(Color.BLACK));
+        //jb59.setContentAreaFilled(false);
+        //jb59.setOpaque(true);
+        //jb59.setBorder(new LineBorder(Color.BLACK));
         
-        jb62.setContentAreaFilled(false);
-        jb62.setOpaque(true);
-        jb62.setBorder(new LineBorder(Color.BLACK));
+        //jb62.setContentAreaFilled(false);
+        //jb62.setOpaque(true);
+        //jb62.setBorder(new LineBorder(Color.BLACK));
         
         //  ЗДЕСЬ ЗАКАНЧИВАЕТСЯ КОД ОТНОСЯЩИЙСЯ К КНОПКАМ МЕНЮ
     }
@@ -1160,7 +1160,7 @@ public class Interface extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton57, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1618,7 +1618,7 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
                 .addComponent(jLabel25)
                 .addGap(6, 6, 6))
         );
@@ -1642,8 +1642,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton58.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/down/icon_down_pattern.png"))); // NOI18N
-        jButton58.setText("Pattern");
+        jButton58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Pattern_Off.png"))); // NOI18N
         jButton58.setBorder(null);
         jButton58.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton58.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1654,8 +1653,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/down/icon_display.png"))); // NOI18N
-        jButton13.setText("Display");
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Display_Off.png"))); // NOI18N
         jButton13.setBorder(null);
         jButton13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton13.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1666,8 +1664,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton52.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/down/icon_display.png"))); // NOI18N
-        jButton52.setText("Calibration");
+        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Calibrat_Off.png"))); // NOI18N
         jButton52.setBorder(null);
         jButton52.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton52.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1678,8 +1675,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton59.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/down/icon_down_inputs.png"))); // NOI18N
-        jButton59.setText("Inputs");
+        jButton59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Inputs_Off.png"))); // NOI18N
         jButton59.setBorder(null);
         jButton59.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton59.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1724,8 +1720,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton62.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/down/icon_down_outputs.png"))); // NOI18N
-        jButton62.setText("Outputs");
+        jButton62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Outputs_Off.png"))); // NOI18N
         jButton62.setBorder(null);
         jButton62.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton62.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1736,8 +1731,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton53.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/down/icon_down_utilits.png"))); // NOI18N
-        jButton53.setText("Utility");
+        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Utility_Off.png"))); // NOI18N
         jButton53.setBorder(null);
         jButton53.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton53.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1776,17 +1770,17 @@ public class Interface extends javax.swing.JFrame {
                             .addComponent(jLabel23)
                             .addGap(0, 0, 0)
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel8Layout.createSequentialGroup()
-                                    .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(0, 0, 0)
-                                    .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel8Layout.createSequentialGroup()
-                                    .addComponent(jButton59, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton59, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(0, 0, 0)
-                                    .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel8Layout.setVerticalGroup(
@@ -1809,14 +1803,14 @@ public class Interface extends javax.swing.JFrame {
                         .addComponent(jLabel23)
                         .addGroup(jPanel8Layout.createSequentialGroup()
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton59, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton59, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(0, 0, 0)
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addContainerGap()))
         );
 
@@ -1865,19 +1859,19 @@ public class Interface extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
-                    .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 547, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 88, Short.MAX_VALUE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
         pack();
@@ -1906,27 +1900,27 @@ public class Interface extends javax.swing.JFrame {
             //jButton14.setForeground(Color.WHITE);
         }
 
-        // Остальные кнопки сделать серыми
-        jButton13.setBackground(GRAY_FOR_BUTTONS);
+        //  Остальные кнопки сделать серыми
+        //jButton13.setBackground(GRAY_FOR_BUTTONS);
         //jButton16.setBackground(GRAY_FOR_BUTTONS);
-        jButton52.setBackground(GRAY_FOR_BUTTONS);
-        jButton53.setBackground(GRAY_FOR_BUTTONS);
+        //jButton52.setBackground(GRAY_FOR_BUTTONS);
+        //jButton53.setBackground(GRAY_FOR_BUTTONS);
         //jButton54.setBackground(GRAY_FOR_BUTTONS);
         //jButton55.setBackground(GRAY_FOR_BUTTONS);
-        jButton58.setBackground(GRAY_FOR_BUTTONS);
-        jButton59.setBackground(GRAY_FOR_BUTTONS);
-        jButton62.setBackground(GRAY_FOR_BUTTONS);
+        //jButton58.setBackground(GRAY_FOR_BUTTONS);
+        //jButton59.setBackground(GRAY_FOR_BUTTONS);
+        //jButton62.setBackground(GRAY_FOR_BUTTONS);
         
-        // Текст остальных кнопок сделать черным
-        jButton13.setForeground(Color.BLACK);
+        //  Текст остальных кнопок сделать черным
+        //jButton13.setForeground(Color.BLACK);
         //jButton16.setForeground(Color.BLACK);
-        jButton52.setForeground(Color.BLACK);
-        jButton53.setForeground(Color.BLACK);
+        //jButton52.setForeground(Color.BLACK);
+        //jButton53.setForeground(Color.BLACK);
         //jButton54.setForeground(Color.BLACK);
         //jButton55.setForeground(Color.BLACK);
-        jButton58.setForeground(Color.BLACK);
-        jButton59.setForeground(Color.BLACK);
-        jButton62.setForeground(Color.BLACK);
+        //jButton58.setForeground(Color.BLACK);
+        //jButton59.setForeground(Color.BLACK);
+        //jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -1945,37 +1939,41 @@ public class Interface extends javax.swing.JFrame {
         if( ch4 == false )
         {
             ch4 = true;
-            jButton58.setBackground(GRAY_FOR_BUTTONS);
-            jButton58.setForeground(Color.BLACK);
+            jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_Off.png"));
+            
+            //jButton58.setBackground(GRAY_FOR_BUTTONS);
+            //jButton58.setForeground(Color.BLACK);
         }
         else if( ch4 == true )
         {
             ch4 = false;
-            jButton58.setBackground(BLUE_FOR_BUTTONS);
-            jButton58.setForeground(Color.WHITE);
+            jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_On.png"));
+            
+            //jButton58.setBackground(BLUE_FOR_BUTTONS);
+            //jButton58.setForeground(Color.WHITE);
         }
 
-        // Остальные кнопки сделать серыми
-        jButton13.setBackground(GRAY_FOR_BUTTONS);
+        //  Остальные кнопки сделать серыми
+        //jButton13.setBackground(GRAY_FOR_BUTTONS);
         //jButton14.setBackground(GRAY_FOR_BUTTONS);
         //jButton16.setBackground(GRAY_FOR_BUTTONS);
-        jButton52.setBackground(GRAY_FOR_BUTTONS);
-        jButton53.setBackground(GRAY_FOR_BUTTONS);
+        //jButton52.setBackground(GRAY_FOR_BUTTONS);
+        //jButton53.setBackground(GRAY_FOR_BUTTONS);
         //jButton54.setBackground(GRAY_FOR_BUTTONS);
         //jButton55.setBackground(GRAY_FOR_BUTTONS);
-        jButton59.setBackground(GRAY_FOR_BUTTONS);
-        jButton62.setBackground(GRAY_FOR_BUTTONS);
+        //jButton59.setBackground(GRAY_FOR_BUTTONS);
+        //jButton62.setBackground(GRAY_FOR_BUTTONS);
         
-        // Текст остальных кнопок сделать черным
-        jButton13.setForeground(Color.BLACK);
+        //  Текст остальных кнопок сделать черным
+        //jButton13.setForeground(Color.BLACK);
         //jButton14.setForeground(Color.BLACK);
         //jButton16.setForeground(Color.BLACK);
-        jButton52.setForeground(Color.BLACK);
-        jButton53.setForeground(Color.BLACK);
+        //jButton52.setForeground(Color.BLACK);
+        //jButton53.setForeground(Color.BLACK);
         //jButton54.setForeground(Color.BLACK);
         //jButton55.setForeground(Color.BLACK);
-        jButton59.setForeground(Color.BLACK);
-        jButton62.setForeground(Color.BLACK);
+        //jButton59.setForeground(Color.BLACK);
+        //jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -1994,40 +1992,42 @@ public class Interface extends javax.swing.JFrame {
         if( ch1 == false )
         {
             ch1 = true;
-            jButton13.setBackground(GRAY_FOR_BUTTONS);
-            jButton13.setForeground(Color.BLACK);
+            jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_Off.png"));
+            
+            //jButton13.setBackground(GRAY_FOR_BUTTONS);
+            //jButton13.setForeground(Color.BLACK);
         }
         else if( ch1 == true )
         {
             ch1 = false;
-            jButton13.setBackground(BLUE_FOR_BUTTONS);
-            jButton13.setForeground(Color.WHITE);
+            jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_On.png"));
+            
+            //jButton13.setBackground(BLUE_FOR_BUTTONS);
+            //jButton13.setForeground(Color.WHITE);
         }
 
-        // Остальные кнопки сделать серыми
+        //  Остальные кнопки сделать серыми
         //jButton14.setBackground(GRAY_FOR_BUTTONS);
         //jButton16.setBackground(GRAY_FOR_BUTTONS);
-        jButton52.setBackground(GRAY_FOR_BUTTONS);
-        jButton53.setBackground(GRAY_FOR_BUTTONS);
+        //jButton52.setBackground(GRAY_FOR_BUTTONS);
+        //jButton53.setBackground(GRAY_FOR_BUTTONS);
         //jButton54.setBackground(GRAY_FOR_BUTTONS);
         //jButton55.setBackground(GRAY_FOR_BUTTONS);
-        jButton58.setBackground(GRAY_FOR_BUTTONS);
-        jButton59.setBackground(GRAY_FOR_BUTTONS);
-        jButton62.setBackground(GRAY_FOR_BUTTONS);
+        //jButton58.setBackground(GRAY_FOR_BUTTONS);
+        //jButton59.setBackground(GRAY_FOR_BUTTONS);
+        //jButton62.setBackground(GRAY_FOR_BUTTONS);
         
-        // Текст остальных кнопок сделать черным
+        //  Текст остальных кнопок сделать черным
         //jButton14.setForeground(Color.BLACK);
         //jButton16.setForeground(Color.BLACK);
-        jButton52.setForeground(Color.BLACK);
-        jButton53.setForeground(Color.BLACK);
+        //jButton52.setForeground(Color.BLACK);
+        //jButton53.setForeground(Color.BLACK);
         //jButton54.setForeground(Color.BLACK);
         //jButton55.setForeground(Color.BLACK);
-        jButton58.setForeground(Color.BLACK);
-        jButton59.setForeground(Color.BLACK);
-        jButton62.setForeground(Color.BLACK);
+        //jButton58.setForeground(Color.BLACK);
+        //jButton59.setForeground(Color.BLACK);
+        //jButton62.setForeground(Color.BLACK);
         
-        
-
         //  Меняем значение чекеров
         ch2 = true;
         ch3 = true;
@@ -2045,37 +2045,41 @@ public class Interface extends javax.swing.JFrame {
         if( ch3 == false )
         {
             ch3 = true;
-            jButton52.setBackground(GRAY_FOR_BUTTONS);
-            jButton52.setForeground(Color.BLACK);
+            jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_Off.png"));
+            
+            //jButton52.setBackground(GRAY_FOR_BUTTONS);
+            //jButton52.setForeground(Color.BLACK);
         }
         else if( ch3 == true )
         {
             ch3 = false;
-            jButton52.setBackground(BLUE_FOR_BUTTONS);
-            jButton52.setForeground(Color.WHITE);
+            jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_On.png"));
+            
+            //jButton52.setBackground(BLUE_FOR_BUTTONS);
+            //jButton52.setForeground(Color.WHITE);
         }
 
-        // Остальные кнопки сделать серыми
-        jButton13.setBackground(GRAY_FOR_BUTTONS);
+        //  Остальные кнопки сделать серыми
+        //jButton13.setBackground(GRAY_FOR_BUTTONS);
         //jButton14.setBackground(GRAY_FOR_BUTTONS);
         //jButton16.setBackground(GRAY_FOR_BUTTONS);
-        jButton53.setBackground(GRAY_FOR_BUTTONS);
+        //jButton53.setBackground(GRAY_FOR_BUTTONS);
         //jButton54.setBackground(GRAY_FOR_BUTTONS);
         //jButton55.setBackground(GRAY_FOR_BUTTONS);
-        jButton58.setBackground(GRAY_FOR_BUTTONS);
-        jButton59.setBackground(GRAY_FOR_BUTTONS);
-        jButton62.setBackground(GRAY_FOR_BUTTONS);
+        //jButton58.setBackground(GRAY_FOR_BUTTONS);
+        //jButton59.setBackground(GRAY_FOR_BUTTONS);
+        //jButton62.setBackground(GRAY_FOR_BUTTONS);
         
-        // Текст остальных кнопок сделать черным
-        jButton13.setForeground(Color.BLACK);
+        //  Текст остальных кнопок сделать черным
+        //jButton13.setForeground(Color.BLACK);
         //jButton14.setForeground(Color.BLACK);
         //jButton16.setForeground(Color.BLACK);
-        jButton53.setForeground(Color.BLACK);
+        //jButton53.setForeground(Color.BLACK);
         //jButton54.setForeground(Color.BLACK);
         //jButton55.setForeground(Color.BLACK);
-        jButton58.setForeground(Color.BLACK);
-        jButton59.setForeground(Color.BLACK);
-        jButton62.setForeground(Color.BLACK);
+        //jButton58.setForeground(Color.BLACK);
+        //jButton59.setForeground(Color.BLACK);
+        //jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2094,37 +2098,41 @@ public class Interface extends javax.swing.JFrame {
         if( ch5 == false )
         {
             ch5 = true;
-            jButton59.setBackground(GRAY_FOR_BUTTONS);
-            jButton59.setForeground(Color.BLACK);
+            jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_Off.png"));
+            
+            //jButton59.setBackground(GRAY_FOR_BUTTONS);
+            //jButton59.setForeground(Color.BLACK);
         }
         else if( ch5 == true )
         {
             ch5 = false;
-            jButton59.setBackground(BLUE_FOR_BUTTONS);
-            jButton59.setForeground(Color.WHITE);
+            jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_On.png"));
+            
+            //jButton59.setBackground(BLUE_FOR_BUTTONS);
+            //jButton59.setForeground(Color.WHITE);
         }
 
-        // Остальные кнопки сделать серыми
-        jButton13.setBackground(GRAY_FOR_BUTTONS);
+        //  Остальные кнопки сделать серыми
+        //jButton13.setBackground(GRAY_FOR_BUTTONS);
         //jButton14.setBackground(GRAY_FOR_BUTTONS);
         //jButton16.setBackground(GRAY_FOR_BUTTONS);
-        jButton52.setBackground(GRAY_FOR_BUTTONS);
-        jButton53.setBackground(GRAY_FOR_BUTTONS);
+        //jButton52.setBackground(GRAY_FOR_BUTTONS);
+        //jButton53.setBackground(GRAY_FOR_BUTTONS);
         //jButton54.setBackground(GRAY_FOR_BUTTONS);
         //jButton55.setBackground(GRAY_FOR_BUTTONS);
-        jButton58.setBackground(GRAY_FOR_BUTTONS);
-        jButton62.setBackground(GRAY_FOR_BUTTONS);
+        //jButton58.setBackground(GRAY_FOR_BUTTONS);
+        //jButton62.setBackground(GRAY_FOR_BUTTONS);
         
-        // Текст остальных кнопок сделать черным
-        jButton13.setForeground(Color.BLACK);
+        //  Текст остальных кнопок сделать черным
+        //jButton13.setForeground(Color.BLACK);
         //jButton14.setForeground(Color.BLACK);
         //jButton16.setForeground(Color.BLACK);
-        jButton52.setForeground(Color.BLACK);
-        jButton53.setForeground(Color.BLACK);
+        //jButton52.setForeground(Color.BLACK);
+        //jButton53.setForeground(Color.BLACK);
         //jButton54.setForeground(Color.BLACK);
         //jButton55.setForeground(Color.BLACK);
-        jButton58.setForeground(Color.BLACK);
-        jButton62.setForeground(Color.BLACK);
+        //jButton58.setForeground(Color.BLACK);
+        //jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2157,27 +2165,27 @@ public class Interface extends javax.swing.JFrame {
             //jButton16.setForeground(Color.WHITE);
         }
 
-        // Остальные кнопки сделать серыми
-        jButton13.setBackground(GRAY_FOR_BUTTONS);
+        //  Остальные кнопки сделать серыми
+        //jButton13.setBackground(GRAY_FOR_BUTTONS);
         //jButton14.setBackground(GRAY_FOR_BUTTONS);
-        jButton52.setBackground(GRAY_FOR_BUTTONS);
-        jButton53.setBackground(GRAY_FOR_BUTTONS);
+        //jButton52.setBackground(GRAY_FOR_BUTTONS);
+        //jButton53.setBackground(GRAY_FOR_BUTTONS);
         //jButton54.setBackground(GRAY_FOR_BUTTONS);
         //jButton55.setBackground(GRAY_FOR_BUTTONS);
-        jButton58.setBackground(GRAY_FOR_BUTTONS);
-        jButton59.setBackground(GRAY_FOR_BUTTONS);
-        jButton62.setBackground(GRAY_FOR_BUTTONS);
+        //jButton58.setBackground(GRAY_FOR_BUTTONS);
+        //jButton59.setBackground(GRAY_FOR_BUTTONS);
+        //jButton62.setBackground(GRAY_FOR_BUTTONS);
         
-        // Текст остальных кнопок сделать черным
-        jButton13.setForeground(Color.BLACK);
+        //  Текст остальных кнопок сделать черным
+        //jButton13.setForeground(Color.BLACK);
         //jButton14.setForeground(Color.BLACK);
-        jButton52.setForeground(Color.BLACK);
-        jButton53.setForeground(Color.BLACK);
+        //jButton52.setForeground(Color.BLACK);
+        //jButton53.setForeground(Color.BLACK);
         //jButton54.setForeground(Color.BLACK);
         //jButton55.setForeground(Color.BLACK);
-        jButton58.setForeground(Color.BLACK);
-        jButton59.setForeground(Color.BLACK);
-        jButton62.setForeground(Color.BLACK);
+        //jButton58.setForeground(Color.BLACK);
+        //jButton59.setForeground(Color.BLACK);
+        //jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2210,27 +2218,27 @@ public class Interface extends javax.swing.JFrame {
             //jButton54.setForeground(Color.WHITE);
         }
 
-        // Остальные кнопки сделать серыми
-        jButton13.setBackground(GRAY_FOR_BUTTONS);
+        //  Остальные кнопки сделать серыми
+        //jButton13.setBackground(GRAY_FOR_BUTTONS);
         //jButton14.setBackground(GRAY_FOR_BUTTONS);
         //jButton16.setBackground(GRAY_FOR_BUTTONS);
-        jButton52.setBackground(GRAY_FOR_BUTTONS);
-        jButton53.setBackground(GRAY_FOR_BUTTONS);
+        //jButton52.setBackground(GRAY_FOR_BUTTONS);
+        //jButton53.setBackground(GRAY_FOR_BUTTONS);
         //jButton55.setBackground(GRAY_FOR_BUTTONS);
-        jButton58.setBackground(GRAY_FOR_BUTTONS);
-        jButton59.setBackground(GRAY_FOR_BUTTONS);
-        jButton62.setBackground(GRAY_FOR_BUTTONS);
+        //jButton58.setBackground(GRAY_FOR_BUTTONS);
+        //jButton59.setBackground(GRAY_FOR_BUTTONS);
+        //jButton62.setBackground(GRAY_FOR_BUTTONS);
         
-        // Текст остальных кнопок сделать черным
-        jButton13.setForeground(Color.BLACK);
+        //  Текст остальных кнопок сделать черным
+        //jButton13.setForeground(Color.BLACK);
         //jButton14.setForeground(Color.BLACK);
         //jButton16.setForeground(Color.BLACK);
-        jButton52.setForeground(Color.BLACK);
-        jButton53.setForeground(Color.BLACK);
+        //jButton52.setForeground(Color.BLACK);
+        //jButton53.setForeground(Color.BLACK);
         //jButton55.setForeground(Color.BLACK);
-        jButton58.setForeground(Color.BLACK);
-        jButton59.setForeground(Color.BLACK);
-        jButton62.setForeground(Color.BLACK);
+        //jButton58.setForeground(Color.BLACK);
+        //jButton59.setForeground(Color.BLACK);
+        //jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2251,39 +2259,39 @@ public class Interface extends javax.swing.JFrame {
             ch10 = true;
             jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_Off.png"));
             
-            jButton55.setBackground(GRAY_FOR_BUTTONS);
-            jButton55.setForeground(Color.BLACK);
+            //jButton55.setBackground(GRAY_FOR_BUTTONS);
+            //jButton55.setForeground(Color.BLACK);
         }
         else if( ch10 == true )
         {
             ch10 = false;
             jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_On.png"));
             
-            jButton55.setBackground(BLUE_FOR_BUTTONS);
-            jButton55.setForeground(Color.WHITE);
+            //jButton55.setBackground(BLUE_FOR_BUTTONS);
+            //jButton55.setForeground(Color.WHITE);
         }
 
-        // Остальные кнопки сделать серыми
-        jButton13.setBackground(GRAY_FOR_BUTTONS);
+        //  Остальные кнопки сделать серыми
+        //jButton13.setBackground(GRAY_FOR_BUTTONS);
         //jButton14.setBackground(GRAY_FOR_BUTTONS);
         //jButton16.setBackground(GRAY_FOR_BUTTONS);
-        jButton52.setBackground(GRAY_FOR_BUTTONS);
-        jButton53.setBackground(GRAY_FOR_BUTTONS);
+        //jButton52.setBackground(GRAY_FOR_BUTTONS);
+        //jButton53.setBackground(GRAY_FOR_BUTTONS);
         //jButton54.setBackground(GRAY_FOR_BUTTONS);
-        jButton58.setBackground(GRAY_FOR_BUTTONS);
-        jButton59.setBackground(GRAY_FOR_BUTTONS);
-        jButton62.setBackground(GRAY_FOR_BUTTONS);
+        //jButton58.setBackground(GRAY_FOR_BUTTONS);
+        //jButton59.setBackground(GRAY_FOR_BUTTONS);
+        //jButton62.setBackground(GRAY_FOR_BUTTONS);
         
-        // Текст остальных кнопок сделать черным
-        jButton13.setForeground(Color.BLACK);
+        //  Текст остальных кнопок сделать черным
+        //jButton13.setForeground(Color.BLACK);
         //jButton14.setForeground(Color.BLACK);
         //jButton16.setForeground(Color.BLACK);
-        jButton52.setForeground(Color.BLACK);
-        jButton53.setForeground(Color.BLACK);
+        //jButton52.setForeground(Color.BLACK);
+        //jButton53.setForeground(Color.BLACK);
         //jButton54.setForeground(Color.BLACK);
-        jButton58.setForeground(Color.BLACK);
-        jButton59.setForeground(Color.BLACK);
-        jButton62.setForeground(Color.BLACK);
+        //jButton58.setForeground(Color.BLACK);
+        //jButton59.setForeground(Color.BLACK);
+        //jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2302,37 +2310,41 @@ public class Interface extends javax.swing.JFrame {
         if( ch6 == false )
         {
             ch6 = true;
-            jButton62.setBackground(GRAY_FOR_BUTTONS);
-            jButton62.setForeground(Color.BLACK);
+            jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_Off.png"));
+            
+            //jButton62.setBackground(GRAY_FOR_BUTTONS);
+            //jButton62.setForeground(Color.BLACK);
         }
         else if( ch6 == true )
         {
             ch6 = false;
-            jButton62.setBackground(BLUE_FOR_BUTTONS);
-            jButton62.setForeground(Color.WHITE);
+            jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_On.png"));
+            
+            //jButton62.setBackground(BLUE_FOR_BUTTONS);
+            //jButton62.setForeground(Color.WHITE);
         }
 
-        // Остальные кнопки сделать серыми
-        jButton13.setBackground(GRAY_FOR_BUTTONS);
+        //  Остальные кнопки сделать серыми
+        //jButton13.setBackground(GRAY_FOR_BUTTONS);
         //jButton14.setBackground(GRAY_FOR_BUTTONS);
         //jButton16.setBackground(GRAY_FOR_BUTTONS);
-        jButton52.setBackground(GRAY_FOR_BUTTONS);
-        jButton53.setBackground(GRAY_FOR_BUTTONS);
+        //jButton52.setBackground(GRAY_FOR_BUTTONS);
+        //jButton53.setBackground(GRAY_FOR_BUTTONS);
         //jButton54.setBackground(GRAY_FOR_BUTTONS);
         //jButton55.setBackground(GRAY_FOR_BUTTONS);
-        jButton58.setBackground(GRAY_FOR_BUTTONS);
-        jButton59.setBackground(GRAY_FOR_BUTTONS);
+        //jButton58.setBackground(GRAY_FOR_BUTTONS);
+        //jButton59.setBackground(GRAY_FOR_BUTTONS);
         
-        // Текст остальных кнопок сделать черным
-        jButton13.setForeground(Color.BLACK);
+        //  Текст остальных кнопок сделать черным
+        //jButton13.setForeground(Color.BLACK);
         //jButton14.setForeground(Color.BLACK);
         //jButton16.setForeground(Color.BLACK);
-        jButton52.setForeground(Color.BLACK);
-        jButton53.setForeground(Color.BLACK);
+        //jButton52.setForeground(Color.BLACK);
+        //jButton53.setForeground(Color.BLACK);
         //jButton54.setForeground(Color.BLACK);
         //jButton55.setForeground(Color.BLACK);
-        jButton58.setForeground(Color.BLACK);
-        jButton59.setForeground(Color.BLACK);
+        //jButton58.setForeground(Color.BLACK);
+        //jButton59.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2351,37 +2363,41 @@ public class Interface extends javax.swing.JFrame {
         if( ch7 == false )
         {
             ch7 = true;
-            jButton53.setBackground(GRAY_FOR_BUTTONS);
-            jButton53.setForeground(Color.BLACK);
+            jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_Off.png"));
+            
+            //jButton53.setBackground(GRAY_FOR_BUTTONS);
+            //jButton53.setForeground(Color.BLACK);
         }
         else if( ch7 == true )
         {
             ch7 = false;
-            jButton53.setBackground(BLUE_FOR_BUTTONS);
-            jButton53.setForeground(Color.WHITE);
+            jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_On.png"));
+            
+            //jButton53.setBackground(BLUE_FOR_BUTTONS);
+            //jButton53.setForeground(Color.WHITE);
         }
 
-        // Остальные кнопки сделать серыми
-        jButton13.setBackground(GRAY_FOR_BUTTONS);
+        //  Остальные кнопки сделать серыми
+        //jButton13.setBackground(GRAY_FOR_BUTTONS);
         //jButton14.setBackground(GRAY_FOR_BUTTONS);
         //jButton16.setBackground(GRAY_FOR_BUTTONS);
-        jButton52.setBackground(GRAY_FOR_BUTTONS);
+        //jButton52.setBackground(GRAY_FOR_BUTTONS);
         //jButton54.setBackground(GRAY_FOR_BUTTONS);
         //jButton55.setBackground(GRAY_FOR_BUTTONS);
-        jButton58.setBackground(GRAY_FOR_BUTTONS);
-        jButton59.setBackground(GRAY_FOR_BUTTONS);
-        jButton62.setBackground(GRAY_FOR_BUTTONS);
+        //jButton58.setBackground(GRAY_FOR_BUTTONS);
+        //jButton59.setBackground(GRAY_FOR_BUTTONS);
+        //jButton62.setBackground(GRAY_FOR_BUTTONS);
         
-        // Текст остальных кнопок сделать черным
-        jButton13.setForeground(Color.BLACK);
+        //  Текст остальных кнопок сделать черным
+        //jButton13.setForeground(Color.BLACK);
         //jButton14.setForeground(Color.BLACK);
         //jButton16.setForeground(Color.BLACK);
-        jButton52.setForeground(Color.BLACK);
+        //jButton52.setForeground(Color.BLACK);
         //jButton54.setForeground(Color.BLACK);
         //jButton55.setForeground(Color.BLACK);
-        jButton58.setForeground(Color.BLACK);
-        jButton59.setForeground(Color.BLACK);
-        jButton62.setForeground(Color.BLACK);
+        //jButton58.setForeground(Color.BLACK);
+        //jButton59.setForeground(Color.BLACK);
+        //jButton62.setForeground(Color.BLACK);
 
         //  Меняем значение чекеров
         ch1 = true;
@@ -2399,12 +2415,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( on_off_btn_ch1 == false )
         {
+            //  Переключаем чекер
             on_off_btn_ch1 = true;
+            
+            //  Меняем картинку
             jToggleButton18.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\on_button.png"));
         }
         else if( on_off_btn_ch1 == true )
         {
+            //  Переключаем чекер
             on_off_btn_ch1 = false;
+            
+            //  Меняем картинку
             jToggleButton18.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\off_button.png"));
         }
     }//GEN-LAST:event_jToggleButton18ActionPerformed
@@ -2413,12 +2435,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( on_off_btn_ch2 == false )
         {
+            //  Переключаем чекер
             on_off_btn_ch2 = true;
+            
+            //  Меняем картинку
             jToggleButton4.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\on_button.png"));
         }
         else if( on_off_btn_ch2 == true )
         {
+            //  Переключаем чекер
             on_off_btn_ch2 = false;
+            
+            //  Меняем картинку
             jToggleButton4.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\off_button.png"));
         }
     }//GEN-LAST:event_jToggleButton4ActionPerformed
@@ -2427,12 +2455,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( on_off_ch1 == false )
         {
+            //  Переключаем чекер
             on_off_ch1 = true;
+            
+            //  Меняем картинку
             jToggleButton19.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_on.png"));
         }
         else if( on_off_ch1 == true )
         {
+            //  Переключаем чекер
             on_off_ch1 = false;
+            
+            //  Меняем картинку
             jToggleButton19.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_off.png"));
         }
     }//GEN-LAST:event_jToggleButton19ActionPerformed
@@ -2441,12 +2475,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( on_off_ch2 == false )
         {
+            //  Переключаем чекер
             on_off_ch2 = true;
+            
+            //  Меняем картинку
             jToggleButton20.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_on.png"));
         }
         else if( on_off_ch2 == true )
         {
+            //  Переключаем чекер
             on_off_ch2 = false;
+            
+            //  Меняем картинку
             jToggleButton20.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_off.png"));
         }
     }//GEN-LAST:event_jToggleButton20ActionPerformed
@@ -2455,12 +2495,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( on_off_ch1_r == false )
         {
+            //  Переключаем чекер
             on_off_ch1_r = true;
+            
+            //  Меняем картинку
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_on.png"));
         }
         else if( on_off_ch1_r == true )
         {
+            //  Переключаем чекер
             on_off_ch1_r = false;
+            
+            //  Меняем картинку
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_off.png"));
         }
     }//GEN-LAST:event_jToggleButton21ActionPerformed
@@ -2469,12 +2515,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( on_off_ch2_r == false )
         {
+            //  Переключаем чекер
             on_off_ch2_r = true;
+            
+            //  Меняем картинку
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_on.png"));
         }
         else if( on_off_ch2_r == true )
         {
+            //  Переключаем чекер
             on_off_ch2_r = false;
+            
+            //  Меняем картинку
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_off.png"));
         }
     }//GEN-LAST:event_jToggleButton22ActionPerformed
@@ -2483,12 +2535,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( peri_ch == true )
         {
+            //  Ничего не происходит
         }
         else if( peri_ch == false )
         {
+            //  Меняем текст
             jLabel20.setText("Period");
+            
+            //  Переключаем чекеры
             peri_ch = true;
             freq_ch = false;
+            
+            //  Меняеем картинки
             jToggleButton5.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\period_on.png"));
             jToggleButton23.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\frequency_off.png"));
         }
@@ -2498,12 +2556,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( freq_ch == true )
         {
+            //  Ничего не происходит
         }
         else if( freq_ch == false )
         {
+            // Меняем текст
             jLabel20.setText("Frequency");
+            
+            //  Переключаем чекеры
             freq_ch = true;
             peri_ch = false;
+            
+            //  Меняеем картинки
             jToggleButton23.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\frequency_on.png"));
             jToggleButton5.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\period_off.png"));
         }
@@ -2513,11 +2577,15 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( comp_ch == true )
         {
+            //  Ничего не происходит
         }
         else if( comp_ch == false )
         {
+            //  Переключаем чекеры
             comp_ch = true;
             nrml_ch = false;
+            
+            //  Меняеем картинки
             jToggleButton24.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\complement_on.png"));
             jToggleButton6.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\normal_off.png"));
         }
@@ -2527,11 +2595,15 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( nrml_ch == true )
         {
+            //  Ничего не происходит
         }
         else if( nrml_ch == false )
         {
+            //  Переключаем чекеры
             nrml_ch = true;
             comp_ch = false;
+            
+            //  Меняеем картинки
             jToggleButton6.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\normal_on.png"));
             jToggleButton24.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\complement_off.png"));
         }
@@ -2541,12 +2613,16 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( ofst_ch == true )
         {
+            //  Ничего не происходит
         }
         else if( ofst_ch == false )
         {
+            //  Переключаем чекеры
             ofst_ch = true;
             hilo_ch = false;
             stnd_ch = false;
+            
+            //  Меняеем картинки
             jToggleButton25.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\offset_on.png"));
             jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\high-low_off.png"));
             jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\std_off.png"));
@@ -2557,12 +2633,16 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( hilo_ch == true )
         {
+            //  Ничего не происходит
         }
         else if( hilo_ch == false )
         {
+            //  Переключаем чекеры
             hilo_ch = true;
             ofst_ch = false;
             stnd_ch = false;
+            
+            //  Меняеем картинки
             jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\high-low_on.png"));
             jToggleButton25.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\offset_off.png"));
             jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\std_off.png"));
@@ -2573,12 +2653,16 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( stnd_ch == true )
         {
+            //  Ничего не происходит
         }
         else if( stnd_ch == false )
         {
+            //  Переключаем чекеры
             stnd_ch = true;
             hilo_ch = false;
             ofst_ch = false;
+            
+            //  Меняеем картинки
             jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\std_on.png"));
             jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\high-low_off.png"));
             jToggleButton25.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\offset_off.png"));
@@ -2589,12 +2673,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( delay_ch == true )
         {
+            //  Ничего не происходит
         }
         else if( delay_ch == false )
         {
+            //  Меняем текст
             jLabel19.setText("Delay");
+            
+            //  Переключаем чекеры
             delay_ch = true;
             phase_ch = false;
+            
+            //  Меняеем картинки
             jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\delay_on.png"));
             jToggleButton27.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\phase_off.png"));
         }
@@ -2604,12 +2694,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( phase_ch == true )
         {
+            //  Ничего не происходит
         }
         else if( phase_ch == false )
         {
+            //  Меняем текст
             jLabel19.setText("Phase");
+            
+            //  Переключаем чекеры
             phase_ch = true;
             delay_ch = false;
+            
+            //  Меняеем картинки
             jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\delay_off.png"));
             jToggleButton27.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\phase_on.png"));
         }
@@ -2675,12 +2771,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( width_ch == true )
         {
+            //  Ничего не происходит
         }
         else if( width_ch == false )
         {
+            //  Меняем текст
             jLabel18.setText("Width");
+            
+            //  Переключаем чекеры
             width_ch = true;
             dcycle_ch = false;
+            
+            //  Меняеем картинки
             jToggleButton10.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\width_on.png"));
             jToggleButton28.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\dcycle_off.png"));
         }
@@ -2690,12 +2792,18 @@ public class Interface extends javax.swing.JFrame {
         // Меняем иконку
         if( dcycle_ch == true )
         {
+            //  Ничего не происходит
         }
         else if( dcycle_ch == false )
         {
+            //  Меняем текст
             jLabel18.setText("Duty Cycle");
+            
+            //  Переключаем чекеры
             dcycle_ch = true;
             width_ch = false;
+            
+            //  Меняеем картинки
             jToggleButton10.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\width_off.png"));
             jToggleButton28.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\dcycle_on.png"));
         }
