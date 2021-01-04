@@ -18,10 +18,13 @@ This is a program designed to work with the device "FemtoScope" (9511 and 9512 m
   * jFreeChart 1.0.19
   * jSerialComm 2.6.2
   
-  
 ## Installation
 
  To install run the following commands in a working directory:
  ```
  git clone https://github.com/rengetsu/FemtoV.git
  ```
+### Preview Screenshot
+
+![GitHub Logo](https://i.ibb.co/WxRvTBj/FemtoV.png)
+
