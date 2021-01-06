@@ -5,6 +5,7 @@
  */
 package femtov;
 
+import java.awt.Choice;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Insets;
@@ -484,6 +485,30 @@ public class Interface extends javax.swing.JFrame {
         jButton36.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_right_cl.png"));
         jButton41.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_right_cl.png"));
         
+        //  КОМБО БОКС ПО ВЫБОРЕ ИЗ ТАБЛИЦЫ СТАНДАРТОВ
+
+        //  Массив таблицы стандартов
+        String[] fam_mas =
+        {
+            "NECL", "5-V PECL", "3.3-V PECL", "2.5-V PECL", "1.8-V PECL",
+            "5-V TTL", "3-V TTL", "2.5-V TTL", "LVDS", "CML",
+            "3.3-V CML", "2.5-V CML", "1.8-V CML", "1.2-V CML",
+            "5-V CMOS", "3.3-V CMOS", "2.5-V CMOS", "1.8-V CMOS",
+            "1.5-V CMOS", "1.2-V CMOS", "0.8-V CMOS"
+        };
+        
+        //  Переменная количество элементов в массиве
+        int fam_mas_qt  = 21;
+        
+        //  Кнопка выбора
+        Choice chc1 = choice1;
+        
+        //  Цикл добавления элементов в кнопку выбора из масcива
+        for (int i = 0; i < fam_mas_qt; i++)
+        {
+            chc1.add( fam_mas [ i ] );
+        }
+        
         //  ЗДЕСЬ ЗАКАНЧИВАЕТСЯ КОД ОТНОСЯЩИЙСЯ К КНОПКАМ МЕНЮ
     }
     
@@ -506,7 +531,6 @@ public class Interface extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jToggleButton4 = new javax.swing.JToggleButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -549,6 +573,7 @@ public class Interface extends javax.swing.JFrame {
         jButton76 = new javax.swing.JButton();
         jLabel27 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
+        choice1 = new java.awt.Choice();
         jPanel5 = new javax.swing.JPanel();
         jButton7 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -680,10 +705,6 @@ public class Interface extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel7.setText("Level Format");
-
-        jComboBox1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NECL", "5-V PECL", "3.3-V PECL", "2.5-V PECL", "1.8-V PECL", "5-TTL", "3.3-V TTL", "2.5-V TTL", "LVDS", "CML", "3.3-V CML", "2.5-V CML", "1.8-V CML", "1.2-V CML", "5-V CMOS", "3.3-V CMOS", "2.5-V CMOS", "1.8-V CMOS", "1.5-V CMOS", "1.2-V CMOS", "0.8-V CMOS" }));
-        jComboBox1.setToolTipText("");
 
         jToggleButton4.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
         jToggleButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/off_button.png"))); // NOI18N
@@ -999,6 +1020,13 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
+        choice1.setBackground(new java.awt.Color(0, 0, 0));
+        choice1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        choice1.setFocusable(false);
+        choice1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        choice1.setForeground(new java.awt.Color(255, 255, 255));
+        choice1.setName(""); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1034,14 +1062,14 @@ public class Interface extends javax.swing.JFrame {
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel11)
                             .addComponent(jLabel8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 10, 10)
                         .addComponent(jLabel4)
-                        .addGap(49, 49, 49))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jToggleButton19)
                         .addGap(4, 4, 4)
                         .addComponent(jToggleButton20)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1070,7 +1098,6 @@ public class Interface extends javax.swing.JFrame {
                             .addComponent(jLabel27)
                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7)
                             .addComponent(jToggleButton11)
                             .addComponent(jToggleButton25)
@@ -1085,8 +1112,9 @@ public class Interface extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel5)))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(jLabel5))
+                            .addComponent(choice1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1113,7 +1141,7 @@ public class Interface extends javax.swing.JFrame {
                 .addComponent(jToggleButton6)
                 .addGap(0, 0, 0)
                 .addComponent(jToggleButton24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
                 .addGap(3, 3, 3)
                 .addComponent(jToggleButton11)
@@ -1121,9 +1149,9 @@ public class Interface extends javax.swing.JFrame {
                 .addComponent(jToggleButton25)
                 .addGap(0, 0, 0)
                 .addComponent(jToggleButton26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(choice1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel15)
                 .addGap(3, 3, 3)
                 .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3072,6 +3100,7 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Choice choice1;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
@@ -3125,7 +3154,6 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton jButton75;
     private javax.swing.JButton jButton76;
     private javax.swing.JButton jButton8;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
