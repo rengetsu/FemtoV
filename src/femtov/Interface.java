@@ -402,10 +402,87 @@ public class Interface extends javax.swing.JFrame {
         
         //  АНИМАЦИИ ПРИ НАЖАТИИ НА КНОПКИ
         
+        //  АНИМАЦИЯ КНОПОК ВЕРХНЕГО ЛЕВОГО МЕНЮ
+        
+        //  Анимация нажатия - Кнопка помощи
+        jButton11.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\help_button_cl.png"));
+        
+        //  Анимация нажатия - Кнопка закрытия
+        jButton60.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\cancel_button_cl.png"));
+        
+        //  АНИМАЦИЯ КНОПОК ВЕРХНЕГО ПРАВОГО МЕНЮ
+        
+        //  Анимация нажатия - Кнопка закрытия
+        jButton12.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\cancel_button_cl.png"));
+        
+        //  Анимация нажатия - Кнопка помощи
+        jButton61.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\help_button_cl.png"));
+        
+        //  АНИМАЦИЯ КНОПОК ВЕРХНЕГО СРЕДНЕГО МЕНЮ
+        
+        jButton6.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\back_left_cl.png"));
+        jButton7.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\ManualTrigGate_cl.png"));
+        jButton8.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\back_right_cl.png"));
+        jButton57.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\HelpButton_cl.png"));
+        
+        //  АНИМАЦИЯ КНОПОК ЛЕВОГО МЕНЮ
+        
+        //  Анимация нажатия - Маленькая стрелка вниз
+        jButton22.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_down_cl.png"));
+        jButton56.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_down_cl.png"));
+        jButton71.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_down_cl.png"));
+        jButton72.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_down_cl.png"));
+        
+        //  Анимация нажатия - Маленькая стрелка вверх
+        jButton23.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_up_cl.png"));
+        jButton63.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_up_cl.png"));
+        jButton70.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_up_cl.png"));
+        jButton73.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_up_cl.png"));
+        
+        //  Анимация нажатия - Ноль
+        jButton24.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_zero_cl.png"));
+        jButton64.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_zero_cl.png"));
+        jButton69.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_zero_cl.png"));
+        jButton74.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_zero_cl.png"));
+        
+        //  Анимация нажатия - Большая стрелка вниз
+        jButton25.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_down_cl.png"));
+        jButton65.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_down_cl.png"));
+        jButton68.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_down_cl.png"));
+        jButton75.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_down_cl.png"));
+        
+        //  Анимация нажатия - Большая стрелка вверх
+        jButton26.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_up_cl.png"));
+        jButton66.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_up_cl.png"));
+        jButton67.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_up_cl.png"));
+        jButton76.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_up_cl.png"));
+        
+        //  АНИМАЦИЯ КНОПОК ПРАВОГО МЕНЮ
+        
+        //  Анимация нажатия - Маленькая стрелка влево
+        jButton27.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_left_cl.png"));
+        jButton32.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_left_cl.png"));
+        jButton37.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_left_cl.png"));
+        
         //  Анимация нажатия - Маленькая стрелка вправо
         jButton28.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_right_cl.png"));
         jButton33.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_right_cl.png"));
         jButton38.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_right_cl.png"));
+        
+        //  Анимация нажатия - Дельта
+        jButton29.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_d_cl.png"));
+        jButton34.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_d_cl.png"));
+        jButton39.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_d_cl.png"));
+        
+        //  Анимация нажатия - Большая стрелка влево
+        jButton30.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_left_cl.png"));
+        jButton35.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_left_cl.png"));
+        jButton40.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_left_cl.png"));
+        
+        //  Анимация нажатия - Большая стрелка вправо
+        jButton31.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_right_cl.png"));
+        jButton36.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_right_cl.png"));
+        jButton41.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_right_cl.png"));
         
         //  ЗДЕСЬ ЗАКАНЧИВАЕТСЯ КОД ОТНОСЯЩИЙСЯ К КНОПКАМ МЕНЮ
     }
@@ -1191,8 +1268,8 @@ public class Interface extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
