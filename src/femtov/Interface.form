@@ -175,7 +175,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/cancel_button.png"/>
+              <Image iconType="3" name="/images/cancel_button.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="iconTextGap" type="int" value="0"/>
@@ -187,7 +187,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/help_button.png"/>
+              <Image iconType="3" name="/images/help_button.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="iconTextGap" type="int" value="0"/>
@@ -448,7 +448,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/off_button.png"/>
+              <Image iconType="3" name="/images/off_button.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -498,7 +498,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/off_button.png"/>
+              <Image iconType="3" name="/images/off_button.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -514,7 +514,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/ch1_off.png"/>
+              <Image iconType="3" name="/images/ch1_off.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -530,7 +530,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/ch2_off.png"/>
+              <Image iconType="3" name="/images/ch2_off.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -546,7 +546,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/complement_off.png"/>
+              <Image iconType="3" name="/images/complement_off.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -566,7 +566,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/normal_on.png"/>
+              <Image iconType="3" name="/images/normal_on.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -607,7 +607,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/high-low_on.png"/>
+              <Image iconType="3" name="/images/high-low_on.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -628,7 +628,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/std_off.png"/>
+              <Image iconType="3" name="/images/std_off.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -646,7 +646,7 @@
         <Component class="javax.swing.JButton" name="jButton22">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_down.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_down.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -661,7 +661,7 @@
         <Component class="javax.swing.JButton" name="jButton23">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_up.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_up.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -676,7 +676,7 @@
         <Component class="javax.swing.JButton" name="jButton24">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_mid_zero.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_mid_zero.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -691,7 +691,7 @@
         <Component class="javax.swing.JButton" name="jButton25">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_down.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_down.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -706,7 +706,7 @@
         <Component class="javax.swing.JButton" name="jButton26">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_up.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_up.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -724,7 +724,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/long_button.png"/>
+              <Image iconType="3" name="/images/long_button.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
           </Properties>
@@ -759,7 +759,7 @@
         <Component class="javax.swing.JLabel" name="jLabel24">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/long_button.png"/>
+              <Image iconType="3" name="/images/long_button.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
           </Properties>
@@ -794,7 +794,7 @@
         <Component class="javax.swing.JButton" name="jButton56">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_down.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_down.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -809,7 +809,7 @@
         <Component class="javax.swing.JButton" name="jButton63">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_up.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_up.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -824,7 +824,7 @@
         <Component class="javax.swing.JButton" name="jButton64">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_mid_zero.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_mid_zero.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -839,7 +839,7 @@
         <Component class="javax.swing.JButton" name="jButton65">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_down.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_down.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -854,7 +854,7 @@
         <Component class="javax.swing.JButton" name="jButton66">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_up.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_up.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -872,7 +872,7 @@
         <Component class="javax.swing.JButton" name="jButton67">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_up.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_up.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -890,7 +890,7 @@
         <Component class="javax.swing.JButton" name="jButton68">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_down.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_down.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -905,7 +905,7 @@
         <Component class="javax.swing.JButton" name="jButton69">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_mid_zero.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_mid_zero.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -920,7 +920,7 @@
         <Component class="javax.swing.JButton" name="jButton70">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_up.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_up.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -935,7 +935,7 @@
         <Component class="javax.swing.JButton" name="jButton71">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_down.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_down.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -950,7 +950,7 @@
         <Component class="javax.swing.JLabel" name="jLabel26">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/long_button.png"/>
+              <Image iconType="3" name="/images/long_button.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
           </Properties>
@@ -985,7 +985,7 @@
         <Component class="javax.swing.JButton" name="jButton72">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_down.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_down.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1000,7 +1000,7 @@
         <Component class="javax.swing.JButton" name="jButton73">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_up.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_up.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1015,7 +1015,7 @@
         <Component class="javax.swing.JButton" name="jButton74">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_mid_zero.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_mid_zero.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1030,7 +1030,7 @@
         <Component class="javax.swing.JButton" name="jButton75">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_down.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_down.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1045,7 +1045,7 @@
         <Component class="javax.swing.JButton" name="jButton76">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_up.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_up.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1063,7 +1063,7 @@
         <Component class="javax.swing.JLabel" name="jLabel27">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/long_button.png"/>
+              <Image iconType="3" name="/images/long_button.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
           </Properties>
@@ -1113,6 +1113,9 @@
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="choice1ItemStateChanged"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -1169,7 +1172,7 @@
               <Font name="Arial" size="11" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/MannualTrigGate.png"/>
+              <Image iconType="3" name="/images/MannualTrigGate.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="alignmentY" type="float" value="0.0"/>
@@ -1193,7 +1196,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/back_left.png"/>
+              <Image iconType="3" name="/images/back_left.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="alignmentY" type="float" value="0.0"/>
@@ -1212,7 +1215,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/back_right.png"/>
+              <Image iconType="3" name="/images/back_right.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1235,7 +1238,7 @@
               <Font name="Arial" size="11" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/HelpButton.png"/>
+              <Image iconType="3" name="/images/HelpButton.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1346,7 +1349,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/help_button.png"/>
+              <Image iconType="3" name="/images/help_button.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="iconTextGap" type="int" value="0"/>
@@ -1358,7 +1361,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/cancel_button.png"/>
+              <Image iconType="3" name="/images/cancel_button.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="iconTextGap" type="int" value="0"/>
@@ -1538,7 +1541,7 @@
         <Component class="javax.swing.JLabel" name="jLabel21">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/icon_line.png"/>
+              <Image iconType="3" name="/images/icon_line.png"/>
             </Property>
           </Properties>
         </Component>
@@ -1553,7 +1556,7 @@
         <Component class="javax.swing.JLabel" name="jLabel22">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/icon_line.png"/>
+              <Image iconType="3" name="/images/icon_line.png"/>
             </Property>
           </Properties>
         </Component>
@@ -1579,7 +1582,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/ch1_off.png"/>
+              <Image iconType="3" name="/images/ch1_off.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -1595,7 +1598,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/ch2_off.png"/>
+              <Image iconType="3" name="/images/ch2_off.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -1611,7 +1614,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/period_on.png"/>
+              <Image iconType="3" name="/images/period_on.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1631,7 +1634,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/frequency_off.png"/>
+              <Image iconType="3" name="/images/frequency_off.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1651,7 +1654,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/delay_on.png"/>
+              <Image iconType="3" name="/images/delay_on.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1671,7 +1674,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/phase_off.png"/>
+              <Image iconType="3" name="/images/phase_off.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1688,7 +1691,7 @@
         <Component class="javax.swing.JButton" name="jButton28">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_right.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_right.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1733,7 +1736,7 @@
         <Component class="javax.swing.JButton" name="jButton29">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_mid_d.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_mid_d.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1748,7 +1751,7 @@
         <Component class="javax.swing.JButton" name="jButton27">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_left.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_left.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1763,7 +1766,7 @@
         <Component class="javax.swing.JButton" name="jButton31">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_right.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_right.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1781,7 +1784,7 @@
         <Component class="javax.swing.JLabel" name="jLabel28">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/long_button.png"/>
+              <Image iconType="3" name="/images/long_button.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
           </Properties>
@@ -1789,7 +1792,7 @@
         <Component class="javax.swing.JButton" name="jButton30">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_left.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_left.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1804,7 +1807,7 @@
         <Component class="javax.swing.JButton" name="jButton32">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_left.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_left.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1819,7 +1822,7 @@
         <Component class="javax.swing.JLabel" name="jLabel29">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/long_button.png"/>
+              <Image iconType="3" name="/images/long_button.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
           </Properties>
@@ -1854,7 +1857,7 @@
         <Component class="javax.swing.JButton" name="jButton33">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_right.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_right.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1872,7 +1875,7 @@
         <Component class="javax.swing.JButton" name="jButton34">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_mid_d.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_mid_d.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1887,7 +1890,7 @@
         <Component class="javax.swing.JButton" name="jButton35">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_left.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_left.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1902,7 +1905,7 @@
         <Component class="javax.swing.JButton" name="jButton36">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_right.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_right.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1920,7 +1923,7 @@
         <Component class="javax.swing.JButton" name="jButton37">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_left.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_left.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1935,7 +1938,7 @@
         <Component class="javax.swing.JLabel" name="jLabel30">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/long_button.png"/>
+              <Image iconType="3" name="/images/long_button.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
           </Properties>
@@ -1970,7 +1973,7 @@
         <Component class="javax.swing.JButton" name="jButton38">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_small_right.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_small_right.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1988,7 +1991,7 @@
         <Component class="javax.swing.JButton" name="jButton39">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_mid_d.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_mid_d.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2003,7 +2006,7 @@
         <Component class="javax.swing.JButton" name="jButton40">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_left.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_left.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2018,7 +2021,7 @@
         <Component class="javax.swing.JButton" name="jButton41">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/silvernew/silver_icon_button_big_right.png"/>
+              <Image iconType="3" name="/images/silver_icon_button_big_right.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2039,7 +2042,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/width_on.png"/>
+              <Image iconType="3" name="/images/width_on.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2059,7 +2062,7 @@
               <Font name="Arial" size="8" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/fullbuttons/dcycle_off.png"/>
+              <Image iconType="3" name="/images/dcycle_off.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2165,7 +2168,7 @@
         <Component class="javax.swing.JLabel" name="jLabel23">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Mouse_Left.png"/>
+              <Image iconType="3" name="/images/Down_Mouse_Left.png"/>
             </Property>
           </Properties>
         </Component>
@@ -2175,7 +2178,7 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Mode_Off.png"/>
+              <Image iconType="3" name="/images/Down_Mode_Off.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2196,7 +2199,7 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Pattern_Off.png"/>
+              <Image iconType="3" name="/images/Down_Pattern_Off.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2221,7 +2224,7 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Display_Off.png"/>
+              <Image iconType="3" name="/images/Down_Display_Off.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -2241,7 +2244,7 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Calibrat_Off.png"/>
+              <Image iconType="3" name="/images/Down_Calibrat_Off.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -2261,7 +2264,7 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Inputs_Off.png"/>
+              <Image iconType="3" name="/images/Down_Inputs_Off.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2286,7 +2289,7 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Trigger_Off.png"/>
+              <Image iconType="3" name="/images/Down_Trigger_Off.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -2306,7 +2309,7 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Timing_Off.png"/>
+              <Image iconType="3" name="/images/Down_Timing_Off.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -2326,9 +2329,8 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Levels_Off.png"/>
+              <Image iconType="3" name="/images/Down_Levels_Off.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Levels"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -2347,7 +2349,7 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Outputs_Off.png"/>
+              <Image iconType="3" name="/images/Down_Outputs_Off.png"/>
             </Property>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2372,7 +2374,7 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Utility_Off.png"/>
+              <Image iconType="3" name="/images/Down_Utility_Off.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -2389,7 +2391,7 @@
         <Component class="javax.swing.JLabel" name="jLabel16">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/downnew/Down_Mouse_Right.png"/>
+              <Image iconType="3" name="/images/Down_Mouse_Right.png"/>
             </Property>
           </Properties>
         </Component>

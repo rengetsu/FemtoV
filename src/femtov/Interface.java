@@ -27,6 +27,7 @@ import javax.swing.plaf.metal.MetalToggleButtonUI;
  *
  * @author PAVEL TROSTIANKO
  */
+
 public class Interface extends javax.swing.JFrame {
     /* ГРАФИЧЕСКИЙ ИНТЕРФЕЙС ПРОГРАММЫ  */
     
@@ -88,6 +89,19 @@ public class Interface extends javax.swing.JFrame {
         //  initComponents() регенерируется средой IDE при создании пользовательского интерфейса в редакторе графического интерфейса
         
         //  ДАЛЕЕ ИДЕТ РЕДАКТИРУЕМЫЙ КОД ГРАФИЧЕСКОГО ИНТЕРФЕЙСА
+        
+        //  Делаем невозможным редактирование текстовых полей
+        jTextField1.setEditable(false);
+        jTextField2.setEditable(false);
+        jTextField3.setEditable(false);
+        jTextField4.setEditable(false);
+        jTextField5.setEditable(false);
+        jTextField6.setEditable(false);
+        jTextField7.setEditable(false);
+        
+        //  Стандартно в Timing все элементы каналов выключены
+        timing_СhannelsOff();
+        
         //  НАКЛАДЫВАЕМ ЦВЕТ НА КНОПКИ НИЖНЕГО МЕНЮ
         
         //jButton13.setBackground(GRAY_FOR_BUTTONS);
@@ -405,84 +419,84 @@ public class Interface extends javax.swing.JFrame {
         //  АНИМАЦИЯ КНОПОК ВЕРХНЕГО ЛЕВОГО МЕНЮ
         
         //  Анимация нажатия - Кнопка помощи
-        jButton11.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\help_button_cl.png"));
+        jButton11.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\help_button_cl.png"));
         
         //  Анимация нажатия - Кнопка закрытия
-        jButton60.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\cancel_button_cl.png"));
+        jButton60.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\cancel_button_cl.png"));
         
         //  АНИМАЦИЯ КНОПОК ВЕРХНЕГО ПРАВОГО МЕНЮ
         
         //  Анимация нажатия - Кнопка закрытия
-        jButton12.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\cancel_button_cl.png"));
+        jButton12.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\cancel_button_cl.png"));
         
         //  Анимация нажатия - Кнопка помощи
-        jButton61.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\help_button_cl.png"));
+        jButton61.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\help_button_cl.png"));
         
         //  АНИМАЦИЯ КНОПОК ВЕРХНЕГО СРЕДНЕГО МЕНЮ
         
-        jButton6.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\back_left_cl.png"));
-        jButton7.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\ManualTrigGate_cl.png"));
-        jButton8.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\back_right_cl.png"));
-        jButton57.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\HelpButton_cl.png"));
+        jButton6.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\back_left_cl.png"));
+        jButton7.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\ManualTrigGate_cl.png"));
+        jButton8.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\back_right_cl.png"));
+        jButton57.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\HelpButton_cl.png"));
         
         //  АНИМАЦИЯ КНОПОК ЛЕВОГО МЕНЮ
         
         //  Анимация нажатия - Маленькая стрелка вниз
-        jButton22.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_down_cl.png"));
-        jButton56.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_down_cl.png"));
-        jButton71.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_down_cl.png"));
-        jButton72.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_down_cl.png"));
+        jButton22.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_down_cl.png"));
+        jButton56.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_down_cl.png"));
+        jButton71.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_down_cl.png"));
+        jButton72.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_down_cl.png"));
         
         //  Анимация нажатия - Маленькая стрелка вверх
-        jButton23.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_up_cl.png"));
-        jButton63.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_up_cl.png"));
-        jButton70.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_up_cl.png"));
-        jButton73.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_up_cl.png"));
+        jButton23.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_up_cl.png"));
+        jButton63.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_up_cl.png"));
+        jButton70.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_up_cl.png"));
+        jButton73.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_up_cl.png"));
         
         //  Анимация нажатия - Ноль
-        jButton24.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_zero_cl.png"));
-        jButton64.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_zero_cl.png"));
-        jButton69.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_zero_cl.png"));
-        jButton74.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_zero_cl.png"));
+        jButton24.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_mid_zero_cl.png"));
+        jButton64.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_mid_zero_cl.png"));
+        jButton69.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_mid_zero_cl.png"));
+        jButton74.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_mid_zero_cl.png"));
         
         //  Анимация нажатия - Большая стрелка вниз
-        jButton25.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_down_cl.png"));
-        jButton65.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_down_cl.png"));
-        jButton68.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_down_cl.png"));
-        jButton75.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_down_cl.png"));
+        jButton25.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_down_cl.png"));
+        jButton65.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_down_cl.png"));
+        jButton68.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_down_cl.png"));
+        jButton75.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_down_cl.png"));
         
         //  Анимация нажатия - Большая стрелка вверх
-        jButton26.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_up_cl.png"));
-        jButton66.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_up_cl.png"));
-        jButton67.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_up_cl.png"));
-        jButton76.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_up_cl.png"));
+        jButton26.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_up_cl.png"));
+        jButton66.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_up_cl.png"));
+        jButton67.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_up_cl.png"));
+        jButton76.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_up_cl.png"));
         
         //  АНИМАЦИЯ КНОПОК ПРАВОГО МЕНЮ
         
         //  Анимация нажатия - Маленькая стрелка влево
-        jButton27.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_left_cl.png"));
-        jButton32.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_left_cl.png"));
-        jButton37.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_left_cl.png"));
+        jButton27.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_left_cl.png"));
+        jButton32.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_left_cl.png"));
+        jButton37.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_left_cl.png"));
         
         //  Анимация нажатия - Маленькая стрелка вправо
-        jButton28.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_right_cl.png"));
-        jButton33.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_right_cl.png"));
-        jButton38.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_small_right_cl.png"));
+        jButton28.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_right_cl.png"));
+        jButton33.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_right_cl.png"));
+        jButton38.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_small_right_cl.png"));
         
         //  Анимация нажатия - Дельта
-        jButton29.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_d_cl.png"));
-        jButton34.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_d_cl.png"));
-        jButton39.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_mid_d_cl.png"));
+        jButton29.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_mid_d_cl.png"));
+        jButton34.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_mid_d_cl.png"));
+        jButton39.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_mid_d_cl.png"));
         
         //  Анимация нажатия - Большая стрелка влево
-        jButton30.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_left_cl.png"));
-        jButton35.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_left_cl.png"));
-        jButton40.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_left_cl.png"));
+        jButton30.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_left_cl.png"));
+        jButton35.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_left_cl.png"));
+        jButton40.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_left_cl.png"));
         
         //  Анимация нажатия - Большая стрелка вправо
-        jButton31.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_right_cl.png"));
-        jButton36.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_right_cl.png"));
-        jButton41.setPressedIcon(new ImageIcon(currentDir + "\\src\\clicked\\silver_icon_button_big_right_cl.png"));
+        jButton31.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_right_cl.png"));
+        jButton36.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_right_cl.png"));
+        jButton41.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_right_cl.png"));
         
         //  КОМБО БОКС ПО ВЫБОРЕ ИЗ ТАБЛИЦЫ СТАНДАРТОВ
 
@@ -655,12 +669,12 @@ public class Interface extends javax.swing.JFrame {
         jLabel2.setText("Levels");
 
         jButton60.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/cancel_button.png"))); // NOI18N
+        jButton60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel_button.png"))); // NOI18N
         jButton60.setAlignmentY(0.0F);
         jButton60.setIconTextGap(0);
 
         jButton11.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/help_button.png"))); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/help_button.png"))); // NOI18N
         jButton11.setAlignmentY(0.0F);
         jButton11.setIconTextGap(0);
 
@@ -706,7 +720,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel7.setText("Level Format");
 
         jToggleButton4.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/off_button.png"))); // NOI18N
+        jToggleButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/off_button.png"))); // NOI18N
         jToggleButton4.setBorder(null);
         jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -727,7 +741,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel15.setText("High Level");
 
         jToggleButton18.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/off_button.png"))); // NOI18N
+        jToggleButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/off_button.png"))); // NOI18N
         jToggleButton18.setBorder(null);
         jToggleButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -736,7 +750,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton19.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/ch1_off.png"))); // NOI18N
+        jToggleButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ch1_off.png"))); // NOI18N
         jToggleButton19.setBorder(null);
         jToggleButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -745,7 +759,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton20.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/ch2_off.png"))); // NOI18N
+        jToggleButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ch2_off.png"))); // NOI18N
         jToggleButton20.setBorder(null);
         jToggleButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -754,7 +768,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton24.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/complement_off.png"))); // NOI18N
+        jToggleButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/complement_off.png"))); // NOI18N
         jToggleButton24.setAlignmentY(0.0F);
         jToggleButton24.setBorder(null);
         jToggleButton24.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -765,7 +779,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton6.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/normal_on.png"))); // NOI18N
+        jToggleButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/normal_on.png"))); // NOI18N
         jToggleButton6.setAlignmentY(0.0F);
         jToggleButton6.setBorder(null);
         jToggleButton6.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -788,7 +802,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton11.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/high-low_on.png"))); // NOI18N
+        jToggleButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/high-low_on.png"))); // NOI18N
         jToggleButton11.setAlignmentY(0.0F);
         jToggleButton11.setBorder(null);
         jToggleButton11.setIconTextGap(0);
@@ -800,7 +814,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton26.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/std_off.png"))); // NOI18N
+        jToggleButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/std_off.png"))); // NOI18N
         jToggleButton26.setAlignmentY(0.0F);
         jToggleButton26.setBorder(null);
         jToggleButton26.setIconTextGap(0);
@@ -811,31 +825,31 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_down.png"))); // NOI18N
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_down.png"))); // NOI18N
         jButton22.setAlignmentY(0.0F);
         jButton22.setBorder(null);
         jButton22.setIconTextGap(0);
         jButton22.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_up.png"))); // NOI18N
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_up.png"))); // NOI18N
         jButton23.setAlignmentY(0.0F);
         jButton23.setBorder(null);
         jButton23.setIconTextGap(0);
         jButton23.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_mid_zero.png"))); // NOI18N
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_mid_zero.png"))); // NOI18N
         jButton24.setAlignmentY(0.0F);
         jButton24.setBorder(null);
         jButton24.setIconTextGap(0);
         jButton24.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_down.png"))); // NOI18N
+        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_down.png"))); // NOI18N
         jButton25.setAlignmentY(0.0F);
         jButton25.setBorder(null);
         jButton25.setIconTextGap(0);
         jButton25.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_up.png"))); // NOI18N
+        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_up.png"))); // NOI18N
         jButton26.setAlignmentY(0.0F);
         jButton26.setBorder(null);
         jButton26.setIconTextGap(0);
@@ -846,7 +860,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/long_button.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/long_button.png"))); // NOI18N
         jLabel1.setAlignmentY(0.0F);
 
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
@@ -863,7 +877,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/long_button.png"))); // NOI18N
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/long_button.png"))); // NOI18N
         jLabel24.setAlignmentY(0.0F);
 
         jTextField2.setBackground(new java.awt.Color(0, 0, 0));
@@ -880,31 +894,31 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_down.png"))); // NOI18N
+        jButton56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_down.png"))); // NOI18N
         jButton56.setAlignmentY(0.0F);
         jButton56.setBorder(null);
         jButton56.setIconTextGap(0);
         jButton56.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_up.png"))); // NOI18N
+        jButton63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_up.png"))); // NOI18N
         jButton63.setAlignmentY(0.0F);
         jButton63.setBorder(null);
         jButton63.setIconTextGap(0);
         jButton63.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_mid_zero.png"))); // NOI18N
+        jButton64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_mid_zero.png"))); // NOI18N
         jButton64.setAlignmentY(0.0F);
         jButton64.setBorder(null);
         jButton64.setIconTextGap(0);
         jButton64.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_down.png"))); // NOI18N
+        jButton65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_down.png"))); // NOI18N
         jButton65.setAlignmentY(0.0F);
         jButton65.setBorder(null);
         jButton65.setIconTextGap(0);
         jButton65.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_up.png"))); // NOI18N
+        jButton66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_up.png"))); // NOI18N
         jButton66.setAlignmentY(0.0F);
         jButton66.setBorder(null);
         jButton66.setIconTextGap(0);
@@ -915,7 +929,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_up.png"))); // NOI18N
+        jButton67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_up.png"))); // NOI18N
         jButton67.setAlignmentY(0.0F);
         jButton67.setBorder(null);
         jButton67.setIconTextGap(0);
@@ -926,31 +940,31 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_down.png"))); // NOI18N
+        jButton68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_down.png"))); // NOI18N
         jButton68.setAlignmentY(0.0F);
         jButton68.setBorder(null);
         jButton68.setIconTextGap(0);
         jButton68.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_mid_zero.png"))); // NOI18N
+        jButton69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_mid_zero.png"))); // NOI18N
         jButton69.setAlignmentY(0.0F);
         jButton69.setBorder(null);
         jButton69.setIconTextGap(0);
         jButton69.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_up.png"))); // NOI18N
+        jButton70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_up.png"))); // NOI18N
         jButton70.setAlignmentY(0.0F);
         jButton70.setBorder(null);
         jButton70.setIconTextGap(0);
         jButton70.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_down.png"))); // NOI18N
+        jButton71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_down.png"))); // NOI18N
         jButton71.setAlignmentY(0.0F);
         jButton71.setBorder(null);
         jButton71.setIconTextGap(0);
         jButton71.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/long_button.png"))); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/long_button.png"))); // NOI18N
         jLabel26.setAlignmentY(0.0F);
 
         jTextField3.setBackground(new java.awt.Color(0, 0, 0));
@@ -967,31 +981,31 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_down.png"))); // NOI18N
+        jButton72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_down.png"))); // NOI18N
         jButton72.setAlignmentY(0.0F);
         jButton72.setBorder(null);
         jButton72.setIconTextGap(0);
         jButton72.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_up.png"))); // NOI18N
+        jButton73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_up.png"))); // NOI18N
         jButton73.setAlignmentY(0.0F);
         jButton73.setBorder(null);
         jButton73.setIconTextGap(0);
         jButton73.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_mid_zero.png"))); // NOI18N
+        jButton74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_mid_zero.png"))); // NOI18N
         jButton74.setAlignmentY(0.0F);
         jButton74.setBorder(null);
         jButton74.setIconTextGap(0);
         jButton74.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_down.png"))); // NOI18N
+        jButton75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_down.png"))); // NOI18N
         jButton75.setAlignmentY(0.0F);
         jButton75.setBorder(null);
         jButton75.setIconTextGap(0);
         jButton75.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_up.png"))); // NOI18N
+        jButton76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_up.png"))); // NOI18N
         jButton76.setAlignmentY(0.0F);
         jButton76.setBorder(null);
         jButton76.setIconTextGap(0);
@@ -1002,7 +1016,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/long_button.png"))); // NOI18N
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/long_button.png"))); // NOI18N
         jLabel27.setAlignmentY(0.0F);
 
         jTextField4.setBackground(new java.awt.Color(0, 0, 0));
@@ -1026,6 +1040,11 @@ public class Interface extends javax.swing.JFrame {
         choice1.setForeground(new java.awt.Color(255, 255, 255));
         choice1.setName(""); // NOI18N
         choice1.setEnabled(false);
+        choice1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                choice1ItemStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1208,7 +1227,7 @@ public class Interface extends javax.swing.JFrame {
 
         jButton7.setBackground(new java.awt.Color(111, 111, 111));
         jButton7.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/MannualTrigGate.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MannualTrigGate.png"))); // NOI18N
         jButton7.setToolTipText("");
         jButton7.setAlignmentY(0.0F);
         jButton7.setBorder(null);
@@ -1223,7 +1242,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton6.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/back_left.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back_left.png"))); // NOI18N
         jButton6.setToolTipText("");
         jButton6.setAlignmentY(0.0F);
         jButton6.setBorder(null);
@@ -1231,7 +1250,7 @@ public class Interface extends javax.swing.JFrame {
         jButton6.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
         jButton8.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/back_right.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back_right.png"))); // NOI18N
         jButton8.setAlignmentY(0.0F);
         jButton8.setBorder(null);
         jButton8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1245,7 +1264,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton57.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/HelpButton.png"))); // NOI18N
+        jButton57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/HelpButton.png"))); // NOI18N
         jButton57.setAlignmentY(0.0F);
         jButton57.setBorder(null);
         jButton57.setIconTextGap(0);
@@ -1311,12 +1330,12 @@ public class Interface extends javax.swing.JFrame {
         jLabel17.setText("Timing");
 
         jButton61.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/help_button.png"))); // NOI18N
+        jButton61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/help_button.png"))); // NOI18N
         jButton61.setAlignmentY(0.0F);
         jButton61.setIconTextGap(0);
 
         jButton12.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/cancel_button.png"))); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel_button.png"))); // NOI18N
         jButton12.setAlignmentY(0.0F);
         jButton12.setIconTextGap(0);
         jButton12.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1349,12 +1368,12 @@ public class Interface extends javax.swing.JFrame {
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel7.setPreferredSize(new java.awt.Dimension(200, 650));
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/icon_line.png"))); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_line.png"))); // NOI18N
 
         jLabel19.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel19.setText("Delay");
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/icon_line.png"))); // NOI18N
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_line.png"))); // NOI18N
 
         jLabel20.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel20.setText("Period");
@@ -1363,7 +1382,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel18.setText("Width");
 
         jToggleButton21.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/ch1_off.png"))); // NOI18N
+        jToggleButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ch1_off.png"))); // NOI18N
         jToggleButton21.setBorder(null);
         jToggleButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1372,7 +1391,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton22.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/ch2_off.png"))); // NOI18N
+        jToggleButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ch2_off.png"))); // NOI18N
         jToggleButton22.setBorder(null);
         jToggleButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1381,7 +1400,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton5.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/period_on.png"))); // NOI18N
+        jToggleButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/period_on.png"))); // NOI18N
         jToggleButton5.setAlignmentY(0.0F);
         jToggleButton5.setBorder(null);
         jToggleButton5.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1392,7 +1411,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton23.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/frequency_off.png"))); // NOI18N
+        jToggleButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/frequency_off.png"))); // NOI18N
         jToggleButton23.setAlignmentY(0.0F);
         jToggleButton23.setBorder(null);
         jToggleButton23.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1403,7 +1422,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton9.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/delay_on.png"))); // NOI18N
+        jToggleButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delay_on.png"))); // NOI18N
         jToggleButton9.setAlignmentY(0.0F);
         jToggleButton9.setBorder(null);
         jToggleButton9.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1414,7 +1433,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton27.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/phase_off.png"))); // NOI18N
+        jToggleButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/phase_off.png"))); // NOI18N
         jToggleButton27.setAlignmentY(0.0F);
         jToggleButton27.setBorder(null);
         jToggleButton27.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1424,7 +1443,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_right.png"))); // NOI18N
+        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_right.png"))); // NOI18N
         jButton28.setAlignmentY(0.0F);
         jButton28.setBorder(null);
         jButton28.setIconTextGap(0);
@@ -1449,19 +1468,19 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_mid_d.png"))); // NOI18N
+        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_mid_d.png"))); // NOI18N
         jButton29.setAlignmentY(0.0F);
         jButton29.setBorder(null);
         jButton29.setIconTextGap(0);
         jButton29.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_left.png"))); // NOI18N
+        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_left.png"))); // NOI18N
         jButton27.setAlignmentY(0.0F);
         jButton27.setBorder(null);
         jButton27.setIconTextGap(0);
         jButton27.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_right.png"))); // NOI18N
+        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_right.png"))); // NOI18N
         jButton31.setAlignmentY(0.0F);
         jButton31.setBorder(null);
         jButton31.setIconTextGap(0);
@@ -1472,22 +1491,22 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/long_button.png"))); // NOI18N
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/long_button.png"))); // NOI18N
         jLabel28.setAlignmentY(0.0F);
 
-        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_left.png"))); // NOI18N
+        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_left.png"))); // NOI18N
         jButton30.setAlignmentY(0.0F);
         jButton30.setBorder(null);
         jButton30.setIconTextGap(0);
         jButton30.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_left.png"))); // NOI18N
+        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_left.png"))); // NOI18N
         jButton32.setAlignmentY(0.0F);
         jButton32.setBorder(null);
         jButton32.setIconTextGap(0);
         jButton32.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/long_button.png"))); // NOI18N
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/long_button.png"))); // NOI18N
         jLabel29.setAlignmentY(0.0F);
 
         jTextField6.setBackground(new java.awt.Color(0, 0, 0));
@@ -1504,7 +1523,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_right.png"))); // NOI18N
+        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_right.png"))); // NOI18N
         jButton33.setAlignmentY(0.0F);
         jButton33.setBorder(null);
         jButton33.setIconTextGap(0);
@@ -1515,19 +1534,19 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_mid_d.png"))); // NOI18N
+        jButton34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_mid_d.png"))); // NOI18N
         jButton34.setAlignmentY(0.0F);
         jButton34.setBorder(null);
         jButton34.setIconTextGap(0);
         jButton34.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_left.png"))); // NOI18N
+        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_left.png"))); // NOI18N
         jButton35.setAlignmentY(0.0F);
         jButton35.setBorder(null);
         jButton35.setIconTextGap(0);
         jButton35.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_right.png"))); // NOI18N
+        jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_right.png"))); // NOI18N
         jButton36.setAlignmentY(0.0F);
         jButton36.setBorder(null);
         jButton36.setIconTextGap(0);
@@ -1538,13 +1557,13 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_left.png"))); // NOI18N
+        jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_left.png"))); // NOI18N
         jButton37.setAlignmentY(0.0F);
         jButton37.setBorder(null);
         jButton37.setIconTextGap(0);
         jButton37.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/long_button.png"))); // NOI18N
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/long_button.png"))); // NOI18N
         jLabel30.setAlignmentY(0.0F);
 
         jTextField7.setBackground(new java.awt.Color(0, 0, 0));
@@ -1561,7 +1580,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_small_right.png"))); // NOI18N
+        jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_right.png"))); // NOI18N
         jButton38.setAlignmentY(0.0F);
         jButton38.setBorder(null);
         jButton38.setIconTextGap(0);
@@ -1572,19 +1591,19 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_mid_d.png"))); // NOI18N
+        jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_mid_d.png"))); // NOI18N
         jButton39.setAlignmentY(0.0F);
         jButton39.setBorder(null);
         jButton39.setIconTextGap(0);
         jButton39.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_left.png"))); // NOI18N
+        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_left.png"))); // NOI18N
         jButton40.setAlignmentY(0.0F);
         jButton40.setBorder(null);
         jButton40.setIconTextGap(0);
         jButton40.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/silvernew/silver_icon_button_big_right.png"))); // NOI18N
+        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_right.png"))); // NOI18N
         jButton41.setAlignmentY(0.0F);
         jButton41.setBorder(null);
         jButton41.setIconTextGap(0);
@@ -1596,7 +1615,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton10.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/width_on.png"))); // NOI18N
+        jToggleButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/width_on.png"))); // NOI18N
         jToggleButton10.setAlignmentY(0.0F);
         jToggleButton10.setBorder(null);
         jToggleButton10.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1607,7 +1626,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jToggleButton28.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fullbuttons/dcycle_off.png"))); // NOI18N
+        jToggleButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dcycle_off.png"))); // NOI18N
         jToggleButton28.setAlignmentY(0.0F);
         jToggleButton28.setBorder(null);
         jToggleButton28.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -1754,10 +1773,10 @@ public class Interface extends javax.swing.JFrame {
         jPanel8.setFocusTraversalPolicyProvider(true);
         jPanel8.setPreferredSize(new java.awt.Dimension(600, 80));
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Mouse_Left.png"))); // NOI18N
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Mouse_Left.png"))); // NOI18N
 
         jButton14.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Mode_Off.png"))); // NOI18N
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Mode_Off.png"))); // NOI18N
         jButton14.setAlignmentY(0.0F);
         jButton14.setBorder(null);
         jButton14.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1769,7 +1788,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton58.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Pattern_Off.png"))); // NOI18N
+        jButton58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Pattern_Off.png"))); // NOI18N
         jButton58.setAlignmentY(0.0F);
         jButton58.setBorder(null);
         jButton58.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1783,7 +1802,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Display_Off.png"))); // NOI18N
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Display_Off.png"))); // NOI18N
         jButton13.setBorder(null);
         jButton13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton13.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1794,7 +1813,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton52.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Calibrat_Off.png"))); // NOI18N
+        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Calibrat_Off.png"))); // NOI18N
         jButton52.setBorder(null);
         jButton52.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton52.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1805,7 +1824,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton59.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Inputs_Off.png"))); // NOI18N
+        jButton59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Inputs_Off.png"))); // NOI18N
         jButton59.setAlignmentY(0.0F);
         jButton59.setBorder(null);
         jButton59.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1819,7 +1838,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton16.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Trigger_Off.png"))); // NOI18N
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Trigger_Off.png"))); // NOI18N
         jButton16.setBorder(null);
         jButton16.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton16.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1830,7 +1849,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton54.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Timing_Off.png"))); // NOI18N
+        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Timing_Off.png"))); // NOI18N
         jButton54.setBorder(null);
         jButton54.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton54.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1841,8 +1860,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton55.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Levels_Off.png"))); // NOI18N
-        jButton55.setText("Levels");
+        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Levels_Off.png"))); // NOI18N
         jButton55.setBorder(null);
         jButton55.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton55.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1853,7 +1871,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton62.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Outputs_Off.png"))); // NOI18N
+        jButton62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Outputs_Off.png"))); // NOI18N
         jButton62.setAlignmentY(0.0F);
         jButton62.setBorder(null);
         jButton62.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1867,7 +1885,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton53.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Utility_Off.png"))); // NOI18N
+        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Utility_Off.png"))); // NOI18N
         jButton53.setBorder(null);
         jButton53.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton53.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1877,7 +1895,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/downnew/Down_Mouse_Right.png"))); // NOI18N
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Mouse_Right.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -2011,7 +2029,7 @@ public class Interface extends javax.swing.JFrame {
         if( ch8 == false )
         {
             ch8 = true;
-            jButton14.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Mode_Off.png"));
+            jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
             
             //jButton14.setBackground(GRAY_FOR_BUTTONS);
             //jButton14.setForeground(Color.BLACK);
@@ -2019,7 +2037,7 @@ public class Interface extends javax.swing.JFrame {
         else if( ch8 == true )
         {
             ch8 = false;
-            jButton14.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Mode_On.png"));
+            jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_On.png"));
             
             //jButton14.setBackground(BLUE_FOR_BUTTONS);
             //jButton14.setForeground(Color.WHITE);
@@ -2059,15 +2077,15 @@ public class Interface extends javax.swing.JFrame {
         ch10 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_Off.png"));
-        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Timing_Off.png"));
-        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_Off.png"));
+        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
@@ -2075,7 +2093,7 @@ public class Interface extends javax.swing.JFrame {
         if( ch4 == false )
         {
             ch4 = true;
-            jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_Off.png"));
+            jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
             
             //jButton58.setBackground(GRAY_FOR_BUTTONS);
             //jButton58.setForeground(Color.BLACK);
@@ -2083,7 +2101,7 @@ public class Interface extends javax.swing.JFrame {
         else if( ch4 == true )
         {
             ch4 = false;
-            jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_On.png"));
+            jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_On.png"));
             
             //jButton58.setBackground(BLUE_FOR_BUTTONS);
             //jButton58.setForeground(Color.WHITE);
@@ -2123,15 +2141,15 @@ public class Interface extends javax.swing.JFrame {
         ch10 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_Off.png"));
-        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Timing_Off.png"));
-        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_Off.png"));
+        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
     }//GEN-LAST:event_jButton58ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
@@ -2139,7 +2157,7 @@ public class Interface extends javax.swing.JFrame {
         if( ch1 == false )
         {
             ch1 = true;
-            jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_Off.png"));
+            jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
             
             //jButton13.setBackground(GRAY_FOR_BUTTONS);
             //jButton13.setForeground(Color.BLACK);
@@ -2147,7 +2165,7 @@ public class Interface extends javax.swing.JFrame {
         else if( ch1 == true )
         {
             ch1 = false;
-            jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_On.png"));
+            jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_On.png"));
             
             //jButton13.setBackground(BLUE_FOR_BUTTONS);
             //jButton13.setForeground(Color.WHITE);
@@ -2187,15 +2205,15 @@ public class Interface extends javax.swing.JFrame {
         ch10 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_Off.png"));
-        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Timing_Off.png"));
-        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_Off.png"));
+        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
@@ -2203,7 +2221,7 @@ public class Interface extends javax.swing.JFrame {
         if( ch3 == false )
         {
             ch3 = true;
-            jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_Off.png"));
+            jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
             
             //jButton52.setBackground(GRAY_FOR_BUTTONS);
             //jButton52.setForeground(Color.BLACK);
@@ -2211,7 +2229,7 @@ public class Interface extends javax.swing.JFrame {
         else if( ch3 == true )
         {
             ch3 = false;
-            jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_On.png"));
+            jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_On.png"));
             
             //jButton52.setBackground(BLUE_FOR_BUTTONS);
             //jButton52.setForeground(Color.WHITE);
@@ -2251,15 +2269,15 @@ public class Interface extends javax.swing.JFrame {
         ch10 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Trigger_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_Off.png"));
-        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Timing_Off.png"));
-        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_Off.png"));
+        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
     }//GEN-LAST:event_jButton52ActionPerformed
 
     private void jButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton59ActionPerformed
@@ -2267,7 +2285,7 @@ public class Interface extends javax.swing.JFrame {
         if( ch5 == false )
         {
             ch5 = true;
-            jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_Off.png"));
+            jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
             
             //jButton59.setBackground(GRAY_FOR_BUTTONS);
             //jButton59.setForeground(Color.BLACK);
@@ -2275,7 +2293,7 @@ public class Interface extends javax.swing.JFrame {
         else if( ch5 == true )
         {
             ch5 = false;
-            jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_On.png"));
+            jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_On.png"));
             
             //jButton59.setBackground(BLUE_FOR_BUTTONS);
             //jButton59.setForeground(Color.WHITE);
@@ -2315,15 +2333,15 @@ public class Interface extends javax.swing.JFrame {
         ch10 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_Off.png"));
-        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Timing_Off.png"));
-        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_Off.png"));
+        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
     }//GEN-LAST:event_jButton59ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
@@ -2331,7 +2349,7 @@ public class Interface extends javax.swing.JFrame {
         if( ch2 == false )
         {
             ch2 = true;
-            jButton16.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Trigger_Off.png"));
+            jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
             
             //jButton16.setBackground(GRAY_FOR_BUTTONS);
             //jButton16.setForeground(Color.BLACK);
@@ -2339,7 +2357,7 @@ public class Interface extends javax.swing.JFrame {
         else if( ch2 == true )
         {
             ch2 = false;
-            jButton16.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Trigger_On.png"));
+            jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_On.png"));
             
             //jButton16.setBackground(BLUE_FOR_BUTTONS);
             //jButton16.setForeground(Color.WHITE);
@@ -2379,15 +2397,15 @@ public class Interface extends javax.swing.JFrame {
         ch10 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Mode_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_Off.png"));
-        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Timing_Off.png"));
-        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_Off.png"));
+        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
@@ -2395,7 +2413,7 @@ public class Interface extends javax.swing.JFrame {
         if( ch9 == false )
         {
             ch9 = true;
-            jButton54.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Timing_Off.png"));
+            jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
             
             //jButton54.setBackground(GRAY_FOR_BUTTONS);
             //jButton54.setForeground(Color.BLACK);
@@ -2403,7 +2421,7 @@ public class Interface extends javax.swing.JFrame {
         else if( ch9 == true )
         {
             ch9 = false;
-            jButton54.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Timing_On.png"));
+            jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_On.png"));
             
             //jButton54.setBackground(BLUE_FOR_BUTTONS);
             //jButton54.setForeground(Color.WHITE);
@@ -2443,15 +2461,15 @@ public class Interface extends javax.swing.JFrame {
         ch10 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_Off.png"));
-        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_Off.png"));
+        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
     }//GEN-LAST:event_jButton54ActionPerformed
 
     private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
@@ -2459,7 +2477,7 @@ public class Interface extends javax.swing.JFrame {
         if( ch10 == false )
         {
             ch10 = true;
-            jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_Off.png"));
+            jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
             
             //jButton55.setBackground(GRAY_FOR_BUTTONS);
             //jButton55.setForeground(Color.BLACK);
@@ -2467,7 +2485,7 @@ public class Interface extends javax.swing.JFrame {
         else if( ch10 == true )
         {
             ch10 = false;
-            jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_On.png"));
+            jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_On.png"));
             
             //jButton55.setBackground(BLUE_FOR_BUTTONS);
             //jButton55.setForeground(Color.WHITE);
@@ -2507,15 +2525,15 @@ public class Interface extends javax.swing.JFrame {
         ch9 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_Off.png"));
-        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Timing_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_Off.png"));
+        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
     }//GEN-LAST:event_jButton55ActionPerformed
 
     private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
@@ -2523,7 +2541,7 @@ public class Interface extends javax.swing.JFrame {
         if( ch6 == false )
         {
             ch6 = true;
-            jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_Off.png"));
+            jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
             
             //jButton62.setBackground(GRAY_FOR_BUTTONS);
             //jButton62.setForeground(Color.BLACK);
@@ -2531,7 +2549,7 @@ public class Interface extends javax.swing.JFrame {
         else if( ch6 == true )
         {
             ch6 = false;
-            jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_On.png"));
+            jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_On.png"));
             
             //jButton62.setBackground(BLUE_FOR_BUTTONS);
             //jButton62.setForeground(Color.WHITE);
@@ -2571,15 +2589,15 @@ public class Interface extends javax.swing.JFrame {
         ch10 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_Off.png"));
-        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Timing_Off.png"));
-        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_Off.png"));
+        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
     }//GEN-LAST:event_jButton62ActionPerformed
 
     private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
@@ -2587,7 +2605,7 @@ public class Interface extends javax.swing.JFrame {
         if( ch7 == false )
         {
             ch7 = true;
-            jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_Off.png"));
+            jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
             
             //jButton53.setBackground(GRAY_FOR_BUTTONS);
             //jButton53.setForeground(Color.BLACK);
@@ -2595,7 +2613,7 @@ public class Interface extends javax.swing.JFrame {
         else if( ch7 == true )
         {
             ch7 = false;
-            jButton53.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Utility_On.png"));
+            jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_On.png"));
             
             //jButton53.setBackground(BLUE_FOR_BUTTONS);
             //jButton53.setForeground(Color.WHITE);
@@ -2635,15 +2653,15 @@ public class Interface extends javax.swing.JFrame {
         ch10 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Calibrat_Off.png"));
-        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Timing_Off.png"));
-        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Levels_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\downnew\\Down_Outputs_Off.png"));
+        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
     }//GEN-LAST:event_jButton53ActionPerformed
 
     private void jToggleButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton18ActionPerformed
@@ -2654,7 +2672,7 @@ public class Interface extends javax.swing.JFrame {
             on_off_btn_ch1 = true;
             
             //  Меняем картинку
-            jToggleButton18.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\on_button.png"));
+            jToggleButton18.setIcon(new ImageIcon(currentDir + "\\src\\images\\on_button.png"));
         }
         else if( on_off_btn_ch1 == true )
         {
@@ -2662,7 +2680,7 @@ public class Interface extends javax.swing.JFrame {
             on_off_btn_ch1 = false;
             
             //  Меняем картинку
-            jToggleButton18.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\off_button.png"));
+            jToggleButton18.setIcon(new ImageIcon(currentDir + "\\src\\images\\off_button.png"));
         }
     }//GEN-LAST:event_jToggleButton18ActionPerformed
 
@@ -2674,7 +2692,7 @@ public class Interface extends javax.swing.JFrame {
             on_off_btn_ch2 = true;
             
             //  Меняем картинку
-            jToggleButton4.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\on_button.png"));
+            jToggleButton4.setIcon(new ImageIcon(currentDir + "\\src\\images\\on_button.png"));
         }
         else if( on_off_btn_ch2 == true )
         {
@@ -2682,7 +2700,7 @@ public class Interface extends javax.swing.JFrame {
             on_off_btn_ch2 = false;
             
             //  Меняем картинку
-            jToggleButton4.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\off_button.png"));
+            jToggleButton4.setIcon(new ImageIcon(currentDir + "\\src\\images\\off_button.png"));
         }
     }//GEN-LAST:event_jToggleButton4ActionPerformed
 
@@ -2694,7 +2712,7 @@ public class Interface extends javax.swing.JFrame {
             on_off_ch1 = true;
             
             //  Меняем картинку
-            jToggleButton19.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_on.png"));
+            jToggleButton19.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_on.png"));
         }
         else if( on_off_ch1 == true )
         {
@@ -2702,7 +2720,7 @@ public class Interface extends javax.swing.JFrame {
             on_off_ch1 = false;
             
             //  Меняем картинку
-            jToggleButton19.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_off.png"));
+            jToggleButton19.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_off.png"));
         }
     }//GEN-LAST:event_jToggleButton19ActionPerformed
 
@@ -2714,7 +2732,7 @@ public class Interface extends javax.swing.JFrame {
             on_off_ch2 = true;
             
             //  Меняем картинку
-            jToggleButton20.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_on.png"));
+            jToggleButton20.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_on.png"));
         }
         else if( on_off_ch2 == true )
         {
@@ -2722,27 +2740,87 @@ public class Interface extends javax.swing.JFrame {
             on_off_ch2 = false;
             
             //  Меняем картинку
-            jToggleButton20.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_off.png"));
+            jToggleButton20.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_off.png"));
         }
     }//GEN-LAST:event_jToggleButton20ActionPerformed
-
+    
+    //  В случае если никакие каналы в Timing не включены
+    private void timing_СhannelsOff()
+    {
+        //  Делаем все элементы невидимыми
+        jTextField5.setVisible(false);
+        jTextField6.setVisible(false);
+        jToggleButton9.setVisible(false);
+        jToggleButton10.setVisible(false);
+        jToggleButton27.setVisible(false);
+        jToggleButton28.setVisible(false);
+        jLabel18.setVisible(false);
+        jLabel19.setVisible(false);
+        jLabel28.setVisible(false);
+        jLabel29.setVisible(false);
+        jButton27.setVisible(false);
+        jButton28.setVisible(false);
+        jButton29.setVisible(false);
+        jButton30.setVisible(false);
+        jButton31.setVisible(false);
+        jButton32.setVisible(false);
+        jButton33.setVisible(false);
+        jButton34.setVisible(false);
+        jButton35.setVisible(false);
+        jButton36.setVisible(false);
+    }
+    
+    //  В случае если какой-то канал в Timing включен
+    private void timing_СhannelsOn()
+    {
+        //  Делаем все элементы видимыми
+        jTextField5.setVisible(true);
+        jTextField6.setVisible(true);
+        jToggleButton9.setVisible(true);
+        jToggleButton10.setVisible(true);
+        jToggleButton27.setVisible(true);
+        jToggleButton28.setVisible(true);
+        jLabel18.setVisible(true);
+        jLabel19.setVisible(true);
+        jLabel28.setVisible(true);
+        jLabel29.setVisible(true);
+        jButton27.setVisible(true);
+        jButton28.setVisible(true);
+        jButton29.setVisible(true);
+        jButton30.setVisible(true);
+        jButton31.setVisible(true);
+        jButton32.setVisible(true);
+        jButton33.setVisible(true);
+        jButton34.setVisible(true);
+        jButton35.setVisible(true);
+        jButton36.setVisible(true);
+    }
+    
     private void jToggleButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton21ActionPerformed
         // Меняем иконку
         if( on_off_ch1_r == false )
         {
             //  Переключаем чекер
             on_off_ch1_r = true;
+            on_off_ch2_r = false;
             
             //  Меняем картинку
-            jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_on.png"));
+            jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_on.png"));
+            jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_off.png"));
+            
+            timing_СhannelsOn();
         }
         else if( on_off_ch1_r == true )
         {
             //  Переключаем чекер
             on_off_ch1_r = false;
+            on_off_ch2_r = false;
             
             //  Меняем картинку
-            jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch1_off.png"));
+            jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_off.png"));
+            jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_off.png"));
+            
+            timing_СhannelsOff();
         }
     }//GEN-LAST:event_jToggleButton21ActionPerformed
 
@@ -2752,17 +2830,25 @@ public class Interface extends javax.swing.JFrame {
         {
             //  Переключаем чекер
             on_off_ch2_r = true;
+            on_off_ch1_r = false;
             
             //  Меняем картинку
-            jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_on.png"));
+            jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_off.png"));
+            jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_on.png"));
+            
+            timing_СhannelsOn();
         }
         else if( on_off_ch2_r == true )
         {
             //  Переключаем чекер
             on_off_ch2_r = false;
+            on_off_ch1_r = false;
             
             //  Меняем картинку
-            jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\ch2_off.png"));
+            jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_off.png"));
+            jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_off.png"));
+            
+            timing_СhannelsOff();
         }
     }//GEN-LAST:event_jToggleButton22ActionPerformed
 
@@ -2782,8 +2868,8 @@ public class Interface extends javax.swing.JFrame {
             freq_ch = false;
             
             //  Меняеем картинки
-            jToggleButton5.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\period_on.png"));
-            jToggleButton23.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\frequency_off.png"));
+            jToggleButton5.setIcon(new ImageIcon(currentDir + "\\src\\images\\period_on.png"));
+            jToggleButton23.setIcon(new ImageIcon(currentDir + "\\src\\images\\frequency_off.png"));
         }
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
@@ -2803,8 +2889,8 @@ public class Interface extends javax.swing.JFrame {
             peri_ch = false;
             
             //  Меняеем картинки
-            jToggleButton23.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\frequency_on.png"));
-            jToggleButton5.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\period_off.png"));
+            jToggleButton23.setIcon(new ImageIcon(currentDir + "\\src\\images\\frequency_on.png"));
+            jToggleButton5.setIcon(new ImageIcon(currentDir + "\\src\\images\\period_off.png"));
         }
     }//GEN-LAST:event_jToggleButton23ActionPerformed
 
@@ -2821,8 +2907,8 @@ public class Interface extends javax.swing.JFrame {
             nrml_ch = false;
             
             //  Меняеем картинки
-            jToggleButton24.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\complement_on.png"));
-            jToggleButton6.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\normal_off.png"));
+            jToggleButton24.setIcon(new ImageIcon(currentDir + "\\src\\images\\complement_on.png"));
+            jToggleButton6.setIcon(new ImageIcon(currentDir + "\\src\\images\\normal_off.png"));
         }
     }//GEN-LAST:event_jToggleButton24ActionPerformed
 
@@ -2839,8 +2925,8 @@ public class Interface extends javax.swing.JFrame {
             comp_ch = false;
             
             //  Меняеем картинки
-            jToggleButton6.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\normal_on.png"));
-            jToggleButton24.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\complement_off.png"));
+            jToggleButton6.setIcon(new ImageIcon(currentDir + "\\src\\images\\normal_on.png"));
+            jToggleButton24.setIcon(new ImageIcon(currentDir + "\\src\\images\\complement_off.png"));
         }
     }//GEN-LAST:event_jToggleButton6ActionPerformed
 
@@ -2863,8 +2949,8 @@ public class Interface extends javax.swing.JFrame {
             
             //  Меняеем картинки
             jToggleButton25.setIcon(new ImageIcon(currentDir + "\\src\\images\\offset_on.png"));
-            jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\high-low_off.png"));
-            jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\std_off.png"));
+            jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\images\\high-low_off.png"));
+            jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\images\\std_off.png"));
         }
         
         //  Выключаем чекбокс (делаем затемненным)
@@ -2921,9 +3007,9 @@ public class Interface extends javax.swing.JFrame {
             stnd_ch = false;
             
             //  Меняеем картинки
-            jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\high-low_on.png"));
+            jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\images\\high-low_on.png"));
             jToggleButton25.setIcon(new ImageIcon(currentDir + "\\src\\images\\offset_off.png"));
-            jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\std_off.png"));
+            jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\images\\std_off.png"));
         }
         
         //  Выключаем чекбокс (делаем затемненным)
@@ -2980,8 +3066,8 @@ public class Interface extends javax.swing.JFrame {
             ofst_ch = false;
             
             //  Меняеем картинки
-            jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\std_on.png"));
-            jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\high-low_off.png"));
+            jToggleButton26.setIcon(new ImageIcon(currentDir + "\\src\\images\\std_on.png"));
+            jToggleButton11.setIcon(new ImageIcon(currentDir + "\\src\\images\\high-low_off.png"));
             jToggleButton25.setIcon(new ImageIcon(currentDir + "\\src\\images\\offset_off.png"));
         }
         
@@ -3037,8 +3123,8 @@ public class Interface extends javax.swing.JFrame {
             phase_ch = false;
             
             //  Меняеем картинки
-            jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\delay_on.png"));
-            jToggleButton27.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\phase_off.png"));
+            jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\images\\delay_on.png"));
+            jToggleButton27.setIcon(new ImageIcon(currentDir + "\\src\\images\\phase_off.png"));
         }
     }//GEN-LAST:event_jToggleButton9ActionPerformed
 
@@ -3058,8 +3144,8 @@ public class Interface extends javax.swing.JFrame {
             delay_ch = false;
             
             //  Меняеем картинки
-            jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\delay_off.png"));
-            jToggleButton27.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\phase_on.png"));
+            jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\images\\delay_off.png"));
+            jToggleButton27.setIcon(new ImageIcon(currentDir + "\\src\\images\\phase_on.png"));
         }
     }//GEN-LAST:event_jToggleButton27ActionPerformed
 
@@ -3135,8 +3221,8 @@ public class Interface extends javax.swing.JFrame {
             dcycle_ch = false;
             
             //  Меняеем картинки
-            jToggleButton10.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\width_on.png"));
-            jToggleButton28.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\dcycle_off.png"));
+            jToggleButton10.setIcon(new ImageIcon(currentDir + "\\src\\images\\width_on.png"));
+            jToggleButton28.setIcon(new ImageIcon(currentDir + "\\src\\images\\dcycle_off.png"));
         }
     }//GEN-LAST:event_jToggleButton10ActionPerformed
 
@@ -3156,8 +3242,8 @@ public class Interface extends javax.swing.JFrame {
             width_ch = false;
             
             //  Меняеем картинки
-            jToggleButton10.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\width_off.png"));
-            jToggleButton28.setIcon(new ImageIcon(currentDir + "\\src\\fullbuttons\\dcycle_on.png"));
+            jToggleButton10.setIcon(new ImageIcon(currentDir + "\\src\\images\\width_off.png"));
+            jToggleButton28.setIcon(new ImageIcon(currentDir + "\\src\\images\\dcycle_on.png"));
         }
     }//GEN-LAST:event_jToggleButton28ActionPerformed
 
@@ -3180,6 +3266,101 @@ public class Interface extends javax.swing.JFrame {
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
         
     }//GEN-LAST:event_jButton38ActionPerformed
+
+    private void choice1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_choice1ItemStateChanged
+        //  При нажатии фиксированное значение зависит от выбранного стандарта
+        if( null != choice1.getSelectedItem() )
+        //  Switch при выборе фиксированного значения и изменения параметров High/Low
+        switch (choice1.getSelectedItem()) {
+            case "NECL":
+                jTextField4.setText("-0.8 V");  //  High
+                jTextField3.setText("-1.8 V");  //  Low
+                break;
+            case "5-V PECL":
+                jTextField4.setText("4.2 V");   //  High
+                jTextField3.setText("3.4 V");   //  Low
+                break;
+            case "3.3-V PECL":
+                jTextField4.setText("2.4 V");   //  High
+                jTextField3.setText("1.6 V");   //  Low
+                break;
+            case "2.5-V PECL":
+                jTextField4.setText("1.7 V");   //  High
+                jTextField3.setText("0.7 V");   //  Low
+                break;
+            case "1.8-V PECL":
+                jTextField4.setText("0.0 V");   //  High
+                jTextField3.setText("0.0 V");   //  Low
+                break;
+            case "5-V TTL":
+                jTextField4.setText("2.4 V");   //  High
+                jTextField3.setText("0.4 V");   //  Low
+                break;
+            case "3.3-V TTL":
+                jTextField4.setText("2.4 V");   //  High
+                jTextField3.setText("0.4 V");   //  Low
+                break;
+            case "2.5-V TTL":
+                jTextField4.setText("1.9 V");   //  High
+                jTextField3.setText("0.4 V");   //  Low
+                break;
+            case "LVDS":
+                jTextField4.setText("1.4 V");   //  High
+                jTextField3.setText("1.0 V");   //  Low
+                break;
+            case "CML":
+                jTextField4.setText("0.0 V");   //  High
+                jTextField3.setText("-0.6 V");   //  Low
+                break;
+            case "3.3-V CML":
+                jTextField4.setText("3.3 V");   //  High
+                jTextField3.setText("2.7 V");   //  Low
+                break;
+            case "2.5-V CML":
+                jTextField4.setText("2.5 V");   //  High
+                jTextField3.setText("1.9 V");   //  Low
+                break;
+            case "1.8-V CML":
+                jTextField4.setText("1.8 V");   //  High
+                jTextField3.setText("1.2 V");   //  Low
+                break;
+            case "1.2-V CML":
+                jTextField4.setText("1.2 V");   //  High
+                jTextField3.setText("0.6 V");   //  Low
+                break;
+            case "5-V CMOS":
+                jTextField4.setText("4.5 V");   //  High
+                jTextField3.setText("0.5 V");   //  Low
+                break;
+            case "3.3-V CMOS":
+                jTextField4.setText("2.8 V");   //  High
+                jTextField3.setText("0.4 V");   //  Low
+                break;
+            case "2.5-V CMOS":
+                jTextField4.setText("2.0 V");   //  High
+                jTextField3.setText("0.4 V");   //  Low
+                break;
+            case "1.8-V CMOS":
+                jTextField4.setText("1.4 V");   //  High
+                jTextField3.setText("0.4 V");   //  Low
+                break;
+            case "1.5-V CMOS":
+                jTextField4.setText("1.2 V");   //  High
+                jTextField3.setText("0.3 V");   //  Low
+                break;
+            case "1.2-V CMOS":
+                jTextField4.setText("0.9 V");   //  High
+                jTextField3.setText("0.3 V");   //  Low
+                break;
+            case "0.8-V CMOS":
+                jTextField4.setText("0.8 V");   //  High
+                jTextField3.setText("0.2 V");   //  Low
+                break;
+            default:
+                break;
+        }
+        
+    }//GEN-LAST:event_choice1ItemStateChanged
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
