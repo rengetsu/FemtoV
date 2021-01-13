@@ -499,6 +499,12 @@ public class Interface extends javax.swing.JFrame {
         jButton41.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\silver_icon_button_big_right_cl.png"));
         
         //  КОМБО БОКС ПО ВЫБОРЕ ИЗ ТАБЛИЦЫ СТАНДАРТОВ
+        
+        //  Переменная количества элементов в массиве таблицы стандартов
+        int fam_mas_qt  = 21;
+        
+        //  Переменная количества элементов в массиве таблицы Period
+        int per_mas_qt = 21;
 
         //  Массив таблицы стандартов
         String[] fam_mas =
@@ -509,9 +515,6 @@ public class Interface extends javax.swing.JFrame {
             "5-V CMOS", "3.3-V CMOS", "2.5-V CMOS", "1.8-V CMOS",
             "1.5-V CMOS", "1.2-V CMOS", "0.8-V CMOS"
         };
-        
-        //  Переменная количество элементов в массиве
-        int fam_mas_qt  = 21;
         
         //  Кнопка выбора
         Choice chc1 = choice1;
@@ -945,24 +948,44 @@ public class Interface extends javax.swing.JFrame {
         jButton68.setBorder(null);
         jButton68.setIconTextGap(0);
         jButton68.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton68.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton68ActionPerformed(evt);
+            }
+        });
 
         jButton69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_mid_zero.png"))); // NOI18N
         jButton69.setAlignmentY(0.0F);
         jButton69.setBorder(null);
         jButton69.setIconTextGap(0);
         jButton69.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton69.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton69ActionPerformed(evt);
+            }
+        });
 
         jButton70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_up.png"))); // NOI18N
         jButton70.setAlignmentY(0.0F);
         jButton70.setBorder(null);
         jButton70.setIconTextGap(0);
         jButton70.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton70.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton70ActionPerformed(evt);
+            }
+        });
 
         jButton71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_down.png"))); // NOI18N
         jButton71.setAlignmentY(0.0F);
         jButton71.setBorder(null);
         jButton71.setIconTextGap(0);
         jButton71.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton71.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton71ActionPerformed(evt);
+            }
+        });
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/long_button.png"))); // NOI18N
         jLabel26.setAlignmentY(0.0F);
@@ -970,7 +993,7 @@ public class Interface extends javax.swing.JFrame {
         jTextField3.setBackground(new java.awt.Color(0, 0, 0));
         jTextField3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField3.setText("-3 V");
+        jTextField3.setText("0.0 V");
         jTextField3.setAlignmentX(0.0F);
         jTextField3.setAlignmentY(0.0F);
         jTextField3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
@@ -986,24 +1009,44 @@ public class Interface extends javax.swing.JFrame {
         jButton72.setBorder(null);
         jButton72.setIconTextGap(0);
         jButton72.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton72.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton72ActionPerformed(evt);
+            }
+        });
 
         jButton73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_up.png"))); // NOI18N
         jButton73.setAlignmentY(0.0F);
         jButton73.setBorder(null);
         jButton73.setIconTextGap(0);
         jButton73.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton73.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton73ActionPerformed(evt);
+            }
+        });
 
         jButton74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_mid_zero.png"))); // NOI18N
         jButton74.setAlignmentY(0.0F);
         jButton74.setBorder(null);
         jButton74.setIconTextGap(0);
         jButton74.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton74.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton74ActionPerformed(evt);
+            }
+        });
 
         jButton75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_down.png"))); // NOI18N
         jButton75.setAlignmentY(0.0F);
         jButton75.setBorder(null);
         jButton75.setIconTextGap(0);
         jButton75.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton75.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton75ActionPerformed(evt);
+            }
+        });
 
         jButton76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_up.png"))); // NOI18N
         jButton76.setAlignmentY(0.0F);
@@ -1022,7 +1065,7 @@ public class Interface extends javax.swing.JFrame {
         jTextField4.setBackground(new java.awt.Color(0, 0, 0));
         jTextField4.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jTextField4.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField4.setText("3 V");
+        jTextField4.setText("1 V");
         jTextField4.setAlignmentX(0.0F);
         jTextField4.setAlignmentY(0.0F);
         jTextField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
@@ -1051,38 +1094,34 @@ public class Interface extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel1)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton56, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jButton65, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jButton66, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel24)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel8))
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel4))
+                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton56, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton65, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton66, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel24)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel8)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jToggleButton19)
                         .addGap(4, 4, 4)
@@ -1129,6 +1168,8 @@ public class Interface extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel5))
                     .addComponent(choice1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -1512,7 +1553,7 @@ public class Interface extends javax.swing.JFrame {
         jTextField6.setBackground(new java.awt.Color(0, 0, 0));
         jTextField6.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jTextField6.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField6.setText("10 µs");
+        jTextField6.setText("0 s");
         jTextField6.setAlignmentX(0.0F);
         jTextField6.setAlignmentY(0.0F);
         jTextField6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
@@ -1539,12 +1580,22 @@ public class Interface extends javax.swing.JFrame {
         jButton34.setBorder(null);
         jButton34.setIconTextGap(0);
         jButton34.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton34ActionPerformed(evt);
+            }
+        });
 
         jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_left.png"))); // NOI18N
         jButton35.setAlignmentY(0.0F);
         jButton35.setBorder(null);
         jButton35.setIconTextGap(0);
         jButton35.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton35ActionPerformed(evt);
+            }
+        });
 
         jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_right.png"))); // NOI18N
         jButton36.setAlignmentY(0.0F);
@@ -1569,7 +1620,7 @@ public class Interface extends javax.swing.JFrame {
         jTextField7.setBackground(new java.awt.Color(0, 0, 0));
         jTextField7.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jTextField7.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField7.setText("10 µs");
+        jTextField7.setText("400 ps");
         jTextField7.setAlignmentX(0.0F);
         jTextField7.setAlignmentY(0.0F);
         jTextField7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
@@ -1596,12 +1647,22 @@ public class Interface extends javax.swing.JFrame {
         jButton39.setBorder(null);
         jButton39.setIconTextGap(0);
         jButton39.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton39ActionPerformed(evt);
+            }
+        });
 
         jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_left.png"))); // NOI18N
         jButton40.setAlignmentY(0.0F);
         jButton40.setBorder(null);
         jButton40.setIconTextGap(0);
         jButton40.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton40ActionPerformed(evt);
+            }
+        });
 
         jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_right.png"))); // NOI18N
         jButton41.setAlignmentY(0.0F);
@@ -2020,6 +2081,64 @@ public class Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //  ПЕРЕМЕННЫЕ ЗНАЧЕНИЙ ТАБЛИЦ СТАНДАРТОВ
+    int cl_High_Level   =   100;
+    int cl_Low_Level    =   0;
+    
+    //  МАССИВЫ ДЛЯ ВЫВОДА ПРЕДЕЛОВ ИЗМЕНЕНИЙ ТАБЛИЦ СТАНДАРТОВ
+    
+    //  Массив таблицы Period
+    String[] per_mas =
+    {
+        "400 ps", "500 ps", "1 ns", "2 ns", "5 ns",
+        "10 ns", "20 ns", "50 ns", "100 ns", "200 ns",
+        "500 ns", "1 µs", "2 µs", "5 µs", "10 µs",
+        "20 µs", "50 µs", "100 µs", "200 µs", "500 µs", "1 ms"
+    };
+    
+    //  Массив таблицы Frequency
+    String[] freq_mas =
+    {
+        "1 kHz", "2 kHz", "5 kHz", "10 kHz", "20 kHz",
+        "50 kHz", "100 kHz", "200 kHz", "500 kHz", "1 MHz",
+        "2 MHz", "5 MHz", "10 MHz", "50 MHz", "100 MHz",
+        "200 MHz", "500 MHz", "1 GHz", "2 GHz", "2.5 GHz"
+    };
+    
+    //  Массив таблиц Delay
+    String[] del_mas =
+    {
+        "0 s", "200 s", "500 s", "1 ns", "2 ns",
+        "5 ns", "10 ns", "20 ns", "50 ns", "100 ns",
+        "200 ns", "500 ns", "1 µs", "2 µs", "5 µs",
+        "10 µs", "20 µs", "50 µs", "100 µs", "200 µs",
+        "500 µs", "1 ms"
+    };
+    
+    //  Массив таблиц Delay
+    String[] phas_mas =
+    {
+        "0 s", "200 s", "500 s", "1 ns", "2 ns",
+        "5 ns", "10 ns", "20 ns", "50 ns", "100 ns",
+        "200 ns", "500 ns", "1 µs", "2 µs", "5 µs",
+        "10 µs", "20 µs", "50 µs", "100 µs", "200 µs",
+        "500 µs", "1 ms"
+    };
+    
+    //  ПЕРЕМЕННЫЕ ДЛЯ НУМЕРАЦИИ ВЫВОДА ЗНАЧЕНИЙ ТАБЛИЦ СТАНДАРТОВ
+    
+    //  Переменная для нумерации вывода значений таблицы Delay
+    int del_mas_nmb = 0;
+    
+    //  Переменная для нумерации вывода значений таблицы Period
+    int per_mas_nmb = 0;
+    
+    //  Переменная для нумерации вывода значений таблицы Frequency
+    int freq_mas_nmb = 0;
+    
+    //  Переменная для нумерации вывода значений таблицы Phase
+    int phas_mas_nmb = 0;
+    
     private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton57ActionPerformed
@@ -2867,6 +2986,9 @@ public class Interface extends javax.swing.JFrame {
             peri_ch = true;
             freq_ch = false;
             
+            //  Устанавливаем текст относящийся к Period
+            jTextField7.setText( per_mas [ per_mas_nmb ] );
+            
             //  Меняеем картинки
             jToggleButton5.setIcon(new ImageIcon(currentDir + "\\src\\images\\period_on.png"));
             jToggleButton23.setIcon(new ImageIcon(currentDir + "\\src\\images\\frequency_off.png"));
@@ -2887,6 +3009,9 @@ public class Interface extends javax.swing.JFrame {
             //  Переключаем чекеры
             freq_ch = true;
             peri_ch = false;
+            
+            //  Устанавливаем текст относящийся к Period
+            jTextField7.setText( freq_mas [ freq_mas_nmb ] );
             
             //  Меняеем картинки
             jToggleButton23.setIcon(new ImageIcon(currentDir + "\\src\\images\\frequency_on.png"));
@@ -3122,6 +3247,9 @@ public class Interface extends javax.swing.JFrame {
             delay_ch = true;
             phase_ch = false;
             
+            //  Устанавливаем текст относящийся к Delay
+            jTextField6.setText( del_mas [ del_mas_nmb ] );
+            
             //  Меняеем картинки
             jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\images\\delay_on.png"));
             jToggleButton27.setIcon(new ImageIcon(currentDir + "\\src\\images\\phase_off.png"));
@@ -3143,6 +3271,9 @@ public class Interface extends javax.swing.JFrame {
             phase_ch = true;
             delay_ch = false;
             
+            //  Устанавливаем текст относящийся к Phase
+            jTextField6.setText( phas_mas [ phas_mas_nmb ] );
+            
             //  Меняеем картинки
             jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\images\\delay_off.png"));
             jToggleButton27.setIcon(new ImageIcon(currentDir + "\\src\\images\\phase_on.png"));
@@ -3154,7 +3285,7 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -3166,7 +3297,21 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton66ActionPerformed
 
     private void jButton67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton67ActionPerformed
-        // TODO add your handling code here:
+        //  При нажатии калибровки увеличиваем пределы изменения грубого шага Low Level на -0.05
+        //  Увеличиваем значение переменной на +0.05
+        cl_Low_Level += 5;
+        
+        //  Округляем до ближайшего значения около 0.05
+        cl_Low_Level -= cl_Low_Level % 5;
+        
+        //  Проверяем ограничения по верхнему пределу Low Level (2.4 V)
+        if( cl_Low_Level >= 240){cl_Low_Level = 240;}
+        
+        //  Присваиваем новое значение переменной
+        float qqq = (float) (cl_Low_Level * 0.01);
+        
+        //  Передаем это значение текстовому полю
+        jTextField3.setText(qqq + " V");
     }//GEN-LAST:event_jButton67ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
@@ -3174,7 +3319,21 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
-        // TODO add your handling code here:
+        //  При нажатии калибровки увеличиваем пределы изменения грубого шага High Level на +0.05
+        //  Увеличиваем значение переменной на +0.05
+        cl_High_Level += 5;
+        
+        //  Округляем до ближайшего значения около 0.05
+        cl_High_Level -= cl_High_Level % 5;
+        
+        //  Проверяем ограничения по верхнему пределу High Level (2.5 V)
+        if( cl_High_Level >= 250){cl_High_Level = 250;}
+        
+        //  Присваиваем новое значение переменной
+        float qqq = (float) (cl_High_Level * 0.01);
+        
+        //  Передаем это значение текстовому полю
+        jTextField4.setText(qqq + " V");
     }//GEN-LAST:event_jButton76ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
@@ -3194,15 +3353,61 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
-        // TODO add your handling code here:
+        //  Если активен Delay
+        if( delay_ch == true )
+        {
+            //  Повышаем значение переменной номера мас
+            if( del_mas_nmb < 21 )
+            {
+                del_mas_nmb++;
+            }
+
+            //  Устанавливаем значение Delay
+            jTextField6.setText( del_mas[ del_mas_nmb ] );
+        }
+        //  Если активен Phase
+        else if( phase_ch == true )
+        {
+            //  Повышаем значение переменной номера мас
+            if( phas_mas_nmb < 21 )
+            {
+                phas_mas_nmb++;
+            }
+
+            //  Устанавливаем значение Phase
+            jTextField6.setText( phas_mas[ phas_mas_nmb ] );
+        }
     }//GEN-LAST:event_jButton36ActionPerformed
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7ActionPerformed
-
+        
     private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
-        // TODO add your handling code here:
+        //  Если активен Period
+        if( peri_ch == true )
+        {
+            //  Повышаем значение переменной номера мас
+            if( per_mas_nmb < 20 )
+            {
+                per_mas_nmb++;
+            }
+
+            //  Устанавливаем значение Period
+            jTextField7.setText( per_mas[ per_mas_nmb ] );
+        }
+        //  Если активен Frequency
+        else if( freq_ch == true )
+        {
+            //  Повышаем значение переменной номера мас
+            if( freq_mas_nmb < 19 )
+            {
+                freq_mas_nmb++;
+            }
+
+            //  Устанавливаем значение Period
+            jTextField7.setText( freq_mas[ freq_mas_nmb ] );
+        }
     }//GEN-LAST:event_jButton41ActionPerformed
 
     private void jToggleButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton10ActionPerformed
@@ -3361,6 +3566,212 @@ public class Interface extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_choice1ItemStateChanged
+
+    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+        //  Если активен Period
+        if( peri_ch == true )
+        {
+            //  Повышаем значение переменной номера мас
+            if( per_mas_nmb > 0 )
+            {
+                per_mas_nmb--;
+            }
+
+            //  Устанавливаем значение Period
+            jTextField7.setText( per_mas[ per_mas_nmb ] );
+        }
+        //  Если активен Frequency
+        else if( freq_ch == true )
+        {
+            //  Повышаем значение переменной номера мас
+            if( freq_mas_nmb > 0 )
+            {
+                freq_mas_nmb--;
+            }
+
+            //  Устанавливаем значение Period
+            jTextField7.setText( freq_mas[ freq_mas_nmb ] );
+        }
+    }//GEN-LAST:event_jButton40ActionPerformed
+
+    private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
+        //  Если активен Period
+        if( peri_ch == true )
+        {
+            //  Устанавливаем значение Period по дефолту
+            jTextField7.setText( per_mas[ 11 ] );
+            per_mas_nmb = 11;
+        }
+        //  Если активен Frequency
+        else if( freq_ch == true )
+        {
+            jTextField7.setText( freq_mas[ 9 ] );
+            freq_mas_nmb = 9;
+        }
+    }//GEN-LAST:event_jButton39ActionPerformed
+
+    private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
+        //  При нажатии калибровки уменьшаем пределы изменения грубого шага High Level на -0.05
+        //  Уменьшаем значение переменной на -0.05
+        cl_High_Level -= 5;
+        
+        //  Округляем до ближайшего значения около 0.05
+        cl_High_Level -= cl_High_Level % 5;
+        
+        //  Проверяем ограничения по нижнему пределу High Level (-1.9)
+        if( cl_High_Level <= -190){cl_High_Level = -190;}
+        
+        //  Присваиваем новое значение переменной
+        float qqq = (float) (cl_High_Level * 0.01);
+        
+        //  Передаем это значение текстовому полю
+        jTextField4.setText(qqq + " V");
+    }//GEN-LAST:event_jButton75ActionPerformed
+
+    private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
+        //  При нажатии калибровки выставляем пределы изменения High Level на ноль
+        //  Присваиваем переменной значение ноль
+        cl_High_Level = 0;
+        
+        //  Присваиваем новое значение переменной
+        float qqq = (float) (cl_High_Level * 0.01);
+        
+        //  Передаем это значение текстовому полю
+        jTextField4.setText(qqq + " V");
+    }//GEN-LAST:event_jButton74ActionPerformed
+
+    private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
+        //  При нажатии калибровки увеличиваем пределы изменения плавного шага High Level на +0.01
+        //  Увеличиваем значение переменной на +0.01
+        cl_High_Level++;
+        
+        //  Проверяем ограничения по верхнему пределу High Level (2.5 V)
+        if( cl_High_Level >= 250){cl_High_Level = 250;}
+        
+        //  Присваиваем новое значение переменной
+        float qqq = (float) (cl_High_Level * 0.01);
+        
+        //  Передаем это значение текстовому полю
+        jTextField4.setText(qqq + " V");
+    }//GEN-LAST:event_jButton73ActionPerformed
+
+    private void jButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton72ActionPerformed
+        //   При нажатии калибровки уменьшаем пределы изменения плавного шага High Level на -0.01
+        //  Уменьшаем значение переменной на -0.01
+        cl_High_Level--;
+        
+        //  Проверяем ограничения по нижнему пределу High Level (-1.9)
+        if( cl_High_Level <= -190){cl_High_Level = -190;}
+        
+        //  Присваиваем новое значение переменной
+        float qqq = (float) (cl_High_Level * 0.01);
+        
+        //  Передаем это значение текстовому полю
+        jTextField4.setText(qqq + " V");
+    }//GEN-LAST:event_jButton72ActionPerformed
+
+    private void jButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton68ActionPerformed
+        //  При нажатии калибровки уменьшаем пределы изменения грубого шага Low Level на -0.05
+        //  Уменьшаем значение переменной на -0.05
+        cl_Low_Level -= 5;
+        
+        //  Округляем до ближайшего значения около 0.05
+        cl_Low_Level -= cl_Low_Level % 5;
+        
+        //  Проверяем ограничения по нижнему пределу Low Level (-2.0)
+        if( cl_Low_Level <= -200){cl_Low_Level = -200;}
+        
+        //  Присваиваем новое значение переменной
+        float qqq = (float) (cl_Low_Level * 0.01);
+        
+        //  Передаем это значение текстовому полю
+        jTextField3.setText(qqq + " V");
+    }//GEN-LAST:event_jButton68ActionPerformed
+
+    private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
+        //  При нажатии калибровки выставляем пределы изменения Low Level на ноль
+        //  Присваиваем переменной значение ноль
+        cl_Low_Level = 0;
+        
+        //  Присваиваем новое значение переменной
+        float qqq = (float) (cl_Low_Level * 0.01);
+        
+        //  Передаем это значение текстовому полю
+        jTextField3.setText(qqq + " V");
+    }//GEN-LAST:event_jButton69ActionPerformed
+
+    private void jButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton70ActionPerformed
+        //  При нажатии калибровки увеличиваем пределы изменения плавного шага Low Level на +0.01
+        //  Увеличиваем значение переменной на +0.01
+        cl_Low_Level++;
+        
+        //  Проверяем ограничения по верхнему пределу High Level (2.4 V)
+        if( cl_Low_Level >= 240){cl_Low_Level = 240;}
+        
+        //  Присваиваем новое значение переменной
+        float qqq = (float) (cl_Low_Level * 0.01);
+        
+        //  Передаем это значение текстовому полю
+        jTextField3.setText(qqq + " V");
+    }//GEN-LAST:event_jButton70ActionPerformed
+
+    private void jButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton71ActionPerformed
+        //   При нажатии калибровки уменьшаем пределы изменения плавного шага Low Level на -0.01
+        //  Уменьшаем значение переменной на -0.01
+        cl_Low_Level--;
+        
+        //  Проверяем ограничения по нижнему пределу High Level (-1.9)
+        if( cl_Low_Level <= -200){cl_Low_Level = -200;}
+        
+        //  Присваиваем новое значение переменной
+        float qqq = (float) (cl_Low_Level * 0.01);
+        
+        //  Передаем это значение текстовому полю
+        jTextField3.setText(qqq + " V");
+    }//GEN-LAST:event_jButton71ActionPerformed
+
+    private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
+        //  Если активен Delay
+        if( delay_ch == true )
+        {
+            //  Повышаем значение переменной номера мас
+            if( del_mas_nmb > 0 )
+            {
+                del_mas_nmb--;
+            }
+
+            //  Устанавливаем значение Delay
+            jTextField6.setText( del_mas[ del_mas_nmb ] );
+        }
+        //  Если активен Phase
+        else if( phase_ch == true )
+        {
+            //  Повышаем значение переменной номера мас
+            if( phas_mas_nmb > 0 )
+            {
+                phas_mas_nmb--;
+            }
+
+            //  Устанавливаем значение Phase
+            jTextField6.setText( phas_mas[ phas_mas_nmb ] );
+        }
+    }//GEN-LAST:event_jButton35ActionPerformed
+
+    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+        //  Если активен Delay
+        if( delay_ch == true )
+        {
+            //  Устанавливаем значение Delay по дефолту
+            jTextField6.setText( del_mas[ 7 ] );
+            del_mas_nmb = 7;
+        }
+        //  Если активен Phase
+        else if( phase_ch == true )
+        {
+            jTextField6.setText( phas_mas[ 7 ] );
+            phas_mas_nmb = 7;
+        }
+    }//GEN-LAST:event_jButton34ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
