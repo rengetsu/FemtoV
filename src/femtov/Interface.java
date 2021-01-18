@@ -8,6 +8,7 @@ package femtov;
 import java.awt.Choice;
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Font;
 import java.awt.Insets;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -18,11 +19,15 @@ import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import javax.swing.plaf.metal.MetalToggleButtonUI;
+
 /**
  *
  * @author PAVEL TROSTIANKO
@@ -31,7 +36,7 @@ import javax.swing.plaf.metal.MetalToggleButtonUI;
 public class Interface extends javax.swing.JFrame {
     /* ГРАФИЧЕСКИЙ ИНТЕРФЕЙС ПРОГРАММЫ  */
     
-    // Переменная для сохранения определения пути к директории с проектом
+    //  Переменная для сохранения определения пути к директории с проектом
     Path currentDir = Paths.get(".");
     
     //  Специальный цвет для подсветки кнопок
@@ -46,44 +51,50 @@ public class Interface extends javax.swing.JFrame {
     //  public static final Color zen_qinkf = new Color(174,115,215);
     //  public static final Color zen_qinkl = new Color(144,133,220);
     
-    // ЧЕКЕРЫ
+    //  ЧЕКЕРЫ
     
-    // Чекеры для проверки статуса включения/выключения каналов (меню слева)
+    //  Чекеры для проверки статуса включения/выключения каналов (меню слева)
     boolean on_off_ch1 = false;
     boolean on_off_ch2 = false;
     
-    // Чекеры для проверки статуса включения/выключения каналов (меню справа)
-    boolean on_off_ch1_r = false;
+    //  Чекеры для проверки статуса включения/выключения каналов (меню справа)
+    boolean on_off_ch1_r = true;
     boolean on_off_ch2_r = false;
     
-    // Чекеры для проверки статуса кнопки включения/выключения
+    //  Чекеры для проверки статуса кнопки включения/выключения
     boolean on_off_btn_ch1 = false;
     boolean on_off_btn_ch2 = false;
     
-    // Чекеры для проверки нажатия кнопок нижнего меню
+    //  Чекеры для проверки нажатия кнопок нижнего меню
     boolean ch1 = true, ch2 = true, ch3 = true, ch4 = true, ch5 = true, ch6 = true, ch7 = true, ch8 = true, ch9 = true, ch10 = true;
     
-    // Чекеры для проверки включения частоты и периода
+    //  Чекеры для проверки включения частоты и периода
     boolean peri_ch = true;
     boolean freq_ch = false;
     
-    // Чекеры для проверки включения частоты и периода
+    //  Чекеры для проверки включения частоты и периода
     boolean nrml_ch = true;
     boolean comp_ch = false;
     
-    // Чекеры для проверки включения high-low, offset и standard
+    //  Чекеры для проверки включения high-low, offset и standard
     boolean hilo_ch = true;
     boolean ofst_ch = false;
     boolean stnd_ch = false;
     
-    // Чекеры для проверки задержки и фазы
+    //  Чекеры для проверки задержки и фазы
     boolean delay_ch = true;
     boolean phase_ch = false;
     
-    // Чекеры для проверки задержки и фазы
+    //  Чекеры для проверки задержки и фазы
     boolean width_ch = true;
     boolean dcycle_ch = false;
     
+    //  Чекер для проверки добавления пунктов в попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
+    boolean popupmenu1_ch = false;
+    
+    /**
+     * Создает форму для Interface
+     */
     public Interface() {
         initComponents();
         //  initComponents() регенерируется средой IDE при создании пользовательского интерфейса в редакторе графического интерфейса
@@ -98,9 +109,6 @@ public class Interface extends javax.swing.JFrame {
         jTextField5.setEditable(false);
         jTextField6.setEditable(false);
         jTextField7.setEditable(false);
-        
-        //  Стандартно в Timing все элементы каналов выключены
-        timing_СhannelsOff();
         
         //  НАКЛАДЫВАЕМ ЦВЕТ НА КНОПКИ НИЖНЕГО МЕНЮ
         
@@ -538,6 +546,7 @@ public class Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton60 = new javax.swing.JButton();
@@ -874,6 +883,11 @@ public class Interface extends javax.swing.JFrame {
         jTextField1.setAlignmentY(0.0F);
         jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         jTextField1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField1MouseClicked(evt);
+            }
+        });
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -891,6 +905,11 @@ public class Interface extends javax.swing.JFrame {
         jTextField2.setAlignmentY(0.0F);
         jTextField2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         jTextField2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jTextField2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField2MouseClicked(evt);
+            }
+        });
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -998,6 +1017,11 @@ public class Interface extends javax.swing.JFrame {
         jTextField3.setAlignmentY(0.0F);
         jTextField3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         jTextField3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jTextField3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField3MouseClicked(evt);
+            }
+        });
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
@@ -1070,6 +1094,11 @@ public class Interface extends javax.swing.JFrame {
         jTextField4.setAlignmentY(0.0F);
         jTextField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         jTextField4.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jTextField4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField4MouseClicked(evt);
+            }
+        });
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
@@ -1423,7 +1452,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel18.setText("Width");
 
         jToggleButton21.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jToggleButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ch1_off.png"))); // NOI18N
+        jToggleButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ch1_on.png"))); // NOI18N
         jToggleButton21.setBorder(null);
         jToggleButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1503,6 +1532,11 @@ public class Interface extends javax.swing.JFrame {
         jTextField5.setAlignmentY(0.0F);
         jTextField5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         jTextField5.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jTextField5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField5MouseClicked(evt);
+            }
+        });
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
@@ -1558,6 +1592,11 @@ public class Interface extends javax.swing.JFrame {
         jTextField6.setAlignmentY(0.0F);
         jTextField6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         jTextField6.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jTextField6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField6MouseClicked(evt);
+            }
+        });
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
@@ -1625,6 +1664,11 @@ public class Interface extends javax.swing.JFrame {
         jTextField7.setAlignmentY(0.0F);
         jTextField7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         jTextField7.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jTextField7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField7MouseClicked(evt);
+            }
+        });
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField7ActionPerformed(evt);
@@ -2933,13 +2977,11 @@ public class Interface extends javax.swing.JFrame {
         {
             //  Переключаем чекер
             on_off_ch1_r = false;
-            on_off_ch2_r = false;
+            on_off_ch2_r = true;
             
             //  Меняем картинку
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_off.png"));
-            jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_off.png"));
-            
-            timing_СhannelsOff();
+            jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_on.png"));
         }
     }//GEN-LAST:event_jToggleButton21ActionPerformed
 
@@ -2961,13 +3003,11 @@ public class Interface extends javax.swing.JFrame {
         {
             //  Переключаем чекер
             on_off_ch2_r = false;
-            on_off_ch1_r = false;
+            on_off_ch1_r = true;
             
             //  Меняем картинку
-            jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_off.png"));
+            jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_on.png"));
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_off.png"));
-            
-            timing_СhannelsOff();
         }
     }//GEN-LAST:event_jToggleButton22ActionPerformed
 
@@ -3773,6 +3813,109 @@ public class Interface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton34ActionPerformed
 
+    //  Функция для отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
+    //  adjNmbr - номер регулировки где должен быть отображен элемент
+    public void showAdjPopupMenu(int adjNmbr)
+    {
+        if( popupmenu1_ch == false )
+        {
+            //  Меняем значение чекера чтобы не функция добавляла элементы по второму разу
+            popupmenu1_ch = true;
+            
+            //  Show jPopup Menu  
+            JMenuItem calc = new JMenuItem("Calculator");           //  Создаем пункт меню Калькулятор (Calc)
+            JMenuItem max = new JMenuItem("Max");                   //  Создаем пункт меню Максимум (Max)
+            JMenuItem mid = new JMenuItem("Mid");                   //  Создаем пункт меню Среднего значения (Mid)
+            JMenuItem min = new JMenuItem("Min");                   //  Создаем пункт меню Минимума (Min)
+            
+            //  Установка шрифтов, стилей и размеров для пунктов меню
+            calc.setFont(   new Font("Arial", Font.BOLD, 12));      //  Установка шрифта, стиля и размеров для пункта меню Калькулятора (Calc)
+            max.setFont(    new Font("Arial", Font.PLAIN, 12));     //  Установка шрифта, стиля и размеров для пункта меню Максимум (Max)
+            mid.setFont(    new Font("Arial", Font.PLAIN, 12));     //  Установка шрифта, стиля и размеров для пункта меню Среднего значения (Mid)
+            min.setFont(    new Font("Arial", Font.PLAIN, 12));     //  Установка шрифта, стиля и размеров для пункта меню Минимума (Min)
+
+            //  Добавляем пункты меню
+            jPopupMenu1.add(calc);                                  //  Добавляем пункт Калькулятора (Calc)
+            jPopupMenu1.addSeparator();                             //  Добавляем Разделитель
+            jPopupMenu1.add(max);                                   //  Добавляем пункт Максимум (Max)
+            jPopupMenu1.add(mid);                                   //  Добавляем пункт Среднего значения (Mid)
+            jPopupMenu1.add(min);                                   //  Добавляем пункт Минимума (Min)
+            
+            //  Пока временно калькулятор отображается так
+            Calculator_Widget CW = new Calculator_Widget();
+            CW.setVisible(true);
+        }
+        
+        //  Выбор места для отображения попап-меню
+        switch (adjNmbr) {
+        //  Если выбран компонент jTextField1
+            case 1:
+                jPopupMenu1.show(jPanel1 , jTextField1.getX(), jTextField1.getY());
+                break;
+        //  Если выбран компонент JTextField2
+            case 2:
+                jPopupMenu1.show(jPanel1, jTextField2.getX(), jTextField2.getY());
+                break;
+        //  Если выбран компонент JTextField3
+            case 3:
+                jPopupMenu1.show(jPanel1, jTextField3.getX(), jTextField3.getY());
+                break;
+        //  Если выбран компонент JTextField4
+            case 4:
+                jPopupMenu1.show(jPanel1, jTextField4.getX(), jTextField4.getY());
+                break;
+        //  Если выбран компонент JTextField5
+            case 5:
+                jPopupMenu1.show(jPanel7, jTextField5.getX(), jTextField5.getY());
+                break;
+        //  Если выбран компонент JTextField6
+            case 6:
+                jPopupMenu1.show(jPanel7, jTextField6.getX(), jTextField6.getY());
+                break;
+        //  Если выбран компонент JTextField7
+            case 7:
+                jPopupMenu1.show(jPanel7, jTextField7.getX(), jTextField7.getY());
+                break;
+            default:
+                break;
+        }
+    }
+    
+    private void jTextField4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField4MouseClicked
+        //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
+        showAdjPopupMenu(4);
+    }//GEN-LAST:event_jTextField4MouseClicked
+
+    private void jTextField3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField3MouseClicked
+        //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
+        showAdjPopupMenu(3);
+    }//GEN-LAST:event_jTextField3MouseClicked
+
+    private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
+        //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
+        showAdjPopupMenu(2);
+    }//GEN-LAST:event_jTextField2MouseClicked
+
+    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
+        //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
+        showAdjPopupMenu(1);
+    }//GEN-LAST:event_jTextField1MouseClicked
+
+    private void jTextField7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField7MouseClicked
+        //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
+        showAdjPopupMenu(7);
+    }//GEN-LAST:event_jTextField7MouseClicked
+
+    private void jTextField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField6MouseClicked
+        //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
+        showAdjPopupMenu(6);
+    }//GEN-LAST:event_jTextField6MouseClicked
+
+    private void jTextField5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField5MouseClicked
+        //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
+        showAdjPopupMenu(5);
+    }//GEN-LAST:event_jTextField5MouseClicked
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -3902,6 +4045,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
