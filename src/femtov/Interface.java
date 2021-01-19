@@ -1527,7 +1527,7 @@ public class Interface extends javax.swing.JFrame {
         jTextField5.setBackground(new java.awt.Color(0, 0, 0));
         jTextField5.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jTextField5.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField5.setText("10 ns");
+        jTextField5.setText("200 ps");
         jTextField5.setAlignmentX(0.0F);
         jTextField5.setAlignmentY(0.0F);
         jTextField5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
@@ -1548,12 +1548,22 @@ public class Interface extends javax.swing.JFrame {
         jButton29.setBorder(null);
         jButton29.setIconTextGap(0);
         jButton29.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
 
         jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_left.png"))); // NOI18N
         jButton27.setAlignmentY(0.0F);
         jButton27.setBorder(null);
         jButton27.setIconTextGap(0);
         jButton27.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
 
         jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_big_right.png"))); // NOI18N
         jButton31.setAlignmentY(0.0F);
@@ -1574,6 +1584,11 @@ public class Interface extends javax.swing.JFrame {
         jButton30.setBorder(null);
         jButton30.setIconTextGap(0);
         jButton30.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton30ActionPerformed(evt);
+            }
+        });
 
         jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silver_icon_button_small_left.png"))); // NOI18N
         jButton32.setAlignmentY(0.0F);
@@ -2129,6 +2144,8 @@ public class Interface extends javax.swing.JFrame {
     int cl_High_Level   =   100;
     int cl_Low_Level    =   0;
     
+    int dcycle_percent  =   0;
+    
     //  МАССИВЫ ДЛЯ ВЫВОДА ПРЕДЕЛОВ ИЗМЕНЕНИЙ ТАБЛИЦ СТАНДАРТОВ
     
     //  Массив таблицы Period
@@ -2149,7 +2166,7 @@ public class Interface extends javax.swing.JFrame {
         "200 MHz", "500 MHz", "1 GHz", "2 GHz", "2.5 GHz"
     };
     
-    //  Массив таблиц Delay
+    //  Массив таблицы Delay
     String[] del_mas =
     {
         "0 s", "200 s", "500 s", "1 ns", "2 ns",
@@ -2159,7 +2176,7 @@ public class Interface extends javax.swing.JFrame {
         "500 µs", "1 ms"
     };
     
-    //  Массив таблиц Delay
+    //  Массив таблицы Delay
     String[] phas_mas =
     {
         "0 s", "200 s", "500 s", "1 ns", "2 ns",
@@ -2168,6 +2185,19 @@ public class Interface extends javax.swing.JFrame {
         "10 µs", "20 µs", "50 µs", "100 µs", "200 µs",
         "500 µs", "1 ms"
     };
+    
+    //  Массив таблицы Width
+    String[] width_mas =
+    {
+        "200 ps", "500 ps", "1 ns", "2 ns", "5 ns",
+        "10 ns", "20 ns", "50 ns", "100 ns", "200 ns",
+        "500 ns", "1 µs", "2 µs", "5 µs", "10 µs",
+        "20 µs", "50 µs", "100 µs", "200 µs", "500 µs", "1 ms"
+    };
+    
+    //  ПЕРЕМЕННЫЕ ДЛЯ ХРАНЕНИЯ ЗНАЧЕНИЙ МАЛЕНЬКОГО ШАГА
+    
+    int li_width   =   200;     //  Значение в пико секундах
     
     //  ПЕРЕМЕННЫЕ ДЛЯ НУМЕРАЦИИ ВЫВОДА ЗНАЧЕНИЙ ТАБЛИЦ СТАНДАРТОВ
     
@@ -2182,6 +2212,9 @@ public class Interface extends javax.swing.JFrame {
     
     //  Переменная для нумерации вывода значений таблицы Phase
     int phas_mas_nmb = 0;
+    
+    //  Переменная для нумерация вывода значений таблицы Width
+    int width_mas_nmb = 0;
     
     private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
         // TODO add your handling code here:
@@ -3384,8 +3417,155 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
 
+    //  VDF -   Value Determination Function (Функция Определения Значения)
+    //  int calib   -   переменная куда отправляется номер таблицы значений
+    //  int nmbr    -   переменная номера масива таблицы значений
+    public void VDF(int calib, int nmbr)
+    {
+        //  calib   =   6   -   Width
+        if( calib   ==  6   )
+        {
+            if      (   nmbr    ==  0   ){  li_width    =   200;        }   //  200 ps
+            else if (   nmbr    ==  1   ){  li_width    =   500;        }   //  500 ps
+            else if (   nmbr    ==  2   ){  li_width    =   1000;       }   //  1 ns
+            else if (   nmbr    ==  3   ){  li_width    =   2000;       }   //  2 ns
+            else if (   nmbr    ==  4   ){  li_width    =   5000;       }   //  5 ns
+            else if (   nmbr    ==  5   ){  li_width    =   10000;      }   //  10 ns
+            else if (   nmbr    ==  6   ){  li_width    =   20000;      }   //  20 ns
+            else if (   nmbr    ==  7   ){  li_width    =   50000;      }   //  50 ns
+            else if (   nmbr    ==  8   ){  li_width    =   100000;     }   //  100 ns
+            else if (   nmbr    ==  9   ){  li_width    =   200000;     }   //  200 ns
+            else if (   nmbr    ==  10  ){  li_width    =   500000;     }   //  500 ns
+            else if (   nmbr    ==  11  ){  li_width    =   1000000;    }   //  1 µs
+            else if (   nmbr    ==  12  ){  li_width    =   2000000;    }   //  2 µs
+            else if (   nmbr    ==  13  ){  li_width    =   5000000;    }   //  5 µs
+            else if (   nmbr    ==  14  ){  li_width    =   10000000;   }   //  10 µs
+            else if (   nmbr    ==  15  ){  li_width    =   20000000;   }   //  20 µs
+            else if (   nmbr    ==  16  ){  li_width    =   50000000;   }   //  50 µs
+            else if (   nmbr    ==  17  ){  li_width    =   100000000;  }   //  100 µs
+            else if (   nmbr    ==  18  ){  li_width    =   200000000;  }   //  200 µs
+            else if (   nmbr    ==  19  ){  li_width    =   500000000;  }   //  500 µs
+            else if (   nmbr    ==  20  ){  li_width    =   1000000000; }   //  1 ms
+            
+        }
+    }
+    
+    //  VDDF -  Value Display Definition Function (Функция определения отображения значения)
+    public String VDDF(int calib, float nmbr, boolean plus)
+    {
+        //  Создаем переменную которую будем возвращять
+        String rez = "";
+        
+        //  calib   =   6   -   Width
+        if( calib   ==  6   )
+        {
+            if( plus == true )      //  Прибавляем
+            {
+                if      ( li_width    <   500       ){li_width  +=  2;          nmbr += 2;      }   //  200 ps - 500 ps
+                else if ( li_width    <   1000      ){li_width  +=  5;          nmbr += 5;      }   //  500 ps - 1 ns
+                else if ( li_width    <   2000      ){li_width  +=  10;         nmbr+= 10;      }   //  1 ns - 2 ns
+                else if ( li_width    <   5000      ){li_width  +=  20;         nmbr+= 20;      }   //  2 ns - 5 ns
+                else if ( li_width    <   10000     ){li_width  +=  50;         nmbr+= 50;      }   //  5 ns - 10 ns
+                else if ( li_width    <   20000     ){li_width  +=  100;        nmbr+= 100;     }   //  10 ns - 20 ns
+                else if ( li_width    <   50000     ){li_width  +=  200;        nmbr+= 200;     }   //  20 ns - 50 ns
+                else if ( li_width    <   100000    ){li_width  +=  500;        nmbr+= 200;     }   //  50 ns - 100 ns
+                else if ( li_width    <   200000    ){li_width  +=  1000;       nmbr+= 200;     }   //  100 ns - 200 ns
+                else if ( li_width    <   500000    ){li_width  +=  2000;       nmbr+= 200;     }   //  200 ns - 500 ns
+                else if ( li_width    <   1000000   ){li_width  +=  5000;       nmbr+= 200;     }   //  500 ns - 1 µs
+                else if ( li_width    <   2000000   ){li_width  +=  10000;      nmbr+= 200;     }   //  1 µs - 2 µs
+                else if ( li_width    <   5000000   ){li_width  +=  20000;      nmbr+= 200;     }   //  2 µs - 5 µs
+                else if ( li_width    <   10000000  ){li_width  +=  50000;      nmbr+= 200;     }   //  5 µs - 10 µs
+                else if ( li_width    <   50000000  ){li_width  +=  100000;     nmbr+= 200;     }   //  10 µs - 50 µs
+                else if ( li_width    <   100000000 ){li_width  +=  500000;     nmbr+= 200;     }   //  50 µs - 100 µs
+                else if ( li_width    <   200000000 ){li_width  +=  1000000;    nmbr+= 200;     }   //  100 µs - 200 µs
+                else if ( li_width    <   500000000 ){li_width  +=  2000000;    nmbr+= 200;     }   //  200 µs - 500 µs
+                else if ( li_width    <   1000000000){li_width  +=  5000000;    nmbr+= 200;     }   //  500 µs - 1 ms
+                else if ( li_width    >=  1000000000){li_width  =   1000000000;                 }   //  MAX
+            }
+            else if( plus == false )    //  Отнимаем
+            {
+                if      ( li_width    <=  200       ){li_width  =   200;                        }   //  MIN
+                else if ( li_width    <   500       ){li_width  -=  2;          nmbr += 2;      }   //  200 ps - 500 ps
+                else if ( li_width    <   1000      ){li_width  -=  5;          nmbr += 5;      }   //  500 ps - 1 ns
+                else if ( li_width    <   2000      ){li_width  -=  10;         nmbr += 10;     }   //  1 ns - 2 ns
+                else if ( li_width    <   5000      ){li_width  -=  20;         nmbr += 20;     }   //  2 ns - 5 ns
+                else if ( li_width    <   10000     ){li_width  -=  50;         nmbr += 50;     }   //  5 ns - 10 ns
+                else if ( li_width    <   20000     ){li_width  -=  100;        nmbr += 100;    }   //  10 ns - 20 ns
+                else if ( li_width    <   50000     ){li_width  -=  200;        nmbr += 200;    }   //  20 ns - 50 ns
+                else if ( li_width    <   100000    ){li_width  -=  500;        nmbr += 500;    }   //  50 ns - 100 ns
+                else if ( li_width    <   200000    ){li_width  -=  1000;       nmbr += 1000;   }   //  100 ns - 200 ns
+                else if ( li_width    <   500000    ){li_width  -=  2000;       nmbr += 2000;   }   //  200 ns - 500 ns
+                else if ( li_width    <   1000000   ){li_width  -=  5000;       nmbr += 5000;   }   //  500 ns - 1 µs
+                else if ( li_width    <   2000000   ){li_width  -=  10000;      nmbr += 10000;  }   //  1 µs - 2 µs
+                else if ( li_width    <   5000000   ){li_width  -=  20000;      nmbr += 20000;  }   //  2 µs - 5 µs
+                else if ( li_width    <   10000000  ){li_width  -=  50000;      nmbr += 50000;  }   //  5 µs - 10 µs
+                else if ( li_width    <   50000000  ){li_width  -=  100000;     nmbr += 100000; }   //  10 µs - 50 µs
+                else if ( li_width    <   100000000 ){li_width  -=  500000;     nmbr += 500000; }   //  50 µs - 100 µs
+                else if ( li_width    <   200000000 ){li_width  -=  1000000;    nmbr += 1000000;}   //  100 µs - 200 µs
+                else if ( li_width    <   500000000 ){li_width  -=  2000000;    nmbr += 2000000;}   //  200 µs - 500 µs
+                else if ( li_width    <   1000000000){li_width  -=  5000000;    nmbr += 5000000;}   //  500 µs - 1 ms
+                else if ( li_width    ==  1000000000){li_width  -=  5000000;                    }   //  500 µs - 1 ms
+                
+            }
+            
+            if      ( li_width    <   500       ){rez   =   li_width + " ps";           }   //  200 ps - 500 ps
+            else if ( li_width    <   1000      ){rez   =   li_width + " ps";           }   //  500 ps - 1 ns
+            else if ( li_width    <   2000      ){rez   =   (nmbr/1000) + " ns";        }   //  1 ns - 2 ns
+            else if ( li_width    <   5000      ){rez   =   (nmbr/1000) + " ns";        }   //  2 ns - 5 ns
+            else if ( li_width    <   10000     ){rez   =   (nmbr/1000) + " ns";        }   //  5 ns - 10 ns
+            else if ( li_width    <   20000     ){rez   =   (nmbr/1000) + " ns";        }   //  10 ns - 20 ns
+            else if ( li_width    <   50000     ){rez   =   (nmbr/1000) + " ns";        }   //  20 ns - 50 ns
+            else if ( li_width    <   100000    ){rez   =   (nmbr/1000) + " ns";        }   //  50 ns - 100 ns
+            else if ( li_width    <   200000    ){rez   =   (nmbr/1000) + " ns";        }   //  100 ns - 200 ns
+            else if ( li_width    <   500000    ){rez   =   (nmbr/1000) + " ns";        }   //  200 ns - 500 ns
+            else if ( li_width    <   1000000   ){rez   =   (nmbr/1000) + " ns";        }   //  500 ns - 1 µs
+            else if ( li_width    <   2000000   ){rez   =   (nmbr/1000000) + " µs";     }   //  1 µs - 2 µs
+            else if ( li_width    <   5000000   ){rez   =   (nmbr/1000000) + " µs";     }   //  2 µs - 5 µs
+            else if ( li_width    <   10000000  ){rez   =   (nmbr/1000000) + " µs";     }   //  5 µs - 10 µs
+            else if ( li_width    <   50000000  ){rez   =   (nmbr/1000000) + " µs";     }   //  10 µs - 50 µs
+            else if ( li_width    <   100000000 ){rez   =   (nmbr/1000000) + " µs";     }   //  50 µs - 100 µs
+            else if ( li_width    <   200000000 ){rez   =   (nmbr/1000000) + " µs";     }   //  100 µs - 200 µs
+            else if ( li_width    <   500000000 ){rez   =   (nmbr/1000000) + " µs";     }   //  200 µs - 500 µs
+            else if ( li_width    <   1000000000){rez   =   (nmbr/1000000) + " µs";     }   //  500 µs - 1 ms
+            else if ( li_width    >=  1000000000){rez  =    "1 ms";                }   //  MAX
+            
+        }
+        return rez;
+    }
+    
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
-        // TODO add your handling code here:
+        //  Если активен Width
+        if( width_ch == true )
+        {
+            //  Повышаем значение переменной номера мас
+            if( width_mas_nmb < 20 )
+            {
+                width_mas_nmb++;
+                VDF(6, width_mas_nmb);
+            }
+
+            //  Устанавливаем значение Width
+            jTextField5.setText( width_mas [ width_mas_nmb ] );
+        }
+        //  Если активен DCycle
+        else if( dcycle_ch == true )
+        {
+            //  Округляем переменную до ближайшего значение делимого на 5, чтобы был ровный шаг
+            dcycle_percent = ( dcycle_percent / 5 ) * 5;
+            
+            //  Проверяем не превышает ли переменная dcycle_percent максимальное значение
+            if( ( dcycle_percent + 5 ) < 101 )
+            {
+                //  Добавляем 5 процентов к значению переменной dcycle_percent
+                dcycle_percent += 5;
+            }
+            
+            //  Конвертируем переменную процентов int в String
+            String s = Integer.toString(dcycle_percent);
+            
+            //  Устанавливаем значение
+            jTextField5.setText(s + " %");
+        }
     }//GEN-LAST:event_jButton31ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
@@ -3451,6 +3631,19 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton41ActionPerformed
 
     private void jToggleButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton10ActionPerformed
+        //  Присваиваем значение Width
+        
+        String s;       //  Создаем переменную для хранения текстового значения
+        s = "";         //  Присваиваем стандартное значение перменной
+        
+        //  Определяем значение li_width
+        if( li_width < 1000 ){s = Integer.toString(li_width);}        
+        else if( li_width < 1000000 ){s = Integer.toString(li_width/1000);}
+        
+        //  Определяем как будет выглядеть текстовое значение li_width
+        if( li_width < 1000 ){jTextField5.setText(s + " ps");}
+        else if( li_width < 1000000 ){jTextField5.setText(s + " ns");}
+        
         // Меняем иконку
         if( width_ch == true )
         {
@@ -3472,6 +3665,10 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton10ActionPerformed
 
     private void jToggleButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton28ActionPerformed
+        //  Присваиваем значение DCycle
+        String s = Integer.toString(dcycle_percent);
+        jTextField5.setText(s + " %");
+
         // Меняем иконку
         if( dcycle_ch == true )
         {
@@ -3501,7 +3698,31 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
-        
+        //  Если активен Width
+        if( width_ch == true )
+        {
+            //  Отправляем запрос в функцию VDDF и сохраняем возвращяемое значение в переменную
+            String ans = VDDF(6, li_width, true);
+            
+            //  Выводим результат
+            jTextField5.setText(ans);
+        }
+        //  Если активен DCycle
+        else if( dcycle_ch == true )
+        {
+            //  Проверяем не превышает ли переменная dcycle_percent максимальное значение
+            if( ( dcycle_percent + 1 ) < 101 )
+            {
+                //  Добавляем 1 процент к значению переменной dcycle_percent
+                dcycle_percent += 1;
+            }
+            
+            //  Конвертируем переменную процентов int в String
+            String s = Integer.toString(dcycle_percent);
+            
+            //  Устанавливаем значение
+            jTextField5.setText(s + " %");
+        }
     }//GEN-LAST:event_jButton28ActionPerformed
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
@@ -3611,7 +3832,7 @@ public class Interface extends javax.swing.JFrame {
         //  Если активен Period
         if( peri_ch == true )
         {
-            //  Повышаем значение переменной номера мас
+            //  Понижаем значение переменной номера мас
             if( per_mas_nmb > 0 )
             {
                 per_mas_nmb--;
@@ -3915,6 +4136,107 @@ public class Interface extends javax.swing.JFrame {
         //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
         showAdjPopupMenu(5);
     }//GEN-LAST:event_jTextField5MouseClicked
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        //  Если активен Period
+        if( width_ch == true )
+        {
+            //  Устанавливаем значение Width по дефолту
+            jTextField5.setText( width_mas[ 5 ] );
+            width_mas_nmb = 5;
+            VDF(6, width_mas_nmb);
+        }
+        //  Если активен DCycle
+        else if( dcycle_ch == true )
+        {
+            //  Устанавливаем значение 50 %
+            dcycle_percent = 50;
+            
+            //  Конвертируем переменную процентов int в String
+            String s = Integer.toString(dcycle_percent);
+            
+            //  Устанавливаем значение
+            jTextField5.setText(s + " %");
+        }
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        //  Если активен Width
+        if( width_ch == true )
+        {
+            //  Отправляем запрос в функцию VDDF и сохраняем возвращяемое значение в переменную
+            String ans = VDDF(6, li_width, false);
+            
+            //  Выводим результат
+            jTextField5.setText(ans);
+        }
+        //  Если активен DCycle
+        if( dcycle_ch == true )
+        {
+            //  Проверяем не является ли переменная dcycle_percent меньше минимального значения
+            if( ( dcycle_percent - 1 ) >= 0 )
+            {
+                //  Убавляем 1 процент от значения переменной dcycle_percent
+                dcycle_percent -= 1;
+            }
+            
+            //  Конвертируем переменную процентов int в String
+            String s = Integer.toString(dcycle_percent);
+            
+            //  Устанавливаем значение
+            jTextField5.setText(s + " %");
+        }
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        //  Если активен Width
+        if( width_ch == true )
+        {
+            //  Понижаем значение переменной номера мас
+            if( width_mas_nmb > 0 )
+            {
+                width_mas_nmb--;
+                VDF(6, width_mas_nmb);
+            }
+
+            //  Устанавливаем значение Width
+            jTextField5.setText( width_mas [ width_mas_nmb ] );
+        }
+
+        //  Если активен DCycle
+        if( dcycle_ch == true )
+        {
+            //  Переменная для проверки делится ли процентное значение DCycle на 5
+            boolean division_by_five = true;
+            
+            //  Проверяем делится ли настоящее значение dcycle_percent на 5
+            if( dcycle_percent > ( ( dcycle_percent / 5 ) * 5 ) )
+            {
+                division_by_five = false;
+            }
+            else{division_by_five = true;}  //  В случае если нет возвращяем значение true
+            
+            //  Округляем переменную до ближайшего значение делимого на 5, чтобы был ровный шаг
+            dcycle_percent = ( dcycle_percent / 5 ) * 5;
+            
+            //  Понижение значения процентов на 5 выполняется только в том случае если значение делится на 5 ровно, чтобы был ровный шаг
+            if( division_by_five == true )
+            {
+                //  Проверяем не является ли переменная dcycle_percent меньше минимального значения
+                if( ( dcycle_percent - 5 ) >= 0 )
+                {
+                    //  Убавляем 5 процентов от значения переменной dcycle_percent
+                    dcycle_percent -= 5;
+                }
+            }
+            
+            //  Конвертируем переменную процентов int в String
+            String s = Integer.toString(dcycle_percent);
+            
+            //  Устанавливаем значение
+            jTextField5.setText(s + " %");
+        }
+    }//GEN-LAST:event_jButton30ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
