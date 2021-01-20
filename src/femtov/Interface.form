@@ -51,10 +51,12 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Femto V   FemtoScope 9512   1,2 GHz   Pulse Pattern Generator"/>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="c0" green="c0" red="c0" type="rgb"/>
+    </Property>
     <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
       <Point value="[200, 200]"/>
     </Property>
-    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
@@ -107,14 +109,12 @@
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jPanel7" alignment="1" min="-2" pref="543" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="jPanel8" pref="90" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="jPanel1" alignment="0" min="-2" pref="543" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Component id="jPanel8" min="-2" pref="90" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jPanel1" min="-2" pref="543" max="-2" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -186,6 +186,9 @@
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="iconTextGap" type="int" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton60ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton11">
           <Properties>
@@ -1399,6 +1402,9 @@
               <Insets value="[0, 0, 0, 0]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -2363,7 +2369,7 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/Down_Timing_Off.png"/>
+              <Image iconType="3" name="/images/Down_Timing_On.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -2383,7 +2389,7 @@
               <Font name="Arial" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/Down_Levels_Off.png"/>
+              <Image iconType="3" name="/images/Down_Levels_On.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>

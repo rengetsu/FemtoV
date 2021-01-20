@@ -66,7 +66,7 @@ public class Interface extends javax.swing.JFrame {
     boolean on_off_btn_ch2 = false;
     
     //  Чекеры для проверки нажатия кнопок нижнего меню
-    boolean ch1 = true, ch2 = true, ch3 = true, ch4 = true, ch5 = true, ch6 = true, ch7 = true, ch8 = true, ch9 = true, ch10 = true;
+    boolean ch1 = true, ch2 = true, ch3 = true, ch4 = true, ch5 = true, ch6 = true, ch7 = true, ch8 = true, ch9 = false, ch10 = false;
     
     //  Чекеры для проверки включения частоты и периода
     boolean peri_ch = true;
@@ -670,8 +670,8 @@ public class Interface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Femto V   FemtoScope 9512   1,2 GHz   Pulse Pattern Generator");
+        setBackground(new java.awt.Color(192, 192, 192));
         setLocation(new java.awt.Point(200, 200));
-        setResizable(false);
 
         jPanel3.setBackground(new java.awt.Color(111, 111, 111));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
@@ -684,6 +684,11 @@ public class Interface extends javax.swing.JFrame {
         jButton60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel_button.png"))); // NOI18N
         jButton60.setAlignmentY(0.0F);
         jButton60.setIconTextGap(0);
+        jButton60.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton60ActionPerformed(evt);
+            }
+        });
 
         jButton11.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/help_button.png"))); // NOI18N
@@ -1409,6 +1414,11 @@ public class Interface extends javax.swing.JFrame {
         jButton12.setAlignmentY(0.0F);
         jButton12.setIconTextGap(0);
         jButton12.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -1969,7 +1979,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton54.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Timing_Off.png"))); // NOI18N
+        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Timing_On.png"))); // NOI18N
         jButton54.setBorder(null);
         jButton54.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton54.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1980,7 +1990,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton55.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Levels_Off.png"))); // NOI18N
+        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Levels_On.png"))); // NOI18N
         jButton55.setBorder(null);
         jButton55.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton55.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -2129,12 +2139,11 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 0, 0)
-                            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
-                        .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         pack();
@@ -2220,6 +2229,98 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton57ActionPerformed
 
+    //  closeTab    -   Close tab function
+    /**
+     *
+     * @param tabName       The name of the tab we want to close 
+     * @param left_right    Where it was opened, on the left tab or on the right tab
+     */
+    public void closeTab(String tabName, String left_right)
+    {
+        //  Вкладка "Levels"
+        if          (   "Levels".equals(tabName)    )
+        {
+            //  Делаем невидимой вкладку "Levels" слева
+            if      (   "left".equals(left_right)   )
+            {
+                jPanel1.setVisible(false);
+                jPanel3.setVisible(false);
+                pack();
+            }
+            //  Делаем невидимой вкладку "Levels" справа
+            else if (   "right".equals(left_right)  )
+            {
+                jPanel1.setVisible(false);
+                jPanel3.setVisible(false);
+                pack();
+            }
+        }
+        //  Вкладка "Timing"
+        else if     (   "Timing".equals(tabName)    )
+        {
+            //  Делаем невидимой вкладку "Timing" слева
+            if      (   "left".equals(left_right)   )
+            {
+                jPanel6.setVisible(false);
+                jPanel7.setVisible(false);
+                pack();
+            }
+            //  Делаем невидимой вкладку "Timing" справа
+            else if (   "right".equals(left_right)  )
+            {
+                jPanel6.setVisible(false);
+                jPanel7.setVisible(false);
+                pack();
+            }
+        }
+    }
+    
+    //  openTab     -   Open tab function
+    /**
+     *
+     * @param tabName       The name of the tab we want to open
+     * @param left_right    Where this tab should be open, on the left or on the right
+     */
+    public void openTab(String tabName, String left_right)
+    {
+        //  Вкладка "Levels"
+        if          (   "Levels".equals(tabName)    )
+        {
+            //  Делаем видимой вкладку "Levels" слева
+            if      (   "left".equals(left_right)   )
+            {
+                jPanel1.setVisible(true);
+                jPanel3.setVisible(true);
+                pack();
+            }
+            //  Делаем видимой вкладку "Levels" справа
+            else if (   "right".equals(left_right)  )
+            {
+                jPanel1.setVisible(true);
+                jPanel3.setVisible(true);
+                pack();
+            }
+        }
+        //  Вкладка "Timing"
+        else if     (   "Timing".equals(tabName)    )
+        {
+            //  Делаем невидимой вкладку "Timing" слева
+            if      (   "left".equals(left_right)   )
+            {
+                jPanel6.setVisible(true);
+                jPanel7.setVisible(true);
+                pack();
+            }
+            //  Делаем невидимой вкладку "Timing" справа
+            else if (   "right".equals(left_right)  )
+            {
+                jPanel6.setVisible(true);
+                jPanel7.setVisible(true);
+                pack();
+            }
+        }
+    }
+    
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         //  При нажатии подсвечивать синим
         if( ch8 == false )
@@ -2608,17 +2709,21 @@ public class Interface extends javax.swing.JFrame {
         //  При нажатии подсвечивать синим
         if( ch9 == false )
         {
+            //  Закрываем вкладку "Timing" справа
+            closeTab("Timing", "right");
+            
             ch9 = true;
             jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
-            
             //jButton54.setBackground(GRAY_FOR_BUTTONS);
             //jButton54.setForeground(Color.BLACK);
         }
         else if( ch9 == true )
         {
+            //  Открываем вкладку "Timing" справа
+            openTab("Timing", "right");
+            
             ch9 = false;
             jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_On.png"));
-            
             //jButton54.setBackground(BLUE_FOR_BUTTONS);
             //jButton54.setForeground(Color.WHITE);
         }
@@ -2654,7 +2759,7 @@ public class Interface extends javax.swing.JFrame {
         ch6 = true;
         ch7 = true;
         ch8 = true;
-        ch10 = true;
+        //ch10 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
@@ -2662,7 +2767,7 @@ public class Interface extends javax.swing.JFrame {
         jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
         jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
         jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+        //jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
         jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
         jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
         jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
@@ -2672,6 +2777,9 @@ public class Interface extends javax.swing.JFrame {
         //  При нажатии подсвечивать синим
         if( ch10 == false )
         {
+            //  Закрываем вкладку "Levels" слева
+            closeTab("Levels", "left");
+            
             ch10 = true;
             jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
             
@@ -2680,6 +2788,9 @@ public class Interface extends javax.swing.JFrame {
         }
         else if( ch10 == true )
         {
+            //  Открываем вкладку "Levels" слева
+            openTab("Levels", "left");
+            
             ch10 = false;
             jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_On.png"));
             
@@ -2718,7 +2829,7 @@ public class Interface extends javax.swing.JFrame {
         ch6 = true;
         ch7 = true;
         ch8 = true;
-        ch9 = true;
+        //ch9 = true;
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
@@ -2726,7 +2837,7 @@ public class Interface extends javax.swing.JFrame {
         jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
         jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
         jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+        //jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
         jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
         jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
         jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
@@ -4231,12 +4342,31 @@ public class Interface extends javax.swing.JFrame {
             }
             
             //  Конвертируем переменную процентов int в String
-            String s = Integer.toString(dcycle_percent);
+            String s;
+            s = Integer.toString(dcycle_percent);
             
             //  Устанавливаем значение
             jTextField5.setText(s + " %");
         }
     }//GEN-LAST:event_jButton30ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        //  Закрываем вкладку "Timing"
+        closeTab("Timing", "right");
+        
+        //  Меняем значение чекера и картинку на самой кнопке
+        ch9 = true;
+        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton60ActionPerformed
+        //  Закрываем вкладку "Levels"
+        closeTab("Levels", "left");
+        
+        //  Меняем значение чекера и картинку на самой кнопке
+        ch10 = true;
+        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+    }//GEN-LAST:event_jButton60ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
