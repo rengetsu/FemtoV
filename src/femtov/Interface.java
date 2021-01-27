@@ -3,22 +3,34 @@
  * This is a program designed to work with the device FemtoScope (9511/9512 models).
  * FemtoScope - is a pulse pattern generator released by "Eltesta".
  */
-package femtov;
 
+//  Пакеты Java используемые для группировки связанных классов 
+package femtov; //  femtov - основной пакет программы
+
+import transitions.Tabs;
+import transitions.PopupMenu;
+import transitions.Visibility;
+import calculations.Calibrations;
+import calculations.LevelStandard;
+import java.awt.AWTEvent;
 import java.awt.Choice;
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.Insets;
-import java.awt.geom.RoundRectangle2D;
+import java.awt.Toolkit;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import javax.swing.ImageIcon;
+import java.awt.event.AWTEventListener;
+import java.awt.Font;
+import java.awt.Component;
+import java.awt.Insets;
+import java.awt.event.ActionListener;
+import java.awt.event.InputEvent;
+import java.awt.geom.RoundRectangle2D;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.BorderFactory;
 import javax.swing.Icon;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -29,6 +41,11 @@ import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.plaf.metal.MetalToggleButtonUI;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import static java.awt.event.MouseEvent.MOUSE_CLICKED;
+import java.awt.event.MouseListener;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -37,6 +54,14 @@ import javax.swing.plaf.metal.MetalToggleButtonUI;
 
 public class Interface extends javax.swing.JFrame {
     /* ГРАФИЧЕСКИЙ ИНТЕРФЕЙС ПРОГРАММЫ  */
+    
+    //  ВЫЗОВ КЛАССОВ
+    
+    Tabs            tabs            = new Tabs();
+    PopupMenu       popupmenu       = new PopupMenu();
+    Visibility      visibility      = new Visibility();
+    Calibrations    calibrations    = new Calibrations();
+    LevelStandard   levelStandard   = new LevelStandard();
     
     //  Переменная для сохранения определения пути к директории с проектом
     Path currentDir = Paths.get(".");
@@ -91,8 +116,11 @@ public class Interface extends javax.swing.JFrame {
     boolean width_ch = true;
     boolean dcycle_ch = false;
     
-    //  Чекер для проверки добавления пунктов в попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
-    boolean popupmenu1_ch = false;
+    
+    static String str, str2;
+    
+    boolean left_click = false;
+    boolean right_click = false;
     
     /**
      * Создает форму для Interface
@@ -691,6 +719,7 @@ public class Interface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Femto V   FemtoScope 9512   1,2 GHz   Pulse Pattern Generator");
+        setBackground(new java.awt.Color(192, 192, 192));
         setLocation(new java.awt.Point(200, 200));
         setResizable(false);
 
@@ -1625,6 +1654,11 @@ public class Interface extends javax.swing.JFrame {
         jButton32.setBorder(null);
         jButton32.setIconTextGap(0);
         jButton32.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton32ActionPerformed(evt);
+            }
+        });
 
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/long_button.png"))); // NOI18N
         jLabel29.setAlignmentY(0.0F);
@@ -2423,18 +2457,9 @@ public class Interface extends javax.swing.JFrame {
         "500 µs", "1 ms"
     };
     
-    //  Массив таблицы Width
-    String[] width_mas =
-    {
-        "200 ps", "500 ps", "1 ns", "2 ns", "5 ns",
-        "10 ns", "20 ns", "50 ns", "100 ns", "200 ns",
-        "500 ns", "1 µs", "2 µs", "5 µs", "10 µs",
-        "20 µs", "50 µs", "100 µs", "200 µs", "500 µs", "1 ms"
-    };
-    
     //  ПЕРЕМЕННЫЕ ДЛЯ ХРАНЕНИЯ ЗНАЧЕНИЙ МАЛЕНЬКОГО ШАГА
     
-    int li_width   =   200;     //  Значение в пико секундах
+    //int li_width   =   200;     //  Значение в пико секундах
     
     //  ПЕРЕМЕННЫЕ ДЛЯ НУМЕРАЦИИ ВЫВОДА ЗНАЧЕНИЙ ТАБЛИЦ СТАНДАРТОВ
     
@@ -2450,9 +2475,6 @@ public class Interface extends javax.swing.JFrame {
     //  Переменная для нумерации вывода значений таблицы Phase
     int phas_mas_nmb = 0;
     
-    //  Переменная для нумерация вывода значений таблицы Width
-    int width_mas_nmb = 0;
-    
     private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton57ActionPerformed
@@ -2465,6 +2487,7 @@ public class Interface extends javax.swing.JFrame {
      */
     public void closeTab(String tabName, String left_right)
     {
+        clickMouse();
         //  Вкладка "Levels"
         if          (   "Levels".equals(tabName)    )
         {
@@ -2503,6 +2526,44 @@ public class Interface extends javax.swing.JFrame {
         }
     }
     
+    public void clickMouse()
+    {
+        //  Переменная eventMask для сохранения значения событий мышки
+        long eventMask = AWTEvent.MOUSE_MOTION_EVENT_MASK + AWTEvent.MOUSE_EVENT_MASK;
+        
+        //  Получаем действия мышки в реальном времени
+        Toolkit.getDefaultToolkit().addAWTEventListener(new AWTEventListener() {
+            
+            public void eventDispatched(AWTEvent e) {
+                //  Выводим значение в строку
+                //System.out.println(e.paramString()+"-"+e.getSource());
+                
+                str = e.paramString().substring(0, 13);
+                str2 = e.paramString().substring(46, 48);
+                
+                if( "MOUSE_CLICKED".equals(str) )
+                {
+                    //System.out.println("MOUSE CLICKED");
+                }
+                if( "=3".equals(str2) )
+                {
+                    right_click = true;
+                    left_click = false;
+                    //System.out.println("RIGHT MOUSE");
+                }
+                else if( "=1".equals(str2) )
+                {
+                    left_click = true;
+                    right_click = true;
+                    //System.out.println("LEFT MOUSE");
+                }
+                str     =   "";
+                str2    =   "";
+            }
+        }, eventMask);
+        
+    }
+    
     //  openTab     -   Open tab function
     /**
      *
@@ -2511,6 +2572,7 @@ public class Interface extends javax.swing.JFrame {
      */
     public void openTab(String tabName, String left_right)
     {
+        clickMouse();
         //  Вкладка "Levels"
         if          (   "Levels".equals(tabName)    )
         {
@@ -2532,14 +2594,14 @@ public class Interface extends javax.swing.JFrame {
         //  Вкладка "Timing"
         else if     (   "Timing".equals(tabName)    )
         {
-            //  Делаем невидимой вкладку "Timing" слева
+            //  Делаем видимой вкладку "Timing" слева
             if      (   "left".equals(left_right)   )
             {
                 jPanel6.setVisible(true);
                 jPanel7.setVisible(true);
                 pack();
             }
-            //  Делаем невидимой вкладку "Timing" справа
+            //  Делаем видимой вкладку "Timing" справа
             else if (   "right".equals(left_right)  )
             {
                 jPanel6.setVisible(true);
@@ -3279,58 +3341,6 @@ public class Interface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jToggleButton20ActionPerformed
     
-    //  В случае если никакие каналы в Timing не включены
-    private void timing_СhannelsOff()
-    {
-        //  Делаем все элементы невидимыми
-        jTextField5.setVisible(false);
-        jTextField6.setVisible(false);
-        jToggleButton9.setVisible(false);
-        jToggleButton10.setVisible(false);
-        jToggleButton27.setVisible(false);
-        jToggleButton28.setVisible(false);
-        jLabel18.setVisible(false);
-        jLabel19.setVisible(false);
-        jLabel28.setVisible(false);
-        jLabel29.setVisible(false);
-        jButton27.setVisible(false);
-        jButton28.setVisible(false);
-        jButton29.setVisible(false);
-        jButton30.setVisible(false);
-        jButton31.setVisible(false);
-        jButton32.setVisible(false);
-        jButton33.setVisible(false);
-        jButton34.setVisible(false);
-        jButton35.setVisible(false);
-        jButton36.setVisible(false);
-    }
-    
-    //  В случае если какой-то канал в Timing включен
-    private void timing_СhannelsOn()
-    {
-        //  Делаем все элементы видимыми
-        jTextField5.setVisible(true);
-        jTextField6.setVisible(true);
-        jToggleButton9.setVisible(true);
-        jToggleButton10.setVisible(true);
-        jToggleButton27.setVisible(true);
-        jToggleButton28.setVisible(true);
-        jLabel18.setVisible(true);
-        jLabel19.setVisible(true);
-        jLabel28.setVisible(true);
-        jLabel29.setVisible(true);
-        jButton27.setVisible(true);
-        jButton28.setVisible(true);
-        jButton29.setVisible(true);
-        jButton30.setVisible(true);
-        jButton31.setVisible(true);
-        jButton32.setVisible(true);
-        jButton33.setVisible(true);
-        jButton34.setVisible(true);
-        jButton35.setVisible(true);
-        jButton36.setVisible(true);
-    }
-    
     private void jToggleButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton21ActionPerformed
         // Меняем иконку
         if( on_off_ch1_r == false )
@@ -3342,8 +3352,6 @@ public class Interface extends javax.swing.JFrame {
             //  Меняем картинку
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_on.png"));
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_off.png"));
-            
-            timing_СhannelsOn();
         }
         else if( on_off_ch1_r == true )
         {
@@ -3368,8 +3376,6 @@ public class Interface extends javax.swing.JFrame {
             //  Меняем картинку
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_off.png"));
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_on.png"));
-            
-            timing_СhannelsOn();
         }
         else if( on_off_ch2_r == true )
         {
@@ -3756,135 +3762,19 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
 
-    //  VDF -   Value Determination Function (Функция Определения Значения)
-    //  int calib   -   переменная куда отправляется номер таблицы значений
-    //  int nmbr    -   переменная номера масива таблицы значений
-    public void VDF(int calib, int nmbr)
-    {
-        //  calib   =   6   -   Width
-        if( calib   ==  6   )
-        {
-            if      (   nmbr    ==  0   ){  li_width    =   200;        }   //  200 ps
-            else if (   nmbr    ==  1   ){  li_width    =   500;        }   //  500 ps
-            else if (   nmbr    ==  2   ){  li_width    =   1000;       }   //  1 ns
-            else if (   nmbr    ==  3   ){  li_width    =   2000;       }   //  2 ns
-            else if (   nmbr    ==  4   ){  li_width    =   5000;       }   //  5 ns
-            else if (   nmbr    ==  5   ){  li_width    =   10000;      }   //  10 ns
-            else if (   nmbr    ==  6   ){  li_width    =   20000;      }   //  20 ns
-            else if (   nmbr    ==  7   ){  li_width    =   50000;      }   //  50 ns
-            else if (   nmbr    ==  8   ){  li_width    =   100000;     }   //  100 ns
-            else if (   nmbr    ==  9   ){  li_width    =   200000;     }   //  200 ns
-            else if (   nmbr    ==  10  ){  li_width    =   500000;     }   //  500 ns
-            else if (   nmbr    ==  11  ){  li_width    =   1000000;    }   //  1 µs
-            else if (   nmbr    ==  12  ){  li_width    =   2000000;    }   //  2 µs
-            else if (   nmbr    ==  13  ){  li_width    =   5000000;    }   //  5 µs
-            else if (   nmbr    ==  14  ){  li_width    =   10000000;   }   //  10 µs
-            else if (   nmbr    ==  15  ){  li_width    =   20000000;   }   //  20 µs
-            else if (   nmbr    ==  16  ){  li_width    =   50000000;   }   //  50 µs
-            else if (   nmbr    ==  17  ){  li_width    =   100000000;  }   //  100 µs
-            else if (   nmbr    ==  18  ){  li_width    =   200000000;  }   //  200 µs
-            else if (   nmbr    ==  19  ){  li_width    =   500000000;  }   //  500 µs
-            else if (   nmbr    ==  20  ){  li_width    =   1000000000; }   //  1 ms
-            
-        }
-    }
-    
-    //  VDDF -  Value Display Definition Function (Функция определения отображения значения)
-    public String VDDF(int calib, float nmbr, boolean plus)
-    {
-        //  Создаем переменную которую будем возвращять
-        String rez = "";
-        
-        //  calib   =   6   -   Width
-        if( calib   ==  6   )
-        {
-            if( plus == true )      //  Прибавляем
-            {
-                if      ( li_width    <   500       ){li_width  +=  2;          nmbr += 2;      }   //  200 ps - 500 ps
-                else if ( li_width    <   1000      ){li_width  +=  5;          nmbr += 5;      }   //  500 ps - 1 ns
-                else if ( li_width    <   2000      ){li_width  +=  10;         nmbr+= 10;      }   //  1 ns - 2 ns
-                else if ( li_width    <   5000      ){li_width  +=  20;         nmbr+= 20;      }   //  2 ns - 5 ns
-                else if ( li_width    <   10000     ){li_width  +=  50;         nmbr+= 50;      }   //  5 ns - 10 ns
-                else if ( li_width    <   20000     ){li_width  +=  100;        nmbr+= 100;     }   //  10 ns - 20 ns
-                else if ( li_width    <   50000     ){li_width  +=  200;        nmbr+= 200;     }   //  20 ns - 50 ns
-                else if ( li_width    <   100000    ){li_width  +=  500;        nmbr+= 200;     }   //  50 ns - 100 ns
-                else if ( li_width    <   200000    ){li_width  +=  1000;       nmbr+= 200;     }   //  100 ns - 200 ns
-                else if ( li_width    <   500000    ){li_width  +=  2000;       nmbr+= 200;     }   //  200 ns - 500 ns
-                else if ( li_width    <   1000000   ){li_width  +=  5000;       nmbr+= 200;     }   //  500 ns - 1 µs
-                else if ( li_width    <   2000000   ){li_width  +=  10000;      nmbr+= 200;     }   //  1 µs - 2 µs
-                else if ( li_width    <   5000000   ){li_width  +=  20000;      nmbr+= 200;     }   //  2 µs - 5 µs
-                else if ( li_width    <   10000000  ){li_width  +=  50000;      nmbr+= 200;     }   //  5 µs - 10 µs
-                else if ( li_width    <   50000000  ){li_width  +=  100000;     nmbr+= 200;     }   //  10 µs - 50 µs
-                else if ( li_width    <   100000000 ){li_width  +=  500000;     nmbr+= 200;     }   //  50 µs - 100 µs
-                else if ( li_width    <   200000000 ){li_width  +=  1000000;    nmbr+= 200;     }   //  100 µs - 200 µs
-                else if ( li_width    <   500000000 ){li_width  +=  2000000;    nmbr+= 200;     }   //  200 µs - 500 µs
-                else if ( li_width    <   1000000000){li_width  +=  5000000;    nmbr+= 200;     }   //  500 µs - 1 ms
-                else if ( li_width    >=  1000000000){li_width  =   1000000000;                 }   //  MAX
-            }
-            else if( plus == false )    //  Отнимаем
-            {
-                if      ( li_width    <=  200       ){li_width  =   200;                        }   //  MIN
-                else if ( li_width    <   500       ){li_width  -=  2;          nmbr += 2;      }   //  200 ps - 500 ps
-                else if ( li_width    <   1000      ){li_width  -=  5;          nmbr += 5;      }   //  500 ps - 1 ns
-                else if ( li_width    <   2000      ){li_width  -=  10;         nmbr += 10;     }   //  1 ns - 2 ns
-                else if ( li_width    <   5000      ){li_width  -=  20;         nmbr += 20;     }   //  2 ns - 5 ns
-                else if ( li_width    <   10000     ){li_width  -=  50;         nmbr += 50;     }   //  5 ns - 10 ns
-                else if ( li_width    <   20000     ){li_width  -=  100;        nmbr += 100;    }   //  10 ns - 20 ns
-                else if ( li_width    <   50000     ){li_width  -=  200;        nmbr += 200;    }   //  20 ns - 50 ns
-                else if ( li_width    <   100000    ){li_width  -=  500;        nmbr += 500;    }   //  50 ns - 100 ns
-                else if ( li_width    <   200000    ){li_width  -=  1000;       nmbr += 1000;   }   //  100 ns - 200 ns
-                else if ( li_width    <   500000    ){li_width  -=  2000;       nmbr += 2000;   }   //  200 ns - 500 ns
-                else if ( li_width    <   1000000   ){li_width  -=  5000;       nmbr += 5000;   }   //  500 ns - 1 µs
-                else if ( li_width    <   2000000   ){li_width  -=  10000;      nmbr += 10000;  }   //  1 µs - 2 µs
-                else if ( li_width    <   5000000   ){li_width  -=  20000;      nmbr += 20000;  }   //  2 µs - 5 µs
-                else if ( li_width    <   10000000  ){li_width  -=  50000;      nmbr += 50000;  }   //  5 µs - 10 µs
-                else if ( li_width    <   50000000  ){li_width  -=  100000;     nmbr += 100000; }   //  10 µs - 50 µs
-                else if ( li_width    <   100000000 ){li_width  -=  500000;     nmbr += 500000; }   //  50 µs - 100 µs
-                else if ( li_width    <   200000000 ){li_width  -=  1000000;    nmbr += 1000000;}   //  100 µs - 200 µs
-                else if ( li_width    <   500000000 ){li_width  -=  2000000;    nmbr += 2000000;}   //  200 µs - 500 µs
-                else if ( li_width    <   1000000000){li_width  -=  5000000;    nmbr += 5000000;}   //  500 µs - 1 ms
-                else if ( li_width    ==  1000000000){li_width  -=  5000000;                    }   //  500 µs - 1 ms
-                
-            }
-            
-            if      ( li_width    <   500       ){rez   =   li_width + " ps";           }   //  200 ps - 500 ps
-            else if ( li_width    <   1000      ){rez   =   li_width + " ps";           }   //  500 ps - 1 ns
-            else if ( li_width    <   2000      ){rez   =   (nmbr/1000) + " ns";        }   //  1 ns - 2 ns
-            else if ( li_width    <   5000      ){rez   =   (nmbr/1000) + " ns";        }   //  2 ns - 5 ns
-            else if ( li_width    <   10000     ){rez   =   (nmbr/1000) + " ns";        }   //  5 ns - 10 ns
-            else if ( li_width    <   20000     ){rez   =   (nmbr/1000) + " ns";        }   //  10 ns - 20 ns
-            else if ( li_width    <   50000     ){rez   =   (nmbr/1000) + " ns";        }   //  20 ns - 50 ns
-            else if ( li_width    <   100000    ){rez   =   (nmbr/1000) + " ns";        }   //  50 ns - 100 ns
-            else if ( li_width    <   200000    ){rez   =   (nmbr/1000) + " ns";        }   //  100 ns - 200 ns
-            else if ( li_width    <   500000    ){rez   =   (nmbr/1000) + " ns";        }   //  200 ns - 500 ns
-            else if ( li_width    <   1000000   ){rez   =   (nmbr/1000) + " ns";        }   //  500 ns - 1 µs
-            else if ( li_width    <   2000000   ){rez   =   (nmbr/1000000) + " µs";     }   //  1 µs - 2 µs
-            else if ( li_width    <   5000000   ){rez   =   (nmbr/1000000) + " µs";     }   //  2 µs - 5 µs
-            else if ( li_width    <   10000000  ){rez   =   (nmbr/1000000) + " µs";     }   //  5 µs - 10 µs
-            else if ( li_width    <   50000000  ){rez   =   (nmbr/1000000) + " µs";     }   //  10 µs - 50 µs
-            else if ( li_width    <   100000000 ){rez   =   (nmbr/1000000) + " µs";     }   //  50 µs - 100 µs
-            else if ( li_width    <   200000000 ){rez   =   (nmbr/1000000) + " µs";     }   //  100 µs - 200 µs
-            else if ( li_width    <   500000000 ){rez   =   (nmbr/1000000) + " µs";     }   //  200 µs - 500 µs
-            else if ( li_width    <   1000000000){rez   =   (nmbr/1000000) + " µs";     }   //  500 µs - 1 ms
-            else if ( li_width    >=  1000000000){rez  =    "1 ms";                }   //  MAX
-            
-        }
-        return rez;
-    }
-    
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
         //  Если активен Width
         if( width_ch == true )
         {
             //  Повышаем значение переменной номера мас
-            if( width_mas_nmb < 20 )
+            if( calibrations.width_mas_nmb < 20 )
             {
-                width_mas_nmb++;
-                VDF(6, width_mas_nmb);
+                calibrations.width_mas_nmb++;
+                calibrations.VDF(6, calibrations.width_mas_nmb);
             }
 
             //  Устанавливаем значение Width
-            jTextField5.setText( width_mas [ width_mas_nmb ] );
+            jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb ] );
         }
         //  Если активен DCycle
         else if( dcycle_ch == true )
@@ -3976,12 +3866,12 @@ public class Interface extends javax.swing.JFrame {
         s = "";         //  Присваиваем стандартное значение перменной
         
         //  Определяем значение li_width
-        if( li_width < 1000 ){s = Integer.toString(li_width);}        
-        else if( li_width < 1000000 ){s = Integer.toString(li_width/1000);}
+        if( calibrations.li_width < 1000 ){s = Integer.toString(calibrations.li_width);}        
+        else if( calibrations.li_width < 1000000 ){s = Integer.toString(calibrations.li_width/1000);}
         
         //  Определяем как будет выглядеть текстовое значение li_width
-        if( li_width < 1000 ){jTextField5.setText(s + " ps");}
-        else if( li_width < 1000000 ){jTextField5.setText(s + " ns");}
+        if( calibrations.li_width < 1000 ){jTextField5.setText(s + " ps");}
+        else if( calibrations.li_width < 1000000 ){jTextField5.setText(s + " ns");}
         
         // Меняем иконку
         if( width_ch == true )
@@ -4041,7 +3931,7 @@ public class Interface extends javax.swing.JFrame {
         if( width_ch == true )
         {
             //  Отправляем запрос в функцию VDDF и сохраняем возвращяемое значение в переменную
-            String ans = VDDF(6, li_width, true);
+            String ans = calibrations.VDDF(6, calibrations.li_width, true);
             
             //  Выводим результат
             jTextField5.setText(ans);
@@ -4073,98 +3963,11 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton38ActionPerformed
 
     private void choice1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_choice1ItemStateChanged
-        //  При нажатии фиксированное значение зависит от выбранного стандарта
-        if( null != choice1.getSelectedItem() )
-        //  Switch при выборе фиксированного значения и изменения параметров High/Low
-        switch (choice1.getSelectedItem()) {
-            case "NECL":
-                jTextField4.setText("-0.8 V");  //  High
-                jTextField3.setText("-1.8 V");  //  Low
-                break;
-            case "5-V PECL":
-                jTextField4.setText("4.2 V");   //  High
-                jTextField3.setText("3.4 V");   //  Low
-                break;
-            case "3.3-V PECL":
-                jTextField4.setText("2.4 V");   //  High
-                jTextField3.setText("1.6 V");   //  Low
-                break;
-            case "2.5-V PECL":
-                jTextField4.setText("1.7 V");   //  High
-                jTextField3.setText("0.7 V");   //  Low
-                break;
-            case "1.8-V PECL":
-                jTextField4.setText("0.0 V");   //  High
-                jTextField3.setText("0.0 V");   //  Low
-                break;
-            case "5-V TTL":
-                jTextField4.setText("2.4 V");   //  High
-                jTextField3.setText("0.4 V");   //  Low
-                break;
-            case "3.3-V TTL":
-                jTextField4.setText("2.4 V");   //  High
-                jTextField3.setText("0.4 V");   //  Low
-                break;
-            case "2.5-V TTL":
-                jTextField4.setText("1.9 V");   //  High
-                jTextField3.setText("0.4 V");   //  Low
-                break;
-            case "LVDS":
-                jTextField4.setText("1.4 V");   //  High
-                jTextField3.setText("1.0 V");   //  Low
-                break;
-            case "CML":
-                jTextField4.setText("0.0 V");   //  High
-                jTextField3.setText("-0.6 V");   //  Low
-                break;
-            case "3.3-V CML":
-                jTextField4.setText("3.3 V");   //  High
-                jTextField3.setText("2.7 V");   //  Low
-                break;
-            case "2.5-V CML":
-                jTextField4.setText("2.5 V");   //  High
-                jTextField3.setText("1.9 V");   //  Low
-                break;
-            case "1.8-V CML":
-                jTextField4.setText("1.8 V");   //  High
-                jTextField3.setText("1.2 V");   //  Low
-                break;
-            case "1.2-V CML":
-                jTextField4.setText("1.2 V");   //  High
-                jTextField3.setText("0.6 V");   //  Low
-                break;
-            case "5-V CMOS":
-                jTextField4.setText("4.5 V");   //  High
-                jTextField3.setText("0.5 V");   //  Low
-                break;
-            case "3.3-V CMOS":
-                jTextField4.setText("2.8 V");   //  High
-                jTextField3.setText("0.4 V");   //  Low
-                break;
-            case "2.5-V CMOS":
-                jTextField4.setText("2.0 V");   //  High
-                jTextField3.setText("0.4 V");   //  Low
-                break;
-            case "1.8-V CMOS":
-                jTextField4.setText("1.4 V");   //  High
-                jTextField3.setText("0.4 V");   //  Low
-                break;
-            case "1.5-V CMOS":
-                jTextField4.setText("1.2 V");   //  High
-                jTextField3.setText("0.3 V");   //  Low
-                break;
-            case "1.2-V CMOS":
-                jTextField4.setText("0.9 V");   //  High
-                jTextField3.setText("0.3 V");   //  Low
-                break;
-            case "0.8-V CMOS":
-                jTextField4.setText("0.8 V");   //  High
-                jTextField3.setText("0.2 V");   //  Low
-                break;
-            default:
-                break;
-        }
+        //  Получаем выбранное значение и сохраняем его в переменную
+        String choiceSelectedItem = choice1.getSelectedItem();
         
+        //  Отправляем его в функцию изменения значений High/Low Level
+        levelStandard.changeLevelValues(choiceSelectedItem);
     }//GEN-LAST:event_choice1ItemStateChanged
 
     private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
@@ -4373,107 +4176,39 @@ public class Interface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton34ActionPerformed
 
-    //  Функция для отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
-    //  adjNmbr - номер регулировки где должен быть отображен элемент
-    public void showAdjPopupMenu(int adjNmbr)
-    {
-        if( popupmenu1_ch == false )
-        {
-            //  Меняем значение чекера чтобы не функция добавляла элементы по второму разу
-            popupmenu1_ch = true;
-            
-            //  Show jPopup Menu  
-            JMenuItem calc = new JMenuItem("Calculator");           //  Создаем пункт меню Калькулятор (Calc)
-            JMenuItem max = new JMenuItem("Max");                   //  Создаем пункт меню Максимум (Max)
-            JMenuItem mid = new JMenuItem("Mid");                   //  Создаем пункт меню Среднего значения (Mid)
-            JMenuItem min = new JMenuItem("Min");                   //  Создаем пункт меню Минимума (Min)
-            
-            //  Установка шрифтов, стилей и размеров для пунктов меню
-            calc.setFont(   new Font("Arial", Font.BOLD, 12));      //  Установка шрифта, стиля и размеров для пункта меню Калькулятора (Calc)
-            max.setFont(    new Font("Arial", Font.PLAIN, 12));     //  Установка шрифта, стиля и размеров для пункта меню Максимум (Max)
-            mid.setFont(    new Font("Arial", Font.PLAIN, 12));     //  Установка шрифта, стиля и размеров для пункта меню Среднего значения (Mid)
-            min.setFont(    new Font("Arial", Font.PLAIN, 12));     //  Установка шрифта, стиля и размеров для пункта меню Минимума (Min)
-
-            //  Добавляем пункты меню
-            jPopupMenu1.add(calc);                                  //  Добавляем пункт Калькулятора (Calc)
-            jPopupMenu1.addSeparator();                             //  Добавляем Разделитель
-            jPopupMenu1.add(max);                                   //  Добавляем пункт Максимум (Max)
-            jPopupMenu1.add(mid);                                   //  Добавляем пункт Среднего значения (Mid)
-            jPopupMenu1.add(min);                                   //  Добавляем пункт Минимума (Min)
-            
-            //  Пока временно калькулятор отображается так
-            Calculator_Widget CW = new Calculator_Widget();
-            CW.setVisible(true);
-        }
-        
-        //  Выбор места для отображения попап-меню
-        switch (adjNmbr) {
-        //  Если выбран компонент jTextField1
-            case 1:
-                jPopupMenu1.show(jPanel1 , jTextField1.getX(), jTextField1.getY());
-                break;
-        //  Если выбран компонент JTextField2
-            case 2:
-                jPopupMenu1.show(jPanel1, jTextField2.getX(), jTextField2.getY());
-                break;
-        //  Если выбран компонент JTextField3
-            case 3:
-                jPopupMenu1.show(jPanel1, jTextField3.getX(), jTextField3.getY());
-                break;
-        //  Если выбран компонент JTextField4
-            case 4:
-                jPopupMenu1.show(jPanel1, jTextField4.getX(), jTextField4.getY());
-                break;
-        //  Если выбран компонент JTextField5
-            case 5:
-                jPopupMenu1.show(jPanel7, jTextField5.getX(), jTextField5.getY());
-                break;
-        //  Если выбран компонент JTextField6
-            case 6:
-                jPopupMenu1.show(jPanel7, jTextField6.getX(), jTextField6.getY());
-                break;
-        //  Если выбран компонент JTextField7
-            case 7:
-                jPopupMenu1.show(jPanel7, jTextField7.getX(), jTextField7.getY());
-                break;
-            default:
-                break;
-        }
-    }
-    
     private void jTextField4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField4MouseClicked
         //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
-        showAdjPopupMenu(4);
+        popupmenu.showAdjPopupMenu(4);
     }//GEN-LAST:event_jTextField4MouseClicked
 
     private void jTextField3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField3MouseClicked
         //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
-        showAdjPopupMenu(3);
+        popupmenu.showAdjPopupMenu(3);
     }//GEN-LAST:event_jTextField3MouseClicked
 
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
         //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
-        showAdjPopupMenu(2);
+        popupmenu.showAdjPopupMenu(2);
     }//GEN-LAST:event_jTextField2MouseClicked
 
     private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
         //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
-        showAdjPopupMenu(1);
+        popupmenu.showAdjPopupMenu(1);
     }//GEN-LAST:event_jTextField1MouseClicked
 
     private void jTextField7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField7MouseClicked
         //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
-        showAdjPopupMenu(7);
+        popupmenu.showAdjPopupMenu(7);
     }//GEN-LAST:event_jTextField7MouseClicked
 
     private void jTextField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField6MouseClicked
         //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
-        showAdjPopupMenu(6);
+        popupmenu.showAdjPopupMenu(6);
     }//GEN-LAST:event_jTextField6MouseClicked
 
     private void jTextField5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField5MouseClicked
         //  Вызываем функцию отображения попап-меню для регулировок с Калькулятором и Минимумом, Среднего значения и Максимумом
-        showAdjPopupMenu(5);
+        popupmenu.showAdjPopupMenu(5);
     }//GEN-LAST:event_jTextField5MouseClicked
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
@@ -4481,9 +4216,9 @@ public class Interface extends javax.swing.JFrame {
         if( width_ch == true )
         {
             //  Устанавливаем значение Width по дефолту
-            jTextField5.setText( width_mas[ 5 ] );
-            width_mas_nmb = 5;
-            VDF(6, width_mas_nmb);
+            jTextField5.setText( calibrations.width_mas[ 5 ] );
+            calibrations.width_mas_nmb = 5;
+            calibrations.VDF(6, calibrations.width_mas_nmb);
         }
         //  Если активен DCycle
         else if( dcycle_ch == true )
@@ -4504,7 +4239,7 @@ public class Interface extends javax.swing.JFrame {
         if( width_ch == true )
         {
             //  Отправляем запрос в функцию VDDF и сохраняем возвращяемое значение в переменную
-            String ans = VDDF(6, li_width, false);
+            String ans = calibrations.VDDF(6, calibrations.li_width, false);
             
             //  Выводим результат
             jTextField5.setText(ans);
@@ -4532,14 +4267,14 @@ public class Interface extends javax.swing.JFrame {
         if( width_ch == true )
         {
             //  Понижаем значение переменной номера мас
-            if( width_mas_nmb > 0 )
+            if( calibrations.width_mas_nmb > 0 )
             {
-                width_mas_nmb--;
-                VDF(6, width_mas_nmb);
+                calibrations.width_mas_nmb--;
+                calibrations.VDF(6, calibrations.width_mas_nmb);
             }
 
             //  Устанавливаем значение Width
-            jTextField5.setText( width_mas [ width_mas_nmb ] );
+            jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb ] );
         }
 
         //  Если активен DCycle
@@ -4596,6 +4331,10 @@ public class Interface extends javax.swing.JFrame {
         jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
     }//GEN-LAST:event_jButton60ActionPerformed
 
+    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton32ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -4629,7 +4368,7 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Choice choice1;
+    public static java.awt.Choice choice1;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
@@ -4640,16 +4379,16 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton36;
+    public static javax.swing.JButton jButton27;
+    public static javax.swing.JButton jButton28;
+    public static javax.swing.JButton jButton29;
+    public static javax.swing.JButton jButton30;
+    public static javax.swing.JButton jButton31;
+    public static javax.swing.JButton jButton32;
+    public static javax.swing.JButton jButton33;
+    public static javax.swing.JButton jButton34;
+    public static javax.swing.JButton jButton35;
+    public static javax.swing.JButton jButton36;
     private javax.swing.JButton jButton37;
     private javax.swing.JButton jButton38;
     private javax.swing.JButton jButton39;
@@ -4690,8 +4429,8 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
+    public static javax.swing.JLabel jLabel18;
+    public static javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -4701,8 +4440,8 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
+    public static javax.swing.JLabel jLabel28;
+    public static javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
@@ -4717,9 +4456,9 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    public static javax.swing.JLabel jLabel5;
+    public static javax.swing.JLabel jLabel6;
+    public static javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
@@ -4730,7 +4469,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel1;
+    public static javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
@@ -4741,17 +4480,17 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
+    public static javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPopupMenu jPopupMenu1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JToggleButton jToggleButton10;
+    public static javax.swing.JPopupMenu jPopupMenu1;
+    public static javax.swing.JTextField jTextField1;
+    public static javax.swing.JTextField jTextField2;
+    public static javax.swing.JTextField jTextField3;
+    public static javax.swing.JTextField jTextField4;
+    public static javax.swing.JTextField jTextField5;
+    public static javax.swing.JTextField jTextField6;
+    public static javax.swing.JTextField jTextField7;
+    public static javax.swing.JToggleButton jToggleButton10;
     private javax.swing.JToggleButton jToggleButton11;
     private javax.swing.JToggleButton jToggleButton18;
     private javax.swing.JToggleButton jToggleButton19;
@@ -4762,11 +4501,11 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton24;
     private javax.swing.JToggleButton jToggleButton25;
     private javax.swing.JToggleButton jToggleButton26;
-    private javax.swing.JToggleButton jToggleButton27;
-    private javax.swing.JToggleButton jToggleButton28;
+    public static javax.swing.JToggleButton jToggleButton27;
+    public static javax.swing.JToggleButton jToggleButton28;
     private javax.swing.JToggleButton jToggleButton4;
     private javax.swing.JToggleButton jToggleButton5;
     private javax.swing.JToggleButton jToggleButton6;
-    private javax.swing.JToggleButton jToggleButton9;
+    public static javax.swing.JToggleButton jToggleButton9;
     // End of variables declaration//GEN-END:variables
 }
