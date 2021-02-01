@@ -116,7 +116,6 @@ public class Interface extends javax.swing.JFrame {
     boolean width_ch = true;
     boolean dcycle_ch = false;
     
-    
     static String str, str2;
     
     boolean left_click = false;
@@ -542,9 +541,6 @@ public class Interface extends javax.swing.JFrame {
         //  Переменная количества элементов в массиве таблицы стандартов
         int fam_mas_qt  = 21;
         
-        //  Переменная количества элементов в массиве таблицы Period
-        int per_mas_qt = 21;
-
         //  Массив таблицы стандартов
         String[] fam_mas =
         {
@@ -2411,70 +2407,6 @@ public class Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    //  ПЕРЕМЕННЫЕ ЗНАЧЕНИЙ ТАБЛИЦ СТАНДАРТОВ
-    int cl_High_Level   =   100;
-    int cl_Low_Level    =   0;
-    
-    int dcycle_percent  =   0;
-    
-    //  МАССИВЫ ДЛЯ ВЫВОДА ПРЕДЕЛОВ ИЗМЕНЕНИЙ ТАБЛИЦ СТАНДАРТОВ
-    
-    //  Массив таблицы Period
-    String[] per_mas =
-    {
-        "400 ps", "500 ps", "1 ns", "2 ns", "5 ns",
-        "10 ns", "20 ns", "50 ns", "100 ns", "200 ns",
-        "500 ns", "1 µs", "2 µs", "5 µs", "10 µs",
-        "20 µs", "50 µs", "100 µs", "200 µs", "500 µs", "1 ms"
-    };
-    
-    //  Массив таблицы Frequency
-    String[] freq_mas =
-    {
-        "1 kHz", "2 kHz", "5 kHz", "10 kHz", "20 kHz",
-        "50 kHz", "100 kHz", "200 kHz", "500 kHz", "1 MHz",
-        "2 MHz", "5 MHz", "10 MHz", "50 MHz", "100 MHz",
-        "200 MHz", "500 MHz", "1 GHz", "2 GHz", "2.5 GHz"
-    };
-    
-    //  Массив таблицы Delay
-    String[] del_mas =
-    {
-        "0 s", "200 s", "500 s", "1 ns", "2 ns",
-        "5 ns", "10 ns", "20 ns", "50 ns", "100 ns",
-        "200 ns", "500 ns", "1 µs", "2 µs", "5 µs",
-        "10 µs", "20 µs", "50 µs", "100 µs", "200 µs",
-        "500 µs", "1 ms"
-    };
-    
-    //  Массив таблицы Delay
-    String[] phas_mas =
-    {
-        "0 s", "200 s", "500 s", "1 ns", "2 ns",
-        "5 ns", "10 ns", "20 ns", "50 ns", "100 ns",
-        "200 ns", "500 ns", "1 µs", "2 µs", "5 µs",
-        "10 µs", "20 µs", "50 µs", "100 µs", "200 µs",
-        "500 µs", "1 ms"
-    };
-    
-    //  ПЕРЕМЕННЫЕ ДЛЯ ХРАНЕНИЯ ЗНАЧЕНИЙ МАЛЕНЬКОГО ШАГА
-    
-    //int li_width   =   200;     //  Значение в пико секундах
-    
-    //  ПЕРЕМЕННЫЕ ДЛЯ НУМЕРАЦИИ ВЫВОДА ЗНАЧЕНИЙ ТАБЛИЦ СТАНДАРТОВ
-    
-    //  Переменная для нумерации вывода значений таблицы Delay
-    int del_mas_nmb = 0;
-    
-    //  Переменная для нумерации вывода значений таблицы Period
-    int per_mas_nmb = 0;
-    
-    //  Переменная для нумерации вывода значений таблицы Frequency
-    int freq_mas_nmb = 0;
-    
-    //  Переменная для нумерации вывода значений таблицы Phase
-    int phas_mas_nmb = 0;
-    
     private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton57ActionPerformed
@@ -3405,7 +3337,7 @@ public class Interface extends javax.swing.JFrame {
             freq_ch = false;
             
             //  Устанавливаем текст относящийся к Period
-            jTextField7.setText( per_mas [ per_mas_nmb ] );
+            jTextField7.setText( calibrations.per_mas [ calibrations.per_mas_nmb ] );
             
             //  Меняеем картинки
             jToggleButton5.setIcon(new ImageIcon(currentDir + "\\src\\images\\period_on.png"));
@@ -3429,7 +3361,7 @@ public class Interface extends javax.swing.JFrame {
             peri_ch = false;
             
             //  Устанавливаем текст относящийся к Period
-            jTextField7.setText( freq_mas [ freq_mas_nmb ] );
+            jTextField7.setText( calibrations.freq_mas [ calibrations.freq_mas_nmb ] );
             
             //  Меняеем картинки
             jToggleButton23.setIcon(new ImageIcon(currentDir + "\\src\\images\\frequency_on.png"));
@@ -3666,7 +3598,7 @@ public class Interface extends javax.swing.JFrame {
             phase_ch = false;
             
             //  Устанавливаем текст относящийся к Delay
-            jTextField6.setText( del_mas [ del_mas_nmb ] );
+            jTextField6.setText( calibrations.del_mas [ calibrations.del_mas_nmb ] );
             
             //  Меняеем картинки
             jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\images\\delay_on.png"));
@@ -3690,7 +3622,7 @@ public class Interface extends javax.swing.JFrame {
             delay_ch = false;
             
             //  Устанавливаем текст относящийся к Phase
-            jTextField6.setText( phas_mas [ phas_mas_nmb ] );
+            jTextField6.setText( calibrations.phas_mas [ calibrations.phas_mas_nmb ] );
             
             //  Меняеем картинки
             jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\images\\delay_off.png"));
@@ -3717,16 +3649,16 @@ public class Interface extends javax.swing.JFrame {
     private void jButton67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton67ActionPerformed
         //  При нажатии калибровки увеличиваем пределы изменения грубого шага Low Level на -0.05
         //  Увеличиваем значение переменной на +0.05
-        cl_Low_Level += 5;
+        calibrations.cl_Low_Level += 5;
         
         //  Округляем до ближайшего значения около 0.05
-        cl_Low_Level -= cl_Low_Level % 5;
+        calibrations.cl_Low_Level -= calibrations.cl_Low_Level % 5;
         
         //  Проверяем ограничения по верхнему пределу Low Level (2.4 V)
-        if( cl_Low_Level >= 240){cl_Low_Level = 240;}
+        if( calibrations.cl_Low_Level >= 240){calibrations.cl_Low_Level = 240;}
         
         //  Присваиваем новое значение переменной
-        float qqq = (float) (cl_Low_Level * 0.01);
+        float qqq = (float) (calibrations.cl_Low_Level * 0.01);
         
         //  Передаем это значение текстовому полю
         jTextField3.setText(qqq + " V");
@@ -3739,16 +3671,16 @@ public class Interface extends javax.swing.JFrame {
     private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
         //  При нажатии калибровки увеличиваем пределы изменения грубого шага High Level на +0.05
         //  Увеличиваем значение переменной на +0.05
-        cl_High_Level += 5;
+        calibrations.cl_High_Level += 5;
         
         //  Округляем до ближайшего значения около 0.05
-        cl_High_Level -= cl_High_Level % 5;
+        calibrations.cl_High_Level -= calibrations.cl_High_Level % 5;
         
         //  Проверяем ограничения по верхнему пределу High Level (2.5 V)
-        if( cl_High_Level >= 250){cl_High_Level = 250;}
+        if( calibrations.cl_High_Level >= 250){calibrations.cl_High_Level = 250;}
         
         //  Присваиваем новое значение переменной
-        float qqq = (float) (cl_High_Level * 0.01);
+        float qqq = (float) (calibrations.cl_High_Level * 0.01);
         
         //  Передаем это значение текстовому полю
         jTextField4.setText(qqq + " V");
@@ -3766,12 +3698,22 @@ public class Interface extends javax.swing.JFrame {
         //  Если активен Width
         if( width_ch == true )
         {
-            //  Повышаем значение переменной номера мас
-            if( calibrations.width_mas_nmb < 20 )
+            //  Если выбран 1 канал
+            if      ( on_off_ch1_r == true && on_off_ch2_r == false )
             {
-                calibrations.width_mas_nmb++;
-                calibrations.VDF(6, calibrations.width_mas_nmb);
+                //  Повышаем значение переменной номера мас
+                if( calibrations.width_mas_nmb < 20 )
+                {
+                    calibrations.width_mas_nmb++;
+                    
+                        calibrations.VDF(6, calibrations.width_mas_nmb_ch1, 1);
+                    
+                    
+                        calibrations.VDF(6, calibrations.width_mas_nmb, 2);
+                    }
+                }
             }
+        else if ( on_off_ch1_r == false && on_off_ch2_r == true ){}
 
             //  Устанавливаем значение Width
             jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb ] );
@@ -3780,17 +3722,17 @@ public class Interface extends javax.swing.JFrame {
         else if( dcycle_ch == true )
         {
             //  Округляем переменную до ближайшего значение делимого на 5, чтобы был ровный шаг
-            dcycle_percent = ( dcycle_percent / 5 ) * 5;
+            calibrations.dcycle_percent = ( calibrations.dcycle_percent / 5 ) * 5;
             
             //  Проверяем не превышает ли переменная dcycle_percent максимальное значение
-            if( ( dcycle_percent + 5 ) < 101 )
+            if( ( calibrations.dcycle_percent + 5 ) < 101 )
             {
                 //  Добавляем 5 процентов к значению переменной dcycle_percent
-                dcycle_percent += 5;
+                calibrations.dcycle_percent += 5;
             }
             
             //  Конвертируем переменную процентов int в String
-            String s = Integer.toString(dcycle_percent);
+            String s = Integer.toString(calibrations.dcycle_percent);
             
             //  Устанавливаем значение
             jTextField5.setText(s + " %");
@@ -3806,25 +3748,25 @@ public class Interface extends javax.swing.JFrame {
         if( delay_ch == true )
         {
             //  Повышаем значение переменной номера мас
-            if( del_mas_nmb < 21 )
+            if( calibrations.del_mas_nmb < 21 )
             {
-                del_mas_nmb++;
+                calibrations.del_mas_nmb++;
             }
 
             //  Устанавливаем значение Delay
-            jTextField6.setText( del_mas[ del_mas_nmb ] );
+            jTextField6.setText( calibrations.del_mas[ calibrations.del_mas_nmb ] );
         }
         //  Если активен Phase
         else if( phase_ch == true )
         {
             //  Повышаем значение переменной номера мас
-            if( phas_mas_nmb < 21 )
+            if( calibrations.phas_mas_nmb < 21 )
             {
-                phas_mas_nmb++;
+                calibrations.phas_mas_nmb++;
             }
 
             //  Устанавливаем значение Phase
-            jTextField6.setText( phas_mas[ phas_mas_nmb ] );
+            jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb ] );
         }
     }//GEN-LAST:event_jButton36ActionPerformed
 
@@ -3837,25 +3779,25 @@ public class Interface extends javax.swing.JFrame {
         if( peri_ch == true )
         {
             //  Повышаем значение переменной номера мас
-            if( per_mas_nmb < 20 )
+            if( calibrations.per_mas_nmb < 20 )
             {
-                per_mas_nmb++;
+                calibrations.per_mas_nmb++;
             }
 
             //  Устанавливаем значение Period
-            jTextField7.setText( per_mas[ per_mas_nmb ] );
+            jTextField7.setText( calibrations.per_mas[ calibrations.per_mas_nmb ] );
         }
         //  Если активен Frequency
         else if( freq_ch == true )
         {
             //  Повышаем значение переменной номера мас
-            if( freq_mas_nmb < 19 )
+            if( calibrations.freq_mas_nmb < 19 )
             {
-                freq_mas_nmb++;
+                calibrations.freq_mas_nmb++;
             }
 
             //  Устанавливаем значение Period
-            jTextField7.setText( freq_mas[ freq_mas_nmb ] );
+            jTextField7.setText( calibrations.freq_mas[ calibrations.freq_mas_nmb ] );
         }
     }//GEN-LAST:event_jButton41ActionPerformed
 
@@ -3895,7 +3837,7 @@ public class Interface extends javax.swing.JFrame {
 
     private void jToggleButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton28ActionPerformed
         //  Присваиваем значение DCycle
-        String s = Integer.toString(dcycle_percent);
+        String s = Integer.toString(calibrations.dcycle_percent);
         jTextField5.setText(s + " %");
 
         // Меняем иконку
@@ -3931,7 +3873,7 @@ public class Interface extends javax.swing.JFrame {
         if( width_ch == true )
         {
             //  Отправляем запрос в функцию VDDF и сохраняем возвращяемое значение в переменную
-            String ans = calibrations.VDDF(6, calibrations.li_width, true);
+            String ans = calibrations.VDDF(6, calibrations.li_width_ch1, true, 1);
             
             //  Выводим результат
             jTextField5.setText(ans);
@@ -3940,14 +3882,14 @@ public class Interface extends javax.swing.JFrame {
         else if( dcycle_ch == true )
         {
             //  Проверяем не превышает ли переменная dcycle_percent максимальное значение
-            if( ( dcycle_percent + 1 ) < 101 )
+            if( ( calibrations.dcycle_percent + 1 ) < 101 )
             {
                 //  Добавляем 1 процент к значению переменной dcycle_percent
-                dcycle_percent += 1;
+                calibrations.dcycle_percent += 1;
             }
             
             //  Конвертируем переменную процентов int в String
-            String s = Integer.toString(dcycle_percent);
+            String s = Integer.toString(calibrations.dcycle_percent);
             
             //  Устанавливаем значение
             jTextField5.setText(s + " %");
@@ -3975,25 +3917,25 @@ public class Interface extends javax.swing.JFrame {
         if( peri_ch == true )
         {
             //  Понижаем значение переменной номера мас
-            if( per_mas_nmb > 0 )
+            if( calibrations.per_mas_nmb > 0 )
             {
-                per_mas_nmb--;
+                calibrations.per_mas_nmb--;
             }
 
             //  Устанавливаем значение Period
-            jTextField7.setText( per_mas[ per_mas_nmb ] );
+            jTextField7.setText( calibrations.per_mas[ calibrations.per_mas_nmb ] );
         }
         //  Если активен Frequency
         else if( freq_ch == true )
         {
             //  Повышаем значение переменной номера мас
-            if( freq_mas_nmb > 0 )
+            if( calibrations.freq_mas_nmb > 0 )
             {
-                freq_mas_nmb--;
+                calibrations.freq_mas_nmb--;
             }
 
             //  Устанавливаем значение Period
-            jTextField7.setText( freq_mas[ freq_mas_nmb ] );
+            jTextField7.setText( calibrations.freq_mas[ calibrations.freq_mas_nmb ] );
         }
     }//GEN-LAST:event_jButton40ActionPerformed
 
@@ -4002,30 +3944,30 @@ public class Interface extends javax.swing.JFrame {
         if( peri_ch == true )
         {
             //  Устанавливаем значение Period по дефолту
-            jTextField7.setText( per_mas[ 11 ] );
-            per_mas_nmb = 11;
+            jTextField7.setText( calibrations.per_mas[ 11 ] );
+            calibrations.per_mas_nmb = 11;
         }
         //  Если активен Frequency
         else if( freq_ch == true )
         {
-            jTextField7.setText( freq_mas[ 9 ] );
-            freq_mas_nmb = 9;
+            jTextField7.setText( calibrations.freq_mas[ 9 ] );
+            calibrations.freq_mas_nmb = 9;
         }
     }//GEN-LAST:event_jButton39ActionPerformed
 
     private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
         //  При нажатии калибровки уменьшаем пределы изменения грубого шага High Level на -0.05
         //  Уменьшаем значение переменной на -0.05
-        cl_High_Level -= 5;
+        calibrations.cl_High_Level -= 5;
         
         //  Округляем до ближайшего значения около 0.05
-        cl_High_Level -= cl_High_Level % 5;
+        calibrations.cl_High_Level -= calibrations.cl_High_Level % 5;
         
         //  Проверяем ограничения по нижнему пределу High Level (-1.9)
-        if( cl_High_Level <= -190){cl_High_Level = -190;}
+        if( calibrations.cl_High_Level <= -190){calibrations.cl_High_Level = -190;}
         
         //  Присваиваем новое значение переменной
-        float qqq = (float) (cl_High_Level * 0.01);
+        float qqq = (float) (calibrations.cl_High_Level * 0.01);
         
         //  Передаем это значение текстовому полю
         jTextField4.setText(qqq + " V");
@@ -4034,10 +3976,10 @@ public class Interface extends javax.swing.JFrame {
     private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
         //  При нажатии калибровки выставляем пределы изменения High Level на ноль
         //  Присваиваем переменной значение ноль
-        cl_High_Level = 0;
+        calibrations.cl_High_Level = 0;
         
         //  Присваиваем новое значение переменной
-        float qqq = (float) (cl_High_Level * 0.01);
+        float qqq = (float) (calibrations.cl_High_Level * 0.01);
         
         //  Передаем это значение текстовому полю
         jTextField4.setText(qqq + " V");
@@ -4046,13 +3988,13 @@ public class Interface extends javax.swing.JFrame {
     private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
         //  При нажатии калибровки увеличиваем пределы изменения плавного шага High Level на +0.01
         //  Увеличиваем значение переменной на +0.01
-        cl_High_Level++;
+        calibrations.cl_High_Level++;
         
         //  Проверяем ограничения по верхнему пределу High Level (2.5 V)
-        if( cl_High_Level >= 250){cl_High_Level = 250;}
+        if( calibrations.cl_High_Level >= 250){calibrations.cl_High_Level = 250;}
         
         //  Присваиваем новое значение переменной
-        float qqq = (float) (cl_High_Level * 0.01);
+        float qqq = (float) (calibrations.cl_High_Level * 0.01);
         
         //  Передаем это значение текстовому полю
         jTextField4.setText(qqq + " V");
@@ -4061,13 +4003,13 @@ public class Interface extends javax.swing.JFrame {
     private void jButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton72ActionPerformed
         //   При нажатии калибровки уменьшаем пределы изменения плавного шага High Level на -0.01
         //  Уменьшаем значение переменной на -0.01
-        cl_High_Level--;
+        calibrations.cl_High_Level--;
         
         //  Проверяем ограничения по нижнему пределу High Level (-1.9)
-        if( cl_High_Level <= -190){cl_High_Level = -190;}
+        if( calibrations.cl_High_Level <= -190){calibrations.cl_High_Level = -190;}
         
         //  Присваиваем новое значение переменной
-        float qqq = (float) (cl_High_Level * 0.01);
+        float qqq = (float) (calibrations.cl_High_Level * 0.01);
         
         //  Передаем это значение текстовому полю
         jTextField4.setText(qqq + " V");
@@ -4076,16 +4018,16 @@ public class Interface extends javax.swing.JFrame {
     private void jButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton68ActionPerformed
         //  При нажатии калибровки уменьшаем пределы изменения грубого шага Low Level на -0.05
         //  Уменьшаем значение переменной на -0.05
-        cl_Low_Level -= 5;
+        calibrations.cl_Low_Level -= 5;
         
         //  Округляем до ближайшего значения около 0.05
-        cl_Low_Level -= cl_Low_Level % 5;
+        calibrations.cl_Low_Level -= calibrations.cl_Low_Level % 5;
         
         //  Проверяем ограничения по нижнему пределу Low Level (-2.0)
-        if( cl_Low_Level <= -200){cl_Low_Level = -200;}
+        if( calibrations.cl_Low_Level <= -200){calibrations.cl_Low_Level = -200;}
         
         //  Присваиваем новое значение переменной
-        float qqq = (float) (cl_Low_Level * 0.01);
+        float qqq = (float) (calibrations.cl_Low_Level * 0.01);
         
         //  Передаем это значение текстовому полю
         jTextField3.setText(qqq + " V");
@@ -4094,10 +4036,10 @@ public class Interface extends javax.swing.JFrame {
     private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
         //  При нажатии калибровки выставляем пределы изменения Low Level на ноль
         //  Присваиваем переменной значение ноль
-        cl_Low_Level = 0;
+        calibrations.cl_Low_Level = 0;
         
         //  Присваиваем новое значение переменной
-        float qqq = (float) (cl_Low_Level * 0.01);
+        float qqq = (float) (calibrations.cl_Low_Level * 0.01);
         
         //  Передаем это значение текстовому полю
         jTextField3.setText(qqq + " V");
@@ -4106,13 +4048,13 @@ public class Interface extends javax.swing.JFrame {
     private void jButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton70ActionPerformed
         //  При нажатии калибровки увеличиваем пределы изменения плавного шага Low Level на +0.01
         //  Увеличиваем значение переменной на +0.01
-        cl_Low_Level++;
+        calibrations.cl_Low_Level++;
         
         //  Проверяем ограничения по верхнему пределу High Level (2.4 V)
-        if( cl_Low_Level >= 240){cl_Low_Level = 240;}
+        if( calibrations.cl_Low_Level >= 240){calibrations.cl_Low_Level = 240;}
         
         //  Присваиваем новое значение переменной
-        float qqq = (float) (cl_Low_Level * 0.01);
+        float qqq = (float) (calibrations.cl_Low_Level * 0.01);
         
         //  Передаем это значение текстовому полю
         jTextField3.setText(qqq + " V");
@@ -4121,13 +4063,13 @@ public class Interface extends javax.swing.JFrame {
     private void jButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton71ActionPerformed
         //   При нажатии калибровки уменьшаем пределы изменения плавного шага Low Level на -0.01
         //  Уменьшаем значение переменной на -0.01
-        cl_Low_Level--;
+        calibrations.cl_Low_Level--;
         
         //  Проверяем ограничения по нижнему пределу High Level (-1.9)
-        if( cl_Low_Level <= -200){cl_Low_Level = -200;}
+        if( calibrations.cl_Low_Level <= -200){calibrations.cl_Low_Level = -200;}
         
         //  Присваиваем новое значение переменной
-        float qqq = (float) (cl_Low_Level * 0.01);
+        float qqq = (float) (calibrations.cl_Low_Level * 0.01);
         
         //  Передаем это значение текстовому полю
         jTextField3.setText(qqq + " V");
@@ -4138,25 +4080,25 @@ public class Interface extends javax.swing.JFrame {
         if( delay_ch == true )
         {
             //  Повышаем значение переменной номера мас
-            if( del_mas_nmb > 0 )
+            if( calibrations.del_mas_nmb > 0 )
             {
-                del_mas_nmb--;
+                calibrations.del_mas_nmb--;
             }
 
             //  Устанавливаем значение Delay
-            jTextField6.setText( del_mas[ del_mas_nmb ] );
+            jTextField6.setText( calibrations.del_mas[ calibrations.del_mas_nmb ] );
         }
         //  Если активен Phase
         else if( phase_ch == true )
         {
             //  Повышаем значение переменной номера мас
-            if( phas_mas_nmb > 0 )
+            if( calibrations.phas_mas_nmb > 0 )
             {
-                phas_mas_nmb--;
+                calibrations.phas_mas_nmb--;
             }
 
             //  Устанавливаем значение Phase
-            jTextField6.setText( phas_mas[ phas_mas_nmb ] );
+            jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb ] );
         }
     }//GEN-LAST:event_jButton35ActionPerformed
 
@@ -4165,14 +4107,14 @@ public class Interface extends javax.swing.JFrame {
         if( delay_ch == true )
         {
             //  Устанавливаем значение Delay по дефолту
-            jTextField6.setText( del_mas[ 7 ] );
-            del_mas_nmb = 7;
+            jTextField6.setText( calibrations.del_mas[ 7 ] );
+            calibrations.del_mas_nmb = 7;
         }
         //  Если активен Phase
         else if( phase_ch == true )
         {
-            jTextField6.setText( phas_mas[ 7 ] );
-            phas_mas_nmb = 7;
+            jTextField6.setText( calibrations.phas_mas[ 7 ] );
+            calibrations.phas_mas_nmb = 7;
         }
     }//GEN-LAST:event_jButton34ActionPerformed
 
@@ -4224,10 +4166,10 @@ public class Interface extends javax.swing.JFrame {
         else if( dcycle_ch == true )
         {
             //  Устанавливаем значение 50 %
-            dcycle_percent = 50;
+            calibrations.dcycle_percent = 50;
             
             //  Конвертируем переменную процентов int в String
-            String s = Integer.toString(dcycle_percent);
+            String s = Integer.toString(calibrations.dcycle_percent);
             
             //  Устанавливаем значение
             jTextField5.setText(s + " %");
@@ -4248,14 +4190,14 @@ public class Interface extends javax.swing.JFrame {
         if( dcycle_ch == true )
         {
             //  Проверяем не является ли переменная dcycle_percent меньше минимального значения
-            if( ( dcycle_percent - 1 ) >= 0 )
+            if( ( calibrations.dcycle_percent - 1 ) >= 0 )
             {
                 //  Убавляем 1 процент от значения переменной dcycle_percent
-                dcycle_percent -= 1;
+                calibrations.dcycle_percent -= 1;
             }
             
             //  Конвертируем переменную процентов int в String
-            String s = Integer.toString(dcycle_percent);
+            String s = Integer.toString(calibrations.dcycle_percent);
             
             //  Устанавливаем значение
             jTextField5.setText(s + " %");
@@ -4284,29 +4226,29 @@ public class Interface extends javax.swing.JFrame {
             boolean division_by_five = true;
             
             //  Проверяем делится ли настоящее значение dcycle_percent на 5
-            if( dcycle_percent > ( ( dcycle_percent / 5 ) * 5 ) )
+            if( calibrations.dcycle_percent > ( ( calibrations.dcycle_percent / 5 ) * 5 ) )
             {
                 division_by_five = false;
             }
             else{division_by_five = true;}  //  В случае если нет возвращяем значение true
             
             //  Округляем переменную до ближайшего значение делимого на 5, чтобы был ровный шаг
-            dcycle_percent = ( dcycle_percent / 5 ) * 5;
+            calibrations.dcycle_percent = ( calibrations.dcycle_percent / 5 ) * 5;
             
             //  Понижение значения процентов на 5 выполняется только в том случае если значение делится на 5 ровно, чтобы был ровный шаг
             if( division_by_five == true )
             {
                 //  Проверяем не является ли переменная dcycle_percent меньше минимального значения
-                if( ( dcycle_percent - 5 ) >= 0 )
+                if( ( calibrations.dcycle_percent - 5 ) >= 0 )
                 {
                     //  Убавляем 5 процентов от значения переменной dcycle_percent
-                    dcycle_percent -= 5;
+                    calibrations.dcycle_percent -= 5;
                 }
             }
             
             //  Конвертируем переменную процентов int в String
             String s;
-            s = Integer.toString(dcycle_percent);
+            s = Integer.toString(calibrations.dcycle_percent);
             
             //  Устанавливаем значение
             jTextField5.setText(s + " %");
