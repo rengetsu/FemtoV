@@ -56,7 +56,6 @@ public class Interface extends javax.swing.JFrame {
     /* ГРАФИЧЕСКИЙ ИНТЕРФЕЙС ПРОГРАММЫ  */
     
     //  ВЫЗОВ КЛАССОВ
-    
     Tabs            tabs            = new Tabs();
     PopupMenu       popupmenu       = new PopupMenu();
     Visibility      visibility      = new Visibility();
@@ -70,15 +69,7 @@ public class Interface extends javax.swing.JFrame {
     public static final Color BLUE_FOR_BUTTONS = new Color(100,158,242);
     public static final Color GRAY_FOR_BUTTONS = new Color(240,240,240);
     
-    //  Цвета для автоматического выставления фонового цвета
-    //  public static final Color zen_ginks = new Color(105,125,245);
-    //  public static final Color zen_qinkz = new Color(115,125,220);
-    //  public static final Color zen_qinkd = new Color(150,150,250);
-    //  public static final Color zen_qinkq = new Color(199,130,200);
-    //  public static final Color zen_qinkf = new Color(174,115,215);
-    //  public static final Color zen_qinkl = new Color(144,133,220);
-    
-    //  ЧЕКЕРЫ
+    //  ДАЛЕЕ ИДУТ ЧЕКЕРЫ
     
     //  Чекеры для проверки статуса включения/выключения каналов (меню слева)
     boolean on_off_ch1 = false;
@@ -116,18 +107,12 @@ public class Interface extends javax.swing.JFrame {
     boolean width_ch = true;
     boolean dcycle_ch = false;
     
-    static String str, str2;
-    
-    boolean left_click = false;
-    boolean right_click = false;
-    
     /**
      * Создает форму для Interface
      */
     public Interface() {
-        initComponents();
-        
         //  initComponents() регенерируется средой IDE при создании пользовательского интерфейса в редакторе графического интерфейса
+        initComponents();
         
         //  ДАЛЕЕ ИДЕТ РЕДАКТИРУЕМЫЙ КОД ГРАФИЧЕСКОГО ИНТЕРФЕЙСА
         
@@ -139,318 +124,6 @@ public class Interface extends javax.swing.JFrame {
         jTextField5.setEditable(false);
         jTextField6.setEditable(false);
         jTextField7.setEditable(false);
-        
-        //  НАКЛАДЫВАЕМ ЦВЕТ НА КНОПКИ НИЖНЕГО МЕНЮ
-        
-        //jButton13.setBackground(GRAY_FOR_BUTTONS);
-        //jButton14.setBackground(GRAY_FOR_BUTTONS);
-        //jButton16.setBackground(GRAY_FOR_BUTTONS);
-        //jButton52.setBackground(GRAY_FOR_BUTTONS);
-        //jButton53.setBackground(GRAY_FOR_BUTTONS);
-        //jButton54.setBackground(GRAY_FOR_BUTTONS);
-        //jButton55.setBackground(GRAY_FOR_BUTTONS);
-        //jButton58.setBackground(GRAY_FOR_BUTTONS);
-        //jButton59.setBackground(GRAY_FOR_BUTTONS);
-        //jButton62.setBackground(GRAY_FOR_BUTTONS);
-        
-        //  КНОПКИ ВЫБОРА
-        
-        //JToggleButton jtb5 = jToggleButton5;
-        //JToggleButton jtb6 = jToggleButton6;
-        //JToggleButton jtb9 = jToggleButton9;
-        //JToggleButton jtb11 = jToggleButton11;
-        //JToggleButton jtb23 = jToggleButton23;
-        //JToggleButton jtb24 = jToggleButton24;
-        //JToggleButton jtb25 = jToggleButton25;
-        //JToggleButton jtb26 = jToggleButton26;
-        //JToggleButton jtb27 = jToggleButton27;
-        
-        //  ПРОКЛИКИВАЕМ КНОПКИ ВЫБОРА
-        
-        //jtb17.doClick();
-        //jtb16.doClick();
-        //jtb12.doClick();
-        //jtb15.doClick();
-        //jtb1.doClick();
-        
-        //  НАСТРОЙКА КНОПОК ВЫБОРА
-         
-        //jtb1.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jtb11.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jtb11.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jtb5.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jtb5.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jtb5.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jtb16.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jtb6.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jtb6.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jtb19.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jtb9.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jtb9.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jtb23.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jtb23.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jtb23.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jtb24.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jtb24.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jtb24.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jtb25.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jtb25.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jtb25.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jtb26.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jtb26.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jtb26.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jtb27.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jtb27.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jtb27.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //  КНОПКИ ВЕРХНЕГО МЕНЮ
-        
-        //JButton jb7 = jButton7;
-        //JButton jb17 = jButton17;
-        //JButton jb18 = jButton18;
-        //JButton jb19 = jButton19;
-        //JButton jb20 = jButton20;
-        //JButton jb21 = jButton21;
-        //JButton jb22 = jButton22;
-        //JButton jb23 = jButton23;
-        //JButton jb24 = jButton24;
-        //JButton jb25 = jButton25;
-        //JButton jb26 = jButton26;
-        //JButton jb27 = jButton27;
-        //JButton jb28 = jButton28;
-        //JButton jb29 = jButton29;
-        //JButton jb30 = jButton30;
-        //JButton jb31 = jButton31;
-        //JButton jb32 = jButton32;
-        //JButton jb33 = jButton33;
-        //JButton jb34 = jButton34;
-        //JButton jb35 = jButton35;
-        //JButton jb36 = jButton36;
-        
-        //  НАСТРОЙКА ВНЕШНЕГО ВИДА КНОПОК
-        
-        //jb7.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb7.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb7.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb17.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb17.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb17.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb18.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb18.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb18.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb19.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb19.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb19.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb20.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb20.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb20.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb21.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb21.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb21.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb22.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb22.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb22.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb23.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb23.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb23.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb24.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb24.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb24.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb25.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb25.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb25.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb26.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb26.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb26.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb27.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb27.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb27.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb28.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb28.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb28.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb29.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb29.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb29.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb30.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb30.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb30.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb31.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb31.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb31.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb32.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb32.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb32.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb33.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb33.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb33.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb34.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb34.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb34.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb35.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb35.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb35.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //jb36.setContentAreaFilled(false);               // Делает кнопку полностью заполненой
-        //jb36.setOpaque(true);                           // Делает кнопку непрозрачной
-        //jb36.setBorder(new LineBorder(Color.BLACK));    // Создает темную рамку вокруг кнопки
-        
-        //  КНОПКИ ПРАВОГО МЕНЮ
-        
-        //JButton jb37 = jButton37;
-        //JButton jb38 = jButton38;
-        //JButton jb39 = jButton39;
-        //JButton jb40 = jButton40;
-        //JButton jb41 = jButton41;
-        //JButton jb42 = jButton42;
-        //JButton jb43 = jButton43;
-        //JButton jb44 = jButton44;
-        //JButton jb45 = jButton45;
-        //JButton jb46 = jButton46;
-        //JButton jb47 = jButton47;
-        //JButton jb48 = jButton48;
-        //JButton jb49 = jButton49;
-        //JButton jb50 = jButton50;
-        //JButton jb51 = jButton51;
-        
-        //jb37.setContentAreaFilled(false);
-        //jb37.setOpaque(true);
-        //jb37.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb38.setContentAreaFilled(false);
-        //jb38.setOpaque(true);
-        //jb38.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb39.setContentAreaFilled(false);
-        //jb39.setOpaque(true);
-        //jb39.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb40.setContentAreaFilled(false);
-        //jb40.setOpaque(true);
-        //jb40.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb41.setContentAreaFilled(false);
-        //jb41.setOpaque(true);
-        //jb41.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb42.setContentAreaFilled(false);
-        //jb42.setOpaque(true);
-        //jb42.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb43.setContentAreaFilled(false);
-        //jb43.setOpaque(true);
-        //jb43.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb44.setContentAreaFilled(false);
-        //jb44.setOpaque(true);
-        //jb44.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb45.setContentAreaFilled(false);
-        //jb45.setOpaque(true);
-        //jb45.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb46.setContentAreaFilled(false);
-        //jb46.setOpaque(true);
-        //jb46.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb47.setContentAreaFilled(false);
-        //jb47.setOpaque(true);
-        //jb47.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb48.setContentAreaFilled(false);
-        //jb48.setOpaque(true);
-        //jb48.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb49.setContentAreaFilled(false);
-        //jb49.setOpaque(true);
-        //jb49.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb50.setContentAreaFilled(false);
-        //jb50.setOpaque(true);
-        //jb50.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb51.setContentAreaFilled(false);
-        //jb51.setOpaque(true);
-        //jb51.setBorder(new LineBorder(Color.BLACK));
-        
-        // КНОПКИ НИЖНЕГО МЕНЮ
-        
-        //JButton jb13 = jButton13;
-        //JButton jb14 = jButton14;
-        //JButton jb16 = jButton16;
-        //JButton jb52 = jButton52;
-        //JButton jb53 = jButton53;
-        //JButton jb54 = jButton54;
-        //JButton jb55 = jButton55;
-        //JButton jb58 = jButton58;
-        //JButton jb59 = jButton59;
-        //JButton jb62 = jButton62;
-        
-        //jb13.setContentAreaFilled(false);
-        //jb13.setOpaque(true);
-        //jb13.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb14.setContentAreaFilled(false);
-        //jb14.setOpaque(true);
-        //jb14.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb16.setContentAreaFilled(false);
-        //jb16.setOpaque(true);
-        //jb16.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb52.setContentAreaFilled(false);
-        //jb52.setOpaque(true);
-        //jb52.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb53.setContentAreaFilled(false);
-        //jb53.setOpaque(true);
-        //jb53.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb54.setContentAreaFilled(false);
-        //jb54.setOpaque(true);
-        //jb54.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb55.setContentAreaFilled(false);
-        //jb55.setOpaque(true);
-        //jb55.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb58.setContentAreaFilled(false);
-        //jb58.setOpaque(true);
-        //jb58.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb59.setContentAreaFilled(false);
-        //jb59.setOpaque(true);
-        //jb59.setBorder(new LineBorder(Color.BLACK));
-        
-        //jb62.setContentAreaFilled(false);
-        //jb62.setOpaque(true);
-        //jb62.setBorder(new LineBorder(Color.BLACK));
         
         //  АНИМАЦИИ ПРИ НАЖАТИИ НА КНОПКИ
         
@@ -2411,138 +2084,6 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton57ActionPerformed
 
-    //  closeTab    -   Close tab function
-    /**
-     *
-     * @param tabName       The name of the tab we want to close 
-     * @param left_right    Where it was opened, on the left tab or on the right tab
-     */
-    public void closeTab(String tabName, String left_right)
-    {
-        clickMouse();
-        //  Вкладка "Levels"
-        if          (   "Levels".equals(tabName)    )
-        {
-            //  Делаем невидимой вкладку "Levels" слева
-            if      (   "left".equals(left_right)   )
-            {
-                jPanel1.setVisible(false);
-                jPanel3.setVisible(false);
-                pack();
-            }
-            //  Делаем невидимой вкладку "Levels" справа
-            else if (   "right".equals(left_right)  )
-            {
-                jPanel1.setVisible(false);
-                jPanel3.setVisible(false);
-                pack();
-            }
-        }
-        //  Вкладка "Timing"
-        else if     (   "Timing".equals(tabName)    )
-        {
-            //  Делаем невидимой вкладку "Timing" слева
-            if      (   "left".equals(left_right)   )
-            {
-                jPanel6.setVisible(false);
-                jPanel7.setVisible(false);
-                pack();
-            }
-            //  Делаем невидимой вкладку "Timing" справа
-            else if (   "right".equals(left_right)  )
-            {
-                jPanel6.setVisible(false);
-                jPanel7.setVisible(false);
-                pack();
-            }
-        }
-    }
-    
-    public void clickMouse()
-    {
-        //  Переменная eventMask для сохранения значения событий мышки
-        long eventMask = AWTEvent.MOUSE_MOTION_EVENT_MASK + AWTEvent.MOUSE_EVENT_MASK;
-        
-        //  Получаем действия мышки в реальном времени
-        Toolkit.getDefaultToolkit().addAWTEventListener(new AWTEventListener() {
-            
-            public void eventDispatched(AWTEvent e) {
-                //  Выводим значение в строку
-                //System.out.println(e.paramString()+"-"+e.getSource());
-                
-                str = e.paramString().substring(0, 13);
-                str2 = e.paramString().substring(46, 48);
-                
-                if( "MOUSE_CLICKED".equals(str) )
-                {
-                    //System.out.println("MOUSE CLICKED");
-                }
-                if( "=3".equals(str2) )
-                {
-                    right_click = true;
-                    left_click = false;
-                    //System.out.println("RIGHT MOUSE");
-                }
-                else if( "=1".equals(str2) )
-                {
-                    left_click = true;
-                    right_click = true;
-                    //System.out.println("LEFT MOUSE");
-                }
-                str     =   "";
-                str2    =   "";
-            }
-        }, eventMask);
-        
-    }
-    
-    //  openTab     -   Open tab function
-    /**
-     *
-     * @param tabName       The name of the tab we want to open
-     * @param left_right    Where this tab should be open, on the left or on the right
-     */
-    public void openTab(String tabName, String left_right)
-    {
-        clickMouse();
-        //  Вкладка "Levels"
-        if          (   "Levels".equals(tabName)    )
-        {
-            //  Делаем видимой вкладку "Levels" слева
-            if      (   "left".equals(left_right)   )
-            {
-                jPanel1.setVisible(true);
-                jPanel3.setVisible(true);
-                pack();
-            }
-            //  Делаем видимой вкладку "Levels" справа
-            else if (   "right".equals(left_right)  )
-            {
-                jPanel1.setVisible(true);
-                jPanel3.setVisible(true);
-                pack();
-            }
-        }
-        //  Вкладка "Timing"
-        else if     (   "Timing".equals(tabName)    )
-        {
-            //  Делаем видимой вкладку "Timing" слева
-            if      (   "left".equals(left_right)   )
-            {
-                jPanel6.setVisible(true);
-                jPanel7.setVisible(true);
-                pack();
-            }
-            //  Делаем видимой вкладку "Timing" справа
-            else if (   "right".equals(left_right)  )
-            {
-                jPanel6.setVisible(true);
-                jPanel7.setVisible(true);
-                pack();
-            }
-        }
-    }
-    
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         //  При нажатии подсвечивать синим
         if( ch8 == false )
@@ -2932,7 +2473,10 @@ public class Interface extends javax.swing.JFrame {
         if( ch9 == false )
         {
             //  Закрываем вкладку "Timing" справа
-            closeTab("Timing", "right");
+            tabs.closeTab("Timing", "right");
+            
+            //  Метод pack изменяет размер кадра таким образом, чтобы все его содержимое было равным или превышающим их предпочтительные размеры. 
+            pack();
             
             ch9 = true;
             jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
@@ -2942,7 +2486,10 @@ public class Interface extends javax.swing.JFrame {
         else if( ch9 == true )
         {
             //  Открываем вкладку "Timing" справа
-            openTab("Timing", "right");
+            tabs.openTab("Timing", "right");
+            
+            //  Метод pack изменяет размер кадра таким образом, чтобы все его содержимое было равным или превышающим их предпочтительные размеры. 
+            pack();
             
             ch9 = false;
             jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_On.png"));
@@ -3000,7 +2547,10 @@ public class Interface extends javax.swing.JFrame {
         if( ch10 == false )
         {
             //  Закрываем вкладку "Levels" слева
-            closeTab("Levels", "left");
+            tabs.closeTab("Levels", "left");
+            
+            //  Метод pack изменяет размер кадра таким образом, чтобы все его содержимое было равным или превышающим их предпочтительные размеры. 
+            pack();
             
             ch10 = true;
             jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
@@ -3011,7 +2561,10 @@ public class Interface extends javax.swing.JFrame {
         else if( ch10 == true )
         {
             //  Открываем вкладку "Levels" слева
-            openTab("Levels", "left");
+            tabs.openTab("Levels", "left");
+            
+            //  Метод pack изменяет размер кадра таким образом, чтобы все его содержимое было равным или превышающим их предпочтительные размеры. 
+            pack();
             
             ch10 = false;
             jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_On.png"));
@@ -3598,7 +3151,8 @@ public class Interface extends javax.swing.JFrame {
             phase_ch = false;
             
             //  Устанавливаем текст относящийся к Delay
-            jTextField6.setText( calibrations.del_mas [ calibrations.del_mas_nmb ] );
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //jTextField6.setText( calibrations.del_mas [ calibrations.del_mas_nmb ] );
             
             //  Меняеем картинки
             jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\images\\delay_on.png"));
@@ -3622,7 +3176,8 @@ public class Interface extends javax.swing.JFrame {
             delay_ch = false;
             
             //  Устанавливаем текст относящийся к Phase
-            jTextField6.setText( calibrations.phas_mas [ calibrations.phas_mas_nmb ] );
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //jTextField6.setText( calibrations.phas_mas [ calibrations.phas_mas_nmb ] );
             
             //  Меняеем картинки
             jToggleButton9.setIcon(new ImageIcon(currentDir + "\\src\\images\\delay_off.png"));
@@ -3702,21 +3257,25 @@ public class Interface extends javax.swing.JFrame {
             if      ( on_off_ch1_r == true && on_off_ch2_r == false )
             {
                 //  Повышаем значение переменной номера мас
-                if( calibrations.width_mas_nmb < 20 )
-                {
-                    calibrations.width_mas_nmb++;
+                //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+                //if( calibrations.width_mas_nmb < 20 )
+                //{
+                //    calibrations.width_mas_nmb++;
                     
-                        calibrations.VDF(6, calibrations.width_mas_nmb_ch1, 1);
+                //        calibrations.VDF(6, calibrations.width_mas_nmb_ch1, 1);
                     
                     
-                        calibrations.VDF(6, calibrations.width_mas_nmb, 2);
-                    }
-                }
+                //        calibrations.VDF(6, calibrations.width_mas_nmb, 2);
+                //}
             }
-        else if ( on_off_ch1_r == false && on_off_ch2_r == true ){}
-
+        
+        else if ( on_off_ch1_r == false && on_off_ch2_r == true )
+        {
+        
+        }
             //  Устанавливаем значение Width
-            jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb ] );
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb ] );
         }
         //  Если активен DCycle
         else if( dcycle_ch == true )
@@ -3748,25 +3307,29 @@ public class Interface extends javax.swing.JFrame {
         if( delay_ch == true )
         {
             //  Повышаем значение переменной номера мас
-            if( calibrations.del_mas_nmb < 21 )
-            {
-                calibrations.del_mas_nmb++;
-            }
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //if( calibrations.del_mas_nmb < 21 )
+            //{
+            //    calibrations.del_mas_nmb++;
+            //}
 
             //  Устанавливаем значение Delay
-            jTextField6.setText( calibrations.del_mas[ calibrations.del_mas_nmb ] );
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //jTextField6.setText( calibrations.del_mas[ calibrations.del_mas_nmb ] );
         }
         //  Если активен Phase
         else if( phase_ch == true )
         {
             //  Повышаем значение переменной номера мас
-            if( calibrations.phas_mas_nmb < 21 )
-            {
-                calibrations.phas_mas_nmb++;
-            }
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //if( calibrations.phas_mas_nmb < 21 )
+            //{
+            //    calibrations.phas_mas_nmb++;
+            //}
 
             //  Устанавливаем значение Phase
-            jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb ] );
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb ] );
         }
     }//GEN-LAST:event_jButton36ActionPerformed
 
@@ -3808,12 +3371,14 @@ public class Interface extends javax.swing.JFrame {
         s = "";         //  Присваиваем стандартное значение перменной
         
         //  Определяем значение li_width
-        if( calibrations.li_width < 1000 ){s = Integer.toString(calibrations.li_width);}        
-        else if( calibrations.li_width < 1000000 ){s = Integer.toString(calibrations.li_width/1000);}
+        //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+        //if( calibrations.li_width < 1000 ){s = Integer.toString(calibrations.li_width);}        
+        //else if( calibrations.li_width < 1000000 ){s = Integer.toString(calibrations.li_width/1000);}
         
         //  Определяем как будет выглядеть текстовое значение li_width
-        if( calibrations.li_width < 1000 ){jTextField5.setText(s + " ps");}
-        else if( calibrations.li_width < 1000000 ){jTextField5.setText(s + " ns");}
+        //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+        //if( calibrations.li_width < 1000 ){jTextField5.setText(s + " ps");}
+        //else if( calibrations.li_width < 1000000 ){jTextField5.setText(s + " ns");}
         
         // Меняем иконку
         if( width_ch == true )
@@ -4079,26 +3644,29 @@ public class Interface extends javax.swing.JFrame {
         //  Если активен Delay
         if( delay_ch == true )
         {
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
             //  Повышаем значение переменной номера мас
-            if( calibrations.del_mas_nmb > 0 )
-            {
-                calibrations.del_mas_nmb--;
-            }
+            //if( calibrations.del_mas_nmb > 0 )
+            //{
+            //    calibrations.del_mas_nmb--;
+            //}
 
             //  Устанавливаем значение Delay
-            jTextField6.setText( calibrations.del_mas[ calibrations.del_mas_nmb ] );
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //jTextField6.setText( calibrations.del_mas[ calibrations.del_mas_nmb ] );
         }
         //  Если активен Phase
         else if( phase_ch == true )
         {
             //  Повышаем значение переменной номера мас
-            if( calibrations.phas_mas_nmb > 0 )
-            {
-                calibrations.phas_mas_nmb--;
-            }
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //if( calibrations.phas_mas_nmb > 0 )
+            //{
+            //    calibrations.phas_mas_nmb--;
+            //}
 
             //  Устанавливаем значение Phase
-            jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb ] );
+            //jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb ] );
         }
     }//GEN-LAST:event_jButton35ActionPerformed
 
@@ -4107,14 +3675,16 @@ public class Interface extends javax.swing.JFrame {
         if( delay_ch == true )
         {
             //  Устанавливаем значение Delay по дефолту
-            jTextField6.setText( calibrations.del_mas[ 7 ] );
-            calibrations.del_mas_nmb = 7;
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //jTextField6.setText( calibrations.del_mas[ 7 ] );
+            //calibrations.del_mas_nmb = 7;
         }
         //  Если активен Phase
         else if( phase_ch == true )
         {
-            jTextField6.setText( calibrations.phas_mas[ 7 ] );
-            calibrations.phas_mas_nmb = 7;
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //jTextField6.setText( calibrations.phas_mas[ 7 ] );
+            //calibrations.phas_mas_nmb = 7;
         }
     }//GEN-LAST:event_jButton34ActionPerformed
 
@@ -4157,10 +3727,11 @@ public class Interface extends javax.swing.JFrame {
         //  Если активен Period
         if( width_ch == true )
         {
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
             //  Устанавливаем значение Width по дефолту
-            jTextField5.setText( calibrations.width_mas[ 5 ] );
-            calibrations.width_mas_nmb = 5;
-            calibrations.VDF(6, calibrations.width_mas_nmb);
+            //jTextField5.setText( calibrations.width_mas[ 5 ] );
+            //calibrations.width_mas_nmb = 5;
+            //calibrations.VDF(6, calibrations.width_mas_nmb);
         }
         //  Если активен DCycle
         else if( dcycle_ch == true )
@@ -4181,10 +3752,12 @@ public class Interface extends javax.swing.JFrame {
         if( width_ch == true )
         {
             //  Отправляем запрос в функцию VDDF и сохраняем возвращяемое значение в переменную
-            String ans = calibrations.VDDF(6, calibrations.li_width, false);
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //String ans = calibrations.VDDF(6, calibrations.li_width, false);
             
             //  Выводим результат
-            jTextField5.setText(ans);
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //jTextField5.setText(ans);
         }
         //  Если активен DCycle
         if( dcycle_ch == true )
@@ -4208,15 +3781,17 @@ public class Interface extends javax.swing.JFrame {
         //  Если активен Width
         if( width_ch == true )
         {
+        //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
             //  Понижаем значение переменной номера мас
-            if( calibrations.width_mas_nmb > 0 )
-            {
-                calibrations.width_mas_nmb--;
-                calibrations.VDF(6, calibrations.width_mas_nmb);
-            }
+            //if( calibrations.width_mas_nmb > 0 )
+            //{
+            //    calibrations.width_mas_nmb--;
+            //    calibrations.VDF(6, calibrations.width_mas_nmb);
+            //}
 
             //  Устанавливаем значение Width
-            jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb ] );
+            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
+            //jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb ] );
         }
 
         //  Если активен DCycle
@@ -4257,7 +3832,7 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         //  Закрываем вкладку "Timing"
-        closeTab("Timing", "right");
+        tabs.closeTab("Timing", "right");
         
         //  Меняем значение чекера и картинку на самой кнопке
         ch9 = true;
@@ -4266,7 +3841,7 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton60ActionPerformed
         //  Закрываем вкладку "Levels"
-        closeTab("Levels", "left");
+        tabs.closeTab("Levels", "left");
         
         //  Меняем значение чекера и картинку на самой кнопке
         ch10 = true;
@@ -4412,18 +3987,18 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     public static javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel11;
+    public static javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    public static javax.swing.JPanel jPanel2;
+    public static javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
+    public static javax.swing.JPanel jPanel5;
+    public static javax.swing.JPanel jPanel6;
     public static javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
+    public static javax.swing.JPanel jPanel8;
     public static javax.swing.JPopupMenu jPopupMenu1;
     public static javax.swing.JTextField jTextField1;
     public static javax.swing.JTextField jTextField2;

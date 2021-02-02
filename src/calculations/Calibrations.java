@@ -7,8 +7,6 @@
 //  Пакеты Java используемые для группировки связанных классов 
 package calculations;   //  calculations - пакет где выполняются все вычисления программы
 
-import transitions.Tabs;
-
 /**
  *
  * @author PAVEL TROSTIANKO
@@ -473,9 +471,6 @@ public class Calibrations {
     //  Основной метод Java - это точка входа в любую Java-программу
     public static void main(String[] args) {
         //  ДАЛЕЕ ИДУТ ВЫЗОВЫ ИСПОЛЬЗУЕМЫХ КЛАССОВ
-        
-        //  Вызываем класс Tabs
-        Tabs tabs = new Tabs();
         
         //  Вызываем класc Delay для 1 и 2 канала
         Delay delay_ch1 = new Delay();
