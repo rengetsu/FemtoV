@@ -45,4 +45,50 @@ public class Visibility {
         Interface.jToggleButton27.setVisible(visibility);
         Interface.jToggleButton28.setVisible(visibility);
     }
+    
+    /**
+     * levelsTab_HighLowLevelsVisibility - показывает или скрывает все элементы вкладки Levels - High/Low Level
+     * @param visibility - может быть либо true/false в зависимости от того показываем или скрываем
+     */
+    static public void levelsTab_HighLowLevelsVisibility(boolean visibility)
+    {
+        //  Меняем видимость кнопок и шкал относящихся к этой секции
+        Interface.jLabel26.setVisible(visibility);
+        Interface.jLabel27.setVisible(visibility);
+        Interface.jButton67.setVisible(visibility);
+        Interface.jButton68.setVisible(visibility);
+        Interface.jButton69.setVisible(visibility);
+        Interface.jButton70.setVisible(visibility);
+        Interface.jButton71.setVisible(visibility);
+        Interface.jButton72.setVisible(visibility);
+        Interface.jButton73.setVisible(visibility);
+        Interface.jButton74.setVisible(visibility);
+        Interface.jButton75.setVisible(visibility);
+        Interface.jButton76.setVisible(visibility);
+    }
+    
+    /**
+     * levelsTab_HighLowLimitsVisibility - показывает или скрывает все элементы вкладки Levels - High/Low Limits
+     * @param visibility - может быть либо true/false в зависимости от того показываем или скрываем
+     */
+    static public void levelsTab_HighLowLimitsVisibility(boolean visibility)
+    {
+        //  Делаем невидимыми кнопки и шкалы (High/Low Limit) относящиеся к этой секции
+        Interface.jLabel1.setVisible(visibility);
+        Interface.jLabel8.setVisible(visibility);
+        Interface.jLabel11.setVisible(visibility);
+        Interface.jLabel24.setVisible(visibility);
+        Interface.jTextField1.setVisible(visibility);
+        Interface.jTextField2.setVisible(visibility);
+        Interface.jButton22.setVisible(visibility);
+        Interface.jButton23.setVisible(visibility);
+        Interface.jButton24.setVisible(visibility);
+        Interface.jButton25.setVisible(visibility);
+        Interface.jButton26.setVisible(visibility);
+        Interface.jButton56.setVisible(visibility);
+        Interface.jButton63.setVisible(visibility);
+        Interface.jButton64.setVisible(visibility);
+        Interface.jButton65.setVisible(visibility);
+        Interface.jButton66.setVisible(visibility);
+    }
 }
