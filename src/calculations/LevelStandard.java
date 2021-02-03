@@ -20,7 +20,7 @@ public class LevelStandard {
      * Функция изменения значений High/Low Level
      * @param choiceSelectedItem - получает выбранный параметр в элементе выбора (choice)
      */
-    public void changeLevelValues(String choiceSelectedItem)
+    public static void changeLevelValues(String choiceSelectedItem)
     {
         //  При нажатии фиксированное значение зависит от выбранного стандарта
         if( null != Interface.choice1.getSelectedItem() )
@@ -113,5 +113,9 @@ public class LevelStandard {
             default:
                 break;
         }
+    }
+    
+    //  Основной метод Java - это точка входа в любую Java-программу
+    public static void main(String[] args) {
     }
 }
