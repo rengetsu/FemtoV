@@ -8,6 +8,7 @@
 package transitions;    //  transitions - пакет где выполняются все перемещения элементов интерфейса програм
 import femtov.Interface;
 import java.awt.AWTEvent;
+import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.AWTEventListener;
 
@@ -151,6 +152,7 @@ public class Tabs {
             //  Делаем видимой вкладку "Levels" справа
             else if (   "right".equals(left_right)  )
             {
+                
                 Interface.jPanel1.setVisible(true);
                 Interface.jPanel3.setVisible(true);
             }

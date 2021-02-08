@@ -11,6 +11,7 @@ import transitions.Tabs;
 import transitions.PopupMenu;
 import transitions.Visibility;
 import calculations.Calibrations;
+import calculations.ChannelsUpdate;
 import calculations.ChoiceStandard;
 import calculations.LevelStandard;
 import transitions.Animations;
@@ -34,6 +35,7 @@ public class Interface extends javax.swing.JFrame {
     Animations      animations      = new Animations();
     Calibrations    calibrations    = new Calibrations();
     LevelStandard   levelStandard   = new LevelStandard();
+    ChannelsUpdate  channelsupdate  = new ChannelsUpdate();
     ChoiceStandard  choicestandard  = new ChoiceStandard();
     
     //  Переменная для сохранения определения пути к директории с проектом
@@ -46,40 +48,40 @@ public class Interface extends javax.swing.JFrame {
     //  ДАЛЕЕ ИДУТ ЧЕКЕРЫ
     
     //  Чекеры для проверки статуса включения/выключения каналов (меню слева)
-    boolean on_off_ch1 = false;
-    boolean on_off_ch2 = false;
+    public static boolean on_off_ch1 = false;
+    public static boolean on_off_ch2 = false;
     
     //  Чекеры для проверки статуса включения/выключения каналов (меню справа)
-    boolean on_off_ch1_r = true;
-    boolean on_off_ch2_r = false;
+    public static boolean on_off_ch1_r = true;
+    public static boolean on_off_ch2_r = false;
     
     //  Чекеры для проверки статуса кнопки включения/выключения
-    boolean on_off_btn_ch1 = false;
-    boolean on_off_btn_ch2 = false;
+    public static boolean on_off_btn_ch1 = false;
+    public static boolean on_off_btn_ch2 = false;
     
     //  Чекеры для проверки нажатия кнопок нижнего меню
-    boolean ch1 = true, ch2 = true, ch3 = true, ch4 = true, ch5 = true, ch6 = true, ch7 = true, ch8 = true, ch9 = false, ch10 = false;
+    public static boolean ch1 = true, ch2 = true, ch3 = true, ch4 = true, ch5 = true, ch6 = true, ch7 = true, ch8 = true, ch9 = true, ch10 = true;
     
     //  Чекеры для проверки включения частоты и периода
-    boolean peri_ch = true;
-    boolean freq_ch = false;
+    public static boolean peri_ch = true;
+    public static boolean freq_ch = false;
     
     //  Чекеры для проверки включения частоты и периода
-    boolean nrml_ch = true;
-    boolean comp_ch = false;
+    public static boolean nrml_ch = true;
+    public static boolean comp_ch = false;
     
     //  Чекеры для проверки включения high-low, offset и standard
-    boolean hilo_ch = true;
-    boolean ofst_ch = false;
-    boolean stnd_ch = false;
+    public static boolean hilo_ch = true;
+    public static boolean ofst_ch = false;
+    public static boolean stnd_ch = false;
     
     //  Чекеры для проверки задержки и фазы
-    boolean delay_ch = true;
-    boolean phase_ch = false;
+    public static boolean delay_ch = true;
+    public static boolean phase_ch = false;
     
     //  Чекеры для проверки задержки и фазы
-    boolean width_ch = true;
-    boolean dcycle_ch = false;
+    public static boolean width_ch = true;
+    public static boolean dcycle_ch = false;
     
     //  ЗДЕСЬ ЗАКАНЧИВАЕТСЯ КОД ОТНОСЯЩИЙСЯ К КНОПКАМ МЕНЮ
     
@@ -89,6 +91,13 @@ public class Interface extends javax.swing.JFrame {
     public Interface() {
         //  initComponents() регенерируется средой IDE при создании пользовательского интерфейса в редакторе графического интерфейса
         initComponents();
+        
+        tabs.closeTab("Levels", "left");
+        tabs.closeTab("Timing", "left");
+        pack();
+        
+        //this.getContentPane().add(jPanel1);
+        //this.getContentPane().add(jPanel7);
         
         //  ДАЛЕЕ ИДЕТ РЕДАКТИРУЕМЫЙ КОД ГРАФИЧЕСКОГО ИНТЕРФЕЙСА
         
@@ -231,6 +240,8 @@ public class Interface extends javax.swing.JFrame {
         jButton62 = new javax.swing.JButton();
         jButton53 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
@@ -888,7 +899,6 @@ public class Interface extends javax.swing.JFrame {
         );
 
         jPanel5.setBackground(new java.awt.Color(111, 111, 111));
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jButton7.setBackground(new java.awt.Color(111, 111, 111));
         jButton7.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -1574,7 +1584,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton54.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Timing_On.png"))); // NOI18N
+        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Timing_Off.png"))); // NOI18N
         jButton54.setBorder(null);
         jButton54.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton54.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1585,7 +1595,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton55.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Levels_On.png"))); // NOI18N
+        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Levels_Off.png"))); // NOI18N
         jButton55.setBorder(null);
         jButton55.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton55.setPreferredSize(new java.awt.Dimension(80, 18));
@@ -1622,21 +1632,20 @@ public class Interface extends javax.swing.JFrame {
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Mouse_Right.png"))); // NOI18N
 
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/border_line.png"))); // NOI18N
+        jLabel12.setToolTipText("");
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/border_line.png"))); // NOI18N
+        jLabel13.setToolTipText("");
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(jLabel13)
+                .addGap(5, 5, 5)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jButton55, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(jLabel23)
                         .addGap(16, 16, 16)
@@ -1653,11 +1662,22 @@ public class Interface extends javax.swing.JFrame {
                                 .addGap(0, 0, 0)
                                 .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(16, 16, 16)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jButton55, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(5, 5, 5)
+                .addComponent(jLabel12)
+                .addGap(0, 0, 0))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1680,6 +1700,7 @@ public class Interface extends javax.swing.JFrame {
                             .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
 
         jPanel11.setBackground(new java.awt.Color(47, 47, 47));
@@ -2395,6 +2416,9 @@ public class Interface extends javax.swing.JFrame {
             //  Меняем картинку
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_on.png"));
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_off.png"));
+            
+            //  Обновление каналов
+            channelsupdate.updateChannels();
         }
         else if( on_off_ch1_r == true )
         {
@@ -2405,6 +2429,9 @@ public class Interface extends javax.swing.JFrame {
             //  Меняем картинку
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_off.png"));
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_on.png"));
+            
+            //  Обновление каналов
+            channelsupdate.updateChannels();
         }
     }//GEN-LAST:event_jToggleButton21ActionPerformed
 
@@ -2419,6 +2446,9 @@ public class Interface extends javax.swing.JFrame {
             //  Меняем картинку
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_off.png"));
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_on.png"));
+            
+            //  Обновление каналов
+            channelsupdate.updateChannels();
         }
         else if( on_off_ch2_r == true )
         {
@@ -2429,6 +2459,9 @@ public class Interface extends javax.swing.JFrame {
             //  Меняем картинку
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_on.png"));
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_off.png"));
+            
+            //  Обновление каналов
+            channelsupdate.updateChannels();
         }
     }//GEN-LAST:event_jToggleButton22ActionPerformed
 
@@ -3490,6 +3523,8 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel1;
     public static javax.swing.JLabel jLabel10;
     public static javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     public static javax.swing.JLabel jLabel14;
     public static javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
