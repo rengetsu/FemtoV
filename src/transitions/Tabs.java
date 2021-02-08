@@ -8,7 +8,6 @@
 package transitions;    //  transitions - пакет где выполняются все перемещения элементов интерфейса програм
 import femtov.Interface;
 import java.awt.AWTEvent;
-import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.AWTEventListener;
 

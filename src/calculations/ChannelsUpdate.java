@@ -18,45 +18,52 @@ public class ChannelsUpdate {
     //  ВЫЗОВ КЛАССОВ
     Calibrations    calibrations    = new Calibrations();
     
-    public void updateChannels()
+    /**
+     * updateTimingChannels - функция обновления каналов вкладки Timing, которая выполняется при их переключении
+     * @param width - переменная передачи состояния true/false чекера включения/выключения кнопки width
+     * @param delay - переменная передачи состояния true/false чекера включения/выключения кнопки delay
+     * @param ch1_onoff - переменная передачи состояния true/false чекера включения/выключения первого канала
+     * @param ch2_onoff - переменная передачи состояния true/false чекера включения/выключения второго канала
+     */
+    public void updateTimingChannels(boolean width, boolean delay, boolean ch1_onoff, boolean ch2_onoff)
     {
-        if      ( Interface.delay_ch == true )
+        if      ( delay == true )
         {
-            if      ( Interface.on_off_ch1_r == true && Interface.on_off_ch2_r == false )
+            if      ( ch1_onoff == true && ch2_onoff == false )
             {
                 Interface.jTextField6.setText( calibrations.del_mas [ calibrations.del_mas_nmb_ch1 ] );
             }
-            else if ( Interface.on_off_ch1_r == false && Interface.on_off_ch2_r == true )
+            else if ( ch1_onoff == false && ch2_onoff == true )
             {
                 Interface.jTextField6.setText( calibrations.del_mas [ calibrations.del_mas_nmb_ch2 ] );
             }
         }
-        else if ( Interface.delay_ch == false )
+        else if ( delay == false )
         {
-            if      ( Interface.on_off_ch1_r == true && Interface.on_off_ch2_r == false )
+            if      ( ch1_onoff == true && ch2_onoff == false )
             {
                 Interface.jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb_ch1 ] );
             }
-            else if ( Interface.on_off_ch1_r == false && Interface.on_off_ch2_r == true )
+            else if ( ch1_onoff == false && ch2_onoff == true )
             {
                 Interface.jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb_ch2 ] );
             }
         }
         
-        if      ( Interface.width_ch == true )
+        if      ( width == true )
         {
-            if      ( Interface.on_off_ch1_r == true && Interface.on_off_ch2_r == false )
+            if      ( ch1_onoff == true && ch2_onoff == false )
             {
                 Interface.jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb_ch1 ] );
             }
-            else if ( Interface.on_off_ch1_r == false && Interface.on_off_ch2_r == true )
+            else if ( ch1_onoff == false && ch2_onoff == true )
             {
                 Interface.jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb_ch2 ] );
             }
         }
-        else if ( Interface.width_ch == false )
+        else if ( width == false )
         {
-            if      ( Interface.on_off_ch1_r == true && Interface.on_off_ch2_r == false  )
+            if      ( ch1_onoff == true && ch2_onoff == false )
             {
                 //  Конвертируем переменную процентов int в String
                 String s = Integer.toString(calibrations.dcycle_percent);
@@ -64,7 +71,7 @@ public class ChannelsUpdate {
                 //  Устанавливаем значение
                 Interface.jTextField5.setText(s + " %");
             }
-            else if ( Interface.on_off_ch1_r == false && Interface.on_off_ch2_r == true )
+            else if ( ch1_onoff == false && ch2_onoff == true )
             {
                 //  Конвертируем переменную процентов int в String
                 String s = Integer.toString(calibrations.dcycle_percent);
