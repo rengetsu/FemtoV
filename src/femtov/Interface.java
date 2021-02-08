@@ -7,6 +7,8 @@
 //  Пакеты Java используемые для группировки связанных классов 
 package femtov; //  femtov - основной пакет программы
 
+import actions.Editability;
+import actions.Switches;
 import transitions.Tabs;
 import transitions.PopupMenu;
 import transitions.Visibility;
@@ -30,8 +32,10 @@ public class Interface extends javax.swing.JFrame {
     
     //  ВЫЗОВ КЛАССОВ
     Tabs            tabs            = new Tabs();
+    Switches        switches        = new Switches();
     PopupMenu       popupmenu       = new PopupMenu();
     Visibility      visibility      = new Visibility();
+    Editability     editability     = new Editability();
     Animations      animations      = new Animations();
     Calibrations    calibrations    = new Calibrations();
     LevelStandard   levelStandard   = new LevelStandard();
@@ -92,29 +96,23 @@ public class Interface extends javax.swing.JFrame {
         //  initComponents() регенерируется средой IDE при создании пользовательского интерфейса в редакторе графического интерфейса
         initComponents();
         
-        tabs.closeTab("Levels", "left");
-        tabs.closeTab("Timing", "left");
-        pack();
-        
-        //this.getContentPane().add(jPanel1);
-        //this.getContentPane().add(jPanel7);
-        
         //  ДАЛЕЕ ИДЕТ РЕДАКТИРУЕМЫЙ КОД ГРАФИЧЕСКОГО ИНТЕРФЕЙСА
         
-        //  Делаем невозможным редактирование текстовых полей
-        jTextField1.setEditable(false);
-        jTextField2.setEditable(false);
-        jTextField3.setEditable(false);
-        jTextField4.setEditable(false);
-        jTextField5.setEditable(false);
-        jTextField6.setEditable(false);
-        jTextField7.setEditable(false);
-        
         //  ЗАПУСКАЕМ ВСЮ АНИМАЦИЮ ПРОГРАММЫ ЧЕРЕЗ ГЛАВНЫЙ КЛАСС АНИМАЦИЙ
-        Animations.startAnimations();
+        animations.startAnimations();
         
         //  ЗАПУСКАЕМ КОМБОБОКС ДЛЯ ВЫБОРА ИЗ ТАБЛИЦЫ СТАНДАРТОВ
-        ChoiceStandard.runChoice();
+        choicestandard.runChoice();
+        
+        //  ВЫКЛЮЧАЕМ РЕДАКТИРУЕМОСТЬ ТЕКСТОВЫХ ПОЛЕЙ
+        editability.notEditableTextFields(false);
+        
+        //  ЗАКРЫВАЕМ ВКЛАДКИ (ПОТОМ СДЕЛАТЬ ИЗНАЧАЛЬНО ЗАКРЫТЫМИ)
+        tabs.closeTab("Levels", "left");
+        tabs.closeTab("Timing", "left");
+        
+        //  Метод pack изменяет размер кадра таким образом, чтобы все его содержимое было равным или превышающим их предпочтительные размеры. 
+        pack();
     }
     
     /**
@@ -1991,13 +1989,7 @@ public class Interface extends javax.swing.JFrame {
         }
 
         //  Меняем значение чекеров
-        ch1 = true;
-        ch2 = true;
-        ch3 = true;
-        ch4 = true;
-        ch5 = true;
-        ch6 = true;
-        ch7 = true;
+        switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
@@ -2023,13 +2015,7 @@ public class Interface extends javax.swing.JFrame {
         }
         
         //  Меняем значение чекеров
-        ch1 = true;
-        ch2 = true;
-        ch3 = true;
-        ch5 = true;
-        ch6 = true;
-        ch7 = true;
-        ch8 = true;
+        switches.chChanger_DownMenu(true,true, true,true, true,true, false,false, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
@@ -2055,13 +2041,7 @@ public class Interface extends javax.swing.JFrame {
         }
         
         //  Меняем значение чекеров
-        ch2 = true;
-        ch3 = true;
-        ch4 = true;
-        ch5 = true;
-        ch6 = true;
-        ch7 = true;
-        ch8 = true;
+        switches.chChanger_DownMenu(false,false, true,true, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
@@ -2087,13 +2067,7 @@ public class Interface extends javax.swing.JFrame {
         }
 
         //  Меняем значение чекеров
-        ch1 = true;
-        ch2 = true;
-        ch4 = true;
-        ch5 = true;
-        ch6 = true;
-        ch7 = true;
-        ch8 = true;
+        switches.chChanger_DownMenu(true,true, true,true, false,false, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
@@ -2119,13 +2093,7 @@ public class Interface extends javax.swing.JFrame {
         }
 
         //  Меняем значение чекеров
-        ch1 = true;
-        ch2 = true;
-        ch3 = true;
-        ch4 = true;
-        ch6 = true;
-        ch7 = true;
-        ch8 = true;
+        switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, false,false, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
@@ -2151,13 +2119,7 @@ public class Interface extends javax.swing.JFrame {
         }
         
         //  Меняем значение чекеров
-        ch1 = true;
-        ch3 = true;
-        ch4 = true;
-        ch5 = true;
-        ch6 = true;
-        ch7 = true;
-        ch8 = true;
+        switches.chChanger_DownMenu(true,true, false,false, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
@@ -2195,14 +2157,7 @@ public class Interface extends javax.swing.JFrame {
         }
         
         //  Меняем значение чекеров
-        ch1 = true;
-        ch2 = true;
-        ch3 = true;
-        ch4 = true;
-        ch5 = true;
-        ch6 = true;
-        ch7 = true;
-        ch8 = true;
+        switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
@@ -2241,14 +2196,7 @@ public class Interface extends javax.swing.JFrame {
         }
 
         //  Меняем значение чекеров
-        ch1 = true;
-        ch2 = true;
-        ch3 = true;
-        ch4 = true;
-        ch5 = true;
-        ch6 = true;
-        ch7 = true;
-        ch8 = true;
+        switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
@@ -2275,13 +2223,7 @@ public class Interface extends javax.swing.JFrame {
         }
         
         //  Меняем значение чекеров
-        ch1 = true;
-        ch2 = true;
-        ch3 = true;
-        ch4 = true;
-        ch5 = true;
-        ch7 = true;
-        ch8 = true;
+        switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, false,false, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
@@ -2307,13 +2249,7 @@ public class Interface extends javax.swing.JFrame {
         }
 
         //  Меняем значение чекеров
-        ch1 = true;
-        ch2 = true;
-        ch3 = true;
-        ch4 = true;
-        ch5 = true;
-        ch6 = true;
-        ch8 = true;
+        switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, true,true, false,false, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
         jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
@@ -2417,8 +2353,8 @@ public class Interface extends javax.swing.JFrame {
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_on.png"));
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_off.png"));
             
-            //  Обновление каналов
-            channelsupdate.updateChannels();
+            //  Обновление каналов вкладки Timing
+            channelsupdate.updateTimingChannels(delay_ch, width_ch, on_off_ch1_r, on_off_ch2_r);
         }
         else if( on_off_ch1_r == true )
         {
@@ -2430,8 +2366,8 @@ public class Interface extends javax.swing.JFrame {
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_off.png"));
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_on.png"));
             
-            //  Обновление каналов
-            channelsupdate.updateChannels();
+            //  Обновление каналов вкладки Timing
+            channelsupdate.updateTimingChannels(delay_ch, width_ch, on_off_ch1_r, on_off_ch2_r);
         }
     }//GEN-LAST:event_jToggleButton21ActionPerformed
 
@@ -2447,8 +2383,8 @@ public class Interface extends javax.swing.JFrame {
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_off.png"));
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_on.png"));
             
-            //  Обновление каналов
-            channelsupdate.updateChannels();
+            //  Обновление каналов вкладки Timing
+            channelsupdate.updateTimingChannels(delay_ch, width_ch, on_off_ch1_r, on_off_ch2_r);
         }
         else if( on_off_ch2_r == true )
         {
@@ -2460,8 +2396,8 @@ public class Interface extends javax.swing.JFrame {
             jToggleButton21.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch1_on.png"));
             jToggleButton22.setIcon(new ImageIcon(currentDir + "\\src\\images\\ch2_off.png"));
             
-            //  Обновление каналов
-            channelsupdate.updateChannels();
+            //  Обновление каналов вкладки Timing
+            channelsupdate.updateTimingChannels(delay_ch, width_ch, on_off_ch1_r, on_off_ch2_r);
         }
     }//GEN-LAST:event_jToggleButton22ActionPerformed
 
@@ -3141,7 +3077,7 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton73ActionPerformed
 
     private void jButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton72ActionPerformed
-        //   При нажатии калибровки уменьшаем пределы изменения плавного шага High Level на -0.01
+        //  При нажатии калибровки уменьшаем пределы изменения плавного шага High Level на -0.01
         //  Уменьшаем значение переменной на -0.01
         calibrations.cl_High_Level--;
         
@@ -3219,29 +3155,52 @@ public class Interface extends javax.swing.JFrame {
         //  Если активен Delay
         if( delay_ch == true )
         {
-            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
-            //  Повышаем значение переменной номера мас
-            //if( calibrations.del_mas_nmb > 0 )
-            //{
-            //    calibrations.del_mas_nmb--;
-            //}
-
-            //  Устанавливаем значение Delay
-            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
-            //jTextField6.setText( calibrations.del_mas[ calibrations.del_mas_nmb ] );
+            //  Проверяем какой из каналов выбран
+            if      ( on_off_ch1_r == true && on_off_ch2_r == false )
+            {
+                //  Повышаем значение переменной номера мас
+                if( calibrations.del_mas_nmb_ch1 > 0 )
+                {
+                    calibrations.del_mas_nmb_ch1--;
+                }
+                //  Устанавливаем значение Delay
+                jTextField6.setText( calibrations.del_mas[ calibrations.del_mas_nmb_ch1 ] );
+            }
+            else if ( on_off_ch2_r == true && on_off_ch1_r == false )
+            {
+                //  Повышаем значение переменной номера мас
+                if( calibrations.del_mas_nmb_ch2 > 0 )
+                {
+                    calibrations.del_mas_nmb_ch2--;
+                }
+                //  Устанавливаем значение Delay
+                jTextField6.setText( calibrations.del_mas[ calibrations.del_mas_nmb_ch2 ] );
+            }
         }
         //  Если активен Phase
         else if( phase_ch == true )
         {
-            //  Повышаем значение переменной номера мас
-            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
-            //if( calibrations.phas_mas_nmb > 0 )
-            //{
-            //    calibrations.phas_mas_nmb--;
-            //}
-
-            //  Устанавливаем значение Phase
-            //jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb ] );
+            //  Проверяем какой из каналов выбран
+            if      ( on_off_ch1_r == true && on_off_ch2_r == false )
+            {
+                //  Повышаем значение переменной номера мас
+                if( calibrations.phas_mas_nmb_ch1 > 0 )
+                {
+                    calibrations.phas_mas_nmb_ch1--;
+                }
+                //  Устанавливаем значение Phase
+                jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb_ch1 ] );
+            }
+            else if ( on_off_ch2_r == true && on_off_ch1_r == false )
+            {
+                //  Повышаем значение переменной номера мас
+                if( calibrations.phas_mas_nmb_ch2 > 0 )
+                {
+                    calibrations.phas_mas_nmb_ch2--;
+                }
+                //  Устанавливаем значение Phase
+                jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb_ch2 ] );
+            }
         }
     }//GEN-LAST:event_jButton35ActionPerformed
 
@@ -3250,16 +3209,37 @@ public class Interface extends javax.swing.JFrame {
         if( delay_ch == true )
         {
             //  Устанавливаем значение Delay по дефолту
-            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
-            //jTextField6.setText( calibrations.del_mas[ 7 ] );
-            //calibrations.del_mas_nmb = 7;
+            jTextField6.setText( calibrations.del_mas[ 7 ] );
+            
+            //  Проверяем какой из каналов выбран
+            if      ( on_off_ch1_r == true && on_off_ch2_r == false )
+            {
+                //  Присваиваем дефолтное значение
+                calibrations.del_mas_nmb_ch1 = 7;
+            }
+            else if ( on_off_ch2_r == true && on_off_ch1_r == false )
+            {
+                //  Присваиваем дефолтное значение
+                calibrations.del_mas_nmb_ch2 = 7;
+            }
         }
         //  Если активен Phase
         else if( phase_ch == true )
         {
-            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
-            //jTextField6.setText( calibrations.phas_mas[ 7 ] );
-            //calibrations.phas_mas_nmb = 7;
+            //  Устанавливаем значение Phase по дефолту
+            jTextField6.setText( calibrations.phas_mas[ 7 ] );
+            
+            //  Проверяем какой из каналов выбран
+            if      ( on_off_ch1_r == true && on_off_ch2_r == false )
+            {
+                //  Присваиваем дефолтное значение
+                calibrations.phas_mas_nmb_ch1 = 7;
+            }
+            else if ( on_off_ch2_r == true && on_off_ch1_r == false )
+            {   
+                //  Присваиваем дефолтное значение
+                calibrations.phas_mas_nmb_ch2 = 7;
+            }
         }
     }//GEN-LAST:event_jButton34ActionPerformed
 
@@ -3302,11 +3282,26 @@ public class Interface extends javax.swing.JFrame {
         //  Если активен Period
         if( width_ch == true )
         {
-            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
             //  Устанавливаем значение Width по дефолту
-            //jTextField5.setText( calibrations.width_mas[ 5 ] );
-            //calibrations.width_mas_nmb = 5;
-            //calibrations.VDF(6, calibrations.width_mas_nmb);
+            jTextField5.setText( calibrations.width_mas[ 5 ] );
+            
+            //  Проверяем какой из каналов выбран
+            if      ( on_off_ch1_r == true && on_off_ch2_r == false )
+            {
+                //  Присваиваем дефолтное значение
+                calibrations.width_mas_nmb_ch1 = 5;
+                
+                //  Отправляем в функцию определения значения
+                calibrations.VDF(6, calibrations.width_mas_nmb_ch1, 1);
+            }
+            else if ( on_off_ch2_r == true && on_off_ch1_r == false)
+            {   
+                //  Присваиваем дефолтное значение
+                calibrations.width_mas_nmb_ch2 = 5;
+                
+                //  Отправляем в функцию определения значения
+                calibrations.VDF(6, calibrations.width_mas_nmb_ch2, 2);
+            }
         }
         //  Если активен DCycle
         else if( dcycle_ch == true )
@@ -3326,13 +3321,23 @@ public class Interface extends javax.swing.JFrame {
         //  Если активен Width
         if( width_ch == true )
         {
-            //  Отправляем запрос в функцию VDDF и сохраняем возвращяемое значение в переменную
-            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
-            //String ans = calibrations.VDDF(6, calibrations.li_width, false);
-            
-            //  Выводим результат
-            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
-            //jTextField5.setText(ans);
+            //  Проверяем какой из каналов выбран
+            if      ( on_off_ch1_r == true && on_off_ch2_r == false )
+            {
+                //  Отправляем запрос в функцию VDDF и сохраняем возвращяемое значение в переменную для 1 канала
+                String ans_ch1 = calibrations.VDDF(6, calibrations.li_width_ch1, false, 1);
+                
+                //  Выводим результат
+                jTextField5.setText(ans_ch1);
+            }
+            else if ( on_off_ch2_r == true && on_off_ch1_r == false)
+            {     
+                //  Отправляем запрос в функцию VDDF и сохраняем возвращяемое значение в переменную для 2 канала
+                String ans_ch2 = calibrations.VDDF(6, calibrations.li_width_ch2, false, 2);
+                
+                //  Выводим результат
+                jTextField5.setText(ans_ch2);
+            }
         }
         //  Если активен DCycle
         if( dcycle_ch == true )
@@ -3356,17 +3361,29 @@ public class Interface extends javax.swing.JFrame {
         //  Если активен Width
         if( width_ch == true )
         {
-        //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
-            //  Понижаем значение переменной номера мас
-            //if( calibrations.width_mas_nmb > 0 )
-            //{
-            //    calibrations.width_mas_nmb--;
-            //    calibrations.VDF(6, calibrations.width_mas_nmb);
-            //}
-
-            //  Устанавливаем значение Width
-            //  ПОТОМ ОТКОММЕНТИРОВАТЬ НАЗАД
-            //jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb ] );
+            //  Проверяем какой из каналов выбран
+            if      ( on_off_ch1_r == true && on_off_ch2_r == false )
+            {
+                //  Понижаем значение переменной номера мас
+                if( calibrations.width_mas_nmb_ch1 > 0 )
+                {
+                    calibrations.width_mas_nmb_ch1--;
+                    calibrations.VDF(6, calibrations.width_mas_nmb_ch1, 1);
+                }
+                //  Устанавливаем значение Width
+                jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb_ch1 ] );
+            }
+            else if ( on_off_ch2_r == true && on_off_ch1_r == false)
+            {   
+                //  Понижаем значение переменной номера мас
+                if( calibrations.width_mas_nmb_ch2 > 0 )
+                {
+                    calibrations.width_mas_nmb_ch2--;
+                    calibrations.VDF(6, calibrations.width_mas_nmb_ch2, 2);
+                }
+                //  Устанавливаем значение Width
+                jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb_ch2 ] );
+            }
         }
 
         //  Если активен DCycle
