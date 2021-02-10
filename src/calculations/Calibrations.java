@@ -72,6 +72,7 @@ public class Calibrations {
         "2 MHz", "5 MHz", "10 MHz", "50 MHz", "100 MHz",
         "200 MHz", "500 MHz", "1 GHz", "2 GHz", "2.5 GHz"
     };
+    
     //  Массив таблицы Delay
     public static String[] del_mas =
     {
