@@ -8,6 +8,7 @@
 package femtov; //  femtov - основной пакет программы
 
 import actions.Editability;
+import actions.IconChanger;
 import actions.Switches;
 import transitions.Tabs;
 import transitions.PopupMenu;
@@ -37,6 +38,7 @@ public class Interface extends javax.swing.JFrame {
     Visibility      visibility      = new Visibility();
     Editability     editability     = new Editability();
     Animations      animations      = new Animations();
+    IconChanger     iconchanger     = new IconChanger();
     Calibrations    calibrations    = new Calibrations();
     LevelStandard   levelStandard   = new LevelStandard();
     ChannelsUpdate  channelsupdate  = new ChannelsUpdate();
@@ -126,11 +128,51 @@ public class Interface extends javax.swing.JFrame {
     private void initComponents() {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton60 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        panel_TopMenu = new javax.swing.JPanel();
+        topMenu_ManualTrigGateButton = new javax.swing.JButton();
+        topMenu_BackLeftButton = new javax.swing.JButton();
+        topMenu_BackRightButton = new javax.swing.JButton();
+        topMenu_HelpButton = new javax.swing.JButton();
+        panel_Screen = new javax.swing.JPanel();
+        ScreenImage = new javax.swing.JLabel();
+        panel_CalibrationsScreen = new javax.swing.JPanel();
+        panel_CalibrationsTable = new javax.swing.JPanel();
+        panel_Calibrations_Delay = new javax.swing.JPanel();
+        calibLabel_Period = new javax.swing.JLabel();
+        calibLabel_DelayChOne = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        panel_Calibrations_Width = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        panel_Calibrations_Ampl = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        panel_Calibrations_Offset = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        panel_DownMenu = new javax.swing.JPanel();
+        downMenu_ModeButton = new javax.swing.JButton();
+        downMenu_TriggerButton = new javax.swing.JButton();
+        downMenu_TimingButton = new javax.swing.JButton();
+        downMenu_LevelsButton = new javax.swing.JButton();
+        downMenu_PatternButton = new javax.swing.JButton();
+        downMenu_InputsButton = new javax.swing.JButton();
+        downMenu_OutputsButton = new javax.swing.JButton();
+        downMenu_DisplayButton = new javax.swing.JButton();
+        downMenu_CalibrationButton = new javax.swing.JButton();
+        downMenu_UtilityButton = new javax.swing.JButton();
+        downMenu_LeftLine = new javax.swing.JLabel();
+        downMenu_RightMouseImage = new javax.swing.JLabel();
+        downMenu_LeftMouseImage = new javax.swing.JLabel();
+        downMenu_RightLine = new javax.swing.JLabel();
+        panel_TopTab_Levels = new javax.swing.JPanel();
+        topTab_Levels_TextLabel = new javax.swing.JLabel();
+        topTab_Levels_CancelButton = new javax.swing.JButton();
+        topTab_Levels_HelpButton = new javax.swing.JButton();
+        panel_Tab_Levels = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -178,18 +220,11 @@ public class Interface extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         choice1 = new java.awt.Choice();
-        jPanel5 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton57 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jButton61 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jPanel7 = new javax.swing.JPanel();
+        panel_TopTab_Timing = new javax.swing.JPanel();
+        tobTab_Timing_TextLabel = new javax.swing.JLabel();
+        topTab_Timing_CancelButton = new javax.swing.JButton();
+        topTab_Timing_HelpButton = new javax.swing.JButton();
+        panel_Tab_Timing = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -225,47 +260,14 @@ public class Interface extends javax.swing.JFrame {
         jButton41 = new javax.swing.JButton();
         jToggleButton10 = new javax.swing.JToggleButton();
         jToggleButton28 = new javax.swing.JToggleButton();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        jButton14 = new javax.swing.JButton();
-        jButton58 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton52 = new javax.swing.JButton();
-        jButton59 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton54 = new javax.swing.JButton();
-        jButton55 = new javax.swing.JButton();
-        jButton62 = new javax.swing.JButton();
-        jButton53 = new javax.swing.JButton();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jPanel11 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel13 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jPanel14 = new javax.swing.JPanel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jPanel16 = new javax.swing.JPanel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jPanel17 = new javax.swing.JPanel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
+        MenuBar = new javax.swing.JMenuBar();
+        MenuBar_FileItem = new javax.swing.JMenu();
+        MenuBar_EditItem = new javax.swing.JMenu();
+        MenuBar_ViewItem = new javax.swing.JMenu();
+        MenuBar_SetupItem = new javax.swing.JMenu();
+        MenuBar_SystemItem = new javax.swing.JMenu();
+        MenuBar_UtilityItem = new javax.swing.JMenu();
+        MenuBar_HelpItem = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Femto V   FemtoScope 9512   1,2 GHz   Pulse Pattern Generator");
@@ -273,55 +275,559 @@ public class Interface extends javax.swing.JFrame {
         setLocation(new java.awt.Point(200, 200));
         setResizable(false);
 
-        jPanel3.setBackground(new java.awt.Color(111, 111, 111));
-        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+        panel_TopMenu.setBackground(new java.awt.Color(111, 111, 111));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(187, 226, 255));
-        jLabel2.setText("Levels");
-
-        jButton60.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel_button.png"))); // NOI18N
-        jButton60.setAlignmentY(0.0F);
-        jButton60.setIconTextGap(0);
-        jButton60.addActionListener(new java.awt.event.ActionListener() {
+        topMenu_ManualTrigGateButton.setBackground(new java.awt.Color(111, 111, 111));
+        topMenu_ManualTrigGateButton.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        topMenu_ManualTrigGateButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MannualTrigGate.png"))); // NOI18N
+        topMenu_ManualTrigGateButton.setToolTipText("");
+        topMenu_ManualTrigGateButton.setAlignmentY(0.0F);
+        topMenu_ManualTrigGateButton.setBorder(null);
+        topMenu_ManualTrigGateButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topMenu_ManualTrigGateButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        topMenu_ManualTrigGateButton.setIconTextGap(0);
+        topMenu_ManualTrigGateButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        topMenu_ManualTrigGateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton60ActionPerformed(evt);
+                topMenu_ManualTrigGateButtonActionPerformed(evt);
             }
         });
 
-        jButton11.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/help_button.png"))); // NOI18N
-        jButton11.setAlignmentY(0.0F);
-        jButton11.setIconTextGap(0);
+        topMenu_BackLeftButton.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        topMenu_BackLeftButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back_left.png"))); // NOI18N
+        topMenu_BackLeftButton.setToolTipText("");
+        topMenu_BackLeftButton.setAlignmentY(0.0F);
+        topMenu_BackLeftButton.setBorder(null);
+        topMenu_BackLeftButton.setIconTextGap(0);
+        topMenu_BackLeftButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton60, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+        topMenu_BackRightButton.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        topMenu_BackRightButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back_right.png"))); // NOI18N
+        topMenu_BackRightButton.setAlignmentY(0.0F);
+        topMenu_BackRightButton.setBorder(null);
+        topMenu_BackRightButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topMenu_BackRightButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        topMenu_BackRightButton.setIconTextGap(0);
+        topMenu_BackRightButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        topMenu_BackRightButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                topMenu_BackRightButtonActionPerformed(evt);
+            }
+        });
+
+        topMenu_HelpButton.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        topMenu_HelpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/HelpButton.png"))); // NOI18N
+        topMenu_HelpButton.setAlignmentY(0.0F);
+        topMenu_HelpButton.setBorder(null);
+        topMenu_HelpButton.setIconTextGap(0);
+        topMenu_HelpButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        topMenu_HelpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                topMenu_HelpButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_TopMenuLayout = new javax.swing.GroupLayout(panel_TopMenu);
+        panel_TopMenu.setLayout(panel_TopMenuLayout);
+        panel_TopMenuLayout.setHorizontalGroup(
+            panel_TopMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_TopMenuLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(topMenu_ManualTrigGateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(topMenu_BackLeftButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(topMenu_BackRightButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(topMenu_HelpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        panel_TopMenuLayout.setVerticalGroup(
+            panel_TopMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_TopMenuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton60, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel2))
+                .addGroup(panel_TopMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(topMenu_ManualTrigGateButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, Short.MAX_VALUE)
+                    .addComponent(topMenu_BackLeftButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, Short.MAX_VALUE)
+                    .addComponent(topMenu_BackRightButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, Short.MAX_VALUE)
+                    .addComponent(topMenu_HelpButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        jPanel1.setBackground(new java.awt.Color(192, 192, 192));
-        jPanel1.setPreferredSize(new java.awt.Dimension(200, 650));
+        panel_Screen.setBackground(new java.awt.Color(47, 47, 47));
+
+        ScreenImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/screen.png"))); // NOI18N
+        ScreenImage.setPreferredSize(new java.awt.Dimension(445, 405));
+
+        javax.swing.GroupLayout panel_ScreenLayout = new javax.swing.GroupLayout(panel_Screen);
+        panel_Screen.setLayout(panel_ScreenLayout);
+        panel_ScreenLayout.setHorizontalGroup(
+            panel_ScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_ScreenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ScreenImage, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panel_ScreenLayout.setVerticalGroup(
+            panel_ScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_ScreenLayout.createSequentialGroup()
+                .addComponent(ScreenImage, javax.swing.GroupLayout.PREFERRED_SIZE, 381, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        panel_CalibrationsScreen.setBackground(new java.awt.Color(47, 47, 47));
+
+        panel_CalibrationsTable.setBackground(new java.awt.Color(47, 47, 47));
+        panel_CalibrationsTable.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+
+        panel_Calibrations_Delay.setBackground(new java.awt.Color(47, 47, 47));
+        panel_Calibrations_Delay.setPreferredSize(new java.awt.Dimension(101, 50));
+
+        calibLabel_Period.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        calibLabel_Period.setForeground(new java.awt.Color(255, 255, 255));
+        calibLabel_Period.setText("Period = -1.02 us");
+
+        calibLabel_DelayChOne.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        calibLabel_DelayChOne.setForeground(new java.awt.Color(252, 252, 132));
+        calibLabel_DelayChOne.setText("Delay(1) = 1.02 us");
+
+        jLabel32.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(132, 252, 252));
+        jLabel32.setText("Delay(2) = 1.02 us");
+
+        javax.swing.GroupLayout panel_Calibrations_DelayLayout = new javax.swing.GroupLayout(panel_Calibrations_Delay);
+        panel_Calibrations_Delay.setLayout(panel_Calibrations_DelayLayout);
+        panel_Calibrations_DelayLayout.setHorizontalGroup(
+            panel_Calibrations_DelayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Calibrations_DelayLayout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addGroup(panel_Calibrations_DelayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(calibLabel_Period, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(calibLabel_DelayChOne, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(5, 5, 5))
+        );
+        panel_Calibrations_DelayLayout.setVerticalGroup(
+            panel_Calibrations_DelayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Calibrations_DelayLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(calibLabel_Period)
+                .addGap(3, 3, 3)
+                .addComponent(calibLabel_DelayChOne)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel32)
+                .addGap(6, 6, 6))
+        );
+
+        panel_Calibrations_Width.setBackground(new java.awt.Color(47, 47, 47));
+        panel_Calibrations_Width.setPreferredSize(new java.awt.Dimension(101, 50));
+
+        jLabel33.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setText(" ");
+
+        jLabel34.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(252, 252, 132));
+        jLabel34.setText("Width(1) = 1.02 us");
+
+        jLabel35.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(132, 252, 252));
+        jLabel35.setText("Width(2) = 1.02 us");
+
+        javax.swing.GroupLayout panel_Calibrations_WidthLayout = new javax.swing.GroupLayout(panel_Calibrations_Width);
+        panel_Calibrations_Width.setLayout(panel_Calibrations_WidthLayout);
+        panel_Calibrations_WidthLayout.setHorizontalGroup(
+            panel_Calibrations_WidthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Calibrations_WidthLayout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addGroup(panel_Calibrations_WidthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(5, 5, 5))
+        );
+        panel_Calibrations_WidthLayout.setVerticalGroup(
+            panel_Calibrations_WidthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Calibrations_WidthLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel33)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel34)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel35)
+                .addGap(6, 6, 6))
+        );
+
+        panel_Calibrations_Ampl.setBackground(new java.awt.Color(47, 47, 47));
+        panel_Calibrations_Ampl.setPreferredSize(new java.awt.Dimension(101, 50));
+
+        jLabel36.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setText(" ");
+        jLabel36.setToolTipText("");
+
+        jLabel37.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(252, 252, 132));
+        jLabel37.setText("Ampl(1) = -1.03V");
+
+        jLabel38.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(132, 252, 252));
+        jLabel38.setText("Ampl(2) = -1.03V");
+
+        javax.swing.GroupLayout panel_Calibrations_AmplLayout = new javax.swing.GroupLayout(panel_Calibrations_Ampl);
+        panel_Calibrations_Ampl.setLayout(panel_Calibrations_AmplLayout);
+        panel_Calibrations_AmplLayout.setHorizontalGroup(
+            panel_Calibrations_AmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Calibrations_AmplLayout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addGroup(panel_Calibrations_AmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                    .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(5, 5, 5))
+        );
+        panel_Calibrations_AmplLayout.setVerticalGroup(
+            panel_Calibrations_AmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Calibrations_AmplLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel36)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel37)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel38)
+                .addGap(6, 6, 6))
+        );
+
+        panel_Calibrations_Offset.setBackground(new java.awt.Color(47, 47, 47));
+        panel_Calibrations_Offset.setPreferredSize(new java.awt.Dimension(101, 50));
+
+        jLabel39.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel39.setText(" ");
+
+        jLabel40.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(252, 252, 132));
+        jLabel40.setText("Offset(1) = -1.03V");
+
+        jLabel41.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(132, 252, 252));
+        jLabel41.setText("Offset(2) = -1.03V");
+
+        javax.swing.GroupLayout panel_Calibrations_OffsetLayout = new javax.swing.GroupLayout(panel_Calibrations_Offset);
+        panel_Calibrations_Offset.setLayout(panel_Calibrations_OffsetLayout);
+        panel_Calibrations_OffsetLayout.setHorizontalGroup(
+            panel_Calibrations_OffsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Calibrations_OffsetLayout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addGroup(panel_Calibrations_OffsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(5, 5, 5))
+        );
+        panel_Calibrations_OffsetLayout.setVerticalGroup(
+            panel_Calibrations_OffsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Calibrations_OffsetLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel39)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel40)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel41)
+                .addGap(6, 6, 6))
+        );
+
+        javax.swing.GroupLayout panel_CalibrationsTableLayout = new javax.swing.GroupLayout(panel_CalibrationsTable);
+        panel_CalibrationsTable.setLayout(panel_CalibrationsTableLayout);
+        panel_CalibrationsTableLayout.setHorizontalGroup(
+            panel_CalibrationsTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_CalibrationsTableLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(panel_Calibrations_Delay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panel_Calibrations_Width, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panel_Calibrations_Ampl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panel_Calibrations_Offset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
+        panel_CalibrationsTableLayout.setVerticalGroup(
+            panel_CalibrationsTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_CalibrationsTableLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(panel_CalibrationsTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panel_Calibrations_Delay, 65, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panel_Calibrations_Width, 65, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panel_Calibrations_Ampl, 65, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panel_Calibrations_Offset, 65, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        javax.swing.GroupLayout panel_CalibrationsScreenLayout = new javax.swing.GroupLayout(panel_CalibrationsScreen);
+        panel_CalibrationsScreen.setLayout(panel_CalibrationsScreenLayout);
+        panel_CalibrationsScreenLayout.setHorizontalGroup(
+            panel_CalibrationsScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_CalibrationsScreenLayout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addComponent(panel_CalibrationsTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4))
+        );
+        panel_CalibrationsScreenLayout.setVerticalGroup(
+            panel_CalibrationsScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_CalibrationsScreenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panel_CalibrationsTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        panel_DownMenu.setBackground(new java.awt.Color(192, 192, 192));
+        panel_DownMenu.setFocusTraversalPolicyProvider(true);
+        panel_DownMenu.setPreferredSize(new java.awt.Dimension(600, 80));
+
+        downMenu_ModeButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        downMenu_ModeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Mode_Off.png"))); // NOI18N
+        downMenu_ModeButton.setAlignmentY(0.0F);
+        downMenu_ModeButton.setBorder(null);
+        downMenu_ModeButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        downMenu_ModeButton.setPreferredSize(new java.awt.Dimension(80, 18));
+        downMenu_ModeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downMenu_ModeButtonActionPerformed(evt);
+            }
+        });
+
+        downMenu_TriggerButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        downMenu_TriggerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Trigger_Off.png"))); // NOI18N
+        downMenu_TriggerButton.setBorder(null);
+        downMenu_TriggerButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        downMenu_TriggerButton.setPreferredSize(new java.awt.Dimension(80, 18));
+        downMenu_TriggerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downMenu_TriggerButtonActionPerformed(evt);
+            }
+        });
+
+        downMenu_TimingButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        downMenu_TimingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Timing_Off.png"))); // NOI18N
+        downMenu_TimingButton.setBorder(null);
+        downMenu_TimingButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        downMenu_TimingButton.setPreferredSize(new java.awt.Dimension(80, 18));
+        downMenu_TimingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downMenu_TimingButtonActionPerformed(evt);
+            }
+        });
+
+        downMenu_LevelsButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        downMenu_LevelsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Levels_Off.png"))); // NOI18N
+        downMenu_LevelsButton.setBorder(null);
+        downMenu_LevelsButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        downMenu_LevelsButton.setPreferredSize(new java.awt.Dimension(80, 18));
+        downMenu_LevelsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downMenu_LevelsButtonActionPerformed(evt);
+            }
+        });
+
+        downMenu_PatternButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        downMenu_PatternButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Pattern_Off.png"))); // NOI18N
+        downMenu_PatternButton.setAlignmentY(0.0F);
+        downMenu_PatternButton.setBorder(null);
+        downMenu_PatternButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        downMenu_PatternButton.setIconTextGap(0);
+        downMenu_PatternButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        downMenu_PatternButton.setPreferredSize(new java.awt.Dimension(80, 18));
+        downMenu_PatternButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downMenu_PatternButtonActionPerformed(evt);
+            }
+        });
+
+        downMenu_InputsButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        downMenu_InputsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Inputs_Off.png"))); // NOI18N
+        downMenu_InputsButton.setAlignmentY(0.0F);
+        downMenu_InputsButton.setBorder(null);
+        downMenu_InputsButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        downMenu_InputsButton.setIconTextGap(0);
+        downMenu_InputsButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        downMenu_InputsButton.setPreferredSize(new java.awt.Dimension(80, 18));
+        downMenu_InputsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downMenu_InputsButtonActionPerformed(evt);
+            }
+        });
+
+        downMenu_OutputsButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        downMenu_OutputsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Outputs_Off.png"))); // NOI18N
+        downMenu_OutputsButton.setAlignmentY(0.0F);
+        downMenu_OutputsButton.setBorder(null);
+        downMenu_OutputsButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        downMenu_OutputsButton.setIconTextGap(0);
+        downMenu_OutputsButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        downMenu_OutputsButton.setPreferredSize(new java.awt.Dimension(80, 18));
+        downMenu_OutputsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downMenu_OutputsButtonActionPerformed(evt);
+            }
+        });
+
+        downMenu_DisplayButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        downMenu_DisplayButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Display_Off.png"))); // NOI18N
+        downMenu_DisplayButton.setBorder(null);
+        downMenu_DisplayButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        downMenu_DisplayButton.setPreferredSize(new java.awt.Dimension(80, 18));
+        downMenu_DisplayButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downMenu_DisplayButtonActionPerformed(evt);
+            }
+        });
+
+        downMenu_CalibrationButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        downMenu_CalibrationButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Calibrat_Off.png"))); // NOI18N
+        downMenu_CalibrationButton.setBorder(null);
+        downMenu_CalibrationButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        downMenu_CalibrationButton.setPreferredSize(new java.awt.Dimension(80, 18));
+        downMenu_CalibrationButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downMenu_CalibrationButtonActionPerformed(evt);
+            }
+        });
+
+        downMenu_UtilityButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        downMenu_UtilityButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Utility_Off.png"))); // NOI18N
+        downMenu_UtilityButton.setBorder(null);
+        downMenu_UtilityButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        downMenu_UtilityButton.setPreferredSize(new java.awt.Dimension(80, 18));
+        downMenu_UtilityButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                downMenu_UtilityButtonActionPerformed(evt);
+            }
+        });
+
+        downMenu_LeftLine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/border_line.png"))); // NOI18N
+        downMenu_LeftLine.setToolTipText("");
+
+        downMenu_RightMouseImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Mouse_Right.png"))); // NOI18N
+
+        downMenu_LeftMouseImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Mouse_Left.png"))); // NOI18N
+
+        downMenu_RightLine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/border_line.png"))); // NOI18N
+        downMenu_RightLine.setToolTipText("");
+
+        javax.swing.GroupLayout panel_DownMenuLayout = new javax.swing.GroupLayout(panel_DownMenu);
+        panel_DownMenu.setLayout(panel_DownMenuLayout);
+        panel_DownMenuLayout.setHorizontalGroup(
+            panel_DownMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_DownMenuLayout.createSequentialGroup()
+                .addComponent(downMenu_LeftLine)
+                .addGap(5, 5, 5)
+                .addGroup(panel_DownMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_DownMenuLayout.createSequentialGroup()
+                        .addComponent(downMenu_LeftMouseImage)
+                        .addGap(16, 16, 16)
+                        .addGroup(panel_DownMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(downMenu_PatternButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(downMenu_DisplayButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panel_DownMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_DownMenuLayout.createSequentialGroup()
+                                .addComponent(downMenu_CalibrationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(downMenu_UtilityButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panel_DownMenuLayout.createSequentialGroup()
+                                .addComponent(downMenu_InputsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(downMenu_OutputsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(16, 16, 16)
+                        .addComponent(downMenu_RightMouseImage, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_DownMenuLayout.createSequentialGroup()
+                        .addComponent(downMenu_ModeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(downMenu_TriggerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(downMenu_TimingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(downMenu_LevelsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(5, 5, 5)
+                .addComponent(downMenu_RightLine)
+                .addGap(0, 0, 0))
+        );
+        panel_DownMenuLayout.setVerticalGroup(
+            panel_DownMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(downMenu_RightLine, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addGroup(panel_DownMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_DownMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(downMenu_ModeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(downMenu_TriggerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(downMenu_TimingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(downMenu_LevelsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0)
+                .addGroup(panel_DownMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(downMenu_RightMouseImage)
+                    .addGroup(panel_DownMenuLayout.createSequentialGroup()
+                        .addGroup(panel_DownMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(downMenu_PatternButton, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(downMenu_InputsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(downMenu_OutputsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, 0)
+                        .addGroup(panel_DownMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(downMenu_DisplayButton, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(downMenu_CalibrationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(downMenu_UtilityButton, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(downMenu_LeftMouseImage, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(downMenu_LeftLine, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+        );
+
+        panel_TopTab_Levels.setBackground(new java.awt.Color(111, 111, 111));
+        panel_TopTab_Levels.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
+
+        topTab_Levels_TextLabel.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        topTab_Levels_TextLabel.setForeground(new java.awt.Color(187, 226, 255));
+        topTab_Levels_TextLabel.setText("Levels");
+
+        topTab_Levels_CancelButton.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        topTab_Levels_CancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel_button.png"))); // NOI18N
+        topTab_Levels_CancelButton.setAlignmentY(0.0F);
+        topTab_Levels_CancelButton.setIconTextGap(0);
+        topTab_Levels_CancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                topTab_Levels_CancelButtonActionPerformed(evt);
+            }
+        });
+
+        topTab_Levels_HelpButton.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        topTab_Levels_HelpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/help_button.png"))); // NOI18N
+        topTab_Levels_HelpButton.setAlignmentY(0.0F);
+        topTab_Levels_HelpButton.setIconTextGap(0);
+
+        javax.swing.GroupLayout panel_TopTab_LevelsLayout = new javax.swing.GroupLayout(panel_TopTab_Levels);
+        panel_TopTab_Levels.setLayout(panel_TopTab_LevelsLayout);
+        panel_TopTab_LevelsLayout.setHorizontalGroup(
+            panel_TopTab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_TopTab_LevelsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(topTab_Levels_TextLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(topTab_Levels_CancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(topTab_Levels_HelpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        panel_TopTab_LevelsLayout.setVerticalGroup(
+            panel_TopTab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_TopTab_LevelsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_TopTab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_TopTab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(topTab_Levels_CancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(topTab_Levels_HelpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topTab_Levels_TextLabel))
+                .addContainerGap())
+        );
+
+        panel_Tab_Levels.setBackground(new java.awt.Color(192, 192, 192));
+        panel_Tab_Levels.setPreferredSize(new java.awt.Dimension(200, 650));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel5.setText("Compl");
@@ -722,14 +1228,14 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_Tab_LevelsLayout = new javax.swing.GroupLayout(panel_Tab_Levels);
+        panel_Tab_Levels.setLayout(panel_Tab_LevelsLayout);
+        panel_Tab_LevelsLayout.setHorizontalGroup(
+            panel_Tab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Tab_LevelsLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(panel_Tab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_Tab_LevelsLayout.createSequentialGroup()
                         .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -741,7 +1247,7 @@ public class Interface extends javax.swing.JFrame {
                         .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(panel_Tab_LevelsLayout.createSequentialGroup()
                         .addComponent(jButton56, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -755,11 +1261,11 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11)
                     .addComponent(jLabel8)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(panel_Tab_LevelsLayout.createSequentialGroup()
                         .addComponent(jToggleButton19)
                         .addGap(4, 4, 4)
                         .addComponent(jToggleButton20))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(panel_Tab_LevelsLayout.createSequentialGroup()
                         .addComponent(jButton71, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(jButton70, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -772,7 +1278,7 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(jLabel26)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(panel_Tab_LevelsLayout.createSequentialGroup()
                         .addComponent(jButton72, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(jButton73, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -792,11 +1298,11 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jToggleButton6)
                     .addComponent(jToggleButton24)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(panel_Tab_LevelsLayout.createSequentialGroup()
                         .addComponent(jToggleButton4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jToggleButton18))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(panel_Tab_LevelsLayout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel5))
@@ -805,24 +1311,24 @@ public class Interface extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        panel_Tab_LevelsLayout.setVerticalGroup(
+            panel_Tab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Tab_LevelsLayout.createSequentialGroup()
+                .addGroup(panel_Tab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_Tab_LevelsLayout.createSequentialGroup()
                         .addGap(472, 472, 472)
                         .addComponent(jLabel4))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(panel_Tab_LevelsLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panel_Tab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jToggleButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jToggleButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(panel_Tab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
                             .addComponent(jLabel5))
                         .addGap(3, 3, 3)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panel_Tab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jToggleButton18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -848,7 +1354,7 @@ public class Interface extends javax.swing.JFrame {
                         .addGap(0, 0, 0)
                         .addComponent(jLabel27)
                         .addGap(0, 0, 0)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panel_Tab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton72, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton73, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton74, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -861,7 +1367,7 @@ public class Interface extends javax.swing.JFrame {
                         .addGap(0, 0, 0)
                         .addComponent(jLabel26)
                         .addGap(0, 0, 0)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panel_Tab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton71, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton70, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton69, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -874,7 +1380,7 @@ public class Interface extends javax.swing.JFrame {
                         .addGap(0, 0, 0)
                         .addComponent(jLabel24)
                         .addGap(0, 0, 0)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panel_Tab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton56, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton63, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton64, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -887,7 +1393,7 @@ public class Interface extends javax.swing.JFrame {
                         .addGap(0, 0, 0)
                         .addComponent(jLabel1)
                         .addGap(0, 0, 0)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panel_Tab_LevelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -896,155 +1402,55 @@ public class Interface extends javax.swing.JFrame {
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        jPanel5.setBackground(new java.awt.Color(111, 111, 111));
+        panel_TopTab_Timing.setBackground(new java.awt.Color(111, 111, 111));
+        panel_TopTab_Timing.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
 
-        jButton7.setBackground(new java.awt.Color(111, 111, 111));
-        jButton7.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MannualTrigGate.png"))); // NOI18N
-        jButton7.setToolTipText("");
-        jButton7.setAlignmentY(0.0F);
-        jButton7.setBorder(null);
-        jButton7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton7.setIconTextGap(0);
-        jButton7.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        tobTab_Timing_TextLabel.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        tobTab_Timing_TextLabel.setForeground(new java.awt.Color(187, 226, 255));
+        tobTab_Timing_TextLabel.setText("Timing");
+
+        topTab_Timing_CancelButton.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        topTab_Timing_CancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel_button.png"))); // NOI18N
+        topTab_Timing_CancelButton.setAlignmentY(0.0F);
+        topTab_Timing_CancelButton.setIconTextGap(0);
+        topTab_Timing_CancelButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        topTab_Timing_CancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                topTab_Timing_CancelButtonActionPerformed(evt);
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back_left.png"))); // NOI18N
-        jButton6.setToolTipText("");
-        jButton6.setAlignmentY(0.0F);
-        jButton6.setBorder(null);
-        jButton6.setIconTextGap(0);
-        jButton6.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        topTab_Timing_HelpButton.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
+        topTab_Timing_HelpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/help_button.png"))); // NOI18N
+        topTab_Timing_HelpButton.setAlignmentY(0.0F);
+        topTab_Timing_HelpButton.setIconTextGap(0);
 
-        jButton8.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back_right.png"))); // NOI18N
-        jButton8.setAlignmentY(0.0F);
-        jButton8.setBorder(null);
-        jButton8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton8.setIconTextGap(0);
-        jButton8.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-
-        jButton57.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/HelpButton.png"))); // NOI18N
-        jButton57.setAlignmentY(0.0F);
-        jButton57.setBorder(null);
-        jButton57.setIconTextGap(0);
-        jButton57.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton57.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton57ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton57, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, Short.MAX_VALUE)
-                    .addComponent(jButton57, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        jPanel2.setBackground(new java.awt.Color(47, 47, 47));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/screen.png"))); // NOI18N
-        jLabel10.setPreferredSize(new java.awt.Dimension(445, 405));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 381, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jPanel6.setBackground(new java.awt.Color(111, 111, 111));
-        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
-
-        jLabel17.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(187, 226, 255));
-        jLabel17.setText("Timing");
-
-        jButton61.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/help_button.png"))); // NOI18N
-        jButton61.setAlignmentY(0.0F);
-        jButton61.setIconTextGap(0);
-
-        jButton12.setFont(new java.awt.Font("Arial", 1, 8)); // NOI18N
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel_button.png"))); // NOI18N
-        jButton12.setAlignmentY(0.0F);
-        jButton12.setIconTextGap(0);
-        jButton12.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_TopTab_TimingLayout = new javax.swing.GroupLayout(panel_TopTab_Timing);
+        panel_TopTab_Timing.setLayout(panel_TopTab_TimingLayout);
+        panel_TopTab_TimingLayout.setHorizontalGroup(
+            panel_TopTab_TimingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_TopTab_TimingLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(topTab_Timing_CancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton61, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(topTab_Timing_HelpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel17)
+                .addComponent(tobTab_Timing_TextLabel)
                 .addContainerGap())
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        panel_TopTab_TimingLayout.setVerticalGroup(
+            panel_TopTab_TimingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_TopTab_TimingLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton61, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17))
+                .addGroup(panel_TopTab_TimingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(topTab_Timing_CancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topTab_Timing_HelpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tobTab_Timing_TextLabel))
                 .addContainerGap())
         );
 
-        jPanel7.setBackground(new java.awt.Color(192, 192, 192));
-        jPanel7.setPreferredSize(new java.awt.Dimension(200, 650));
+        panel_Tab_Timing.setBackground(new java.awt.Color(192, 192, 192));
+        panel_Tab_Timing.setPreferredSize(new java.awt.Dimension(200, 650));
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_line.png"))); // NOI18N
 
@@ -1369,23 +1775,23 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel_Tab_TimingLayout = new javax.swing.GroupLayout(panel_Tab_Timing);
+        panel_Tab_Timing.setLayout(panel_Tab_TimingLayout);
+        panel_Tab_TimingLayout.setHorizontalGroup(
+            panel_Tab_TimingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Tab_TimingLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGroup(panel_Tab_TimingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_Tab_TimingLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel25)
                         .addGap(49, 49, 49))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_Tab_TimingLayout.createSequentialGroup()
+                        .addGroup(panel_Tab_TimingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jToggleButton5)
                             .addComponent(jToggleButton23)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addGroup(panel_Tab_TimingLayout.createSequentialGroup()
                                 .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1397,7 +1803,7 @@ public class Interface extends javax.swing.JFrame {
                                 .addComponent(jButton41, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel30)
                             .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addGroup(panel_Tab_TimingLayout.createSequentialGroup()
                                 .addComponent(jToggleButton21)
                                 .addGap(4, 4, 4)
                                 .addComponent(jToggleButton22))
@@ -1407,7 +1813,7 @@ public class Interface extends javax.swing.JFrame {
                             .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jToggleButton9)
                             .addComponent(jToggleButton27)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addGroup(panel_Tab_TimingLayout.createSequentialGroup()
                                 .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1419,7 +1825,7 @@ public class Interface extends javax.swing.JFrame {
                                 .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel28)
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addGroup(panel_Tab_TimingLayout.createSequentialGroup()
                                 .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1435,9 +1841,9 @@ public class Interface extends javax.swing.JFrame {
                             .addComponent(jToggleButton28))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+        panel_Tab_TimingLayout.setVerticalGroup(
+            panel_Tab_TimingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_Tab_TimingLayout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addComponent(jToggleButton5)
                 .addGap(0, 0, 0)
@@ -1449,7 +1855,7 @@ public class Interface extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jLabel30)
                 .addGap(0, 0, 0)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_Tab_TimingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton39, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1458,7 +1864,7 @@ public class Interface extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel21)
                 .addGap(12, 12, 12)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_Tab_TimingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jToggleButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
@@ -1474,7 +1880,7 @@ public class Interface extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jLabel29)
                 .addGap(0, 0, 0)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_Tab_TimingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1491,7 +1897,7 @@ public class Interface extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jLabel28)
                 .addGap(0, 0, 0)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_Tab_TimingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1502,432 +1908,28 @@ public class Interface extends javax.swing.JFrame {
                 .addGap(6, 6, 6))
         );
 
-        jPanel8.setBackground(new java.awt.Color(192, 192, 192));
-        jPanel8.setFocusTraversalPolicyProvider(true);
-        jPanel8.setPreferredSize(new java.awt.Dimension(600, 80));
+        MenuBar_FileItem.setText("File");
+        MenuBar.add(MenuBar_FileItem);
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Mouse_Left.png"))); // NOI18N
+        MenuBar_EditItem.setText("Edit");
+        MenuBar.add(MenuBar_EditItem);
 
-        jButton14.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Mode_Off.png"))); // NOI18N
-        jButton14.setAlignmentY(0.0F);
-        jButton14.setBorder(null);
-        jButton14.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton14.setPreferredSize(new java.awt.Dimension(80, 18));
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
-            }
-        });
+        MenuBar_ViewItem.setText("View");
+        MenuBar.add(MenuBar_ViewItem);
 
-        jButton58.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Pattern_Off.png"))); // NOI18N
-        jButton58.setAlignmentY(0.0F);
-        jButton58.setBorder(null);
-        jButton58.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton58.setIconTextGap(0);
-        jButton58.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton58.setPreferredSize(new java.awt.Dimension(80, 18));
-        jButton58.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton58ActionPerformed(evt);
-            }
-        });
+        MenuBar_SetupItem.setText("Setup");
+        MenuBar.add(MenuBar_SetupItem);
 
-        jButton13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Display_Off.png"))); // NOI18N
-        jButton13.setBorder(null);
-        jButton13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton13.setPreferredSize(new java.awt.Dimension(80, 18));
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
-            }
-        });
+        MenuBar_SystemItem.setText("System");
+        MenuBar.add(MenuBar_SystemItem);
 
-        jButton52.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Calibrat_Off.png"))); // NOI18N
-        jButton52.setBorder(null);
-        jButton52.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton52.setPreferredSize(new java.awt.Dimension(80, 18));
-        jButton52.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton52ActionPerformed(evt);
-            }
-        });
+        MenuBar_UtilityItem.setText("Utility");
+        MenuBar.add(MenuBar_UtilityItem);
 
-        jButton59.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Inputs_Off.png"))); // NOI18N
-        jButton59.setAlignmentY(0.0F);
-        jButton59.setBorder(null);
-        jButton59.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton59.setIconTextGap(0);
-        jButton59.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton59.setPreferredSize(new java.awt.Dimension(80, 18));
-        jButton59.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton59ActionPerformed(evt);
-            }
-        });
+        MenuBar_HelpItem.setText("Help");
+        MenuBar.add(MenuBar_HelpItem);
 
-        jButton16.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Trigger_Off.png"))); // NOI18N
-        jButton16.setBorder(null);
-        jButton16.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton16.setPreferredSize(new java.awt.Dimension(80, 18));
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
-            }
-        });
-
-        jButton54.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Timing_Off.png"))); // NOI18N
-        jButton54.setBorder(null);
-        jButton54.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton54.setPreferredSize(new java.awt.Dimension(80, 18));
-        jButton54.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton54ActionPerformed(evt);
-            }
-        });
-
-        jButton55.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Levels_Off.png"))); // NOI18N
-        jButton55.setBorder(null);
-        jButton55.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton55.setPreferredSize(new java.awt.Dimension(80, 18));
-        jButton55.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton55ActionPerformed(evt);
-            }
-        });
-
-        jButton62.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Outputs_Off.png"))); // NOI18N
-        jButton62.setAlignmentY(0.0F);
-        jButton62.setBorder(null);
-        jButton62.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton62.setIconTextGap(0);
-        jButton62.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton62.setPreferredSize(new java.awt.Dimension(80, 18));
-        jButton62.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton62ActionPerformed(evt);
-            }
-        });
-
-        jButton53.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Utility_Off.png"))); // NOI18N
-        jButton53.setBorder(null);
-        jButton53.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton53.setPreferredSize(new java.awt.Dimension(80, 18));
-        jButton53.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton53ActionPerformed(evt);
-            }
-        });
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Down_Mouse_Right.png"))); // NOI18N
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/border_line.png"))); // NOI18N
-        jLabel12.setToolTipText("");
-
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/border_line.png"))); // NOI18N
-        jLabel13.setToolTipText("");
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addComponent(jLabel13)
-                .addGap(5, 5, 5)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jLabel23)
-                        .addGap(16, 16, 16)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(jButton59, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jButton55, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(5, 5, 5)
-                .addComponent(jLabel12)
-                .addGap(0, 0, 0))
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton54, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton55, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel16)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton58, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton59, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton62, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, 0)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton52, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton53, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-        );
-
-        jPanel11.setBackground(new java.awt.Color(47, 47, 47));
-
-        jPanel4.setBackground(new java.awt.Color(47, 47, 47));
-        jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-
-        jPanel13.setBackground(new java.awt.Color(47, 47, 47));
-        jPanel13.setPreferredSize(new java.awt.Dimension(101, 50));
-
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Period = -1.02 us");
-
-        jLabel31.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(252, 252, 132));
-        jLabel31.setText("Delay(1) = 1.02 us");
-
-        jLabel32.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(132, 252, 252));
-        jLabel32.setText("Delay(2) = 1.02 us");
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGap(4, 4, 4)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(5, 5, 5))
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel9)
-                .addGap(3, 3, 3)
-                .addComponent(jLabel31)
-                .addGap(3, 3, 3)
-                .addComponent(jLabel32)
-                .addGap(6, 6, 6))
-        );
-
-        jPanel14.setBackground(new java.awt.Color(47, 47, 47));
-        jPanel14.setPreferredSize(new java.awt.Dimension(101, 50));
-
-        jLabel33.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel33.setText(" ");
-
-        jLabel34.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel34.setForeground(new java.awt.Color(252, 252, 132));
-        jLabel34.setText("Width(1) = 1.02 us");
-
-        jLabel35.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(132, 252, 252));
-        jLabel35.setText("Width(2) = 1.02 us");
-
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGap(4, 4, 4)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(5, 5, 5))
-        );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel33)
-                .addGap(3, 3, 3)
-                .addComponent(jLabel34)
-                .addGap(3, 3, 3)
-                .addComponent(jLabel35)
-                .addGap(6, 6, 6))
-        );
-
-        jPanel16.setBackground(new java.awt.Color(47, 47, 47));
-        jPanel16.setPreferredSize(new java.awt.Dimension(101, 50));
-
-        jLabel36.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel36.setText(" ");
-        jLabel36.setToolTipText("");
-
-        jLabel37.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(252, 252, 132));
-        jLabel37.setText("Ampl(1) = -1.03V");
-
-        jLabel38.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel38.setForeground(new java.awt.Color(132, 252, 252));
-        jLabel38.setText("Ampl(2) = -1.03V");
-
-        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
-        jPanel16.setLayout(jPanel16Layout);
-        jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(4, 4, 4)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
-                    .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(5, 5, 5))
-        );
-        jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel36)
-                .addGap(3, 3, 3)
-                .addComponent(jLabel37)
-                .addGap(3, 3, 3)
-                .addComponent(jLabel38)
-                .addGap(6, 6, 6))
-        );
-
-        jPanel17.setBackground(new java.awt.Color(47, 47, 47));
-        jPanel17.setPreferredSize(new java.awt.Dimension(101, 50));
-
-        jLabel39.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel39.setText(" ");
-
-        jLabel40.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel40.setForeground(new java.awt.Color(252, 252, 132));
-        jLabel40.setText("Offset(1) = -1.03V");
-
-        jLabel41.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jLabel41.setForeground(new java.awt.Color(132, 252, 252));
-        jLabel41.setText("Offset(2) = -1.03V");
-
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(4, 4, 4)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(5, 5, 5))
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel39)
-                .addGap(3, 3, 3)
-                .addComponent(jLabel40)
-                .addGap(3, 3, 3)
-                .addComponent(jLabel41)
-                .addGap(6, 6, 6))
-        );
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel13, 65, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel14, 65, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel16, 65, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel17, 65, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(4, 4, 4)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4))
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        jMenu3.setText("View");
-        jMenuBar1.add(jMenu3);
-
-        jMenu4.setText("Setup");
-        jMenuBar1.add(jMenu4);
-
-        jMenu5.setText("System");
-        jMenuBar1.add(jMenu5);
-
-        jMenu6.setText("Utility");
-        jMenuBar1.add(jMenu6);
-
-        jMenu7.setText("Help");
-        jMenuBar1.add(jMenu7);
-
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(MenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1936,202 +1938,196 @@ public class Interface extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(panel_Tab_Levels, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panel_TopTab_Levels, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panel_Screen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel_CalibrationsScreen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panel_DownMenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panel_TopMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)))
+                    .addComponent(panel_TopTab_Timing, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel_Tab_Timing, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panel_TopTab_Levels, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel_TopMenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel_TopTab_Timing, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panel_Tab_Levels, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panel_Tab_Timing, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panel_Screen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panel_CalibrationsScreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(panel_DownMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, 0))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
+    private void topMenu_HelpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topMenu_HelpButtonActionPerformed
         
-    }//GEN-LAST:event_jButton57ActionPerformed
+    }//GEN-LAST:event_topMenu_HelpButtonActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        //  При нажатии подсвечивать синим
-        if( ch8 == false )
-        {
+    private void downMenu_ModeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_ModeButtonActionPerformed
+        //  Обработка нажатия на пноку нижнего меню "Mode"
+        if( ch8 == false ){
             ch8 = true;
-            jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
-        }
-        else if( ch8 == true )
-        {
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Mode","Down_Mode_Off.png");}
+        else if( ch8 == true ){
             ch8 = false;
-            jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_On.png"));
-        }
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Mode","Down_Mode_On.png");}
 
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
-    }//GEN-LAST:event_jButton14ActionPerformed
+        downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        downMenu_PatternButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
+    }//GEN-LAST:event_downMenu_ModeButtonActionPerformed
 
-    private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
-        //  При нажатии подсвечивать синим
-        if( ch4 == false )
-        {
+    private void downMenu_PatternButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_PatternButtonActionPerformed
+        //  Обработка нажатия на пноку нижнего меню "Pattern"
+        if( ch4 == false ){
             ch4 = true;
-            jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Pattern","Down_Pattern_Off.png");
         }
-        else if( ch4 == true )
-        {
+        else if( ch4 == true ){
             ch4 = false;
-            jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_On.png"));
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Pattern","Down_Pattern_On.png");
         }
         
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, false,false, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
-    }//GEN-LAST:event_jButton58ActionPerformed
+        downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        downMenu_ModeButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
+    }//GEN-LAST:event_downMenu_PatternButtonActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void downMenu_DisplayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_DisplayButtonActionPerformed
         //  При нажатии подсвечивать синим
         if( ch1 == false )
         {
             ch1 = true;
-            jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+            downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
         }
         else if( ch1 == true )
         {
             ch1 = false;
-            jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_On.png"));
+            downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_On.png"));
         }
         
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(false,false, true,true, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
-    }//GEN-LAST:event_jButton13ActionPerformed
+        downMenu_ModeButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        downMenu_PatternButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
+    }//GEN-LAST:event_downMenu_DisplayButtonActionPerformed
 
-    private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
+    private void downMenu_CalibrationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_CalibrationButtonActionPerformed
         //  При нажатии подсвечивать синим
         if( ch3 == false )
         {
             ch3 = true;
-            jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+            downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
         }
         else if( ch3 == true )
         {
             ch3 = false;
-            jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_On.png"));
+            downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_On.png"));
         }
 
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, false,false, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
-    }//GEN-LAST:event_jButton52ActionPerformed
+        downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        downMenu_ModeButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        downMenu_PatternButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
+    }//GEN-LAST:event_downMenu_CalibrationButtonActionPerformed
 
-    private void jButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton59ActionPerformed
+    private void downMenu_InputsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_InputsButtonActionPerformed
         //  При нажатии подсвечивать синим
         if( ch5 == false )
         {
             ch5 = true;
-            jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+            downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
         }
         else if( ch5 == true )
         {
             ch5 = false;
-            jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_On.png"));
+            downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_On.png"));
         }
 
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, false,false, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
-    }//GEN-LAST:event_jButton59ActionPerformed
+        downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        downMenu_ModeButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        downMenu_PatternButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
+    }//GEN-LAST:event_downMenu_InputsButtonActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void downMenu_TriggerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_TriggerButtonActionPerformed
         //  При нажатии подсвечивать синим
         if( ch2 == false )
         {
             ch2 = true;
-            jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+            downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
         }
         else if( ch2 == true )
         {
             ch2 = false;
-            jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_On.png"));
+            downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_On.png"));
         }
         
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, false,false, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
-    }//GEN-LAST:event_jButton16ActionPerformed
+        downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        downMenu_ModeButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        downMenu_PatternButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
+    }//GEN-LAST:event_downMenu_TriggerButtonActionPerformed
 
-    private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
+    private void downMenu_TimingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_TimingButtonActionPerformed
         //  При нажатии подсвечивать синим
         if( ch9 == false )
         {
@@ -2142,7 +2138,7 @@ public class Interface extends javax.swing.JFrame {
             pack();
             
             ch9 = true;
-            jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+            downMenu_TimingButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
         }
         else if( ch9 == true )
         {
@@ -2153,24 +2149,24 @@ public class Interface extends javax.swing.JFrame {
             pack();
             
             ch9 = false;
-            jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_On.png"));
+            downMenu_TimingButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_On.png"));
         }
         
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
-    }//GEN-LAST:event_jButton54ActionPerformed
+        downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        downMenu_ModeButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        downMenu_PatternButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
+    }//GEN-LAST:event_downMenu_TimingButtonActionPerformed
 
-    private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
+    private void downMenu_LevelsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_LevelsButtonActionPerformed
         //  При нажатии подсвечивать синим
         if( ch10 == false )
         {
@@ -2181,7 +2177,7 @@ public class Interface extends javax.swing.JFrame {
             pack();
             
             ch10 = true;
-            jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+            downMenu_LevelsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
         }
         else if( ch10 == true )
         {
@@ -2192,74 +2188,74 @@ public class Interface extends javax.swing.JFrame {
             pack();
             
             ch10 = false;
-            jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_On.png"));
+            downMenu_LevelsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_On.png"));
         }
 
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
-    }//GEN-LAST:event_jButton55ActionPerformed
+        downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        downMenu_ModeButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        downMenu_PatternButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
+    }//GEN-LAST:event_downMenu_LevelsButtonActionPerformed
 
-    private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
+    private void downMenu_OutputsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_OutputsButtonActionPerformed
         //  При нажатии подсвечивать синим
         if( ch6 == false )
         {
             ch6 = true;
-            jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
+            downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
         }
         else if( ch6 == true )
         {
             ch6 = false;
-            jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_On.png"));
+            downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_On.png"));
         }
         
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, false,false, true,true, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
-        jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
-    }//GEN-LAST:event_jButton62ActionPerformed
+        downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        downMenu_ModeButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+        downMenu_PatternButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+    }//GEN-LAST:event_downMenu_OutputsButtonActionPerformed
 
-    private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
+    private void downMenu_UtilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_UtilityButtonActionPerformed
         //  При нажатии подсвечивать синим
         if( ch7 == false )
         {
             ch7 = true;
-            jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
+            downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
         }
         else if( ch7 == true )
         {
             ch7 = false;
-            jButton53.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_On.png"));
+            downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_On.png"));
         }
 
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, true,true, false,false, true,true, false,false, false,false);
         
         //  Меняем картинку иконки на всех других кнопках на выключенную
-        jButton13.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
-        jButton14.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
-        jButton16.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
-        jButton52.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
-        jButton58.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
-        jButton59.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
-        jButton62.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
-    }//GEN-LAST:event_jButton53ActionPerformed
+        downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
+        downMenu_ModeButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Mode_Off.png"));
+        downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
+        downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
+        downMenu_PatternButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Pattern_Off.png"));
+        downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
+        downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
+    }//GEN-LAST:event_downMenu_UtilityButtonActionPerformed
 
     private void jToggleButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton18ActionPerformed
         // Меняем иконку
@@ -2936,13 +2932,13 @@ public class Interface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jToggleButton28ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void topMenu_BackRightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topMenu_BackRightButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_topMenu_BackRightButtonActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void topMenu_ManualTrigGateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topMenu_ManualTrigGateButtonActionPerformed
         
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_topMenu_ManualTrigGateButtonActionPerformed
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         //  Если активен Width
@@ -3422,7 +3418,7 @@ public class Interface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton30ActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void topTab_Timing_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topTab_Timing_CancelButtonActionPerformed
         //  Закрываем вкладку "Timing"
         tabs.closeTab("Timing", "right");
         
@@ -3431,10 +3427,10 @@ public class Interface extends javax.swing.JFrame {
         
         //  Меняем значение чекера и картинку на самой кнопке
         ch9 = true;
-        jButton54.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
-    }//GEN-LAST:event_jButton12ActionPerformed
+        downMenu_TimingButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
+    }//GEN-LAST:event_topTab_Timing_CancelButtonActionPerformed
 
-    private void jButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton60ActionPerformed
+    private void topTab_Levels_CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topTab_Levels_CancelButtonActionPerformed
         //  Закрываем вкладку "Levels"
         tabs.closeTab("Levels", "left");
 
@@ -3443,8 +3439,8 @@ public class Interface extends javax.swing.JFrame {
         
         //  Меняем значение чекера и картинку на самой кнопке
         ch10 = true;
-        jButton55.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
-    }//GEN-LAST:event_jButton60ActionPerformed
+        downMenu_LevelsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
+    }//GEN-LAST:event_topTab_Levels_CancelButtonActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
 
@@ -3483,12 +3479,32 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JMenuBar MenuBar;
+    public static javax.swing.JMenu MenuBar_EditItem;
+    public static javax.swing.JMenu MenuBar_FileItem;
+    public static javax.swing.JMenu MenuBar_HelpItem;
+    public static javax.swing.JMenu MenuBar_SetupItem;
+    public static javax.swing.JMenu MenuBar_SystemItem;
+    public static javax.swing.JMenu MenuBar_UtilityItem;
+    public static javax.swing.JMenu MenuBar_ViewItem;
+    public static javax.swing.JLabel ScreenImage;
+    public static javax.swing.JLabel calibLabel_DelayChOne;
+    public static javax.swing.JLabel calibLabel_Period;
     public static java.awt.Choice choice1;
-    public static javax.swing.JButton jButton11;
-    public static javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton16;
+    public static javax.swing.JButton downMenu_CalibrationButton;
+    public static javax.swing.JButton downMenu_DisplayButton;
+    public static javax.swing.JButton downMenu_InputsButton;
+    public static javax.swing.JLabel downMenu_LeftLine;
+    public static javax.swing.JLabel downMenu_LeftMouseImage;
+    public static javax.swing.JButton downMenu_LevelsButton;
+    public static javax.swing.JButton downMenu_ModeButton;
+    public static javax.swing.JButton downMenu_OutputsButton;
+    public static javax.swing.JButton downMenu_PatternButton;
+    public static javax.swing.JLabel downMenu_RightLine;
+    public static javax.swing.JLabel downMenu_RightMouseImage;
+    public static javax.swing.JButton downMenu_TimingButton;
+    public static javax.swing.JButton downMenu_TriggerButton;
+    public static javax.swing.JButton downMenu_UtilityButton;
     public static javax.swing.JButton jButton22;
     public static javax.swing.JButton jButton23;
     public static javax.swing.JButton jButton24;
@@ -3509,18 +3525,7 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JButton jButton39;
     public static javax.swing.JButton jButton40;
     public static javax.swing.JButton jButton41;
-    private javax.swing.JButton jButton52;
-    private javax.swing.JButton jButton53;
-    private javax.swing.JButton jButton54;
-    private javax.swing.JButton jButton55;
     public static javax.swing.JButton jButton56;
-    public static javax.swing.JButton jButton57;
-    private javax.swing.JButton jButton58;
-    private javax.swing.JButton jButton59;
-    public static javax.swing.JButton jButton6;
-    public static javax.swing.JButton jButton60;
-    public static javax.swing.JButton jButton61;
-    private javax.swing.JButton jButton62;
     public static javax.swing.JButton jButton63;
     public static javax.swing.JButton jButton64;
     public static javax.swing.JButton jButton65;
@@ -3528,7 +3533,6 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JButton jButton67;
     public static javax.swing.JButton jButton68;
     public static javax.swing.JButton jButton69;
-    public static javax.swing.JButton jButton7;
     public static javax.swing.JButton jButton70;
     public static javax.swing.JButton jButton71;
     public static javax.swing.JButton jButton72;
@@ -3536,23 +3540,15 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JButton jButton74;
     public static javax.swing.JButton jButton75;
     public static javax.swing.JButton jButton76;
-    public static javax.swing.JButton jButton8;
     public static javax.swing.JLabel jLabel1;
-    public static javax.swing.JLabel jLabel10;
     public static javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     public static javax.swing.JLabel jLabel14;
     public static javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    public static javax.swing.JLabel jLabel17;
     public static javax.swing.JLabel jLabel18;
     public static javax.swing.JLabel jLabel19;
-    public static javax.swing.JLabel jLabel2;
     public static javax.swing.JLabel jLabel20;
     public static javax.swing.JLabel jLabel21;
     public static javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     public static javax.swing.JLabel jLabel24;
     public static javax.swing.JLabel jLabel25;
     public static javax.swing.JLabel jLabel26;
@@ -3561,7 +3557,6 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel29;
     public static javax.swing.JLabel jLabel3;
     public static javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
@@ -3577,28 +3572,6 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel6;
     public static javax.swing.JLabel jLabel7;
     public static javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenuBar jMenuBar1;
-    public static javax.swing.JPanel jPanel1;
-    public static javax.swing.JPanel jPanel11;
-    public static javax.swing.JPanel jPanel13;
-    public static javax.swing.JPanel jPanel14;
-    public static javax.swing.JPanel jPanel16;
-    public static javax.swing.JPanel jPanel17;
-    public static javax.swing.JPanel jPanel2;
-    public static javax.swing.JPanel jPanel3;
-    public static javax.swing.JPanel jPanel4;
-    public static javax.swing.JPanel jPanel5;
-    public static javax.swing.JPanel jPanel6;
-    public static javax.swing.JPanel jPanel7;
-    public static javax.swing.JPanel jPanel8;
     public static javax.swing.JPopupMenu jPopupMenu1;
     public static javax.swing.JTextField jTextField1;
     public static javax.swing.JTextField jTextField2;
@@ -3624,5 +3597,28 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JToggleButton jToggleButton5;
     public static javax.swing.JToggleButton jToggleButton6;
     public static javax.swing.JToggleButton jToggleButton9;
+    public static javax.swing.JPanel panel_CalibrationsScreen;
+    public static javax.swing.JPanel panel_CalibrationsTable;
+    public static javax.swing.JPanel panel_Calibrations_Ampl;
+    public static javax.swing.JPanel panel_Calibrations_Delay;
+    public static javax.swing.JPanel panel_Calibrations_Offset;
+    public static javax.swing.JPanel panel_Calibrations_Width;
+    public static javax.swing.JPanel panel_DownMenu;
+    public static javax.swing.JPanel panel_Screen;
+    public static javax.swing.JPanel panel_Tab_Levels;
+    public static javax.swing.JPanel panel_Tab_Timing;
+    public static javax.swing.JPanel panel_TopMenu;
+    public static javax.swing.JPanel panel_TopTab_Levels;
+    public static javax.swing.JPanel panel_TopTab_Timing;
+    public static javax.swing.JLabel tobTab_Timing_TextLabel;
+    public static javax.swing.JButton topMenu_BackLeftButton;
+    public static javax.swing.JButton topMenu_BackRightButton;
+    public static javax.swing.JButton topMenu_HelpButton;
+    public static javax.swing.JButton topMenu_ManualTrigGateButton;
+    public static javax.swing.JButton topTab_Levels_CancelButton;
+    public static javax.swing.JButton topTab_Levels_HelpButton;
+    public static javax.swing.JLabel topTab_Levels_TextLabel;
+    public static javax.swing.JButton topTab_Timing_CancelButton;
+    public static javax.swing.JButton topTab_Timing_HelpButton;
     // End of variables declaration//GEN-END:variables
 }
