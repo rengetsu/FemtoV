@@ -18,12 +18,6 @@ This software used to generate digital electronics stimuli. Designed and built t
   * JDK 8 or 11 (to build NetBeans)
   * JDK 9 or above (to run NetBeans)
   * MinGW (optional), to build Windows Launchers
-
-## Jar Libraries
-
-  * jCommon 1.0.23
-  * jFreeChart 1.0.19
-  * jSerialComm 2.6.2
   
 ## Setup
 
