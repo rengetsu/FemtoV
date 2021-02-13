@@ -102,14 +102,14 @@ public class Tabs {
             //  Делаем невидимой вкладку "Levels" слева
             if      (   "left".equals(left_right)   )
             {
-                Interface.jPanel1.setVisible(false);
-                Interface.jPanel3.setVisible(false);
+                Interface.panel_Tab_Levels.setVisible(false);
+                Interface.panel_TopTab_Levels.setVisible(false);
             }
             //  Делаем невидимой вкладку "Levels" справа
             else if (   "right".equals(left_right)  )
             {
-                Interface.jPanel1.setVisible(false);
-                Interface.jPanel3.setVisible(false);
+                Interface.panel_Tab_Levels.setVisible(false);
+                Interface.panel_TopTab_Levels.setVisible(false);
             }
         }
         //  Вкладка "Timing"
@@ -118,14 +118,14 @@ public class Tabs {
             //  Делаем невидимой вкладку "Timing" слева
             if      (   "left".equals(left_right)   )
             {
-                Interface.jPanel6.setVisible(false);
-                Interface.jPanel7.setVisible(false);
+                Interface.panel_TopTab_Timing.setVisible(false);
+                Interface.panel_Tab_Timing.setVisible(false);
             }
             //  Делаем невидимой вкладку "Timing" справа
             else if (   "right".equals(left_right)  )
             {
-                Interface.jPanel6.setVisible(false);
-                Interface.jPanel7.setVisible(false);
+                Interface.panel_TopTab_Timing.setVisible(false);
+                Interface.panel_Tab_Timing.setVisible(false);
             }
         }
     }
@@ -145,15 +145,15 @@ public class Tabs {
             //  Делаем видимой вкладку "Levels" слева
             if      (   "left".equals(left_right)   )
             {
-                Interface.jPanel1.setVisible(true);
-                Interface.jPanel3.setVisible(true);
+                Interface.panel_Tab_Levels.setVisible(true);
+                Interface.panel_TopTab_Levels.setVisible(true);
             }
             //  Делаем видимой вкладку "Levels" справа
             else if (   "right".equals(left_right)  )
             {
                 
-                Interface.jPanel1.setVisible(true);
-                Interface.jPanel3.setVisible(true);
+                Interface.panel_Tab_Levels.setVisible(true);
+                Interface.panel_TopTab_Levels.setVisible(true);
             }
         }
         //  Вкладка "Timing"
@@ -162,14 +162,14 @@ public class Tabs {
             //  Делаем видимой вкладку "Timing" слева
             if      (   "left".equals(left_right)   )
             {
-                Interface.jPanel6.setVisible(true);
-                Interface.jPanel7.setVisible(true);
+                Interface.panel_TopTab_Timing.setVisible(true);
+                Interface.panel_Tab_Timing.setVisible(true);
             }
             //  Делаем видимой вкладку "Timing" справа
             else if (   "right".equals(left_right)  )
             {
-                Interface.jPanel6.setVisible(true);
-                Interface.jPanel7.setVisible(true);
+                Interface.panel_TopTab_Timing.setVisible(true);
+                Interface.panel_Tab_Timing.setVisible(true);
             }
         }
     }

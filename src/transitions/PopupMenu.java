@@ -63,31 +63,31 @@ public class PopupMenu {
         switch (adjNmbr) {
         //  Если выбран компонент jTextField1
             case 1:
-                Interface.jPopupMenu1.show(Interface.jPanel1 , Interface.jTextField1.getX(), Interface.jTextField1.getY());
+                Interface.jPopupMenu1.show(Interface.panel_Tab_Levels , Interface.jTextField1.getX(), Interface.jTextField1.getY());
                 break;
         //  Если выбран компонент JTextField2
             case 2:
-                Interface.jPopupMenu1.show(Interface.jPanel1, Interface.jTextField2.getX(), Interface.jTextField2.getY());
+                Interface.jPopupMenu1.show(Interface.panel_Tab_Levels, Interface.jTextField2.getX(), Interface.jTextField2.getY());
                 break;
         //  Если выбран компонент JTextField3
             case 3:
-                Interface.jPopupMenu1.show(Interface.jPanel1, Interface.jTextField3.getX(), Interface.jTextField3.getY());
+                Interface.jPopupMenu1.show(Interface.panel_Tab_Levels, Interface.jTextField3.getX(), Interface.jTextField3.getY());
                 break;
         //  Если выбран компонент JTextField4
             case 4:
-                Interface.jPopupMenu1.show(Interface.jPanel1, Interface.jTextField4.getX(), Interface.jTextField4.getY());
+                Interface.jPopupMenu1.show(Interface.panel_Tab_Levels, Interface.jTextField4.getX(), Interface.jTextField4.getY());
                 break;
         //  Если выбран компонент JTextField5
             case 5:
-                Interface.jPopupMenu1.show(Interface.jPanel7, Interface.jTextField5.getX(), Interface.jTextField5.getY());
+                Interface.jPopupMenu1.show(Interface.panel_Tab_Timing, Interface.jTextField5.getX(), Interface.jTextField5.getY());
                 break;
         //  Если выбран компонент JTextField6
             case 6:
-                Interface.jPopupMenu1.show(Interface.jPanel7, Interface.jTextField6.getX(), Interface.jTextField6.getY());
+                Interface.jPopupMenu1.show(Interface.panel_Tab_Timing, Interface.jTextField6.getX(), Interface.jTextField6.getY());
                 break;
         //  Если выбран компонент JTextField7
             case 7:
-                Interface.jPopupMenu1.show(Interface.jPanel7, Interface.jTextField7.getX(), Interface.jTextField7.getY());
+                Interface.jPopupMenu1.show(Interface.panel_Tab_Timing, Interface.jTextField7.getX(), Interface.jTextField7.getY());
                 break;
             default:
                 break;

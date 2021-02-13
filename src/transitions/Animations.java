@@ -26,34 +26,34 @@ public class Animations {
     //  ФУНКЦИЯ АНИМАЦИЙ КНОПОК ВЕРХНЕГО ЛЕВОГО МЕНЮ
     public static void topLeftButtonsAnimations(){
         //  Анимация нажатия - Кнопка помощи
-        Interface.jButton11.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\help_button_cl.png"));
+        Interface.topTab_Levels_HelpButton.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\help_button_cl.png"));
 
         //  Анимация нажатия - Кнопка закрытия
-        Interface.jButton60.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\cancel_button_cl.png"));
+        Interface.topTab_Levels_CancelButton.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\cancel_button_cl.png"));
     }
 
     //  ФУНКЦИЯ АНИМАЦИЙ КНОПОК ВЕРХНЕГО ПРАВОГО МЕНЮ
     public static void topRightButtonsAnimations(){
         //  Анимация нажатия - Кнопка закрытия
-        Interface.jButton12.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\cancel_button_cl.png"));
+        Interface.topTab_Timing_CancelButton.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\cancel_button_cl.png"));
 
         //  Анимация нажатия - Кнопка помощи
-        Interface.jButton61.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\help_button_cl.png"));
+        Interface.topTab_Timing_HelpButton.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\help_button_cl.png"));
     }
         
     //  ФУНКЦИЯ АНИМАЦИЙ КНОПОК ВЕРХНЕГО СРЕДНЕГО МЕНЮ
     public static void topMiddleButtonsAnimations(){
         //  Анимация нажатия - Кнопка Перехода Назад
-        Interface.jButton6.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\back_left_cl.png"));
+        Interface.topMenu_BackLeftButton.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\back_left_cl.png"));
             
         //  Анимация нажатия - Кнопка Mannual Trig/Gate
-        Interface.jButton7.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\ManualTrigGate_cl.png"));
+        Interface.topMenu_ManualTrigGateButton.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\ManualTrigGate_cl.png"));
 
         //  Анимация нажатия - Кнопка Перехода Вперед
-        Interface.jButton8.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\back_right_cl.png"));
+        Interface.topMenu_BackRightButton.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\back_right_cl.png"));
 
         //  Анимация нажатия - Кнопка Помощи
-        Interface.jButton57.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\HelpButton_cl.png"));
+        Interface.topMenu_HelpButton.setPressedIcon(new ImageIcon(currentDir + "\\src\\images\\HelpButton_cl.png"));
     }
 
     //  ФУНКЦИЯ АНИМАЦИЙ КНОПОК ВКЛАДКИ LEVELS

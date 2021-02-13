@@ -5,7 +5,7 @@
  */
 
 //  Пакеты Java используемые для группировки связанных классов 
-package actions;    //  actions - пакет где выполняются все действия прогр
+package actions;    //  actions - пакет где выполняются все действия программы
 import femtov.Interface;
 
 /**
