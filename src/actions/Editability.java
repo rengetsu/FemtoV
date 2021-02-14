@@ -25,12 +25,12 @@ public class Editability {
     public void notEditableTextFields(boolean editability)
     {
         //  Делаем невозможным редактирование текстовых полей
-        Interface.jTextField1.setEditable(editability);
-        Interface.jTextField2.setEditable(editability);
-        Interface.jTextField3.setEditable(editability);
-        Interface.jTextField4.setEditable(editability);
-        Interface.jTextField5.setEditable(editability);
-        Interface.jTextField6.setEditable(editability);
-        Interface.jTextField7.setEditable(editability);
+        Interface.tabLevels_LowLimitTextField.setEditable(editability);
+        Interface.tabLevels_HighLimitTextField.setEditable(editability);
+        Interface.tabLevels_LowLevelTextField.setEditable(editability);
+        Interface.tabLevels_HighLevelTextField.setEditable(editability);
+        Interface.tabTiming_PeriodTextField.setEditable(editability);
+        Interface.tabTiming_DelayTextField.setEditable(editability);
+        Interface.tabTiming_WidthTextField.setEditable(editability);
     }
 }
