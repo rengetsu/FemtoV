@@ -24,26 +24,28 @@ public class Visibility {
      */
     static public void timing_СhannelsVisibility(boolean visibility)
     {
-        Interface.jLabel18.setVisible(visibility);
-        Interface.jLabel19.setVisible(visibility);
-        Interface.jLabel28.setVisible(visibility);
-        Interface.jLabel29.setVisible(visibility);
-        Interface.jButton27.setVisible(visibility);
-        Interface.jButton28.setVisible(visibility);
-        Interface.jButton29.setVisible(visibility);
-        Interface.jButton30.setVisible(visibility);
-        Interface.jButton31.setVisible(visibility);
-        Interface.jButton32.setVisible(visibility);
-        Interface.jButton33.setVisible(visibility);
-        Interface.jButton34.setVisible(visibility);
-        Interface.jButton35.setVisible(visibility);
-        Interface.jButton36.setVisible(visibility);
-        Interface.jTextField5.setVisible(visibility);
-        Interface.jTextField6.setVisible(visibility);
-        Interface.jToggleButton9.setVisible(visibility);
-        Interface.jToggleButton10.setVisible(visibility);
-        Interface.jToggleButton27.setVisible(visibility);
-        Interface.jToggleButton28.setVisible(visibility);
+        Interface.tabTiming_PeriodLabel.setVisible(visibility);
+        Interface.tabTiming_PeriodMapLabel.setVisible(visibility);        
+        Interface.tabTiming_UpLineLabel.setVisible(visibility);
+        Interface.tabTiming_DownLineLabel.setVisible(visibility);
+        Interface.tabTiming_DelayLabel.setVisible(visibility);
+        Interface.tabTiming_DelayMapLabel.setVisible(visibility);
+        Interface.tabTiming_WidthLabel.setVisible(visibility);
+        Interface.tabTiming_WidthMapLabel.setVisible(visibility);
+        Interface.tabTiming_smallLeftButton_WidthDCycle.setVisible(visibility);
+        Interface.tabTiming_smallRightButton_WidthDCycle.setVisible(visibility);
+        Interface.tabTiming_delayButton_WidthDCycle.setVisible(visibility);
+        Interface.tabTiming_bigLeftButton_WidthDCycle.setVisible(visibility);
+        Interface.tabTiming_bigRightButton_WidthDCycle.setVisible(visibility);
+        Interface.tabTiming_smallLeftButton_DelayPhase.setVisible(visibility);
+        Interface.tabTiming_smallRightButton_DelayPhase.setVisible(visibility);
+        Interface.tabTiming_delayButton_DelayPhase.setVisible(visibility);
+        Interface.tabTiming_bigLeftButton_DelayPhase.setVisible(visibility);
+        Interface.tabTiming_bigRightButton_DelayPhase.setVisible(visibility);
+        Interface.tabTiming_Delay_ToggleButton.setVisible(visibility);
+        Interface.tabTiming_Width_ToggleButton.setVisible(visibility);
+        Interface.tabTiming_Phase_ToggleButton.setVisible(visibility);
+        Interface.tabTiming_DCycle_ToggleButton.setVisible(visibility);
     }
     
     /**
@@ -53,18 +55,18 @@ public class Visibility {
     static public void levelsTab_HighLowLevelsVisibility(boolean visibility)
     {
         //  Меняем видимость кнопок и шкал относящихся к этой секции
-        Interface.jLabel26.setVisible(visibility);
-        Interface.jLabel27.setVisible(visibility);
-        Interface.jButton67.setVisible(visibility);
-        Interface.jButton68.setVisible(visibility);
-        Interface.jButton69.setVisible(visibility);
-        Interface.jButton70.setVisible(visibility);
-        Interface.jButton71.setVisible(visibility);
-        Interface.jButton72.setVisible(visibility);
-        Interface.jButton73.setVisible(visibility);
-        Interface.jButton74.setVisible(visibility);
-        Interface.jButton75.setVisible(visibility);
-        Interface.jButton76.setVisible(visibility);
+        Interface.tabLevels_LowLevelMapLabel.setVisible(visibility);
+        Interface.tabLevels_HighLevelMapLabel.setVisible(visibility);
+        Interface.tabLevels_bigUpButton_LowLevel.setVisible(visibility);
+        Interface.tabLevels_bigDownButton_LowLevel.setVisible(visibility);
+        Interface.tabLevels_zeroButton_LowLevel.setVisible(visibility);
+        Interface.tabLevels_smallUpButton_LowLevel.setVisible(visibility);
+        Interface.tabLevels_smallDownButton_LowLevel.setVisible(visibility);
+        Interface.tabLevels_smallDownButton_HighLevel.setVisible(visibility);
+        Interface.tabLevels_smallUpButton_HighLevel.setVisible(visibility);
+        Interface.tabLevels_zeroButton_HighLevel.setVisible(visibility);
+        Interface.tabLevels_bigDownButton_HighLevel.setVisible(visibility);
+        Interface.tabLevels_bigUpButton_HighLevel.setVisible(visibility);
     }
     
     /**
@@ -74,21 +76,21 @@ public class Visibility {
     static public void levelsTab_HighLowLimitsVisibility(boolean visibility)
     {
         //  Делаем невидимыми кнопки и шкалы (High/Low Limit) относящиеся к этой секции
-        Interface.jLabel1.setVisible(visibility);
-        Interface.jLabel8.setVisible(visibility);
-        Interface.jLabel11.setVisible(visibility);
-        Interface.jLabel24.setVisible(visibility);
-        Interface.jTextField1.setVisible(visibility);
-        Interface.jTextField2.setVisible(visibility);
-        Interface.jButton22.setVisible(visibility);
-        Interface.jButton23.setVisible(visibility);
-        Interface.jButton24.setVisible(visibility);
-        Interface.jButton25.setVisible(visibility);
-        Interface.jButton26.setVisible(visibility);
-        Interface.jButton56.setVisible(visibility);
-        Interface.jButton63.setVisible(visibility);
-        Interface.jButton64.setVisible(visibility);
-        Interface.jButton65.setVisible(visibility);
-        Interface.jButton66.setVisible(visibility);
+        Interface.tabLevels_LowLimitMapLabel.setVisible(visibility);
+        Interface.tabLevels_HighLimitLabel.setVisible(visibility);
+        Interface.tabLevels_LowLimitLabel.setVisible(visibility);
+        Interface.tabLevels_HighLimitMapLabel.setVisible(visibility);
+        Interface.tabLevels_LowLimitTextField.setVisible(visibility);
+        Interface.tabLevels_HighLimitTextField.setVisible(visibility);
+        Interface.tabLevels_smallDownButton_LowLimit.setVisible(visibility);
+        Interface.tabLevels_smallUpButton_LowLimit.setVisible(visibility);
+        Interface.tabLevels_zeroButton_LowLimit.setVisible(visibility);
+        Interface.tabLevels_bigDownButton_LowLimit.setVisible(visibility);
+        Interface.tabLevels_bigUpButton_LowLimit.setVisible(visibility);
+        Interface.tabLevels_smallDownButton_HighLimit.setVisible(visibility);
+        Interface.tabLevels_smallUpButton_HighLimit.setVisible(visibility);
+        Interface.tabLevels_zeroButton_HighLimit.setVisible(visibility);
+        Interface.tabLevels_bigDownButton_HighLimit.setVisible(visibility);
+        Interface.tabLevels_bigUpButton_HighLimit.setVisible(visibility);
     }
 }

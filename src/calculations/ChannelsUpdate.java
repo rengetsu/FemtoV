@@ -31,22 +31,22 @@ public class ChannelsUpdate {
         {
             if      ( ch1_onoff == true && ch2_onoff == false )
             {
-                Interface.jTextField6.setText( calibrations.del_mas [ calibrations.del_mas_nmb_ch1 ] );
+                Interface.tabTiming_DelayTextField.setText( calibrations.del_mas [ calibrations.del_mas_nmb_ch1 ] );
             }
             else if ( ch1_onoff == false && ch2_onoff == true )
             {
-                Interface.jTextField6.setText( calibrations.del_mas [ calibrations.del_mas_nmb_ch2 ] );
+                Interface.tabTiming_DelayTextField.setText( calibrations.del_mas [ calibrations.del_mas_nmb_ch2 ] );
             }
         }
         else if ( delay == false )
         {
             if      ( ch1_onoff == true && ch2_onoff == false )
             {
-                Interface.jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb_ch1 ] );
+                Interface.tabTiming_DelayTextField.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb_ch1 ] );
             }
             else if ( ch1_onoff == false && ch2_onoff == true )
             {
-                Interface.jTextField6.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb_ch2 ] );
+                Interface.tabTiming_DelayTextField.setText( calibrations.phas_mas[ calibrations.phas_mas_nmb_ch2 ] );
             }
         }
         
@@ -54,11 +54,11 @@ public class ChannelsUpdate {
         {
             if      ( ch1_onoff == true && ch2_onoff == false )
             {
-                Interface.jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb_ch1 ] );
+                Interface.tabTiming_WidthTextField.setText( calibrations.width_mas [ calibrations.width_mas_nmb_ch1 ] );
             }
             else if ( ch1_onoff == false && ch2_onoff == true )
             {
-                Interface.jTextField5.setText( calibrations.width_mas [ calibrations.width_mas_nmb_ch2 ] );
+                Interface.tabTiming_WidthTextField.setText( calibrations.width_mas [ calibrations.width_mas_nmb_ch2 ] );
             }
         }
         else if ( width == false )
@@ -69,7 +69,7 @@ public class ChannelsUpdate {
                 String s = Integer.toString(calibrations.dcycle_percent);
 
                 //  Устанавливаем значение
-                Interface.jTextField5.setText(s + " %");
+                Interface.tabTiming_WidthTextField.setText(s + " %");
             }
             else if ( ch1_onoff == false && ch2_onoff == true )
             {
@@ -77,7 +77,7 @@ public class ChannelsUpdate {
                 String s = Integer.toString(calibrations.dcycle_percent);
 
                 //  Устанавливаем значение
-                Interface.jTextField5.setText(s + " %");
+                Interface.tabTiming_WidthTextField.setText(s + " %");
             }
         }
     }

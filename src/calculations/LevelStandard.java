@@ -23,92 +23,92 @@ public class LevelStandard {
     public static void changeLevelValues(String choiceSelectedItem)
     {
         //  При нажатии фиксированное значение зависит от выбранного стандарта
-        if( null != Interface.choice1.getSelectedItem() )
+        if( null != Interface.tabLevels_Choice.getSelectedItem() )
         //  Switch при выборе фиксированного значения и изменения параметров High/Low
         switch (choiceSelectedItem) {
             case "NECL":
-                Interface.jTextField4.setText("-0.8 V");  //  High
-                Interface.jTextField3.setText("-1.8 V");  //  Low
+                Interface.tabLevels_HighLevelTextField.setText("-0.8 V");   //  High
+                Interface.tabLevels_LowLevelTextField.setText("-1.8 V");    //  Low
                 break;
             case "5-V PECL":
-                Interface.jTextField4.setText("4.2 V");   //  High
-                Interface.jTextField3.setText("3.4 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("4.2 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("3.4 V");     //  Low
                 break;
             case "3.3-V PECL":
-                Interface.jTextField4.setText("2.4 V");   //  High
-                Interface.jTextField3.setText("1.6 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("2.4 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("1.6 V");     //  Low
                 break;
             case "2.5-V PECL":
-                Interface.jTextField4.setText("1.7 V");   //  High
-                Interface.jTextField3.setText("0.7 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("1.7 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.7 V");     //  Low
                 break;
             case "1.8-V PECL":
-                Interface.jTextField4.setText("0.0 V");   //  High
-                Interface.jTextField3.setText("0.0 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("0.0 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.0 V");     //  Low
                 break;
             case "5-V TTL":
-                Interface.jTextField4.setText("2.4 V");   //  High
-                Interface.jTextField3.setText("0.4 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("2.4 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.4 V");     //  Low
                 break;
             case "3.3-V TTL":
-                Interface.jTextField4.setText("2.4 V");   //  High
-                Interface.jTextField3.setText("0.4 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("2.4 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.4 V");     //  Low
                 break;
             case "2.5-V TTL":
-                Interface.jTextField4.setText("1.9 V");   //  High
-                Interface.jTextField3.setText("0.4 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("1.9 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.4 V");     //  Low
                 break;
             case "LVDS":
-                Interface.jTextField4.setText("1.4 V");   //  High
-                Interface.jTextField3.setText("1.0 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("1.4 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("1.0 V");     //  Low
                 break;
             case "CML":
-                Interface.jTextField4.setText("0.0 V");   //  High
-                Interface.jTextField3.setText("-0.6 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("0.0 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("-0.6 V");    //  Low
                 break;
             case "3.3-V CML":
-                Interface.jTextField4.setText("3.3 V");   //  High
-                Interface.jTextField3.setText("2.7 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("3.3 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("2.7 V");     //  Low
                 break;
             case "2.5-V CML":
-                Interface.jTextField4.setText("2.5 V");   //  High
-                Interface.jTextField3.setText("1.9 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("2.5 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("1.9 V");     //  Low
                 break;
             case "1.8-V CML":
-                Interface.jTextField4.setText("1.8 V");   //  High
-                Interface.jTextField3.setText("1.2 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("1.8 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("1.2 V");     //  Low
                 break;
             case "1.2-V CML":
-                Interface.jTextField4.setText("1.2 V");   //  High
-                Interface.jTextField3.setText("0.6 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("1.2 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.6 V");     //  Low
                 break;
             case "5-V CMOS":
-                Interface.jTextField4.setText("4.5 V");   //  High
-                Interface.jTextField3.setText("0.5 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("4.5 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.5 V");     //  Low
                 break;
             case "3.3-V CMOS":
-                Interface.jTextField4.setText("2.8 V");   //  High
-                Interface.jTextField3.setText("0.4 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("2.8 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.4 V");     //  Low
                 break;
             case "2.5-V CMOS":
-                Interface.jTextField4.setText("2.0 V");   //  High
-                Interface.jTextField3.setText("0.4 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("2.0 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.4 V");     //  Low
                 break;
             case "1.8-V CMOS":
-                Interface.jTextField4.setText("1.4 V");   //  High
-                Interface.jTextField3.setText("0.4 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("1.4 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.4 V");     //  Low
                 break;
             case "1.5-V CMOS":
-                Interface.jTextField4.setText("1.2 V");   //  High
-                Interface.jTextField3.setText("0.3 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("1.2 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.3 V");     //  Low
                 break;
             case "1.2-V CMOS":
-                Interface.jTextField4.setText("0.9 V");   //  High
-                Interface.jTextField3.setText("0.3 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("0.9 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.3 V");     //  Low
                 break;
             case "0.8-V CMOS":
-                Interface.jTextField4.setText("0.8 V");   //  High
-                Interface.jTextField3.setText("0.2 V");   //  Low
+                Interface.tabLevels_HighLevelTextField.setText("0.8 V");    //  High
+                Interface.tabLevels_LowLevelTextField.setText("0.2 V");     //  Low
                 break;
             default:
                 break;

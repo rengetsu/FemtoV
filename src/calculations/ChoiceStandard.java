@@ -39,7 +39,7 @@ public class ChoiceStandard {
     public static void addingItems()
     {
         //  Кнопка выбора
-        Choice chc1 = Interface.choice1;
+        Choice chc1 = Interface.tabLevels_Choice;
         
         //  Цикл добавления элементов в кнопку выбора из масcива
         for (int i = 0; i < fam_mas_qt; i++)
