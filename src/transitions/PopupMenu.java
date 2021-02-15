@@ -61,31 +61,31 @@ public class PopupMenu {
         
         //  Выбор места для отображения попап-меню
         switch (adjNmbr) {
-        //  Если выбран компонент jTextField1
+        //  Если выбран компонент tabLevels_LowLimitTextField
             case 1:
                 Interface.jPopupMenu1.show(Interface.panel_Tab_Levels , Interface.tabLevels_LowLimitTextField.getX(), Interface.tabLevels_LowLimitTextField.getY());
                 break;
-        //  Если выбран компонент JTextField2
+        //  Если выбран компонент tabLevels_HighLimitTextField
             case 2:
                 Interface.jPopupMenu1.show(Interface.panel_Tab_Levels, Interface.tabLevels_HighLimitTextField.getX(), Interface.tabLevels_HighLimitTextField.getY());
                 break;
-        //  Если выбран компонент JTextField3
+        //  Если выбран компонент tabLevels_LowLevelTextField
             case 3:
                 Interface.jPopupMenu1.show(Interface.panel_Tab_Levels, Interface.tabLevels_LowLevelTextField.getX(), Interface.tabLevels_LowLevelTextField.getY());
                 break;
-        //  Если выбран компонент JTextField4
+        //  Если выбран компонент tabLevels_HighLevelTextField
             case 4:
                 Interface.jPopupMenu1.show(Interface.panel_Tab_Levels, Interface.tabLevels_HighLevelTextField.getX(), Interface.tabLevels_HighLevelTextField.getY());
                 break;
-        //  Если выбран компонент JTextField5
+        //  Если выбран компонент tabTiming_WidthTextField
             case 5:
                 Interface.jPopupMenu1.show(Interface.panel_Tab_Timing, Interface.tabTiming_WidthTextField.getX(), Interface.tabTiming_WidthTextField.getY());
                 break;
-        //  Если выбран компонент JTextField6
+        //  Если выбран компонент tabTiming_DelayTextField
             case 6:
                 Interface.jPopupMenu1.show(Interface.panel_Tab_Timing, Interface.tabTiming_DelayTextField.getX(), Interface.tabTiming_DelayTextField.getY());
                 break;
-        //  Если выбран компонент JTextField7
+        //  Если выбран компонент tabTiming_PeriodTextField
             case 7:
                 Interface.jPopupMenu1.show(Interface.panel_Tab_Timing, Interface.tabTiming_PeriodTextField.getX(), Interface.tabTiming_PeriodTextField.getY());
                 break;
