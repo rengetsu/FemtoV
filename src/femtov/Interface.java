@@ -1986,12 +1986,10 @@ public class Interface extends javax.swing.JFrame {
         //  Обработка нажатия на пноку нижнего меню "Pattern"
         if( ch4 == false ){
             ch4 = true;
-            iconchanger.changeDownMenuButtonIcon(currentDir,"Pattern","Down_Pattern_Off.png");
-        }
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Pattern","Down_Pattern_Off.png");}
         else if( ch4 == true ){
             ch4 = false;
-            iconchanger.changeDownMenuButtonIcon(currentDir,"Pattern","Down_Pattern_On.png");
-        }
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Pattern","Down_Pattern_On.png");}
         
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, false,false, true,true, true,true, true,true, true,true, false,false, false,false);
@@ -2008,16 +2006,12 @@ public class Interface extends javax.swing.JFrame {
 
     private void downMenu_DisplayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_DisplayButtonActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch1 == false )
-        {
+        if( ch1 == false ){
             ch1 = true;
-            downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_Off.png"));
-        }
-        else if( ch1 == true )
-        {
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Display","Down_Display_Off.png");}
+        else if( ch1 == true ){
             ch1 = false;
-            downMenu_DisplayButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Display_On.png"));
-        }
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Display","Down_Display_On.png");}
         
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(false,false, true,true, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
@@ -2034,16 +2028,12 @@ public class Interface extends javax.swing.JFrame {
 
     private void downMenu_CalibrationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_CalibrationButtonActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch3 == false )
-        {
+        if( ch3 == false ){
             ch3 = true;
-            downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_Off.png"));
-        }
-        else if( ch3 == true )
-        {
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Calibration","Down_Calibrat_Off.png");}
+        else if( ch3 == true ){
             ch3 = false;
-            downMenu_CalibrationButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Calibrat_On.png"));
-        }
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Calibration","Down_Calibrat_On.png");}
 
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, false,false, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
@@ -2060,16 +2050,12 @@ public class Interface extends javax.swing.JFrame {
 
     private void downMenu_InputsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_InputsButtonActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch5 == false )
-        {
+        if( ch5 == false ){
             ch5 = true;
-            downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_Off.png"));
-        }
-        else if( ch5 == true )
-        {
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Inputs","Down_Inputs_Off.png");}
+        else if( ch5 == true ){
             ch5 = false;
-            downMenu_InputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Inputs_On.png"));
-        }
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Inputs","Down_Inputs_On.png");}
 
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, false,false, true,true, true,true, true,true, false,false, false,false);
@@ -2086,16 +2072,12 @@ public class Interface extends javax.swing.JFrame {
 
     private void downMenu_TriggerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_TriggerButtonActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch2 == false )
-        {
+        if( ch2 == false ){
             ch2 = true;
-            downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_Off.png"));
-        }
-        else if( ch2 == true )
-        {
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Trigger","Down_Trigger_Off.png");}
+        else if( ch2 == true ){
             ch2 = false;
-            downMenu_TriggerButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Trigger_On.png"));
-        }
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Trigger","Down_Trigger_On.png");}
         
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, false,false, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
@@ -2112,28 +2094,20 @@ public class Interface extends javax.swing.JFrame {
 
     private void downMenu_TimingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_TimingButtonActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch9 == false )
-        {
+        if( ch9 == false ){
             //  Закрываем вкладку "Timing" справа
             tabs.closeTab("Timing", "right");
-            
             //  Метод pack изменяет размер кадра таким образом, чтобы все его содержимое было равным или превышающим их предпочтительные размеры. 
             pack();
-            
             ch9 = true;
-            downMenu_TimingButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_Off.png"));
-        }
-        else if( ch9 == true )
-        {
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Timing","Down_Timing_Off.png");}
+        else if( ch9 == true ){
             //  Открываем вкладку "Timing" справа
             tabs.openTab("Timing", "right");
-            
             //  Метод pack изменяет размер кадра таким образом, чтобы все его содержимое было равным или превышающим их предпочтительные размеры. 
             pack();
-            
             ch9 = false;
-            downMenu_TimingButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Timing_On.png"));
-        }
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Timing","Down_Timing_On.png");}
         
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
@@ -2151,28 +2125,24 @@ public class Interface extends javax.swing.JFrame {
 
     private void downMenu_LevelsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_LevelsButtonActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch10 == false )
-        {
+        if( ch10 == false ){
             //  Закрываем вкладку "Levels" слева
             tabs.closeTab("Levels", "left");
             
             //  Метод pack изменяет размер кадра таким образом, чтобы все его содержимое было равным или превышающим их предпочтительные размеры. 
             pack();
-            
             ch10 = true;
             downMenu_LevelsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_Off.png"));
-        }
-        else if( ch10 == true )
-        {
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Leves","Down_Levels_Off.png");}
+        else if( ch10 == true ){
             //  Открываем вкладку "Levels" слева
             tabs.openTab("Levels", "left");
             
             //  Метод pack изменяет размер кадра таким образом, чтобы все его содержимое было равным или превышающим их предпочтительные размеры. 
             pack();
-            
             ch10 = false;
             downMenu_LevelsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Levels_On.png"));
-        }
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Levels","Down_Levels_On.png");}
 
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, true,true, true,true, true,true, false,false, false,false);
@@ -2190,16 +2160,12 @@ public class Interface extends javax.swing.JFrame {
 
     private void downMenu_OutputsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_OutputsButtonActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch6 == false )
-        {
+        if( ch6 == false ){
             ch6 = true;
-            downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_Off.png"));
-        }
-        else if( ch6 == true )
-        {
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Outputs","Down_Outputs_Off.png");}
+        else if( ch6 == true ){
             ch6 = false;
-            downMenu_OutputsButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Outputs_On.png"));
-        }
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Outputs","Down_Outputs_On.png");}
         
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, false,false, true,true, true,true, false,false, false,false);
@@ -2216,16 +2182,12 @@ public class Interface extends javax.swing.JFrame {
 
     private void downMenu_UtilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downMenu_UtilityButtonActionPerformed
         //  При нажатии подсвечивать синим
-        if( ch7 == false )
-        {
+        if( ch7 == false ){
             ch7 = true;
-            downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_Off.png"));
-        }
-        else if( ch7 == true )
-        {
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Utility","Down_Utility_Off.png");}
+        else if( ch7 == true ){
             ch7 = false;
-            downMenu_UtilityButton.setIcon(new ImageIcon(currentDir + "\\src\\images\\Down_Utility_On.png"));
-        }
+            iconchanger.changeDownMenuButtonIcon(currentDir,"Utility","Down_Utility_On.png");}
 
         //  Меняем значение чекеров
         switches.chChanger_DownMenu(true,true, true,true, true,true, true,true, true,true, true,true, false,false, true,true, false,false, false,false);
