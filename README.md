@@ -34,3 +34,7 @@ All you need is ivy.jar in Ant's classpath (in your `$CLASSPATH`,
 
 ![GitHub Logo](https://i.ibb.co/09KqqkM/Preview-0-75.png)
 
+## Important note
+This is a project that contains only that part of the code that is responsible for managing the graphical user interface!
+
+All the code responsible for working with the hardware program is removed here!
